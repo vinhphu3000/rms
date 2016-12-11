@@ -16,10 +16,8 @@ class User extends Eloquent
      *
      * @var array
      */
-    protected $fillable = ['name','email','password','active','email_confirm','remember_token','agency_entity_id','agency_parent_id','agency_name','agency_id','group_id','created_at','updated_at'];
-    
+    protected $fillable = ['name','email','password','avatar', 'active','email_confirm','remember_token','agency_entity_id','agency_parent_id','agency_name','agency_id','group_id','created_at','updated_at'];
 
-   
    
 }
 
