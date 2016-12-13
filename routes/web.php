@@ -16,6 +16,7 @@ Route::group(['middleware' => 'auth'], function () {
     // users
     Route::get('/', 'WelcomeController@index');
     Route::get('/dash', 'DashboardController@index');
+    Route::get('/employee', 'EmployeeController@listing');
 
     Route::get('/logout',[
         'middleware' => 'role:public',
