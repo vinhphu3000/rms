@@ -13,12 +13,17 @@ class Employee extends Eloquent
      */
     public function role()
     {
-        return $this->hasOne('App\Models\EmployeeRole', 'role');
+        return $this->belongsTo('App\Models\EmployeeRole', 'role_id');
     }
 
     public function position()
     {
-        return $this->hasOne('App\Models\EmployeePosition', 'position');
+        return $this->belongsTo('App\Models\EmployeePosition', 'position_id');
+    }
+
+    public function office()
+    {
+        return $this->belongsTo('App\Models\Office', 'office_id');
     }
 
 }

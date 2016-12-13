@@ -73,7 +73,7 @@
 <!-- jQuery -->
 <script src="{{ asset("gentelella/vendors/jquery/dist/jquery.min.js") }}"></script>
 <!-- Bootstrap -->
-<script src="{{ asset("gentelella/vendors/jquery/dist/bootstrap.min.js") }}"></script>
+<script src="{{ asset("gentelella/vendors/bootstrap/dist/js/bootstrap.min.js") }}"></script>
 <!-- FastClick -->
 <script src="{{ asset("gentelella/vendors/fastclick/lib/fastclick.js") }}"></script>
 <!-- NProgress -->
@@ -82,5 +82,35 @@
 <script src="{{ asset("gentelella/vendors/iCheck/icheck.min.js") }}"></script>
 <!-- Custom Theme Scripts -->
 <script src="{{ asset("gentelella/build/js/custom.min.js") }}"></script>
+
+<script src="{{ asset("js/upload/vendor/jquery.ui.widget.js") }}"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="{{ asset("js/upload/jquery.iframe-transport.js") }}"></script>
+<!-- The basic File Upload plugin -->
+<script src="{{ asset("js/upload/jquery.fileupload.js") }}"></script>
+
+<script>
+    /*jslint unparam: true */
+    /*global window, $ */
+    $(function () {
+        'use strict';
+        /*Add new catagory Event*/
+        $(".uploadBtn").click(function(){
+            $.ajax({
+                url:'{{ url ('employee/upload-excel') }}',
+                data: new FormData($("#upload_form")[0]),
+                dataType:'json',
+                async:false,
+                type:'post',
+                processData: false,
+                contentType: false,
+                success:function(response){
+                    console.log(response);
+                },
+            });
+        });
+
+    });
+</script>
 </body>
 </html>

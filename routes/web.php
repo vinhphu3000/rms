@@ -18,6 +18,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/dash', 'DashboardController@index');
     Route::get('/employee', 'EmployeeController@listing');
 
+
     Route::get('/logout',[
         'middleware' => 'role:public',
         'uses' => 'UserController@logout',
@@ -57,6 +58,7 @@ Route::group(['middleware' => 'guest'], function () {
      * POST request
      */
     Route::post('/login', 'UserController@doLogin');
+    Route::post('/employee/upload-excel', 'EmployeeController@doUploadExcel');
     Route::post('/post-forgot-password', 'UserController@postForgotPassword');
     Route::post('/renewpass/{token}', 'UserController@renewPassword');
     Route::post('/postrenewpass/{token}', 'UserController@postRenewPassword');
