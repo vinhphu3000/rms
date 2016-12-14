@@ -58,15 +58,21 @@ class EmployeeController extends BaseController {
         $fileName = $request->input('file_name');
         $mapColumn = $request->input('map_column');
         EmployeeModel::$csv_map_column = json_decode($mapColumn);
-        var_dump(EmployeeModel::$csv_map_column);die;
-//        $destinationPath = public_path('/images');
-//        \Excel::filter('chunk')->load($destinationPath . '/' . $fileName)->chunk(250, function($results)
-//        {
-//            foreach($results as $row)
-//            {
-//                // do stuff
-//            }
-//        });
+        $destinationPath = public_path('/images');
+        \Excel::filter('chunk')->load($destinationPath . '/' . $fileName)->chunk(250, function($results)
+        {
+            foreach($results as $row)
+            {
+                $employee = new EmployeeModel();
+                foreach (EmployeeModel::$csv_map_column as $item_map) {
+                    $employee->{$item_map->db_column} = $row->{$item_map->csv_column};
+                }
+                $employee->position_id = 1;
+                $employee->office_id = 1;
+                $employee->role_id = 1;
+                $employee->save();
+            }
+        });
     }
 
 

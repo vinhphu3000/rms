@@ -134,22 +134,22 @@
             $('.column-map tbody tr').each(function(){
                 var column = $(this).find('.csv-header');
                 if (!$(this).find("input:checkbox").is(':checked') && column.find(":selected").val() != '') {
-                    var item = [];
-                    item[column.attr('name')] = column.find(":selected").val();
+                    var item = {};
+                    item['db_column'] = column.attr('name');
+                    item['csv_column'] = column.find(":selected").val();
                     item['default'] = '';
                     mColumn.push(item);
                 }
 
             });
+            console.log(mColumn);
             $.ajax({
                 url:'{{ url ('employee/import') }}',
-                data: {map_column : mColumn, file_name : $('input[name=file_name]').val(), _token : $('input[name=_token]').val()},
-                dataType:'json',
+                data: {map_column : JSON.stringify(mColumn), file_name : $('input[name=file_name]').val(), _token : $('input[name=_token]').val()},
                 async:false,
                 type:'post',
-                processData: false,
-                contentType: false,
                 success:function(response){
+                    location.href = "{{ url ('employee') }}";
                 },
             });
         });
