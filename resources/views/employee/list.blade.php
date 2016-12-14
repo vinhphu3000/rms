@@ -80,25 +80,28 @@
                                             </form>
                                         </div>
                                         <div class="x_content"  style="height: 290px; overflow-y: scroll;overflow-x: hidden;">
-                                        <table class="table"  style="border-top: 0px">
+                                        <table class="table column-map"  style="border-top: 0px">
                                             <thead>
                                             <tr>
                                                 <th>CSV header</th>
                                                 <th><i class="fa fa-arrow-right"></i></th>
                                                 <th>Table column</th>
+                                                <th>Skip</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <?php foreach ($db_column as $item): ?>
+                                            <?php if ($item == 'id') {continue;} ?>
                                             <tr>
                                                 <td>
-                                                    <select table-column="{{$item}}" disabled class="form-control csv-header" >
-                                                        <option>Choose CSV header</option>
+                                                    <select name ="{{$item}}" disabled class="form-control csv-header" >
+                                                        <option value="">Choose CSV header</option>
                                                     </select>
 
                                                 </td>
                                                 <td><i class="fa fa-arrow-right"></i></td>
                                                 <td>{{$item}}</td>
+                                                <td><input type="checkbox" value="1"></td>
                                             </tr>
                                             <?php endforeach; ?>
 
@@ -107,8 +110,9 @@
 
                                     </div>
                                     <div class="modal-footer">
+                                        <input type="hidden" name="file_name" value="">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary btn-import">Import</button>
+                                        <button type="button" class="btn btn-primary btn-import disabled">Import</button>
                                     </div>
 
                                 </div>

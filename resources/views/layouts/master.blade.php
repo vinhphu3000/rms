@@ -105,6 +105,7 @@
                 processData: false,
                 contentType: false,
                 success:function(response){
+                    $('input[name=file_name]').val(response.filename);
                     $.each(response.header, function (i, header) {
                         $('.csv-header').append($('<option>', {
                             value: header,
@@ -115,14 +116,40 @@
                     $('.csv-header').each(function(){
                         var header_op =  $(this);
                         $(this).find('option').each(function () {
-                            if ($(this).attr('value') == header_op.attr('table-column')) {
+                            if ($(this).attr('value') == header_op.attr('name')) {
                                 $(this).attr('selected',1)
-                                header_op.attr('disabled','disabled');
                                 return;
                             }
                         })
 
-                    })
+                    });
+                    $('.btn-import').removeClass('disabled');
+                },
+            });
+        });
+
+
+        $(".btn-import").click(function(){
+            var mColumn = [];
+            $('.column-map tbody tr').each(function(){
+                var column = $(this).find('.csv-header');
+                if (!$(this).find("input:checkbox").is(':checked') && column.find(":selected").val() != '') {
+                    var item = [];
+                    item[column.attr('name')] = column.find(":selected").val();
+                    item['default'] = '';
+                    mColumn.push(item);
+                }
+
+            });
+            $.ajax({
+                url:'{{ url ('employee/import') }}',
+                data: {map_column : mColumn, file_name : $('input[name=file_name]').val(), _token : $('input[name=_token]').val()},
+                dataType:'json',
+                async:false,
+                type:'post',
+                processData: false,
+                contentType: false,
+                success:function(response){
                 },
             });
         });

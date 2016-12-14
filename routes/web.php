@@ -59,6 +59,7 @@ Route::group(['middleware' => 'guest'], function () {
      */
     Route::post('/login', 'UserController@doLogin');
     Route::post('/employee/upload-excel', 'EmployeeController@doUploadExcel');
+    Route::post('/employee/import', 'EmployeeController@doImport');
     Route::post('/post-forgot-password', 'UserController@postForgotPassword');
     Route::post('/renewpass/{token}', 'UserController@renewPassword');
     Route::post('/postrenewpass/{token}', 'UserController@postRenewPassword');
