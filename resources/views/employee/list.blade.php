@@ -43,22 +43,79 @@
                     </div>
 
                     <div class="x_content">
+                        <!-- Large modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
 
-                        <div class="form-group">
+                        <div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-m">
+                                <div class="modal-content">
 
-                            <div class="col-lg-10 col-sm-8">
-                                <form enctype="multipart/form-data" id="upload_form" role="form"  action="{{ url ('employee/upload-excel') }}" >
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel">Import data</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="x_content">
+                                            <br />
+                                            <form class="form-horizontal form-label-left" enctype="multipart/form-data" id="upload_form" role="form"  action="{{ url ('employee/upload-excel') }}" >
 
-                                    <div class="form-group">
-                                        <label for="" class="control-label col-lg-2 col-sm-4">Import CSV data</label>
-                                        <input type="file" class="file" name="csvfile">
-                                        <input type="button" value="Upload" class="uploadBtn"/>
-                                        <input type="hidden" name="_token" value="{{ csrf_token()}}">
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-3">File</label>
+                                                    <div class="col-md-9 col-sm-9 col-xs-9">
+                                                        <input type="file" class="file" name="csvfile" placeholder="please chooise excel file">
+
+                                                        <input type="hidden" name="_token" value="{{ csrf_token()}}">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-md-3 col-sm-3 col-xs-3"></label>
+                                                    <div class="col-md-9 col-sm-9 col-xs-9">
+                                                        <button type="button" class="uploadBtn"><span class="glyphicon glyphicon-open" aria-hidden="true"></span> Upload</button>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </form>
+                                        </div>
+                                        <div class="x_content"  style="height: 290px; overflow-y: scroll;overflow-x: hidden;">
+                                        <table class="table"  style="border-top: 0px">
+                                            <thead>
+                                            <tr>
+                                                <th>CSV header</th>
+                                                <th><i class="fa fa-arrow-right"></i></th>
+                                                <th>Table column</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php foreach ($db_column as $item): ?>
+                                            <tr>
+                                                <td>
+                                                    <select table-column="{{$item}}" disabled class="form-control csv-header" >
+                                                        <option>Choose CSV header</option>
+                                                    </select>
+
+                                                </td>
+                                                <td><i class="fa fa-arrow-right"></i></td>
+                                                <td>{{$item}}</td>
+                                            </tr>
+                                            <?php endforeach; ?>
+
+                                            </tbody>
+                                        </table></div>
 
                                     </div>
-                                </form>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary btn-import">Import</button>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
+
+
                         <div class="clearfix"></div>
                         <div class="table-responsive">
                             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">

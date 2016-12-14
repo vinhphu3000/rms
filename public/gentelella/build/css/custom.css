@@ -3977,3 +3977,11 @@ ul.notifications {
   border: 1px solid #e5e5e5; }
 
 /** /Dropzone.js **/
+/** /Modal **/
+.modal-m {
+  width: 592px;
+}
+
+.modal-backdrop.in {
+  opacity: 0.2;
+}

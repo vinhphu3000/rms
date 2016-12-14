@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{ asset("gentelella/vendors/iCheck/skins/flat/green.css") }}" />
 
     <!-- Custom Theme Style -->
-    <link rel="stylesheet" href="{{ asset("gentelella/build/css/custom.min.css") }}" />
+    <link rel="stylesheet" href="{{ asset("gentelella/build/css/custom.css") }}" />
 </head>
 
 <body class="nav-md">
@@ -105,7 +105,24 @@
                 processData: false,
                 contentType: false,
                 success:function(response){
-                    console.log(response);
+                    $.each(response.header, function (i, header) {
+                        $('.csv-header').append($('<option>', {
+                            value: header,
+                            text : header
+                        }));
+                    });
+                    $('.csv-header').removeAttr('disabled');
+                    $('.csv-header').each(function(){
+                        var header_op =  $(this);
+                        $(this).find('option').each(function () {
+                            if ($(this).attr('value') == header_op.attr('table-column')) {
+                                $(this).attr('selected',1)
+                                header_op.attr('disabled','disabled');
+                                return;
+                            }
+                        })
+
+                    })
                 },
             });
         });

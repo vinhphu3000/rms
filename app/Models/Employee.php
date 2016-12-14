@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 class Employee extends Eloquent
 {
    protected $table = 'employee';
+   public static $csv_map_column = [];
     /**
      * Get the phone record associated with the user.
      */
@@ -24,6 +25,10 @@ class Employee extends Eloquent
     public function office()
     {
         return $this->belongsTo('App\Models\Office', 'office_id');
+    }
+
+    public static function getTableColumns() {
+        return \DB::connection()->getSchemaBuilder()->getColumnListing('employee');
     }
 
 }

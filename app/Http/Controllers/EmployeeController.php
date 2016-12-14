@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use App\Models\Employee;
 use Request;
 use Session;
 use Input;
@@ -34,13 +35,14 @@ class EmployeeController extends BaseController {
     public function listing()
     {
         $result = EmployeeModel::all();
-        return view('employee.list', ['result' => $result]);
+        $column = Employee::getTableColumns();
+        return view('employee.list', ['result' => $result, 'db_column' => $column]);
     }
 
     public function doUploadExcel(\Illuminate\Http\Request $request)
     {
         $this->validate($request, [
-            'csvfile' => 'required|mimes:csv,txt|max:10048',
+            'csvfile' => 'required|max:10048',
         ]);
 
         $csvFile = $request->file('csvfile');
@@ -48,8 +50,22 @@ class EmployeeController extends BaseController {
         $destinationPath = public_path('/images');
         $csvFile->move($destinationPath, $csvFileName);
         $header = \Excel::load($destinationPath . '/' . $csvFileName)->first();
-
         return json_encode(['filename' => $csvFileName, 'header' => $header->keys()]);
+    }
+
+    public function doImport(\Illuminate\Http\Request $request)
+    {
+        $fileName = $request->input('file_name');
+        $mapColumn = $request->input('map_column');
+        EmployeeModel::$csv_map_column = json_decode($mapColumn);
+        $destinationPath = public_path('/images');
+        \Excel::filter('chunk')->load($destinationPath . '/' . $fileName)->chunk(250, function($results)
+        {
+            foreach($results as $row)
+            {
+                // do stuff
+            }
+        });
     }
 
 
