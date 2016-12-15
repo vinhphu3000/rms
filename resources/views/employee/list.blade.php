@@ -25,18 +25,11 @@
                         <h2>Listing</h2>
                         <ul class="nav navbar-right panel_toolbox">
 
-                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            <li><button type="button" class="btn" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus-circle"></i> Import CSV</button>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Settings 1</a>
-                                    </li>
-                                    <li><a href="#">Settings 2</a>
-                                    </li>
-                                </ul>
+                            <li><button type="button" class="btn" href="http://rms.local/employee"  data-toggle="modal" data-target=".bs-example-modal-lg" ><i class="glyphicon glyphicon-open"></i> Upload CV</button>
                             </li>
-                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+
                             </li>
                         </ul>
                         <div class="clearfix"></div>
@@ -44,7 +37,7 @@
 
                     <div class="x_content">
                         <!-- Large modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
 
                         <div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-m">
@@ -64,14 +57,14 @@
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-3">File</label>
                                                     <div class="col-md-9 col-sm-9 col-xs-9">
                                                         <input type="file" class="file" name="csvfile" placeholder="please chooise excel file">
-
+                                                        <span style="color: white;display: none"  class="msg-upload label-info">Uploading ... </span>
                                                         <input type="hidden" name="_token" value="{{ csrf_token()}}">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-md-3 col-sm-3 col-xs-3"></label>
                                                     <div class="col-md-9 col-sm-9 col-xs-9">
-                                                        <button type="button" class="uploadBtn"><span class="glyphicon glyphicon-open" aria-hidden="true"></span> Upload</button>
+                                                        <button type="button" class="btn uploadBtn"><span class="glyphicon glyphicon-open" aria-hidden="true"></span> Upload</button>
                                                     </div>
                                                 </div>
 
@@ -114,7 +107,7 @@
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-primary btn-import disabled">Import</button>
                                     </div>
-
+                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
@@ -143,8 +136,8 @@
                                         <td>{{$item->code}}</td>
                                         <td>{{$item->first_name}} {{$item->last_name}}</td>
                                         <td>{{$item->sex == 1 ? trans('employee.male') : trans('employee.female')}}</td>
-                                        <td>{{$item->position->name}}</td>
-                                        <td>{{$item->office->name}}</td>
+                                        <td>{{isset($item->position->name) ? $item->position->name : '-'}}</td>
+                                        <td>{{isset($item->office->name) ? $item->office->name : '-'}}</td>
                                         <td>{{$item->join_date}}</td>
                                         <td>{{$item->email}}</td>
                                         <td>{{$item->skills}}</td>

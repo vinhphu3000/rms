@@ -96,6 +96,7 @@
         'use strict';
         /*Add new catagory Event*/
         $(".uploadBtn").click(function(){
+            $('.loader-msg').text('Uploading ... ');
             $.ajax({
                 url:'{{ url ('employee/upload-excel') }}',
                 data: new FormData($("#upload_form")[0]),
@@ -105,6 +106,10 @@
                 processData: false,
                 contentType: false,
                 success:function(response){
+                    $('.msg-upload').show();
+                    $('.msg-upload').removeClass('label-info');
+                    $('.msg-upload').addClass('label-success');
+                    $('.msg-upload').text('Upload Completed!');
                     $('input[name=file_name]').val(response.filename);
                     $.each(response.header, function (i, header) {
                         $('.csv-header').append($('<option>', {
@@ -125,6 +130,18 @@
                     });
                     $('.btn-import').removeClass('disabled');
                 },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    console.log(xhr);
+                    $('.msg-upload').show();
+                    $('.msg-upload').removeClass('label-info');
+                    $('.msg-upload').removeClass('label-success');
+                    if (xhr.responseJSON.csvfile)
+                        $('.msg-upload').html(xhr.responseJSON.csvfile);
+                    else
+                        $('.msg-upload').html('File csv is invalid!!');
+                    $('.msg-upload').addClass('label-danger');
+
+                }
             });
         });
 
@@ -142,7 +159,6 @@
                 }
 
             });
-            console.log(mColumn);
             $.ajax({
                 url:'{{ url ('employee/import') }}',
                 data: {map_column : JSON.stringify(mColumn), file_name : $('input[name=file_name]').val(), _token : $('input[name=_token]').val()},
@@ -155,6 +171,22 @@
         });
 
     });
+    $body = $("body");
+
+    $(document).on({
+        ajaxStart: function() { $body.addClass("loading");    },
+        ajaxStop: function() { $body.removeClass("loading"); $('.loader-msg').text('Loading... '); }
+    });
 </script>
+<div class="animationload">
+<div class="loader">
+    <p class="loader-msg">Loading...</p>
+    <div class="loader-inner"></div>
+    <div class="loader-inner"></div>
+    <div class="loader-inner"></div>
+</div>
+    </div>
+
+
 </body>
 </html>

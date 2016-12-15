@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use App\Models\Employee;
+use Illuminate\Support\Facades\App;
 use Request;
 use Session;
 use Input;
@@ -42,7 +43,7 @@ class EmployeeController extends BaseController {
     public function doUploadExcel(\Illuminate\Http\Request $request)
     {
         $this->validate($request, [
-            'csvfile' => 'required|max:10048',
+            'csvfile' => 'required|mimes:csv,txt|max:10048',
         ]);
 
         $csvFile = $request->file('csvfile');
@@ -65,14 +66,31 @@ class EmployeeController extends BaseController {
             {
                 $employee = new EmployeeModel();
                 foreach (EmployeeModel::$csv_map_column as $item_map) {
+
+                    if ($item_map->db_column == 'position_id') {
+                        $employeePosition = \App\Models\EmployeePosition::firstOrCreate(array('name' => $row->{$item_map->csv_column}));
+                        $employee->position_id = $employeePosition->id;
+                        continue;
+                    }
+
+                    if ($item_map->db_column == 'office_id') {
+                        $employeePosition = \App\Models\Office::firstOrCreate(array('name' => $row->{$item_map->csv_column}));
+                        $employee->office_id = $employeePosition->id;
+                        continue;
+                    }
+
+                    if ($item_map->db_column == 'role_id') {
+                        $employeePosition = \App\Models\EmployeeRole::firstOrCreate(array('name' => $row->{$item_map->csv_column}));
+                        $employee->role_id = $employeePosition->id;
+                        continue;
+                    }
                     $employee->{$item_map->db_column} = $row->{$item_map->csv_column};
                 }
-                $employee->position_id = 1;
-                $employee->office_id = 1;
-                $employee->role_id = 1;
+
+
                 $employee->save();
             }
-        });
+        }, 'UTF-8');
     }
 
 

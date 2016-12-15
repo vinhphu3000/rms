@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 class EmployeePosition extends Eloquent
 {
    protected $table = 'employee_position';
+   protected $fillable = ['id','name','code'];
    
 }
 
