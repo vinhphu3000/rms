@@ -171,12 +171,11 @@
         });
 
     });
-    $body = $("body");
-
     $(document).on({
-        ajaxStart: function() { $body.addClass("loading");    },
-        ajaxStop: function() { $body.removeClass("loading"); $('.loader-msg').text('Loading... '); }
+        ajaxStart: function() { $("body").addClass("loading");    NProgress.start(); },
+        ajaxStop: function() { $("body").removeClass("loading"); $('.loader-msg').text('Loading... '); NProgress.done();}
     });
+
 </script>
 <div class="animationload">
 <div class="loader">

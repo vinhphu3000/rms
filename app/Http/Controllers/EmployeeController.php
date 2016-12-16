@@ -31,13 +31,65 @@ class EmployeeController extends BaseController {
     }
 
 
-
-
-    public function listing()
+    /**
+     * listing action
+     */
+    public function listing(\Illuminate\Http\Request $request)
     {
-        $result = EmployeeModel::all();
+        $limit = 30;
+        $builder = EmployeeModel::query();
+        $search_param = [
+            'kw' => $request['kw'],
+            'order_by' => empty($request['order_by']) ? 'id' : $request['order_by'],
+            'order_type' => empty($request['order_type']) ? 'asc' : 'desc',
+        ];
+        Session::set('search_param', $search_param);
+
+        if(!empty($search_param['kw'])){
+            $builder->where('full_name', 'LIKE', "%{$search_param['kw']}%");
+            $builder->orWhere('last_name', 'LIKE', "%{$search_param['kw']}%");
+            $builder->orWhere('skills', 'LIKE', "%{$search_param['kw']}%");
+            $builder->orWhere('first_name', 'LIKE', "%{$search_param['kw']}%");
+            $builder->orWhere('code', 'LIKE', "%{$search_param['kw']}%");
+        }
+        $result = $builder->orderBy('code')->paginate($limit);
         $column = Employee::getTableColumns();
-        return view('employee.list', ['result' => $result, 'db_column' => $column]);
+        return view('employee.list', ['result' => $result, 'db_column' => $column, 'search_param' => $search_param]);
+    }
+
+    /**
+     * doExport action
+     */
+    public function doExport()
+    {
+        $builder = EmployeeModel::query();
+        $search_param = ['kw'=>''];
+
+        if(Session::has('search_param')){
+            $search_param = Session::get('search_param');
+        }
+
+        $kw = isset($search_param['kw']) ? $search_param['kw'] : '';
+        if(!empty($kw)){
+            $builder->where('full_name', 'LIKE', "%{$kw}%");
+            $builder->orWhere('last_name', 'LIKE', "%{$kw}%");
+            $builder->orWhere('skills', 'LIKE', "%{$kw}%");
+            $builder->orWhere('first_name', 'LIKE', "%{$kw}%");
+            $builder->orWhere('code', 'LIKE', "%{$kw}%");
+
+        }
+
+        $result = $builder->orderBy('code')->get();
+        $name = 'employee' . date('Y_m_d');
+        \Excel::create($name, function($excel)  use ($result) {
+
+            $excel->sheet('default', function($sheet) use ($result) {
+
+                $sheet->fromModel($result);
+
+            });
+
+        })->download('csv');
     }
 
     public function doUploadExcel(\Illuminate\Http\Request $request)
@@ -66,20 +118,22 @@ class EmployeeController extends BaseController {
             {
                 $employee = new EmployeeModel();
                 foreach (EmployeeModel::$csv_map_column as $item_map) {
-
-                    if ($item_map->db_column == 'position_id') {
+                    if ($item_map->db_column == 'id' && is_numeric($row->{$item_map->csv_column})) {
+                        $employee =    EmployeeModel::find($row->{$item_map->csv_column});
+                    }
+                    if ($item_map->db_column == 'position_id' && !is_integer($row->{$item_map->csv_column})) {
                         $employeePosition = \App\Models\EmployeePosition::firstOrCreate(array('name' => $row->{$item_map->csv_column}));
                         $employee->position_id = $employeePosition->id;
                         continue;
                     }
 
-                    if ($item_map->db_column == 'office_id') {
+                    if ($item_map->db_column == 'office_id' && !is_integer($row->{$item_map->csv_column})) {
                         $employeePosition = \App\Models\Office::firstOrCreate(array('name' => $row->{$item_map->csv_column}));
                         $employee->office_id = $employeePosition->id;
                         continue;
                     }
 
-                    if ($item_map->db_column == 'role_id') {
+                    if ($item_map->db_column == 'role_id' && !is_integer($row->{$item_map->csv_column})) {
                         $employeePosition = \App\Models\EmployeeRole::firstOrCreate(array('name' => $row->{$item_map->csv_column}));
                         $employee->role_id = $employeePosition->id;
                         continue;

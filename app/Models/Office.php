@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 class Office extends Eloquent
 {
    protected $table = 'office';
-   
+   protected $fillable = ['id','name','code'];
 }
 
