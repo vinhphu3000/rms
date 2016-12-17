@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use App\Models\Employee;
+use App\Models\EmployeeExp;
 use Illuminate\Support\Facades\App;
 use Request;
 use Session;
@@ -41,7 +42,7 @@ class EmployeeController extends BaseController {
         $search_param = [
             'kw' => $request['kw'],
             'order_by' => empty($request['order_by']) ? 'id' : $request['order_by'],
-            'order_type' => empty($request['order_type']) ? 'asc' : 'desc',
+            'order_type' => $request['order_type'] == 'asc' ? 'asc' : 'desc',
         ];
         Session::set('search_param', $search_param);
 
@@ -52,9 +53,10 @@ class EmployeeController extends BaseController {
             $builder->orWhere('first_name', 'LIKE', "%{$search_param['kw']}%");
             $builder->orWhere('code', 'LIKE', "%{$search_param['kw']}%");
         }
-        $result = $builder->orderBy('code')->paginate($limit);
+        $result = $builder->orderBy($search_param['order_by'], $request['order_type'])->paginate($limit);
         $column = Employee::getTableColumns();
-        return view('employee.list', ['result' => $result, 'db_column' => $column, 'search_param' => $search_param]);
+        $employee_exp = \App\Models\EmployeeExp::all();
+        return view('employee.list', ['result' => $result, 'db_column' => $column, 'search_param' => $search_param, 'employee_exp' => $employee_exp]);
     }
 
     /**
@@ -150,6 +152,24 @@ class EmployeeController extends BaseController {
                 $employee->save();
             }
         }, 'UTF-8');
+    }
+
+    /**
+     * experience action
+     */
+    public function experience()
+    {
+        $employee_exp = \App\Models\EmployeeExp::all();
+        return view('employee.experience', ['employee_exp' => $employee_exp]);
+    }
+
+    /**
+     * import action
+     */
+    public function import()
+    {
+        $column = Employee::getTableColumns();
+        return view('employee.import', ['db_column' => $column]);
     }
 
 

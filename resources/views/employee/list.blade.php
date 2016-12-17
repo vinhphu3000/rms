@@ -9,8 +9,9 @@
                     <div class="x_title">
                         <h2>Employee <small>Management</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
-
-                            <li><button type="button" class="btn btn-trans" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="glyphicon glyphicon-import" aria-hidden = true></i> Import</button>
+                            <li><button type="button" class="btn btn-trans link-popup" url = "{{ url('experience-popup') }}"><i class="glyphicon glyphicon-certificate" aria-hidden = true></i> Experience</button>
+                            </li>
+                            <li><button type="button" class="btn btn-trans link-popup" url = "{{ url('import-popup') }}"><i class="glyphicon glyphicon-import" aria-hidden = true></i> Import</button>
                             </li>
                             <li>
                                 <button onclick="location.href = '{{ url ('employee/export') }}'" type="button" class="btn btn-trans"><i class="glyphicon glyphicon-export" aria-hidden = true></i> Export</button>
@@ -34,94 +35,11 @@
 
                         </form>
 
-                        <div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal bs-experience-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-m">
                                 <div class="modal-content">
 
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
-                                        </button>
-                                        <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-import"></span>  Import data</h4>
                                     </div>
-                                    <div class="modal-body">
-                                        <div class="x_content">
-                                            <br />
-                                            <form class="form-horizontal form-label-left" enctype="multipart/form-data" id="upload_form" role="form"  action="{{ url ('employee/upload-excel') }}" >
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Import type</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-9">
-                                                        <div style="-moz-user-select: none;
-    background-color: #fff;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 0.6;
-    margin-bottom: 0;
-    padding: 6px 12px;
-    text-align: center;
-    vertical-align: middle;
-    color: #333;
-     border-bottom: 5px solid #2a3f54;
-     border-left: 1px solid #ccc;
-     border-top: 1px solid #ccc;
-     border-right: 1px solid #ccc;
-    white-space: nowrap;">CSV</div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-3">File</label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-9">
-                                                        <input type="file" class="file" name="csvfile" placeholder="please chooise excel file">
-                                                        <span style="color: white;display: none"  class="msg-upload label-info">Uploading ... </span>
-                                                        <input type="hidden" name="_token" value="{{ csrf_token()}}">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-md-3 col-sm-3 col-xs-3"></label>
-                                                    <div class="col-md-9 col-sm-9 col-xs-9">
-                                                        <button type="button" class="btn uploadBtn"><span class="glyphicon glyphicon-open" aria-hidden="true"></span> Upload</button>
-                                                    </div>
-                                                </div>
-
-
-
-                                            </form>
-                                        </div>
-                                        <div class="x_content"  style="height: 290px; overflow-y: scroll;overflow-x: hidden;">
-                                        <table class="table column-map"  style="border-top: 0px">
-                                            <thead>
-                                            <tr>
-                                                <th>CSV header</th>
-                                                <th><i class="fa fa-arrow-right"></i></th>
-                                                <th>Table column</th>
-                                                <th>Skip</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <?php foreach ($db_column as $item): ?>
-                                            <tr>
-                                                <td>
-                                                    <select name ="{{$item}}" disabled class="form-control csv-header" >
-                                                        <option value="">Choose CSV header</option>
-                                                    </select>
-                                                </td>
-                                                <td><i class="fa fa-arrow-right"></i></td>
-                                                <td>{{$item}} <span style="color:#1f648b;">{{$item == 'id' ? '(primary)' : ''}}</span></td>
-                                                <td><input type="checkbox" value="1"></td>
-                                            </tr>
-                                            <?php endforeach; ?>
-
-                                            </tbody>
-                                        </table></div>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <input type="hidden" name="file_name" value="">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary btn-import disabled">Import</button>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
                             </div>
                         </div>
 
@@ -131,21 +49,82 @@
                             <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                                 <thead>
                                 <tr>
-                                    <th {{$search_param['order_by'] == 'id' ? 'class="active"' : ''}}><a href="{{ url ('employee', ['order_by' => 'id', 'order_type' => 'desc']) }}">ID  <i class="fa fa-angle-down pull-right"></i></a></th>
-                                    <th {{$search_param['order_by'] == 'code' ? 'class="active"' : ''}} ><a href="{{ url ('employee', ['order_by' => 'code', 'order_type' => 'desc']) }}">Code<i class="fa fa-angle-down pull-right"></i></a></th>
-                                    <th {{$search_param['order_by'] == 'first_name' ? 'class="active"' : ''}} ><a href="{{ url ('employee', ['order_by' => 'first_name', 'order_type' => 'desc']) }}">First Name<i class="fa fa-angle-down pull-right"></i></a></th>
-                                    <th {{$search_param['order_by'] == 'last_name' ? 'class="active"' : ''}} ><a href="{{ url ('employee', ['order_by' => 'last_name', 'order_type' => 'desc']) }}">Last Name<i class="fa fa-angle-down pull-right"></i></a></th>
-                                    <th {{$search_param['order_by'] == 'sex' ? 'class="active"' : ''}} ><a href="{{ url ('employee', ['order_by' => 'sex', 'order_type' => 'desc']) }}">Sex<i class="fa fa-angle-down pull-right"></i></a></th>
-                                    <th {{$search_param['order_by'] == 'position_id' ? 'class="active"' : ''}} ><a href="{{ url ('employee', ['order_by' => 'position_id', 'order_type' => 'desc']) }}">Position<i class="fa fa-angle-down pull-right"></i></a></th>
-                                    <th {{$search_param['order_by'] == 'office_id' ? 'class="active"' : ''}} ><a href="{{ url ('employee', ['order_by' => 'office_id', 'order_type' => 'desc']) }}">Office<i class="fa fa-angle-down pull-right"></i></a></th>
-                                    <th {{$search_param['order_by'] == 'join_date' ? 'class="active"' : ''}} ><a href="{{ url ('employee', ['order_by' => 'join_date', 'order_type' => 'desc']) }}">Start date<i class="fa fa-angle-down pull-right"></i></a></th>
-                                    <th {{$search_param['order_by'] == 'email' ? 'class="active"' : ''}} ><a href="{{ url ('employee', ['order_by' => 'email', 'order_type' => 'desc']) }}">E-mail<i class="fa fa-angle-down pull-right"></i></a></th>
-                                    <th {{$search_param['order_by'] == 'skills' ? 'class="active"' : ''}} ><a href="{{ url ('employee', ['order_by' => 'skills', 'order_type' => 'desc']) }}">Skills<i class="fa fa-angle-down pull-right"></i></a></th>
+                                    <th><input type="checkbox" class="check-all"></th>
+                                    <th><a href="{{ url ('employee?order_by=id&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">ID
+                                            <?php if ($search_param['order_by'] == 'id') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+                                    <th><a href="{{ url ('employee?order_by=code&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">Code
+                                            <?php if ($search_param['order_by'] == 'code') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+
+                                    <th><a href="{{ url ('employee?order_by=first_name&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">First Name
+                                            <?php if ($search_param['order_by'] == 'first_name') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+
+                                    <th><a href="{{ url ('employee?order_by=last_name&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">Last Name
+                                            <?php if ($search_param['order_by'] == 'last_name') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+
+                                    <th><a href="{{ url ('employee?order_by=sex&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">Sex
+                                            <?php if ($search_param['order_by'] == 'sex') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+
+                                    <th><a href="{{ url ('employee?order_by=position_id&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">Position
+                                            <?php if ($search_param['order_by'] == 'position_id') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+
+                                    <th><a href="{{ url ('employee?order_by=office_id&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">Office
+                                            <?php if ($search_param['order_by'] == 'office_id') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+
+                                    <th><a href="{{ url ('employee?order_by=join_date&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">Join date
+                                            <?php if ($search_param['order_by'] == 'join_date') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+
+                                    <th><a href="{{ url ('employee?order_by=email&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">Email
+                                            <?php if ($search_param['order_by'] == 'email') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+
+                                    <th><a href="{{ url ('employee?order_by=skills&order_type=' . ($search_param['order_type'] == 'desc' ? 'asc' : 'desc')) }}">Skills
+                                            <?php if ($search_param['order_by'] == 'skills') :  ?>
+                                            <i class="fa fa-angle-{{$search_param['order_type'] == 'desc' ? 'down' : 'up'}} pull-right"></i>
+                                            <?php endif; ?>
+                                        </a>
+                                    </th>
+                                    <th>action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php foreach ($result as $key => $item) :?>
                                     <tr>
+                                        <td><input type="checkbox" class="employee-id" value="{{$item->id}}"></td>
                                         <td>{{$item->id}}</td>
                                         <td>{{$item->code}}</td>
                                         <td>{{$item->first_name}}</td>
@@ -156,6 +135,7 @@
                                         <td>{{$item->join_date}}</td>
                                         <td>{{$item->email}}</td>
                                         <td>{{$item->skills}}</td>
+                                        <td><a href="#">View</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                                 </tbody>

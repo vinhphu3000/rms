@@ -947,8 +947,8 @@ h2 {
   margin-top: 5px; }
 
 .x_content h4 {
-  font-size: 16px;
-  font-weight: 500; }
+  font-size: 14px;
+  font-weight: bold; }
 
 legend {
   padding-bottom: 7px; }
@@ -4094,6 +4094,10 @@ ul.notifications {
   background-color:#f5f5f5;
 }
 .modal-title {
+  text-align: center;
+}
+.employee_name_title {
+  padding: 0px;
   text-align: center;
 }
 
