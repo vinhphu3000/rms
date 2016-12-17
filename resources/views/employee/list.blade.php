@@ -2,32 +2,19 @@
 @section('page_heading','Employee Listing')
 @section('section')
         <div class="">
-            <div class="page-title">
-                <div class="title_left">
-                    <h3>Employee <small>Management</small></h3>
-                </div>
 
-                <div class="title_right">
-                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="clearfix"></div>
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Listing</h2>
+                        <h2>Employee <small>Management</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
 
-                            <li><button type="button" class="btn" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus-circle"></i> Import</button>
+                            <li><button type="button" class="btn btn-trans" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="glyphicon glyphicon-import" aria-hidden = true></i> Import</button>
                             </li>
-                            <li><a href="{{ url ('employee/export') }}"  ><i class="glyphicon glyphicon-open"></i> Export</a>
+                            <li>
+                                <button onclick="location.href = '{{ url ('employee/export') }}'" type="button" class="btn btn-trans"><i class="glyphicon glyphicon-export" aria-hidden = true></i> Export</button>
+
                             </li>
 
                             </li>
@@ -37,14 +24,14 @@
 
                     <div class="x_content">
                         <form class="form-horizontal form-label-left"  action="{{ url ('employee') }}"  method = "get">
-                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-left top_search">
+
                                 <div class="input-group">
                                     <input class="form-control" placeholder="Search for..." type="text" value="{{$search_param['kw']}}" name="kw">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default" type="submit">Go!</button>
                                     </span>
                                 </div>
-                            </div>
+
                         </form>
 
                         <div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
@@ -54,7 +41,7 @@
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
                                         </button>
-                                        <h4 class="modal-title" id="myModalLabel">Import</h4>
+                                        <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-import"></span>  Import data</h4>
                                     </div>
                                     <div class="modal-body">
                                         <div class="x_content">

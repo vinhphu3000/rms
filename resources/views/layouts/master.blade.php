@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>RAT </title>
+    <title>RMS - Resource Allocate Management System </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ asset("gentelella/vendors/bootstrap/dist/css/bootstrap.css") }}" />
@@ -20,6 +20,7 @@
 
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{ asset("gentelella/build/css/custom.css") }}" />
+    <link href="{{ asset("js/vendor/jalert/jAlert.css") }}" rel="stylesheet" type="text/css" media="screen" />
 </head>
 
 <body class="nav-md">
@@ -27,25 +28,14 @@
     <div class="main_container">
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
-                <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><span>RMS</span></a>
-                    <span>Resources Management System</span>
+                <div class="navbar nav_title">
+                    <a href="index.html"><h3 style="text-align: center; color:#ecf0f1">RMS</h3></a>
+                    <div style="width: 100%; text-align: center; color:#ecf0f1" >Resource Allocation Management
+                    </div>
+
                 </div>
-
                 <div class="clearfix"></div>
-
-                <!-- menu profile quick info -->
-                <!-- sidebar menu -->
-                @include('widgets.profile')
-
-                <!-- /menu profile quick info -->
-
-                <br />
-
-                <!-- sidebar menu -->
                 @include('widgets.menu')
-
-
             </div>
         </div>
 
@@ -62,7 +52,7 @@
         <!-- footer content -->
         <footer>
             <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+                RMS
             </div>
             <div class="clearfix"></div>
         </footer>
@@ -88,6 +78,9 @@
 <script src="{{ asset("js/upload/jquery.iframe-transport.js") }}"></script>
 <!-- The basic File Upload plugin -->
 <script src="{{ asset("js/upload/jquery.fileupload.js") }}"></script>
+<script src="{{ asset("js/vendor/jalert/jAlert.js") }}" type="text/javascript"></script>
+<script src="{{ asset("js/vendor/jalert/jAlert-functions.js") }}" type="text/javascript"></script>
+
 
 <script>
     /*jslint unparam: true */
@@ -131,7 +124,10 @@
                     $('.btn-import').removeClass('disabled');
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    console.log(xhr);
+                    if (xhr.status == 0) {
+                        errorAlert('An error occurs during upload data, please try again!!');
+                        return;
+                    }
                     $('.msg-upload').show();
                     $('.msg-upload').removeClass('label-info');
                     $('.msg-upload').removeClass('label-success');
@@ -147,6 +143,7 @@
 
 
         $(".btn-import").click(function(){
+            $('.loader-msg').text('Importing ... ');
             var mColumn = [];
             $('.column-map tbody tr').each(function(){
                 var column = $(this).find('.csv-header');
@@ -167,13 +164,17 @@
                 success:function(response){
                     location.href = "{{ url ('employee') }}";
                 },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    errorAlert('An error occurs during data import, please check your csv file');
+
+                }
             });
         });
 
     });
     $(document).on({
-        ajaxStart: function() { $("body").addClass("loading");    NProgress.start(); },
-        ajaxStop: function() { $("body").removeClass("loading"); $('.loader-msg').text('Loading... '); NProgress.done();}
+        ajaxStart: function() { $("body").addClass("loading"); },
+        ajaxStop: function() { $("body").removeClass("loading"); $('.loader-msg').text('Loading... '); }
     });
 
 </script>

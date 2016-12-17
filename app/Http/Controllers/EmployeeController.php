@@ -120,20 +120,25 @@ class EmployeeController extends BaseController {
                 foreach (EmployeeModel::$csv_map_column as $item_map) {
                     if ($item_map->db_column == 'id' && is_numeric($row->{$item_map->csv_column})) {
                         $employee =    EmployeeModel::find($row->{$item_map->csv_column});
+                        if (empty($employee->id)) {
+                            $employee = new EmployeeModel();
+                            $employee->id = $row->{$item_map->csv_column};
+                        }
+                        continue;
                     }
-                    if ($item_map->db_column == 'position_id' && !is_integer($row->{$item_map->csv_column})) {
+                    if ($item_map->db_column == 'position_id' && !is_numeric($row->{$item_map->csv_column})) {
                         $employeePosition = \App\Models\EmployeePosition::firstOrCreate(array('name' => $row->{$item_map->csv_column}));
                         $employee->position_id = $employeePosition->id;
                         continue;
                     }
 
-                    if ($item_map->db_column == 'office_id' && !is_integer($row->{$item_map->csv_column})) {
+                    if ($item_map->db_column == 'office_id' && !is_numeric($row->{$item_map->csv_column})) {
                         $employeePosition = \App\Models\Office::firstOrCreate(array('name' => $row->{$item_map->csv_column}));
                         $employee->office_id = $employeePosition->id;
                         continue;
                     }
 
-                    if ($item_map->db_column == 'role_id' && !is_integer($row->{$item_map->csv_column})) {
+                    if ($item_map->db_column == 'role_id' && !is_numeric($row->{$item_map->csv_column})) {
                         $employeePosition = \App\Models\EmployeeRole::firstOrCreate(array('name' => $row->{$item_map->csv_column}));
                         $employee->role_id = $employeePosition->id;
                         continue;

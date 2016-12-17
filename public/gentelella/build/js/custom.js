@@ -270,12 +270,10 @@ $(document).ready(function() {
 // NProgress
 if (typeof NProgress != 'undefined') {
     $(document).ready(function () {
-        $("body").addClass("loading");
         NProgress.start();
     });
 
     $(window).load(function () {
-        $("body").removeClass("loading");
         NProgress.done();
     });
 }
