@@ -197,7 +197,7 @@
   text-shadow: 1px 1px #000; }
 
 .menu_section > ul {
-  margin-top: 10px; }
+  margin-top: 0px; }
 
 .profile_pic {
   width: 35%;
@@ -271,7 +271,7 @@
   float: left;
   border-bottom: 1px solid #D9DEE4;
 
-  background-color: #ededed;
+  background-color: #f7f8f8;
   width: 100%;
   position: relative; }
 
@@ -549,6 +549,7 @@ a:hover, a:focus {
 
 @media (min-width: 480px) {
   .top_nav .navbar-right li {
+    border-left: 1px solid #f7f7f7;
     position: relative; } }
 .top_nav .dropdown-menu li {
   width: 100%; }
@@ -636,7 +637,7 @@ a:hover, a:focus {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 13px 15px 12px; }
+  padding: 8px 15px 5px; }
 
 .nav.side-menu > li.current-page, .nav.side-menu > li.active {
   border-right: 5px solid #1ABB9C; }
@@ -4083,6 +4084,7 @@ ul.notifications {
 }
 .navbar-left li{
   text-align:center;
+  border-left: 1px solid #ededed;
 }
 .navbar-left li a i{
   font-size:30px;
