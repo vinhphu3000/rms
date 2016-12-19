@@ -87,18 +87,36 @@
         $('.check-all').click(function (){
             $('.employee-id').not(this).prop('checked', this.checked);
         });
+
         $('.link-popup').click(function (e) {
+            openPopup($(this).attr('url'), []);
+            e.preventDefault();
+        });
+
+        $('.experience').click(function() {
+            var data = {employee_ids: [] };
+            $('input:checkbox[name=employee_ids]:checked').each(function()
+            {
+                data.employee_ids.push($(this).val());
+            });
+            if (data.employee_ids.length <= 0) {
+                warningAlert('Missing', 'Please choose employee first!');
+                return ;
+            }
+            openPopup($(this).attr('url'), data)
+        });
+
+        function openPopup(url, data) {
             $.ajax({
-                url: $(this).attr('url'),
+                url: url,
+                data:data,
                 dataType: "html",
                 success: function(reponse) {
                     $('.modal-content').html(reponse);
                     $('#myModal').modal({show:true});
-
                 }
             });
-            e.preventDefault();
-        });
+        }
 
     });
     $(document).on({

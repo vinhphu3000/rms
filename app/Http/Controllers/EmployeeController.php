@@ -2,6 +2,7 @@
 use App\Models\Employee;
 use App\Models\EmployeeExp;
 use Illuminate\Support\Facades\App;
+use League\Flysystem\Exception;
 use Request;
 use Session;
 use Input;
@@ -9,6 +10,7 @@ use DB;
 use App\Http\Controllers\Controller as BaseController;
 use App\Authentication\Service as Auth;
 use App\Models\Employee as EmployeeModel;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class EmployeeController extends BaseController {
 
@@ -157,10 +159,16 @@ class EmployeeController extends BaseController {
     /**
      * experience action
      */
-    public function experience()
+    public function experience(\Illuminate\Http\Request $request)
     {
         $employee_exp = \App\Models\EmployeeExp::all();
-        return view('employee.experience', ['employee_exp' => $employee_exp]);
+        if (count($request['employee_ids'])) {
+            $employee_selected = EmployeeModel::find((int)$request['employee_ids'][0]);
+            $cv_file = EmployeeModel::getCVFile($employee_selected);
+
+            return view('employee.experience', ['employee_exp' => $employee_exp, 'employee' => $employee_selected, 'cv_file' => $cv_file]);
+        }
+
     }
 
     /**
@@ -170,6 +178,49 @@ class EmployeeController extends BaseController {
     {
         $column = Employee::getTableColumns();
         return view('employee.import', ['db_column' => $column]);
+    }
+
+    public function doUploadCV(\Illuminate\Http\Request $request)
+    {
+        try {
+            $employee_id = (int)$request['employee_id'];
+            $this->validate($request, [
+                'cvfile' => 'required|mimes:pdf,docx,doc|max:10048',
+            ]);
+
+            $cvFile = $request->file('cvfile');
+            $cv_file_name = EmployeeModel::generateCVFileName($request['employee_id'], $cvFile->getClientOriginalExtension());
+            $destinationPath = \Config::get('upload.cv_path');
+            $cvFile->move($destinationPath, $cv_file_name['real_name']);
+            EmployeeModel::where('id', $employee_id)
+                ->update(['cv_file' => $cv_file_name['db_name']]);
+            return json_encode(['md5_name' => $cv_file_name['md5_name'], 'display_file_name' => $cv_file_name['display_name']]);
+        } catch (Exception $ex) {
+            if ($ex instanceof FileException) {
+                return json_encode(['error' => 'An error occurs during upload cv file, please check your file']);
+            }
+
+        }
+
+    }
+
+    public function doDownloadCSV($token)
+    {
+
+        $ext = pathinfo($token, PATHINFO_EXTENSION);
+        $filename = pathinfo($token, PATHINFO_FILENAME);
+        $file = \Config::get('upload.cv_path') . '/' . $filename . md5('aaaaaaawwwwqqqxxxx') . '.' . $ext;
+
+        $headers_map = array(
+            'pdf' => 'Content-Type: application/pdf',
+            'doc' => 'Content-Type: application/msword',
+            'docx' => 'Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        );
+        $headers = [
+                    isset($headers_map[$ext]) ? $headers_map[$ext] : $headers_map['doc']
+        ];
+
+        return response()->download($file, 'cv.' . $ext, $headers);
     }
 
 

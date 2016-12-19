@@ -20,6 +20,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/employee/export', 'EmployeeController@doExport');
     Route::get('/experience-popup', 'EmployeeController@experience');
     Route::get('/import-popup', 'EmployeeController@import');
+    Route::get('/employee/download-cv/{token}', 'EmployeeController@doDownloadCSV');
 
 
     Route::get('/logout',[
@@ -63,9 +64,6 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/login', 'UserController@doLogin');
     Route::post('/employee/upload-excel', 'EmployeeController@doUploadExcel');
     Route::post('/employee/import', 'EmployeeController@doImport');
-    Route::post('/post-forgot-password', 'UserController@postForgotPassword');
-    Route::post('/renewpass/{token}', 'UserController@renewPassword');
-    Route::post('/postrenewpass/{token}', 'UserController@postRenewPassword');
-    Route::post('/post-register-agency', 'AgencyController@postRegisterAgency');
+    Route::post('/employee/upload-cv', 'EmployeeController@doUploadCV');
 
 });

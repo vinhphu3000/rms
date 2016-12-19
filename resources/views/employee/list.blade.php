@@ -9,7 +9,7 @@
                     <div class="x_title">
                         <h2>Employee <small>Management</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
-                            <li><button type="button" class="btn btn-trans link-popup" url = "{{ url('experience-popup') }}"><i class="glyphicon glyphicon-certificate" aria-hidden = true></i> Experience</button>
+                            <li><button type="button" class="btn btn-trans experience" url = "{{ url('experience-popup') }}"><i class="glyphicon glyphicon-certificate" aria-hidden = true></i> Experience</button>
                             </li>
                             <li><button type="button" class="btn btn-trans link-popup" url = "{{ url('import-popup') }}"><i class="glyphicon glyphicon-import" aria-hidden = true></i> Import</button>
                             </li>
@@ -124,7 +124,7 @@
                                 <tbody>
                                 <?php foreach ($result as $key => $item) :?>
                                     <tr>
-                                        <td><input type="checkbox" class="employee-id" value="{{$item->id}}"></td>
+                                        <td><input type="checkbox" name="employee_ids" class="employee-id" value="{{$item->id}}"></td>
                                         <td>{{$item->id}}</td>
                                         <td>{{$item->code}}</td>
                                         <td>{{$item->first_name}}</td>

@@ -5,19 +5,25 @@
 </div>
 
 <div class="modal-header employee_name_title">
-    <h4>Le Quang Thieu</h4>
+    <h4>{{$employee->first_name}} {{$employee->last_name}}</h4>
 </div>
 <div class="modal-body">
     <div>
-        <form class="form-horizontal form-label-left" enctype="multipart/form-data" id="upload_form" role="form"  action="{{ url ('employee/upload-excel') }}" >
+        <form class="form-horizontal form-label-left" enctype="multipart/form-data" id="upload_form" role="form"  action="{{ url ('employee/upload-cv') }}" >
             <div class="right col-xs-2 text-center">
                 <img src="{{ asset(Config::get('constants.PATH_AVATAR') . Config::get('constants.DEFAULT_AVATAR')) }}" alt="" class="img-circle img-responsive">
             </div>
             <div class="col-md-4 col-sm-4 col-xs-16 profile_details">
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-3">CV</label>
+                    <?php if (!empty($cv_file['display_name'])) : ?>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <span><a href="{{url('employee/download-cv/' . $cv_file['md5_name'])}}"> {{$cv_file['display_name']}}</a></span>
+                        </div>
+                    <?php endif; ?>
                     <div class="col-md-9 col-sm-9 col-xs-9">
-                        <input type="file" class="file" name="csvfile" placeholder="please chooise excel file">
+                        <input type="file" class="file" name="cvfile">(.docx, .doc, .pdf)
+                        <input type="hidden"  name="employee_id" value="{{$employee->id}}">
                         <span style="color: white;display: none"  class="msg-upload label-info">Uploading ... </span>
                         <input type="hidden" name="_token" value="{{ csrf_token()}}">
                     </div>
@@ -25,12 +31,10 @@
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-3"></label>
                     <div class="col-md-9 col-sm-9 col-xs-9">
-                        <button type="button" class="btn uploadBtn"><span class="glyphicon glyphicon-open" aria-hidden="true"></span> Upload</button>
+                        <button type="button" class="btn uploadCVBtn"><span class="glyphicon glyphicon-open" aria-hidden="true"></span> Upload</button>
                     </div>
                 </div>
-
             </div>
-
         </form>
     </div>
     <table class="table"  style="border-top: 0px">
@@ -121,6 +125,44 @@
             }
 
         });
+
+        $(".uploadCVBtn").click(function(){
+            $('.loader-msg').text('Uploading ... ');
+            $.ajax({
+                url:'{{ url ('employee/upload-cv') }}',
+                data: new FormData($("#upload_form")[0]),
+                dataType:'json',
+                async:false,
+                type:'post',
+                processData: false,
+                contentType: false,
+                success:function(response){
+                    $('.msg-upload').show();
+                    $('.msg-upload').removeClass('label-info');
+                    $('.msg-upload').addClass('label-success');
+                    $('.msg-upload').html('Completed!<br/>' + response.display_file_name);
+                    $('input[name=file_name]').val(response.display_file_name);
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    if (xhr.status == 0) {
+                        errorAlert('An error occurs during upload data, please try again!!');
+                        return;
+                    }
+                    $('.msg-upload').show();
+                    $('.msg-upload').removeClass('label-info');
+                    $('.msg-upload').removeClass('label-success');
+                    if (xhr.responseJSON.cvfile)
+                        $('.msg-upload').html(xhr.responseJSON.cvfile);
+                    else
+                        $('.msg-upload').html('File cv is invalid!!');
+
+                    $('.msg-upload').addClass('label-danger');
+
+                }
+            });
+        });
+
     });
 
 </script>

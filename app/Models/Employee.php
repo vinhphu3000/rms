@@ -31,5 +31,44 @@ class Employee extends Eloquent
         return \DB::connection()->getSchemaBuilder()->getColumnListing('employee');
     }
 
+    public static function getCVFile($employee)
+    {
+        if (!empty($employee->cv_file)) {
+
+            $arr = explode('_', $employee->cv_file);
+            $display_cv_file_name= implode('_', array_slice($arr, 1, 3));
+            $ext = pathinfo($display_cv_file_name, PATHINFO_EXTENSION);
+            $cvFileName = md5($employee->cv_file) . md5('aaaaaaawwwwqqqxxxx') . '.' . $ext;
+            return [
+                'display_name' => $display_cv_file_name,
+                'real_name' => $cvFileName,
+                'md5_name' => md5($employee->cv_file) . '.' . $ext,
+                'db_name' => $employee->cv_file
+            ];
+        }
+
+        return [
+            'display_name' => '',
+            'real_name' => '',
+            'md5_name' => '',
+            'db_name' => ''
+        ];
+
+    }
+
+    public static function generateCVFileName($id, $ext, $format = '')
+    {
+        $display_cv_file_name = 'cv_file_' . date('Y-m-d-h-i-s'). '.' . $ext;
+        $cv_db_file_name = $id . '_' . $display_cv_file_name;
+        $cvFileName = md5($cv_db_file_name) . md5('aaaaaaawwwwqqqxxxx') . '.' . $ext;
+
+        return [
+            'display_name' => $display_cv_file_name,
+            'real_name' => $cvFileName,
+            'md5_name' => md5($cv_db_file_name) . '.' . $ext,
+            'db_name' => $cv_db_file_name
+        ];
+    }
+
 }
 
