@@ -98,7 +98,7 @@
 
 <div class="breadcrumb-line">
     <ul class="breadcrumb">
-        <li><a href="index.html"><i class="icon-config position-left"></i> Config/</a></li>
+        <li><a href="index.html"><i class="icon-config position-left"></i> Config</a></li>
         <li class="active">Employee</li>
     </ul>
 </div>

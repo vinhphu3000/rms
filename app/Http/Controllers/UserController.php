@@ -73,7 +73,13 @@ class UserController extends Controller {
             Session::flash('flash_error',trans('messages.user_was_blocked'));
             return redirect('/login');
         }
-        return redirect('/dash');
+        return redirect('/employee');
+    }
+
+    public function doLogout()
+    {
+        Auth::clearAuthInfo();
+        return redirect('/login');
     }
 
 }

@@ -54,15 +54,18 @@
         <table class="table table-experience"  style="border-top: 0px;width:100%">
             <tr style="display: none;">
                 <td>
-                    <select class="rms-select2">
+                    <select class="rms-select2" name="exp_id">
+                        <option value="">-- Select --</option>
                         <?php foreach ($employee_exp as $option) : ?>
                         <option value="{{$option->id}}">{{$option->name}}</option>
                         <?php endforeach; ?>
                     </select>
                 </td>
-                <td><input type="number"> month</td>
+                <td><input type="number" name="month"> month
+                    <input type="hidden" name="id" value=""></td>
                 <td>
-                    <select class="rms-select2" >
+                    <select class="rms-select2" name="level" >
+                        <option value="">-- Select --</option>
                         <option value="1">Novice</option>
                         <option value="2">Advanced Beginer</option>
                         <option value="3">Competent</option>
@@ -72,26 +75,32 @@
                 </td>
                 <td><a href="javascript:void(0);" class="experience-remove" ><i class="fa fa-minus-square-o"></i></a></td>
             </tr>
+            <?php foreach ($experience as $item) : ?>
             <tr>
                 <td>
-                    <select class="rms-select2">
+                    <select class="rms-select2" name="exp_id">
+                        <option value="">-- Select --</option>
                         <?php foreach ($employee_exp as $option) : ?>
-                        <option value="{{$option->id}}">{{$option->name}}</option>
+                        <option {{$item->exp_id == $option->id ? 'selected' : ''}} value="{{$option->id}}">{{$option->name}}</option>
                         <?php endforeach; ?>
                     </select>
                 </td>
-                <td><input type="number"> month</td>
+                <td><input type="number" name="month" value="{{$item->month}}"> month
+                    <input type="hidden" name="id" value="{{$item->id}}">
+                </td>
                 <td>
-                    <select class="rms-select2" >
-                        <option value="1">Novice</option>
-                        <option value="2">Advanced Beginer</option>
-                        <option value="3">Competent</option>
-                        <option value="4">Proficient</option>
-                        <option value="5">Expert</option>
+                    <select class="rms-select2" name="level" >
+                        <option value="">-- Select --</option>
+                        <option {{$item->level == 1 ? 'selected' : ''}} value="1">Novice</option>
+                        <option {{$item->level == 2 ? 'selected' : ''}} value="2">Advanced Beginer</option>
+                        <option {{$item->level == 3 ? 'selected' : ''}} value="3">Competent</option>
+                        <option {{$item->level == 4 ? 'selected' : ''}} value="4">Proficient</option>
+                        <option {{$item->level == 5 ? 'selected' : ''}} value="5">Expert</option>
                     </select>
                 </td>
                 <td><a href="javascript:void(0);" class="experience-remove" ><i class="fa fa-minus-square-o"></i></a></td>
             </tr>
+            <?php endforeach; ?>
         </table>
     </div>
 
@@ -99,7 +108,7 @@
 <div class="modal-footer">
     <input type="hidden" name="file_name" value="">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary btn-import disabled">Save</button>
+    <button type="button" class="btn btn-primary btn-experience-save">Save</button>
 </div>
 <div class="clearfix"></div>
 <script >
@@ -124,6 +133,41 @@
                 $(this).parent().parent().remove();
             }
 
+        });
+
+        $(".btn-experience-save").click(function(){
+            $('.loader-msg').text('Saving ... ');
+            var experience_data = [];
+            $('.table-experience tbody tr').each( function () {
+
+                var exp_id = $(this).find('select[name=exp_id]').find('option:selected').val();
+                var month = $(this).find('input[name=month]').val();
+                var id = $(this).find('input[name=id]').val();
+                var level = $(this).find('select[name=level]').find('option:selected').val();
+                if (exp_id) {
+                    experience_data.push({
+                        id: id,
+                        exp_id: exp_id,
+                        month: month,
+                        level: level,
+                    });
+                }
+
+            });
+            $.ajax({
+                url:'{{ url ('employee/experience-save') }}',
+                data: {experience_data : JSON.stringify(experience_data), employee_id : $('input[name=employee_id]').val(), _token : $('input[name=_token]').val()},
+                async:false,
+                type:'post',
+                success:function(response){
+                    successAlert('Save experience successful!');
+                    //location.href = "{{ url ('employee') }}";
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    errorAlert('An error occurs during save data, please try again');
+
+                }
+            });
         });
 
         $(".uploadCVBtn").click(function(){

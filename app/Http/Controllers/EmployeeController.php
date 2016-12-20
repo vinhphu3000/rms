@@ -165,8 +165,8 @@ class EmployeeController extends BaseController {
         if (count($request['employee_ids'])) {
             $employee_selected = EmployeeModel::find((int)$request['employee_ids'][0]);
             $cv_file = EmployeeModel::getCVFile($employee_selected);
-
-            return view('employee.experience', ['employee_exp' => $employee_exp, 'employee' => $employee_selected, 'cv_file' => $cv_file]);
+            $experience = \App\Models\EmployeeExpMatrix::where('employee_id', $employee_selected->id)->get();
+            return view('employee.experience', ['employee_exp' => $employee_exp, 'employee' => $employee_selected, 'cv_file' => $cv_file, 'experience' => $experience]);
         }
 
     }
@@ -221,6 +221,41 @@ class EmployeeController extends BaseController {
         ];
 
         return response()->download($file, 'cv.' . $ext, $headers);
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return string
+     */
+    public function doExperienceSave(\Illuminate\Http\Request $request)
+    {
+        $employee_id = $request->input('employee_id');
+        $experience_data = $request->input('experience_data');
+        $experience_data = json_decode($experience_data);
+        $id_not_deleted  = [];
+        foreach ($experience_data as $item) {
+            if (!empty($item->id)) {
+                $employeeExpMatrix = \App\Models\EmployeeExpMatrix::find((int)$item->id);
+                if (empty($employeeExpMatrix->id)) {
+                    $employeeExpMatrix = new \App\Models\EmployeeExpMatrix();
+                } else {
+                    $id_not_deleted[] = $employeeExpMatrix->id;
+                }
+            } else {
+                $employeeExpMatrix = new \App\Models\EmployeeExpMatrix();
+            }
+            $employeeExpMatrix->employee_id = $employee_id;
+            $employeeExpMatrix->exp_id = $item->exp_id;
+            $employeeExpMatrix->level = $item->level;
+            $employeeExpMatrix->month = $item->month;
+            $employeeExpMatrix->save();
+            $id_not_deleted[] = $employeeExpMatrix->id;
+        }
+        /**
+         * Delete all record not exits id
+         */
+        \App\Models\EmployeeExpMatrix::whereNotIn('id', $id_not_deleted)->delete();
+        return json_encode(['success'=>true]);
     }
 
 

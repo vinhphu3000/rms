@@ -23,23 +23,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/employee/download-cv/{token}', 'EmployeeController@doDownloadCSV');
 
 
-    Route::get('/logout',[
-        'middleware' => 'role:public',
-        'uses' => 'UserController@logout',
-    ]);
-    Route::get('user/profile',[
-        'middleware' => 'role:public',
-        'uses' => 'UserController@getUserProfile',
-    ]);
+    Route::get('/logout','UserController@doLogout');
 
-    Route::get('/permission', 'UserController@listPermission');
-    Route::get('/permission-add', 'UserController@addPermission');
-    Route::get('/permission-edit/{permissionId}', 'UserController@editPermission');
-    Route::get('/permission-remove/{permissionId}', 'UserController@removePermission');
-    Route::get('/permission-add-user-group', [
-        'middleware' => 'role:QLNQ-Update',
-        'uses' => 'UserController@addUserGroupPermission',
-    ]);
+    Route::post('/employee/upload-excel', 'EmployeeController@doUploadExcel');
+    Route::post('/employee/import', 'EmployeeController@doImport');
+    Route::post('/employee/upload-cv', 'EmployeeController@doUploadCV');
+    Route::post('/employee/experience-save', 'EmployeeController@doExperienceSave');
+
 
 });
 
@@ -62,8 +52,6 @@ Route::group(['middleware' => 'guest'], function () {
      * POST request
      */
     Route::post('/login', 'UserController@doLogin');
-    Route::post('/employee/upload-excel', 'EmployeeController@doUploadExcel');
-    Route::post('/employee/import', 'EmployeeController@doImport');
-    Route::post('/employee/upload-cv', 'EmployeeController@doUploadCV');
+
 
 });
