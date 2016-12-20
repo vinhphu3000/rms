@@ -161,12 +161,36 @@ class EmployeeController extends BaseController {
      */
     public function experience(\Illuminate\Http\Request $request)
     {
-        $employee_exp = \App\Models\EmployeeExp::all();
+        $employee_exp = \App\Models\EmployeeExp::orderBy('type')->get();
+
         if (count($request['employee_ids'])) {
+
             $employee_selected = EmployeeModel::find((int)$request['employee_ids'][0]);
             $cv_file = EmployeeModel::getCVFile($employee_selected);
             $experience = \App\Models\EmployeeExpMatrix::where('employee_id', $employee_selected->id)->get();
-            return view('employee.experience', ['employee_exp' => $employee_exp, 'employee' => $employee_selected, 'cv_file' => $cv_file, 'experience' => $experience]);
+            $next_employee_ids = [];
+
+            foreach( $request['employee_ids'] as $key => $item) {
+
+                if ($key == 0)  continue;
+
+                $next_employee_ids[] = $item;
+            }
+
+            $next_employee_ids[] = (int)$request['employee_ids'][0];
+
+            $prev_employee_ids = [];
+            $prev_employee_ids[] = $request['employee_ids'][count($request['employee_ids']) - 1];
+
+            foreach( $request['employee_ids'] as $key => $item) {
+
+                if ($key == count($request['employee_ids']) - 1)  break;
+
+                $prev_employee_ids[] = $item;
+            }
+
+
+            return view('employee.experience', ['employee_exp' => $employee_exp, 'employee' => $employee_selected, 'cv_file' => $cv_file, 'experience' => $experience, 'next_employee_ids' => $next_employee_ids, 'prev_employee_ids' => $prev_employee_ids]);
         }
 
     }
@@ -233,6 +257,7 @@ class EmployeeController extends BaseController {
         $experience_data = $request->input('experience_data');
         $experience_data = json_decode($experience_data);
         $id_not_deleted  = [];
+        $skill = [];
         foreach ($experience_data as $item) {
             if (!empty($item->id)) {
                 $employeeExpMatrix = \App\Models\EmployeeExpMatrix::find((int)$item->id);
@@ -250,11 +275,17 @@ class EmployeeController extends BaseController {
             $employeeExpMatrix->month = $item->month;
             $employeeExpMatrix->save();
             $id_not_deleted[] = $employeeExpMatrix->id;
+            $employee_exp = \App\Models\EmployeeExp::find($item->exp_id);
+            $skill[] = $employee_exp->name;
+        }
+
+        if (count($skill)) {
+            EmployeeModel::where('id', $employee_id)->update(['skills' => implode(', ', $skill)]);
         }
         /**
          * Delete all record not exits id
          */
-        \App\Models\EmployeeExpMatrix::whereNotIn('id', $id_not_deleted)->delete();
+        \App\Models\EmployeeExpMatrix::where('employee_id', $employee_id)->whereNotIn('id', $id_not_deleted)->delete();
         return json_encode(['success'=>true]);
     }
 

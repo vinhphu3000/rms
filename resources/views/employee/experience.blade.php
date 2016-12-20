@@ -5,7 +5,16 @@
 </div>
 
 <div class="modal-header employee_name_title">
-    <h4>{{$employee->first_name}} {{$employee->last_name}}</h4>
+    <h4>
+        <?php if (count($next_employee_ids) > 1) : ?>
+            <button type="button" class="btn btn-trans prev-employee" ><i class="glyphicon glyphicon-fast-backward" ></i></button>
+        <?php endif; ?>
+            {{$employee->first_name}} {{$employee->last_name}}
+        <?php if (count($next_employee_ids) > 1) : ?>
+            <button type="button" class="btn btn-trans next-employee" id="121" ><i class="glyphicon glyphicon-fast-forward" ></i></button>
+        <?php endif; ?>
+    </h4>
+
 </div>
 <div class="modal-body">
     <div>
@@ -37,6 +46,7 @@
             </div>
         </form>
     </div>
+    <h4>Skill matrix</h4>
     <table class="table"  style="border-top: 0px">
         <thead>
         <tr>
@@ -56,9 +66,18 @@
                 <td>
                     <select class="rms-select2" name="exp_id">
                         <option value="">-- Select --</option>
+                        <?php $last_type = ''; ?>
                         <?php foreach ($employee_exp as $option) : ?>
-                        <option value="{{$option->id}}">{{$option->name}}</option>
+                            <?php if ($option->type != $last_type) :  ?>
+                                    <?php if ($last_type != '') : ?>
+                                        </optgroup>
+                                    <?php endif; ?>
+                                    <optgroup label="{{$option->type}}">
+                            <?php endif;?>
+                                <option value="{{$option->id}}">{{$option->name}}</option>
+                                <?php $last_type = $option->type; ?>
                         <?php endforeach; ?>
+                                    </optgroup>
                     </select>
                 </td>
                 <td><input type="number" name="month"> month
@@ -80,9 +99,19 @@
                 <td>
                     <select class="rms-select2" name="exp_id">
                         <option value="">-- Select --</option>
-                        <?php foreach ($employee_exp as $option) : ?>
-                        <option {{$item->exp_id == $option->id ? 'selected' : ''}} value="{{$option->id}}">{{$option->name}}</option>
+                        <?php $last_type = ''; ?>
+                        <?php foreach ($employee_exp as $key => $option) : ?>
+                        <?php if ($option->type != $last_type) :  ?>
+                        <?php if ($last_type != '') : ?>
+                            </optgroup>
+                        <?php endif; ?>
+                            <optgroup label="{{$option->type}}">
+                        <?php endif;?>
+                            <option {{$item->exp_id == $option->id ? 'selected' : ''}} value="{{$option->id}}">{{$option->name}}</option>
+                            <?php $last_type = $option->type; ?>
                         <?php endforeach; ?>
+                            </optgroup>
+
                     </select>
                 </td>
                 <td><input type="number" name="month" value="{{$item->month}}"> month
@@ -170,7 +199,7 @@
             });
         });
 
-        $(".uploadCVBtn").click(function(){
+        $(".uploadCVBtn").click(function() {
             $('.loader-msg').text('Uploading ... ');
             $.ajax({
                 url:'{{ url ('employee/upload-cv') }}',
@@ -203,6 +232,28 @@
 
                     $('.msg-upload').addClass('label-danger');
 
+                }
+            });
+        });
+
+        $('.next-employee').click (function () {
+                $.ajax({
+                    url: '{{ url('experience-popup') }}',
+                    data:{employee_ids: [{{implode(',', $next_employee_ids)}}] },
+                    dataType: "html",
+                    success: function(reponse) {
+                        $('.modal-content').html(reponse);
+                    }
+                });
+        });
+
+        $('.prev-employee').click (function () {
+            $.ajax({
+                url: '{{ url('experience-popup') }}',
+                data:{employee_ids: [{{implode(',', $prev_employee_ids)}}] },
+                dataType: "html",
+                success: function(reponse) {
+                    $('.modal-content').html(reponse);
                 }
             });
         });

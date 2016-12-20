@@ -73,7 +73,7 @@
                         <div class="text-center">
                             <a>
                                 <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
+                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </div>
                     </li>

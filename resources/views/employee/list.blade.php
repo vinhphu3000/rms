@@ -134,7 +134,9 @@
                                         <td>{{isset($item->office->name) ? $item->office->name : '-'}}</td>
                                         <td>{{$item->join_date}}</td>
                                         <td>{{$item->email}}</td>
-                                        <td>{{$item->skills}}</td>
+                                        <td>{{$item->skills}}<br>
+                                            <button type="button" class="btn btn-trans view-matrix" url = "{{ url('experience-popup') }}" id = {{$item->id}}><i class="glyphicon glyphicon-edit" aria-hidden = true></i> Skill matrix</button>
+                                            </td>
                                         <td><a href="#">View</a></td>
                                     </tr>
                                 <?php endforeach; ?>

@@ -106,6 +106,12 @@
             openPopup($(this).attr('url'), data)
         });
 
+        $('.view-matrix').click(function() {
+            var data = {employee_ids: [$(this).attr('id')] };
+
+            openPopup($(this).attr('url'), data)
+        });
+
         function openPopup(url, data) {
             $.ajax({
                 url: url,
