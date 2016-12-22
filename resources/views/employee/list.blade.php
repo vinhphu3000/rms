@@ -35,13 +35,7 @@
 
                         </form>
 
-                        <div class="modal bs-experience-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-                            <div class="modal-dialog modal-m">
-                                <div class="modal-content">
 
-                                    </div>
-                            </div>
-                        </div>
 
 
                         <div class="clearfix"></div>
