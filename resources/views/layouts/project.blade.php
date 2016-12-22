@@ -30,14 +30,13 @@
     <div class="main_container ">
         <div class="col-md-3 left_col menu_fixed">
             <div class="left_col scroll-view">
-                <div class="left-filter">
-                    <label class="select-label">
-                        <select class="btn bg-white select-left-sort">
-                                <option value="0" selected="selected" label="Client">Client</option>
-                                <option value="1" label="Created">Created date</option>
-                                <option value="2" label="Scale">Scale</option>
-                        </select>
-                    </label>
+                <div class="left-filter" style="height:40px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                            <span class="input-group-btn">
+                                              <button type="button" class="btn btn-primary">Go!</button>
+                                          </span>
+                    </div>
                 </div>
 
 

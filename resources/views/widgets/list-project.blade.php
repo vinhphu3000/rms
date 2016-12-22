@@ -3,10 +3,9 @@
 		<ul class="nav side-menu">
 			<?php foreach ($result as $item): ?>
 				<li {{ (Request::is('project/' . $item->id) ? 'class="active"' : '') }} >
-					<a href="{{ url ('project/' . $item->id) }}"> <h4><span class="x_title">{{$item->name}}</span></h4>
-						<span>Client: </span><label>Aussie company</label><br/>
-						<span>Created by: </span><label>{{isset($item->user->name) ? $item->user->name : '-'}}</label><br/>
-						<span>Created date: </span><label>{{$item->created_at->format('Y/m/d')}}</label>
+					<a href="{{ url ('project/' . $item->id) }}"> <span style="border-bottom:1px solid #e6e9ed;">{{$item->name}}</span><br/>
+						<small>Client: Aussie company</small><br/>
+						<small>PM: {{isset($item->user->name) ? $item->user->name : '-'}}</small>
 					</a>
 				</li>
 			<?php endforeach; ?>

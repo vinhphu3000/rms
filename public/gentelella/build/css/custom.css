@@ -200,7 +200,10 @@
   text-shadow: 1px 1px #000; }
 
 .menu_section > ul {
-  margin-top: 0px; }
+  margin-top: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+margin-bottom:200px;}
 
 .profile_pic {
   width: 35%;
@@ -549,7 +552,7 @@ a:hover, a:focus {
 
 .top_nav .navbar-right {
   margin: 0;
-  width: 70%;
+  width: 40%;
   float: right; }
 
 .top_nav .navbar-right li {
@@ -769,6 +772,7 @@ a:hover, a:focus {
   min-height: 200px;
   height: 100%;
   border-right: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
 }
 
 .bs-docs-sidebar .nav > li > a {
