@@ -23,33 +23,59 @@
 </head>
 
 <body class="nav-md">
-<div class="container body">
-            <!-- top navigation -->
+<div class="container body ">
+    <!-- top navigation -->
         @include('widgets.navbar')
-        <!-- /top navigation -->
-    <div class="main_container">
-
-        <div class="col-md-3 left_col">
+    <!-- /top navigation -->
+    <div class="main_container ">
+        <div class="col-md-3 left_col menu_fixed">
             <div class="left_col scroll-view">
-                @include('widgets.menu')
+                <div class="left-filter">
+                    <label class="select-label">
+                        <select class="btn bg-white select-left-sort">
+                                <option value="0" selected="selected" label="Client">Client</option>
+                                <option value="1" label="Created">Created date</option>
+                                <option value="2" label="Scale">Scale</option>
+                        </select>
+                    </label>
+                </div>
+
+
+                <div class="clearfix"></div>
+                @include('widgets.list-project')
+                <div class="sidebar-footer hidden-small">
+                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Add new project">
+                        <span class="fa fa-plus-circle" aria-hidden="true"></span> New project
+                    </a>
+                </div>
             </div>
         </div>
 
 
 
         <!-- page content -->
-        <div class="right_col" role="main" style="min-height: 827px;">
+        <div class="right_col" role="main">
             <div class="breadcrumb-line">
                 <ul class="breadcrumb">
-                    <li><a href="index.html"><i class="icon-config position-left"></i> Config</a></li>
-                    <li class="active">Employee</li>
+                    <li><a href="index.html"><i class="icon-config position-left"></i> Project</a></li>
+                    <li class="active">Aussie</li>
                 </ul>
             </div>
             @yield('section')
         </div>
         <!-- /page content -->
 
+
     </div>
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+
 </div>
 
 <!-- jQuery -->

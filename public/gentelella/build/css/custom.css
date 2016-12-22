@@ -91,7 +91,10 @@
 
 @charset "UTF-8";
 .left_col {
-  background: #fff; }
+  background: #fff;
+  border-bottom: 1px solid #d9dee4;
+  width: 100%;
+}
 
 .nav-sm .container.body .col-md-3.left_col {
   min-height: 100%;
@@ -304,7 +307,7 @@ body .container.body .right_col {
   border-right: 1px solid #d9dee4;
   border-radius: 0;
   float: left;
-  height: 68px;
+  height: 55px;
   width: 230px;
 }
 @media (max-width: 991px) {
@@ -426,10 +429,17 @@ body {
   font-size: 13px;
   font-weight: 400;
   line-height: 1.471; }
-
-.main_container .top_nav {
+.main_container {
+  margin-top: 55px;
+  position: fixed;
+  width: 100%;
+}
+.top_nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
   display: block;
-  margin-left: 230px; }
+  }
 
 .no-padding {
   padding: 0 !important; }
@@ -753,9 +763,12 @@ a:hover, a:focus {
 
 .main_menu_side {
   padding: 0;
-  border-bottom: 1px solid #d9dee4;
-  border-right: 1px solid #d9dee4;
-  height:760px;
+  margin-bottom: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  min-height: 200px;
+  height: 100%;
+  border-right: 1px solid #e7e7e7;
 }
 
 .bs-docs-sidebar .nav > li > a {
@@ -914,7 +927,8 @@ h2 {
   -moz-column-break-inside: avoid;
   column-break-inside: avoid;
   opacity: 1;
-  transition: all .2s ease; }
+  transition: all .2s ease;
+ }
 
 .x_title {
   border-bottom: 2px solid #E6E9ED;
@@ -945,7 +959,12 @@ h2 {
   width: 100%;
   float: left;
   clear: both;
-  margin-top: 5px; }
+  margin-top: 5px;}
+.table-responsive {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 700px;
+}
 
 .x_content h4 {
   font-size: 14px;
@@ -1516,22 +1535,22 @@ span.right {
   bottom: 0px;
   clear: both;
   display: block;
-  padding: 5px 0 0 0;
   position: fixed;
   width: 230px;
-  background: #2A3F54; }
+  border: 1px solid #d9dee4;}
 
 .sidebar-footer a {
   padding: 7px 0 3px;
   text-align: center;
-  width: 25%;
+  width: 100%;
   font-size: 17px;
   display: block;
   float: left;
-  background: #172D44; }
+  background: #f7f8f8; }
 
 .sidebar-footer a:hover {
-  background: #425567; }
+  background: #D9DEE4;
+cursor: pointer;}
 
 /** top tiles  */
 .tile_count {
@@ -4102,5 +4121,23 @@ ul.notifications {
   padding: 0px;
   text-align: center;
 }
+.left-filter {
+  background-color: #f7f8f8;
+  border: 1px solid #d9dee4;
+}
 
+.select-left-sort {
+  background-color: #f7f8f8;
+  border: 1px solid transparent;
+  color: #368dc3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+}
 

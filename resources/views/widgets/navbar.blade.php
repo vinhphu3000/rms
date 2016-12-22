@@ -1,6 +1,11 @@
 <div class="top_nav">
   <div class="nav_menu">
     <nav>
+        <div class="navbar nav_title">
+            <a href="index.html"><h3 style="text-align: center; color:#ecf0f1">RMS</h3></a>
+
+        </div>
+
         <ul class="nav navbar-nav navbar-left">
             <li {{ (Request::is('project') ? 'class=active' : '') }} >
                 <a href="{{ url ('project') }}" >
@@ -96,10 +101,5 @@
     </nav>
   </div>
 
-<div class="breadcrumb-line">
-    <ul class="breadcrumb">
-        <li><a href="index.html"><i class="icon-config position-left"></i> Config</a></li>
-        <li class="active">Employee</li>
-    </ul>
-</div>
+
 </div>

@@ -13,7 +13,7 @@
 Route::group(['middleware' => 'auth'], function () {
 
     /**** GET ***/
-    // users
+    // Employee
     Route::get('/', 'WelcomeController@index');
     Route::get('/dash', 'DashboardController@index');
     Route::get('/employee', 'EmployeeController@listing');
@@ -21,6 +21,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/experience-popup', 'EmployeeController@experience');
     Route::get('/import-popup', 'EmployeeController@import');
     Route::get('/employee/download-cv/{token}', 'EmployeeController@doDownloadCSV');
+
+    /**
+     * Project
+     */
+    Route::get('/project', 'ProjectController@listing');
 
 
     Route::get('/logout','UserController@doLogout');
