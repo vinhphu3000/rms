@@ -20,6 +20,22 @@
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{ asset("gentelella/build/css/custom.css") }}" />
     <link href="{{ asset("js/vendor/jalert/jAlert.css") }}" rel="stylesheet" type="text/css" media="screen" />
+    <!-- Gantt css -->
+    <link href="{{ asset("js/vendor/jQuery.Gantt/css/style.css") }}" type="text/css" rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .gantt table th:first-child {
+            width: 200px;
+        }
+        /* Bootstrap 3.x re-reset */
+        .fn-gantt *,
+        .fn-gantt *:after,
+        .fn-gantt *:before {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+        }
+    </style>
 </head>
 
 <body class="nav-md">
@@ -86,6 +102,12 @@
 <!-- NProgress -->
 <script src="{{ asset("gentelella/vendors/nprogress/nprogress.js") }}"></script>
 
+<!-- Gantt chart -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="{{ asset("js/vendor/jQuery.Gantt/js/jquery.fn.gantt.js") }}"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+
 <!-- Custom Theme Scripts -->
 <script src="{{ asset("gentelella/build/js/custom.min.js") }}"></script>
 
@@ -141,6 +163,47 @@
                 }
             });
         }
+
+
+        $.ajax({
+            url: "{{ url('project/booking-data/1') }}",
+            dataType: "json",
+            success: function(reponse) {
+                $(".gantt").gantt({
+                    source: reponse,
+                    navigate: "scroll",
+                    scale: "weeks",
+                    maxScale: "months",
+                    minScale: "hours",
+                    itemsPerPage: 10,
+                    useCookie: true,
+                    onItemClick: function(data) {
+                        alert("Item clicked - show some details");
+                    },
+                    onAddClick: function(dt, rowId) {
+                        alert("Empty space clicked - add an item!");
+                    },
+                    onRender: function() {
+                        if (window.console && typeof console.log === "function") {
+                            console.log("chart rendered");
+                        }
+                    }
+                });
+
+                $(".gantt").popover({
+                    selector: ".bar",
+                    title: "I'm a popover",
+                    content: "And I'm the content of said popover.",
+                    trigger: "hover"
+                });
+
+                prettyPrint();
+            }
+
+        });
+
+
+
 
     });
     $(document).on({

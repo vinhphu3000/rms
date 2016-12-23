@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use League\Flysystem\Exception;
 use App\Models\Project;
+use App\Models\ProjectBooking;
 use App\Models\Employee;
 use Request;
 use Session;
@@ -57,6 +58,13 @@ class ProjectController extends BaseController {
     {
         $project = Project::find((int)$id);
         return view('project.details', ['project' => $project, 'result' => Project::all()]);
+    }
+
+    public function bookingData($project_id)
+    {
+        $booking = ProjectBooking::where('project_id', (int)$project_id)->get();
+        $gantt_chart_data = ProjectBooking::convertDataGanttChart($booking);
+        return json_encode($gantt_chart_data);
     }
 
 }

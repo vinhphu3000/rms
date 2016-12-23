@@ -46,11 +46,10 @@
                     <br />
 
                     <div id="mainb" style="height:350px;">
-                        <div id="ganttChart"></div>
-                        <br/><br/>
-                        <div id="eventMessage"></div>
+                        <h4>Booking</h4>
+                        <div class="gantt"></div>
                     </div>
-
+                    <br/>
                     <div>
 
                         <h4>Recent Activity</h4>
