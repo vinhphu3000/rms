@@ -25,14 +25,14 @@ Route::group(['middleware' => 'auth'], function () {
     /**
      * Project
      */
-    Route::get('/project/{id}', 'ProjectController@details');
+    Route::get('/project/details/{id}', 'ProjectController@details');
     Route::get('/project/booking-data/{project_id}', 'ProjectController@bookingData');
 
     /**
      * Project
      */
     Route::get('/project', 'ProjectController@listing');
-
+    Route::get('/project/add', 'ProjectController@add');
 
     Route::get('/logout','UserController@doLogout');
 

@@ -59,7 +59,7 @@
                 <div class="clearfix"></div>
                 @include('widgets.list-project')
                 <div class="sidebar-footer hidden-small">
-                    <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Add new project">
+                    <a class="link-popup" url="{{ url('project/add') }}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add new project">
                         <span class="fa fa-plus-circle" aria-hidden="true"></span> New project
                     </a>
                 </div>
@@ -69,13 +69,9 @@
 
 
         <!-- page content -->
-        <div class="right_col" role="main">
-            <div class="breadcrumb-line">
-                <ul class="breadcrumb">
-                    <li><a href="index.html"><i class="icon-config position-left"></i> Project</a></li>
-                    <li class="active">Aussie</li>
-                </ul>
-            </div>
+        <div class="right_col" role="main" style="max-height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto;">
             @yield('section')
         </div>
         <!-- /page content -->
@@ -92,7 +88,13 @@
     <!-- /footer content -->
 
 </div>
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-m">
+        <div class="modal-content">
 
+        </div>
+    </div>
+</div>
 <!-- jQuery -->
 <script src="{{ asset("gentelella/vendors/jquery/dist/jquery.min.js") }}"></script>
 <!-- Bootstrap -->
@@ -133,18 +135,6 @@
             e.preventDefault();
         });
 
-        $('.experience').click(function() {
-            var data = {employee_ids: [] };
-            $('input:checkbox[name=employee_ids]:checked').each(function()
-            {
-                data.employee_ids.push($(this).val());
-            });
-            if (data.employee_ids.length <= 0) {
-                warningAlert('Missing', 'Please choose employee first!');
-                return ;
-            }
-            openPopup($(this).attr('url'), data)
-        });
 
         $('.view-matrix').click(function() {
             var data = {employee_ids: [$(this).attr('id')] };
@@ -164,46 +154,16 @@
             });
         }
 
-
-        $.ajax({
-            url: "{{ url('project/booking-data/1') }}",
-            dataType: "json",
-            success: function(reponse) {
-                $(".gantt").gantt({
-                    source: reponse,
-                    navigate: "scroll",
-                    scale: "weeks",
-                    maxScale: "months",
-                    minScale: "hours",
-                    itemsPerPage: 10,
-                    useCookie: true,
-                    onItemClick: function(data) {
-                        alert("Item clicked - show some details");
-                    },
-                    onAddClick: function(dt, rowId) {
-                        alert("Empty space clicked - add an item!");
-                    },
-                    onRender: function() {
-                        if (window.console && typeof console.log === "function") {
-                            console.log("chart rendered");
-                        }
-                    }
-                });
-
-                $(".gantt").popover({
-                    selector: ".bar",
-                    title: "I'm a popover",
-                    content: "And I'm the content of said popover.",
-                    trigger: "hover"
-                });
-
-                prettyPrint();
-            }
-
+        $('.project-item').click(function () {
+            $.ajax({
+                url: $(this).attr('url'),
+                dataType: "html",
+                success: function (reponse) {
+                    $('.right_col').html(reponse);
+                    $(this).parent().addClass('active');
+                }
+            });
         });
-
-
-
 
     });
     $(document).on({

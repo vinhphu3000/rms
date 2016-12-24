@@ -54,6 +54,13 @@ class ProjectController extends BaseController {
         return view('project.list', ['result' => $result, 'search_param' => $search_param]);
     }
 
+
+    public function add()
+    {
+        return view('project.add');
+    }
+
+
     public function details($id)
     {
         $project = Project::find((int)$id);

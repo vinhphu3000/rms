@@ -1,51 +1,33 @@
-@extends('layouts.project')
-@section('page_heading','Project')
-@section('section')
 <div class="clearfix"></div>
 <div>
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>{{$project->name}}</h2>
-                <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Settings 1</a>
-                            </li>
-                            <li><a href="#">Settings 2</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                </ul>
+                <h4 class="green"><i class="fa fa-paint-brush"></i> {{$project->name}}</h4>
                 <div class="clearfix"></div>
             </div>
 
             <div class="x_content">
 
-                <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12">
 
                     <ul class="stats-overview">
                         <li>
-                            <span class="name"> Estimated budget </span>
-                            <span class="value text-success"> 2300 </span>
+                            <span class="name"> Client company </span>
+                            <span class="value text-success"> {{$project->client}} </span>
                         </li>
                         <li>
                             <span class="name"> Total amount spent </span>
-                            <span class="value text-success"> 2000 </span>
+                            <span class="value text-success"> $ 2000 </span>
                         </li>
                         <li class="hidden-phone">
                             <span class="name"> Estimated project duration </span>
-                            <span class="value text-success"> 20 </span>
+                            <span class="value text-success"> {{$project->estimate_manday}} manday </span>
                         </li>
                     </ul>
                     <br />
 
-                    <div id="mainb" style="height:350px;">
+                    <div id="mainb">
                         <h4>Booking</h4>
                         <div class="gantt"></div>
                     </div>
@@ -113,58 +95,59 @@
 
                 </div>
 
-                <!-- start project-detail sidebar -->
-                <div class="col-md-3 col-sm-3 col-xs-12">
-
-                    <section class="panel">
-
-                        <div class="x_title">
-                            <h2>Project Description</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="panel-body">
-                            <h3 class="green"><i class="fa fa-paint-brush"></i> {{$project->name}}</h3>
-
-                            <p>{{$project->desc}}</p>
-                            <br />
-
-                            <div class="project_detail">
-
-                                <p class="title">Client Company</p>
-                                <p>Deveint Inc</p>
-                                <p class="title">Project Leader</p>
-                                <p>Tony Chicken</p>
-                            </div>
-
-                            <br />
-                            <h5>Project files</h5>
-                            <ul class="list-unstyled project_files">
-                                <li><a href=""><i class="fa fa-file-word-o"></i> Functional-requirements.docx</a>
-                                </li>
-                                <li><a href=""><i class="fa fa-file-pdf-o"></i> UAT.pdf</a>
-                                </li>
-                                <li><a href=""><i class="fa fa-mail-forward"></i> Email-from-flatbal.mln</a>
-                                </li>
-                                <li><a href=""><i class="fa fa-picture-o"></i> Logo.png</a>
-                                </li>
-                                <li><a href=""><i class="fa fa-file-word-o"></i> Contract-10_12_2014.docx</a>
-                                </li>
-                            </ul>
-                            <br />
-
-                            <div class="text-center mtop20">
-                                <a href="#" class="btn btn-sm btn-primary">Add files</a>
-                                <a href="#" class="btn btn-sm btn-warning">Report contact</a>
-                            </div>
-                        </div>
-
-                    </section>
-
-                </div>
-                <!-- end project-detail sidebar -->
 
             </div>
         </div>
     </div>
 </div>
-@stop
+
+<script>
+    /*jslint unparam: true */
+    /*global window, $ */
+    $(function () {
+        'use strict';
+
+        $.ajax({
+            url: "{{ url('project/booking-data/' . $project->id) }}",
+            dataType: "json",
+            success: function(reponse) {
+                $(".gantt").gantt({
+                    source: reponse,
+                    navigate: "scroll",
+                    scale: "days",
+                    maxScale: "months",
+                    minScale: "days",
+                    itemsPerPage: 10,
+                    useCookie: false,
+                    onItemClick: function(data) {
+                        alert("Item clicked - show some details");
+                    },
+                    onAddClick: function(dt, rowId) {
+                        alert("Empty space clicked - add an item!");
+                    },
+                    onRender: function() {
+                        if (window.console && typeof console.log === "function") {
+                            console.log("chart rendered");
+                        }
+                    }
+                });
+
+//                $(".gantt").popover({
+//                    selector: ".bar",
+//                    title: "I'm a popover",
+//                    content: "And I'm the content of said popover.",
+//                    trigger: "hover"
+//                });
+
+                prettyPrint();
+            }
+
+        });
+
+
+
+
+    });
+
+
+</script>

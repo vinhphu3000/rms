@@ -1,0 +1,745 @@
+﻿EmployeeID,New Code,Vietnamese Name,Last Name,FirstName,Start Date,Position (from 2/2014),Skill,Temp,English,Level,Sub Level,YOE (in HvN),YOE(before joining),YOE,Current Project,Assign from date,Available Date,Available,Shadow/Backup,Reserved Prj,Reserved From,Reserved To,Reserved Shadow,Line Manager,New LM,12/19/2016,12/26/2016,1/2/2017,1/9/2017,1/16/2017,1/23/2017,Team Building Q1(2-3-4),Team Building Q2(5-6-7),Team Building Q3(8-9-10),Team Building Q4(11-12-1),Experience,In bench (week),CV Updated date,Need to remind,English Speaking Grade
+v00146,SD0104,Ngô Gia Bảo Oai,Ngo Gia Bao,Oai,16-Sep-04,Principal Software Engineer,VB,,,4,SL2,12.25,,12.25,Internal Tools - SPS,1-Jan-05,,N,N,,,,,Hanh Nguyen Thi Ngoc,Trung Truong Quoc,BVB,BVB,BVB,BVB,BVB,BVB,,,,,,0,16-Sep-04,N,
+V00208,SD0108,Nguyễn Thị Thanh Hà,Nguyen Thi Thanh ,Ha,12-Sep-05,Senior QC Engineer,QC,,,3,SL3,11.26,0,11.26,Aussie,3-May-12,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aussie,0,12-Sep-05,N,
+SR144,SD0110,Đoàn Thị Ngọc Hoa,Doan Thi Ngoc,Hoa,12-Jul-06,Principal QC Engineer,QC,,C1,4,SL1,10.43,1,11.43,CMS Rewrite,25-Nov-13,23-Jun-14,N,N,Forecast_CMS Rewrite,23-Jun-14,,,Nhan Nguyen Hoang,Nhan Nguyen Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"A&B, CMS Rewrite",129,12-Jul-06,Y,
+sr56,SD0309,Cao Thanh Tuấn,Cao Thanh,Tuan,2-May-07,Principal Software Engineer,Microsoft,,A2 High,4,SL2,9.63,,9.63,SMI,7-Nov-11,,N,N,,,,,Loan Pham Thi Tuyet,Loan Pham Thi Tuyet,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,SMI,0,2-May-07,N,
+v061,SD0114,Mai Hoàng Thắng,Mai Hoang,Thang,15-Aug-07,Senior Software Engineer,Microsoft,,B2 High,3,SL3,9.34,,9.34,CMS Rewrite,18-Nov-13,7-Jul-14,N,N,Reserved_US Domain,7-Jul-14,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Lumesse, Civica Allocation, CMS Rewrite",127,15-Aug-07,Y,
+HN003,SD0116,Tô Gia Phượng,To Gia,Phuong,4-Sep-07,Senior Software Engineer,Microsoft,,B1,3,SL3,9.28,,9.28,Lumesse-ETAD,14-Aug-12,,N,N,,,,,Hanh Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,x,x,ETWEB,0,4-Sep-07,N,
+HN006,SD0115,Lương Thị Kim Hạnh,Luong Thi Kim,Hanh,4-Sep-07,Senior Software Engineer,Microsoft,,B1 High,3,SL2,9.28,,9.28,Maternity leave,20-Feb-14,20-Aug-14,Y,N,,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Lumesse; Civica training, KCL",121,1-Dec-13,Y,
+HN020,SD0118,Đỗ Thị Thu Hương,Do Thi Thu,Huong,15-Oct-07,Senior QC Engineer,QC,,B1,3,SL3,9.17,1.3,10.47,Aris Game Testing,1-Nov-11,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aris,0,15-Oct-07,N,
+HN37,SD0122,Đặng Minh Hải,Dang Minh,Hai,14-Apr-08,Senior Software Engineer,VB,,,3,SL3,8.67,1.3,9.97,Internal Tools - SPS,1-Jan-05,,N,N,,,,,Oai Ngo Gia Bao,Trung Truong Quoc,BVB,BVB,BVB,BVB,BVB,BVB,,,,,,0,14-Apr-08,N,
+HN34,SD0123,Phan Thị Diệu,Phan Thi ,Dieu,5-May-08,Senior QC Engineer,QC,,B1,3,SL2,8.62,2.1,10.72,Bodog,10-Sep-13,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Civica, Bodog",0,5-May-08,N,
+HN43,SD0124,Nguyễn Thị Minh Khẩn,Nguyen Thi Minh,Khan,19-May-08,Senior QC Engineer,QC,,B1,3,SL1,8.58,1,9.58,Aris Game Testing,3-Sep-13,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"CrossRail, MoneyCorp, Aris Games",0,19-May-08,N,
+HN56,SD0127,Phạm Thị Ngọc Thúy,Pham Thi Ngoc ,Thuy,15-Aug-08,Senior QC Engineer,QC,,A2 High,3,SL3,8.34,3,11.34,OMG,31-Mar-14,1-Jul-14,N,N,Forecast_OMG,1-Jul-14,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"BCC, NYCPM, OMG",128,30-Oct-13,Y,
+HN76,SD0315,Phan Thị Yến Như,Phan Thi Yen,Nhu,10-Nov-08,Senior QC Engineer,QC,,B1 High,3,SL2,8.10,0,8.10,Bodog,20-May-13,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"BCC, Bodog",0,10-Nov-08,N,
+HN73,SD0038,Ngô Thị Hoàng Lan,Ngo Thi Hoang,Lan,10-Nov-08,Principal QC Engineer,QC NT,,B2,4,SL2,8.10,2,10.10,Alpha,10-Nov-08,,N,N,,,,,Loan Pham Thi Tuyet,Loan Pham Thi Tuyet,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,10-Nov-08,N,
+HN72,SD0037,Đinh Lê Đức,Dinh Le,Duc,10-Nov-08,Solution Architect,C++,,B2,5,SL1,8.10,10.5,18.60,Alpha,10-Nov-08,,N,N,,,,,Bon Nguyen Ba,Bon Nguyen Ba,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,10-Nov-08,N,
+HN83,SD0041,Nguyễn Quốc Huy,Nguyen Quoc,Huy,5-Jan-09,Senior Software Engineer,C++,,B1 High,3,SL3,7.95,3,10.95,Alpha,5-Jan-09,,N,N,,,,,Huy Bui Thanh,Huy Bui Thanh,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,5-Jan-09,N,
+HN82,SD0042,Nguyễn Đình Thanh,Nguyen Dinh,Thanh,12-Jan-09,Principal QC Engineer,QC NT,,B1,4,SL2,7.93,2,9.93,MKI_Global Network Lab,1-Oct-14,,N,N,,,,,Tram Ho Thi Hong,Nhan Nguyen Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,13-Aug-13,N,
+HN85,SD0043,Nguyễn Phước Ân,Nguyen Phuoc,An,12-Jan-09,Principal QC Engineer,QC,,B1,4,SL3,7.93,5,12.93,Eversheds,6-Jan-14,,N,N,,,,,Tram Ho Thi Hong,Nhan Nguyen Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,".Net, HTML, CSS, Team leader; ASP .NET MVC 4, DI, Nhibernate, UT; JS; Evershed",0,30-Nov-13,N,
+HN92,SD0045,Đoàn Xuân Cường,Doan Xuan,Cuong,1-Feb-09,Senior Software Engineer,C++,,B1 High,3,SL2,7.87,3.5,11.37,Alpha-SmallCell,1-Feb-09,,N,N,,,,,Khoa Le Dang,Khoa Le Dang,BC++,BC++,BC++,BC++,BC++,BC++,,X,,,,0,1-Feb-09,N,
+HN97,SD0047,Huỳnh Tấn Hiển,Huynh Tan,Hien,2-Feb-09,Principal Software Engineer,C++,,B1,4,SL3,7.87,6.5,14.37,Alpha-PicoChip,2-Feb-09,,N,N,,,,,Loan Pham Thi Tuyet,Loan Pham Thi Tuyet,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,2-Feb-09,N,
+HN99,SD0049,Nguyễn Thị Phi Yến,Nguyen Thi Phi,Yen,9-Feb-09,Senior Software Engineer,C++,,B2,3,SL2,7.85,,7.85,Maternity leave,17-Feb-14,18-Aug-14,Y,N,,,,,Bon Nguyen Ba,Bon Nguyen Ba,NPNBC++,NPNBC++,NPNBC++,NPNBC++,NPNBC++,NPNBC++,,,,,,121,9-Feb-09,Y,
+HN109,SD0050,Phạm Thị Lánh,Pham Thi,Lanh,9-Feb-09,Senior Software Engineer,C++,,B1 High,3,SL1,7.85,,7.85,Maternity leave,2-Jun-14,2-Dec-14,Y,N,,,,,Bon Nguyen Ba,Bon Nguyen Ba,NPNBC++,NPNBC++,NPNBC++,NPNBC++,NPNBC++,NPNBC++,,,,,,106,9-Feb-09,Y,
+HN88,SD0051,Nguyễn Thế Vũ,Nguyen The,Vu,2-Mar-09,Principal Software Engineer,Mobile,,A1,4,SL2,7.79,8.5,16.29,MKI-WLS,24-Mar-14,6-Jun-14,N,N,Forecast_MKI,6-Jun-14,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,,,X,X,"Mobile Training; C++ from NT, Peninsula",132,30-Nov-13,Y,
+HN113,SD0052,Lê Hoàng Vĩnh Phúc,Le Hoang Vinh,Phuc,16-Mar-09,Principal QC Engineer,QC NT,,B1 High,4,SL2,7.75,2.5,10.25,Alpha,16-Mar-09,,N,N,,,,,Tram Ho Thi Hong,Nhan Nguyen Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,16-Mar-09,N,
+HN123,SD0053,Nguyễn Đình Chinh,Nguyen Dinh,Chinh,16-Mar-09,Principal QC Engineer,QC NT,,A2 High,4,SL1,7.75,2.9,10.65,Alpha,16-Mar-09,,N,N,,,,,Tram Ho Thi Hong,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,16-Mar-09,N,
+HN114,SD0054,Lê Kim Ngọc,Le Kim,Ngoc,19-Mar-09,Solution Architect,C++,,B2,5,SL1,7.75,3,10.75,MKI_Global Network Lab,7-Oct-13,,N,N,,,,,Loan Pham Thi Tuyet,Loan Pham Thi Tuyet,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,19-Mar-09,N,
+HN127,SD0056,Nguyễn Bá Tình,Nguyen Ba,Tinh,23-Mar-09,Principal QC Engineer,QC NT,,B1 High,4,SL1,7.73,2,9.73,Alpha,23-Mar-09,,N,N,,,,,Lan Ngo Thi Hoang,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,23-Mar-09,N,
+HN133,SD0060,Lê Văn Khánh,Le Van,Khanh,1-Apr-09,Principal Software Engineer,C++,,A1 High,4,SL2,7.71,4,11.71,Alpha,1-Apr-09,,N,N,,,,,Thong Lam Hai,Thong Lam Hai,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,1-Apr-09,N,
+HN138,SD0058,Lê Thanh Hải,Le Thanh,Hai,1-Apr-09,Principal QC Engineer,QC NT,,A2 High,4,SL2,7.71,3,10.71,MKI_Global Network Lab,1-Oct-13,,N,N,,,,,Lan Ngo Thi Hoang,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,13-Aug-13,N,
+HN140,SD0062,Phạm Thanh Lịch,Pham Thanh,Lich,6-Apr-09,Principal QC Engineer,QC NT,,B1,4,SL1,7.70,2.5,10.20,Alpha,6-Apr-09,,N,N,,,,,Lan Ngo Thi Hoang,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,6-Apr-09,N,
+HN143,SD0063,Trịnh Minh Hiển,Trinh Minh,Hien,13-Apr-09,Principal QC Engineer,QC NT,,B1 High,4,SL3,7.68,4,11.68,Alpha,13-Apr-09,,N,N,,,,,Tram Ho Thi Hong,Nhan Nguyen Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,13-Aug-13,N,
+HN146,SD0132,Đỗ Tiến Dũng,Do Tien,Dung,13-Apr-09,Senior Software Engineer,Microsoft,,B1 High,3,SL3,7.68,,7.68,Media Brands,21-May-13,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"asp in Lumesse ODC, Media Brands
+MVC Training
+MVC in HorseFarm",0,13-Apr-09,N,
+HN165,SD0136,Văn Quốc Khánh,Van Quoc ,Khanh,6-Jul-09,Senior Software Engineer,Microsoft,,B1,3,SL2,7.45,,7.45,Inventive IT,6-Jan-14,4-Jul-14,N,N,Reserved_resignation,4-Jul-14,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,,,IMX; Umbraco; Inventive,128,31-Dec-13,Y,
+HN159,SD0065,Bùi Thanh Huy,Bui Thanh,Huy,13-Jul-09,Principal Software Engineer,C++,,B1 High,4,SL2,7.43,4.8,12.23,Alpha,13-Jul-09,,N,N,,,,,Loan Pham Thi Tuyet,Loan Pham Thi Tuyet,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,13-Jul-09,N,
+HN173,SD0138,Phạm Minh Tâm,Pham Minh,Tam,3-Aug-09,Senior Software Engineer,Microsoft,,B2,3,SL1,7.37,,7.37,Charles Taylor,25-Mar-13,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,MVC training; Charles Taylor,0,3-Aug-09,N,
+HN177,SD0066,Nguyễn Thị Bảo Khánh,Nguyen Thi Bao,Khanh,17-Aug-09,Senior QC Engineer,QC NT,,B1 High,3,SL2,7.33,2,9.33,Alpha-SmallCell,1-Aug-13,,N,N,,,,,Lan Ngo Thi Hoang,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,17-Aug-09,N,
+HN187,SD0142,Cao Minh Quân,Cao Minh,Quan,14-Sep-09,Senior QC Engineer,QC,,B1 High,3,SL2,7.25,,7.25,Charles Taylor,2-Jun-14,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"MVC in Civica, Civica Allocation",0,14-Sep-09,N,
+HN188,SD0067,Nguyễn Thị Thu Ngân,Nguyen Thi Thu,Ngan,21-Sep-09,Senior QC Engineer,QC NT,,A2,3,SL2,7.24,1.5,8.74,Alpha,21-Sep-09,,N,N,,,,,Tram Ho Thi Hong,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,21-Sep-09,N,
+HN199,SD0144,Vũ Đình Phong,Vu Dinh,Phong ,12-Oct-09,Senior Software Engineer,Microsoft,,B1,3,SL2,7.18,,7.18,Civica ASB,5-Aug-13,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"WPF in A&B; Civica training,Civica Rents",0,12-Oct-09,N,
+HN189,SD0145,Nguyễn Ngọc Lam Anh,Nguyen Ngoc Lam,Anh,15-Oct-09,Principal Software Engineer,PHP,,B2,4,SL1,7.17,,7.17,Lumesse EasyCruit,2-Jun-14,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,x,X,X,,"Perl, Bodog",0,31-Dec-13,N,
+HN206,SD0068,Đặng Nguyễn Kim Anh,Dang Nguyen Kim,Anh,2-Nov-09,Solution Architect,C++,,B2,5,SL1,7.12,4,11.12,Alpha,2-Nov-09,,N,N,,,,,Bon Nguyen Ba,Bon Nguyen Ba,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,2-Nov-09,N,
+HN210,SD0069,Nguyễn Khánh Trình,Nguyen Khanh,Trinh,6-Nov-09,Senior QC Engineer,QC,,A1 High,3,SL3,7.11,2,9.11,Charles Taylor,25-Oct-13,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Charles Taylor,0,13-Aug-13,N,
+HN219,SD0151,Nguyễn Thị Thu Hiền ,Nguyen Thi Thu,Hien,9-Nov-09,Senior QC Engineer,QC,,B1,3,SL2,7.10,2.5,9.60,IIN Testing,4-Mar-14,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,BCC; IIN Testing,0,31-Jul-13,N,
+HN226,SD0153,Nguyễn Huệ Nghi,Nguyen Hue,Nghi,1-Dec-09,Senior Software Engineer,DBA,,B2,3,SL1,7.04,,7.04,BCC Media Data Warehouse,1-Feb-12,,N,N,,,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,x,X,X,X,BCC,0,1-Dec-09,N,
+HN208,SD0071,Phạm Tấn Khoa,Pham Tan,Khoa,1-Dec-09,Senior QC Engineer,QC,,A1 High,3,SL2,7.04,3,10.04,Adeptra,16-Sep-13,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Adeptra,0,13-Aug-13,N,
+HN237,SD0323,Lê Thị Mỹ Linh,Le Thi My ,Linh,4-Jan-10,Senior Software Engineer,Front-End,,B1 High,3,SL2,6.95,,6.95,Maternity leave,17-Apr-14,17-Oct-14,Y,Y,,,,,Tuan Luong Minh,Thao Le Huynh Cong,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,x,,X,X,Hearst; Bodog; AP Responsive Training,113,1-Jan-14,Y,
+HN239,SD0324,Nguyễn Thị Nguyệt Kiểu,Nguyen Thi Nguyet ,Kieu,11-Jan-10,Senior Software Engineer,Front-End,,B2 High,3,SL1,6.93,,6.93,AP Responsive,24-Mar-14,,N,N,,,,,Tuan Luong Minh,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,x,,X,X,"Civica, CMS Rewrite; mobile frontend training; AP Responsive Training",0,1-Jan-14,N,
+HN263,SD0328,Lương Quý Quang,Luong Quy ,Quang,8-Feb-10,Software Engineer,PHP,,A2 High,2,SL2,6.85,,6.85,AP Responsive,24-Mar-14,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,X,,,,PHP; Aussie; Genus Russia; Frontend training; ASB Germany; AP Responsive Training,0,1-Jan-14,N,
+HN259,SD0158,Huỳnh Chí Nhân,Huynh Chi ,Nhan,8-Feb-10,Senior Software Engineer,Microsoft,,B1 High,3,SL3,6.85,,6.85,Lumesse-ETAD,20-Sep-10,,N,N,Technical team,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,ETWEB,0,8-Feb-10,N,
+HN253,SD0162,Võ Minh Trọng,Vo Minh,Trong,22-Feb-10,Senior Software Engineer,PHP,,B1,3,SL2,6.81,,6.81,Lumesse EasyCruit,2-Jun-14,,N,N,bad performance,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,x,X,X,,Hearst; AP Responsive Training,0,1-Jan-14,N,
+HN262,SD0329,Lê Thị Kim Thúy,Le Thi Kim ,Thuy,22-Feb-10,Senior Software Engineer,Microsoft,,A1 High,3,SL1,6.81,,6.81,Charles Taylor,5-May-14,,N,N,,,,,Thanh Nguyen Thi Kim,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"DBA, HTML, CSS, ASP.NET, WPF in A&B; Civica Allocation",0,22-Feb-10,N,
+HN252,SD0159,Huỳnh Minh Mẫn,Huynh Minh,Man,22-Feb-10,Senior QC Engineer,QC,,B1,3,SL1,6.81,1.7,8.51,Thomsons,10-Feb-14,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Civica, InventiveIT; Thomsons",0,22-Feb-10,N,
+HN267,SD0330,Lê Thị Lan Anh,Le Thi Lan,Anh,1-Mar-10,Senior QC Engineer,QC,,A2 High,3,SL1,6.79,0,6.79,Amdocs,5-May-14,,N,N,,,,,Long Vu Nguyen Phi,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Civica Rents,0,1-Mar-10,N,
+HN270,SD0166,Trương Thanh Hải,Truong Thanh ,Hai,8-Mar-10,Principal Software Engineer,Front-End,,A2 High,4,SL1,6.78,4,10.78,Aussie,12-Mar-12,14-Jul-14,Y,N,Proposed_Technology Forge,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,x,X,X,,Aussie,126,8-Mar-10,Y,
+HN273,SD0167,Nguyễn Chí Thành,Nguyen Chi,Thanh,10-Mar-10,Senior Software Engineer,Microsoft,,B1 High,3,SL3,6.77,5,11.77,Peninsula,19-May-14,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"VB.NET, PHP, MVC, Genus GPS WPF, Dotnetnuke, Wordpress; Bullhorn",0,1-Jan-14,N,
+HN274,SD0169,Huỳnh Phát Lộc,Huynh Phat,Loc,17-Mar-10,Senior Software Engineer,Microsoft,,B1,3,SL3,6.75,2,8.75,Thomsons,10-Feb-14,,N,N,,,,,Thanh Nguyen Thi Kim,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,IMX; Thomsons,0,1-Jan-14,N,
+HN278,SD0332,Trần Quốc Tuấn,Tran Quoc,Tuan,1-Apr-10,Software Engineer,Microsoft,,A2,2,SL2,6.71,,6.71,CMS Rewrite,25-Nov-13,23-Jun-14,Y,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Aussie; Front-End training: Vielife; MVC 4, DI, Nhibernate, UT; JS; CMS Rewrite",129,1-Apr-10,Y,
+HN277,SD0172,Nguyễn Hoàng Quang,Nguyen Hoang,Quang,1-Apr-10,Principal Software Engineer,Microsoft,,B1,4,SL1,6.71,4,10.71,Harvey Nash framework / SWAT team,9-Jun-14,,N,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,,,Vielife,0,1-Apr-10,N,3
+HN290,SD0334,Nguyễn Hoàng Oanh,Nguyen Hoang,Oanh,12-Apr-10,Senior Software Engineer,Microsoft,,B2,3,SL1,6.68,2.5,9.18,Publicis Sydney,12-May-14,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Vielife, MVC, WCF, WPF, Civica Rents",0,12-Apr-10,N,
+HN292,SD0181,Nguyễn Thị Phương Thi,Nguyen Thi Phuong,Thi,4-May-10,Senior QC Engineer,QC,,A2,3,SL2,6.62,1.5,8.12,IIN Testing,13-May-14,,N,N,In pregnant; add 1 AQC to support (Trần Ngọc Hưng),,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,ETWEB; CMS Rewrite,0,18-Dec-13,N,
+HN296,SD0179,Trần Hoàng Sơn,Tran Hoang,Son,4-May-10,Senior Software Engineer,Microsoft,,A2 High,3,SL2,6.62,2,8.62,Lumesse-ETAD,15-Jan-13,,N,N,,,,,Phuong To Gia,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,ETWEB,0,4-May-10,N,
+HN287,SD0176,Lâm Thành Bổng,Lam Thanh,Bong,4-May-10,Senior Software Engineer,Microsoft,,A2,3,SL1,6.62,1,7.62,Communisis,14-May-10,7-Jul-14,Y,N,,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,Communsis,127,4-May-10,Y,
+HN294,SD0178,Nguyễn Công Khanh,Nguyen Cong,Khanh,5-May-10,Senior Software Engineer,Microsoft,,A2,3,SL2,6.62,2,8.62,BCC Media,29-Aug-11,,N,N,,,,,Phuong To Gia,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,BCC,0,5-May-10,N,
+HN323,SD0074,Lê Bình Duy Thọ,Le Binh Duy,Tho,1-Jun-10,Senior Software Engineer,Java,,B2,3,SL1,6.54,5,11.54,Adeptra,1-Jan-14,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,Weatherbys training; C++ from NT; Adeptra,0,1-Jun-10,N,
+HN315,SD0187,Nguyễn Quang Phương,Nguyen Quang ,Phuong,1-Jun-10,Senior QC Engineer,QC,,A2,3,SL2,6.54,1,7.54,Communisis,6-Aug-10,7-Jul-14,N,N,Reserved_Bodog;Proposed_CT,7-Jul-14,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Communisis,127,1-Jun-10,Y,
+HN317,SD0338,Nguyễn Thị Mỹ Dung,Nguyen Thi My ,Dung,1-Jun-10,QC Engineer,QC,,B1,2,SL2,6.54,,6.54,Maternity leave,1-Jan-14,4-Aug-14,N,N,asking to unpaid leave 1 month until 4-Aug.,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,Aris,123,1-Jun-10,Y,
+HN313,SD0186,Trần Quốc Cường,Tran Quoc ,Cuong,1-Jun-10,Senior Software Engineer,Microsoft,,B2,3,SL3,6.54,2,8.54,Charles Taylor,2-Dec-13,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,WPF in A&B; Charles Taylor,0,30-Nov-13,N,
+HN316,SD0188,Hồng Gia Cương,Hong Gia ,Cuong,1-Jun-10,Senior Software Engineer,Microsoft,,A2,3,SL3,6.54,4,10.54,CMS Rewrite,19-May-14,23-Jun-14,Y,N,Proposed_KCL,,,,Tri Hua Minh,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,x,,X,X,Genus; CDS Global; CMS Rewrite,129,1-Jun-10,Y,
+HN318,SD0339,Nguyễn Minh Khoa,Nguyen Minh ,Khoa,7-Jun-10,Senior Software Engineer,Microsoft,,B2,3,SL3,6.53,4,10.53,CDS Global,6-Jul-13,,N,N,,,,,Tuan Luong Minh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,"WPF in A&B, MVC, CDS Global",0,7-Jun-10,N,
+HN231,SD0191,Trần Thanh Tú,Tran Thanh,Tu,21-Jun-10,Senior Software Engineer,Microsoft,,A1 High,3,SL2,6.49,2,8.49,CMS Rewrite,1-Nov-12,8-Sep-14,Y,N,,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,CMS Rewrite,118,21-Jun-10,Y,
+HN337,SD0193,Nguyễn Thị Thu Hồng,Nguyen Thi Thu ,Hong,1-Jul-10,QC Engineer,QC,,A2 High,2,SL2,6.46,2,8.46,Aris Game testing,9-Jan-12,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aris,0,1-Jul-10,N,
+HN338,SD0075,Nguyễn Trần Quang Hiếu,Nguyen Tran Quang,Hieu,1-Jul-10,Principal Software Engineer,C++,,B1,4,SL1,6.46,4,10.46,Civica CRM,23-Dec-13,,N,N,,,,,Huy Bui Thanh,Hien Nguyen Quang 1,BC++,BC++,BC++,BC++,BC++,BC++,,,,,"- MVC 4, DI, Nhibernate, UT; JS; Civica CRM",0,1-Jul-10,N,
+HN335,SD0343,Lê Thanh Hiền,Le Thanh,Hien,1-Jul-10,QC Engineer,QC,,A1,2,SL2,6.46,0.5,6.96,Maternity leave,3-Mar-14,3-Sep-14,Y,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,"CrossRail, Training Portal",119,1-Jul-10,Y,
+HN341,SD0344,Nguyễn Thị Cẩm Thi,Nguyen Thi Cam,Thi,5-Jul-10,Software Engineer,Java,,B1 High,2,SL2,6.45,3,9.45,AP CSSO-Automation,28-Apr-14,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,Hearst; Internal Tools PO; Groovy training,0,12-Dec-13,N,
+HN345,SD0197,Đặng Hồ Đăng Khoa,Dang Ho Dang,Khoa,12-Jul-10,Senior QC Engineer,QC,,B1 High,3,SL1,6.43,0,6.43,Charles Taylor,2-Jan-14,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,IMX; Charles Taylor,0,12-Jul-10,N,
+HN346,SD0198,Lư Thế Hùng,Lu The ,Hung,12-Jul-10,Senior Software Engineer,Microsoft,,B1,3,SL3,6.43,3,9.43,Bodog,3-Jun-13,,N,N,,,,,Hanh Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"WPF in A&B, Bodog",0,12-Jul-10,N,
+HN344,SD0196,Cù Trinh Hoàng Chinh,Cu Trinh Hoang,Chinh,12-Jul-10,QC Engineer,QC,,A2,2,SL2,6.43,3,9.43,Bodog ,10-Sep-13,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"BCC, Bodog",0,12-Jul-10,N,
+HN351,SD0201,Lê Ngọc Hoàng Minh,Le Ngoc Hoang,Minh,19-Jul-10,Senior QC Engineer,QC,,B1,3,SL2,6.41,2,8.41,Lumesse-ETAD,19-Jul-10,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,ETWEB,0,19-Jul-10,N,
+HN352,SD0202,Phan Hoàng Anh,Phan Hoang,Anh,19-Jul-10,Software Engineer,Microsoft,,A1,2,SL2,6.41,3.5,9.91,Internal Tools - CMS BPO,4-Jul-11,1-Aug-14,Y,N,,,,,Tri Hua Minh,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,x,,X,X,CMS,124,19-Jul-10,Y,
+HN362,SD0208,Lê Thị Quế Lâm,Le Thi Que,Lam,2-Aug-10,Senior Software Engineer,Microsoft,,A2,3,SL2,6.37,0,6.37,Lumesse-ETAD,14-Aug-12,,N,N,,,,,Tri Hua Minh,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,ETWEB,0,2-Aug-10,N,
+HN359,SD0346,Vũ Nguyễn Vân Khanh,Vu Nguyen Van ,Khanh,2-Aug-10,Senior QC Engineer,QC,,A2 High,3,SL2,6.37,,6.37,Aris Game Testing,1-Nov-11,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aris,0,2-Aug-10,N,
+HN357,SD0345,Lâm Thi Hào,Lam Thi,Hao,2-Aug-10,Senior Software Engineer,Microsoft,,A1,3,SL2,6.37,1,7.37,Genus GPS,1-Nov-13,17-Mar-14,N,Y,Civica training; Proposed_Bodog,,3-Jun-14,,Tri Hua Minh,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,x,,X,X,"Hearst, HTML, CSS,JS, ASP .NET MVC 4, DI, Nhibernate, UT, SharePoint
+Genus Health",143,2-Aug-10,Y,1.5 - 2
+HN356,SD0205,Vũ Thái Anh,Vu Thai ,Anh,2-Aug-10,Senior Software Engineer,Microsoft,,B1,3,SL3,6.37,4,10.37,Lumesse-ETAD,2-Aug-10,,N,N,,,,,Tri Hua Minh,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,ETWEB,0,2-Aug-10,N,
+HN355,SD0204,Võ Thanh Phong,Vo Thanh,Phong ,6-Aug-10,Senior Software Engineer,Microsoft,,A1 High,3,SL3,6.36,3,9.36,Lumesse-ETAD,11-Oct-10,,N,N,,,,,Tri Hua Minh,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,ETWEB,0,6-Aug-10,N,
+HN364,SD0209,Trần Hoàng Trung,Tran Hoang,Trung,10-Aug-10,Senior Software Engineer,Microsoft,,A2 High,3,SL3,6.35,4.5,10.85,ITC,16-Jan-14,,N,N,,,,,Thien Le Vuong,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,"BCC, CDS Global; ITC",0,12-Dec-13,N,
+HN370,SD0349,Nguyễn Hoàng Doanh,Nguyen Hoang,Doanh,16-Aug-10,Senior Software Engineer,Microsoft,,B1,3,SL3,6.33,0,6.33,BCC Media,19-Sep-11,,N,N,,,,,Thanh Nguyen Thi Kim,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,WPF; BCC,0,16-Aug-10,N,
+HN375,SD0076,Phạm Thành Vinh,Pham Thanh,Vinh,20-Sep-10,Senior QC Engineer,QC NT,,,3,SL3,2.45,2,4.45,Alpha,20-Sep-10,,N,N,,,,,Tram Ho Thi Hong,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,13-Aug-13,N,
+HN384,SD0352,Nguyễn Quỳnh Mai,Nguyen Quynh ,Mai,29-Sep-10,Software Engineer,Front-End,,B1 High,2,SL2,6.21,,6.21,AP Responsive,19-May-14,,N,N,,,,,Tuan Luong Minh,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,x,,X,X,Hearst; AP CQ5,0,29-Sep-10,N,
+HN388,SD0214,Trần Như Phượng,Tran Nhu ,Phuong,4-Oct-10,Senior QC Engineer,QC,,B1 High,3,SL1,6.20,2,8.20,Weatherbys ODC,9-Jul-12,29-Sep-14,Y,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,Weatherbys,115,4-Oct-10,Y,
+HN391,SD0215,Lê Thị Bích Liễu,Le Thi Bich,Lieu,13-Oct-10,QC Engineer,QC,,A2,2,SL2,6.18,,6.18,BCC Media,16-Apr-12,,N,N,In pregnant 4 months (until 1-Jun),,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,BCC,0,13-Oct-10,N,
+HN396,SD0216,Ngô Anh Tuấn,Ngo Anh,Tuan,1-Nov-10,Senior Software Engineer,Java,,A2,3,SL2,6.12,5.5,11.62,Weatherbys ODC,12-Jan-12,23-Jun-14,Y,N,,,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,X,X,X,X,Weatherbys,129,1-Nov-10,Y,
+HN397,SD0217,Nguyễn Xuân Bảo Khánh,Nguyen Xuan Bao,Khanh,1-Nov-10,Principal QC Engineer,QC,,B1,4,SL1,6.12,7,13.12,IIN Testing,20-Jan-14,,N,N,,,,,Nhan Nguyen Hoang,Nhan Nguyen Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,IIN Testing,0,1-Nov-10,N,
+HN401,SD0354,Nguyễn Phương Hồng Châu,Nguyen Phuong Hong ,Chau,8-Nov-10,Senior Software Engineer,Java,,B2,3,SL3,6.10,,6.10,Weatherbys ODC,1-Aug-11,28-Jul-14,Y,N,,,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,X,X,X,X,Weatherbys,124,8-Nov-10,Y,
+HN404,SD0220,Bùi Hữu Tựu,Bui Huu ,Tuu,15-Nov-10,Senior Software Engineer,Microsoft,,A1 High,3,SL2,6.08,,6.08,Lumesse-ETAD,17-Nov-10,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,ETWEB,0,15-Nov-10,N,
+HNC30,SD0385,Nguyễn Hoàng Vĩnh,Nguyen Hoang,Vinh,1-Dec-10,Senior Software Engineer,Java,,A2,3,SL2,6.04,,6.04,AP Responsive,11-Jul-12,,N,N,Billed 50%SSE +50% TA; reserved_resignation,30-Jun-14,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,AP Respponsive,0,1-Dec-10,N,
+HNC19,SD0379,Trần Bảo Toàn,Tran Bao,Toan,1-Dec-10,Senior Software Engineer,Microsoft,,A1 High,3,SL2,6.04,,6.04,Media Brands,19-Nov-12,,N,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,,,Media Brands,0,1-Dec-10,N,
+HNC44,SD0395,Trần Hữu Tài,Tran Huu,Tai,1-Dec-10,Principal Software Engineer,Java,,B1 High,4,SL1,6.04,,6.04,Weatherbys ODC,12-Jan-12,9-Jun-14,N,N,Reserved_Ocado (TA),,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,X,X,X,X,Weatherbys,131,1-Dec-10,Y,
+HNC11,SD0375,Hoàng Mai Phương,Hoang Mai,Phuong,1-Dec-10,Principal QC Engineer,QC,,A1 High,4,SL2,6.04,,6.04,Maternity leave,1-Apr-14,1-Oct-14,Y,N,,,,,Nhan Nguyen Hoang,Nhan Nguyen Hoang,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,Genus; IMX Mobile; Inventive,115,1-Dec-10,Y,
+HNC67,SD0409,Phan Quang Nhân,Phan Quang ,Nhan,1-Dec-10,Senior QC Engineer,QC,,A2,3,SL1,6.04,,6.04,BCC Media,3-Jan-12,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,BCC,0,1-Dec-10,N,
+HNC09,SD0374,Vũ Hồng Nam,Vu Hong,Nam,1-Dec-10,Senior Software Engineer,Java,,B1,3,SL1,6.04,,6.04,AP Responsive,19-May-14,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,AP,0,1-Dec-10,N,
+HNC54,SD0401,Nguyễn Thị Loan,Nguyen Thi,Loan,1-Dec-10,Senior QC Engineer,QC,,A2 High,3,SL1,6.04,,6.04,Aussie,12-Mar-14,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,ETWEB; Aussie,0,1-Dec-10,N,
+HNC35,SD0389,Nguyễn Thị Phương Liên,Nguyen Thi Phuong,Lien,1-Dec-10,Senior QC Engineer,QC,,B1,3,SL2,6.04,,6.04,Media Brands,2-Oct-13,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aussie; Media Brands,0,17-Dec-13,N,
+HNC20,SD0380,Trần Thế Hiển,Tran The,Hien,1-Dec-10,Senior Software Engineer,DBA,,B1,3,SL3,6.04,,6.04,Aussie,28-Nov-11,,N,N,,,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,x,X,X,X,Aussie,0,1-Dec-10,N,
+HNC51,SD0399,Dương Thị Chính,Duong Thi,Chinh,1-Dec-10,Senior Software Engineer,Java,,A1 High,3,SL1,6.04,,6.04,Weatherbys ODC,8-May-13,21-Jul-14,Y,N,,,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,X,X,X,X,Weatherbys,125,1-Dec-10,Y,
+HN408,SD0222,Nguyễn Văn Bảo,Nguyen Van,Bao,1-Dec-10,Software Engineer,Microsoft,,B1 High,2,SL2,6.04,,6.04,Microdec,8-Apr-14,21-Jun-14,Y,N,,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"BCC, Winform, desktop-based, .NET 2.0, DevExpress, abit  Oracle db; Civica Rents",130,1-Dec-10,Y,
+HN419,SD0227,Nguyễn Ngọc Thiện,Nguyen Ngoc,Thien,6-Dec-10,Principle UI designer,UI,,B1,4,SL1,6.03,,6.03,AP Design,7-Oct-13,,N,N,VNUK network website (3/6-6/6),,,,Hung Lu The,Thao Le Huynh Cong,BUI,BUI,BUI,BUI,BUI,BUI,X,X,X,X,Boylesports; AP,0,6-Dec-10,N,
+HN422,SD0231,Phạm Nguyễn Hồng Thanh,Pham Nguyen Hong ,Thanh,15-Dec-10,Senior Software Engineer,Microsoft,,A2 High,3,SL1,6.00,,6.00,Adeptra,10-Aug-12,,N,N,,,,,Thanh Nguyen Thi Kim,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Adeptra,0,15-Dec-10,N,
+HN426,SD0233,Trần Thị Ngọc Hà,Tran Thi Ngoc,Ha,27-Dec-10,Senior Software Engineer,Microsoft,,B1 High,3,SL1,5.97,,5.97,Charles Taylor,16-Apr-14,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,ETWEB; Civica Rents,0,17-Mar-14,N,
+HN425,SD0358,Đỗ Minh Dũng,Do Minh ,Dung,27-Dec-10,Senior Software Engineer,Front-End,,B1,3,SL1,5.97,,5.97,Online Assessment,10-Mar-14,12-May-14,Y,N,Proposed_Ocado VN,,,,Tuan Luong Minh,Thao Le Huynh Cong,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,x,,X,X,Hearst,135,1-Jan-14,Y,2.5
+HN428,SD0360,Nguyễn Đình Văn,Nguyen Dinh,Van,4-Jan-11,Senior Software Engineer,Front-End,,A2 High,3,SL2,5.95,2,7.95,AP Responsive,15-Oct-13,,N,N,,,,,Tuan Luong Minh,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,x,,X,X,Hearst; AP,0,4-Jan-11,N,
+HN427,SD0359,Nguyễn Minh Tuấn,Nguyen Minh ,Tuan,4-Jan-11,Senior Software Engineer,Microsoft,,A2,3,SL3,5.95,2.5,8.45,Aussie,14-Nov-11,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,,,,Aussie,0,4-Jan-11,N,
+HN429,SD0234,Trần Tố Trân,Tran To,Tran ,4-Jan-11,Senior QC Engineer,QC,,A2,3,SL1,5.95,2.5,8.45,AP responsive,5-Mar-14,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Vielife, Genus GPS; Ap Responsive",0,4-Jan-11,N,
+HN432,SD0236,Nguyễn Thị Ngọc,Nguyen Thi,Ngoc,10-Jan-11,Senior Software Engineer,Microsoft,,B1,3,SL2,5.93,3,8.93,Charles Taylor,12-Sep-13,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"WPF in A&B, Genus, MVC Training, Holiday Booking; Charles Taylor",0,10-Jan-11,N,
+HN435,SD0237,Vũ Minh Khánh Lộc,Vu Minh Khanh,Loc,14-Feb-11,Senior Software Engineer,Microsoft,,A2 High,3,SL2,5.84,1,6.84,Thomsons,12-Feb-14,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Lumesse; CDS Global; Thomsons,0,14-Feb-11,N,
+HN441,SD0242,Trịnh Lê Hoàng Duy Tân,Trinh Le Hoang Duy,Tan,15-Feb-11,Senior Software Engineer,Microsoft,,B1,3,SL1,5.83,,5.83,Genus GPS,9-Jun-14,30-Jun-14,N,N,50%,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Genus WPF; MVC 4, DI, Nhibernate, UT; JS; SSRS training",128,18-Dec-13,Y,2.5
+HN440,SD0241,Đoàn Nam Hải,Doan Nam,Hai,15-Feb-11,Senior Software Engineer,Microsoft,,A2,3,SL2,5.83,4.5,10.33,Civica ASB,5-Aug-13,,N,N,,,,,Phuong To Gia,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Asp.Net 3.5, WCF, JQuery, Ajax Control toolkit, SQL Server 2008
+Civica Rents",0,15-Feb-11,N,
+HN443,SD0079,Phạm Quang Vinh,Pham Quang ,Vinh,21-Feb-11,Senior Software Engineer,C++,,B1,3,SL1,5.82,4,9.82,Alpha,21-Feb-11,,N,N,,,,,Huy Bui Thanh,Huy Bui Thanh,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,21-Feb-11,N,
+HN442,SD0362,Nguyễn Anh Khoa,Nguyen Anh,Khoa,21-Feb-11,Senior Software Engineer,DBA,,B1,3,SL2,5.82,2.5,8.32,SMI,1-Apr-11,,N,N,,,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,x,X,X,X,SMI,0,21-Feb-11,N,
+HN447,SD0244,Lê Tấn Nghĩa,Le Tan,Nghia,14-Mar-11,Software Engineer,Front-End,,B1,2,SL2,5.76,1.5,7.26,Bodog HTML5,10-Sep-13,,N,N,Submit resignation,30-Jun-14,,,Tuan Luong Minh,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,X,,X,X,"Civica, MVC in A&B;  mobile frontend training; Bodog",0,14-Mar-11,N,
+HN452,SD0246,Nguyễn Văn Hiếu 1,Nguyen Van,Hieu 1,15-Mar-11,Senior Software Engineer,Microsoft,,A2 High,3,SL1,5.76,0,5.76,Civica ASB,16-Sep-13,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Hearst; Civica Rents,0,15-Mar-11,N,
+HN454,SD0080,Lê Minh Việt,Le Minh,Viet,21-Mar-11,Senior Software Engineer,C++,,A1 High,3,SL1,5.74,2.5,8.24,Alpha,21-Mar-11,,N,N,,,,,Bon Nguyen Ba,Bon Nguyen Ba,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,21-Mar-11,N,
+HN453,SD0247,Huỳnh Quang Diệu,Huynh Quang,Dieu,21-Mar-11,Senior Software Engineer,Microsoft,,A2 High,3,SL3,5.74,4,9.74,BCC Advantage ARC,27-Mar-14,,N,N,Billed from 23May,,,,Loan Pham Thi Tuyet,Hien Nguyen Quang 1,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,,X,X,WPF in A&B; OMG,0,22-Apr-14,N,
+HN458,SD0249,Trần Thọ Cường,Tran Tho,Cuong,21-Mar-11,Senior Software Engineer,Microsoft,,B1 High,3,SL3,5.74,,5.74,Civica ASB,5-Aug-13,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Civica CommEngine; Civica Rents,0,21-Mar-11,N,
+HN470,SD0250,Võ Quang Trường,Vo Quang ,Truong,4-Apr-11,Senior Software Engineer,PHP,,A2,3,SL3,5.70,3.5,9.20,Aussie,14-Nov-11,14-Jul-14,N,N,Billed SE level; Proposed_Technology forge,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,x,X,X,,Aussie,126,4-Apr-11,Y,
+HN461,SD0364,Đinh Duy Linh,Dinh Duy,Linh,4-Apr-11,Software Engineer,Microsoft,,A2 High,2,SL2,5.70,0,5.70,Civica Rents,16-Sep-13,11-Mar-14,N,y,Submit resignation,30-May-14,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Hearst; Civica Rents; UT in CMS,144,4-Apr-11,Y,1.5
+HN464,SD0256,Phạm Thị Mỹ Kiều,Pham Thi My,Kieu,4-Apr-11,Senior Software Engineer,Microsoft,,A2 High,3,SL1,5.70,0,5.70,Civica Core Team,22-Jul-13,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Civica; MVC,0,4-Apr-11,N,
+HN471,SD0251,Nguyễn Anh Đào,Nguyen Anh,Dao,4-Apr-11,Software Engineer,Microsoft,,A1,2,SL2,5.70,0.3,6.00,Civica ASB,16-Jun-14,1-Aug-14,Y,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"WPF in A&B; Civica Rents, AP Automation Groovy training",124,4-Apr-11,Y,1.5
+HN474,SD0365,Huỳnh Thị Ngọc Tuyết,Huynh Thi Ngoc,Tuyet,11-Apr-11,Software Engineer,DBA,,A2 High,2,SL2,5.68,5,10.68,BCC Media Data Warehouse,2-Dec-11,,N,N,,,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,x,X,X,X,BCC,0,11-Apr-11,N,
+HN475,SD0258,Trần Thị Thanh Sương,Tran Thi Thanh,Suong,11-Apr-11,Senior Software Engineer,Microsoft,,A2,3,SL2,5.68,3,8.68,US_Domain,16-Jun-14,,N,N,billed SE 1 month --> re-assess,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Vielife,0,11-Apr-11,N,3.5
+HN473,SD0257,Lã Ngọc Hòa,La Ngoc ,Hoa,11-Apr-11,Senior Software Engineer,PHP,,A2 High,3,SL1,5.68,0,5.68,Aussie,1-Apr-14,,N,N,billed from 12May,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,X,,,,Aussie; Babel; Python; Magento,0,3-Mar-14,N,
+HN480,SD0366,Võ Ngọc Phượng,Vo Ngoc,Phuong,18-Apr-11,QC Engineer,QC,,B1 High,2,SL2,5.66,1.5,7.16,IIN Testing,4-Apr-14,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,CDS Global; OMG,0,18-Apr-11,N,
+HVN0379,SD0263,Nguyễn Hải Sơn,Nguyen Hai,Son,4-May-11,Senior Software Engineer,Microsoft,,Very good,3,SL2,5.62,0,5.62,OMG,31-Mar-14,1-Jul-14,N,N,Forecast_OMG,1-Jul-14,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Simbient; OMG,128,4-May-11,Y,
+HVN0378,SD0262,Hoàng Văn Nam,Hoang Van,Nam,4-May-11,Senior Software Engineer,Microsoft,,A2,3,SL2,5.62,5,10.62,Civica ASB,12-May-14,13-Jul-14,N,N,Billed from 14 May,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,Civica Rents,126,17-Mar-14,Y,
+HVN0377,SD0083,Phạm Tuấn Anh,Pham Tuan ,Anh 2,4-May-11,Principal Software Engineer,C++,,A2 High,4,SL1,5.62,3.5,9.12,Alpha,4-May-11,,N,N,,,,,Bon Nguyen Ba,Bon Nguyen Ba,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,4-May-11,N,
+HVN0381,SD0084,Nguyễn Thị Ngọc Trâm,Nguyen Thi Ngoc ,Tram,9-May-11,Senior Software Engineer,C++,,A2,3,SL1,5.61,1,6.61,Alpha,9-May-11,,N,N,,,,,Huy Bui Thanh,Huy Bui Thanh,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,9-May-11,N,
+HVN0384,SD0085,Nguyễn Cảnh Hạt,Nguyen Canh,Hat,12-May-11,Senior Software Engineer,C++,,B1,3,SL1,5.60,0,5.60,Alpha,12-May-11,,N,N,,,,,Thong Lam Hai,Thong Lam Hai,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,12-May-11,N,
+HVN0492,SD0086,Lê Thanh Tâm-SD0086,Le Thanh,Tam 2,13-Jun-11,Principal Software Engineer,C++,,A2,4,SL1,5.51,7,12.51,Alpha,13-Jun-11,,N,N,,,,,Bon Nguyen Ba,Bon Nguyen Ba,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,13-Jun-11,N,
+HVN0508,SD0273,Phạm Thị Trà My,Pham Thi Tra,My,1-Aug-11,Senior Software Engineer,Microsoft,,B2,3,SL2,5.38,4,9.38,BCC AdVantage MB,1-Jan-12,,N,N,,,,,Thanh Nguyen Thi Kim,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,BCC,0,1-Aug-11,N,
+HVN0512,SD0091,Lê Nguyễn Hoài Thu,Le Nguyen Hoai,Thu,15-Aug-11,Senior Software Engineer,C++,,A2,3,SL1,5.34,0,5.34,Alpha,15-Aug-11,,N,N,,,,,Bon Nguyen Ba,Bon Nguyen Ba,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,15-Aug-11,N,
+HVN0521,SD0093,Nguyễn Xuân Vinh,Nguyen Xuan  ,Vinh,19-Sep-11,Senior Software Engineer,C++,,A2 High,3,SL2,4.00,,4.00,Alpha,19-Sep-11,,N,N,,,,,Huy Bui Thanh,Huy Bui Thanh,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,19-Sep-11,N,
+HVN0523,SD0281,Huỳnh Duy Quang,Huynh Duy,Quang,19-Sep-11,Principal Software Engineer,DBA,,B2 High,4,SL1,3.00,,3.00,BCC Media Data Warehouse,19-Sep-11,,N,N,,,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,x,X,X,X,BCC,0,19-Sep-11,N,
+SD0097,SD0097,Tôn Thất Nam Trân,Ton That Nam,Tran,12-Oct-11,Support Analyst,Support Analyst,,,2,SL2,5.18,,5.18,Eversheds,3-Dec-12,,N,N,Submit resignation,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,X,X,X,X,Eversheds,0,12-Oct-11,N,
+HVN0537,SD0417,Nguyễn Thị Cẩm Nhung,Nguyen Thi Cam,Nhung,14-Nov-11,Senior QC Engineer,QC,,B1,3,SL1,5.09,,5.09,Lumesse-ETAD,18-Nov-11,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,ETWEB,0,14-Nov-11,N,
+HVN0546,SD0429,Nguyễn Thị Thanh Huyền,Nguyen Thi Thanh,Huyen,14-Nov-11,Senior QC Engineer,QC,,B1,3,SL2,5.09,,5.09,Civica CRM,23-Dec-13,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,A&B; Civica CRM,0,14-Nov-11,N,
+HVN0547,SD0430,Nguyễn Quang Phước,Nguyen Quang ,Phuoc,21-Nov-11,Senior Software Engineer,PHP,,A2,3,SL2,5.07,7,12.07,NashTech Web S&M,14-Apr-14,15-May-14,N,N,Unpaid leave 1 months,15-May-14,15-Jun-14,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,x,X,X,,Aussie;  mobile frontend training; Bodog; NT Web,135,7-Nov-13,Y,
+HVN0545,SD0424,Nguyễn Xuân Duy,Nguyen Xuan,Duy,21-Nov-11,Senior QC Engineer,QC,,B1,3,SL1,5.07,,5.07,Lumesse-ETAD,1-Apr-13,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,ETWEB,0,21-Nov-11,N,
+HVN0548,SD0440,Đặng Thế Phú,Dang The ,Phu,5-Dec-11,Senior Software Engineer,Microsoft,,B1,3,SL3,5.03,6,11.03,Group M,1-Aug-13,1-Jul-14,Y,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Simbient, Sharepoint, Training  Portal; Group M",128,20-Dec-13,Y,
+HVN0554,SD0446,Nguyễn Thanh Tùng,Nguyen Thanh ,Tung,7-Dec-11,Software Engineer,Java,,A2,2,SL1,5.02,,5.02,Alpha,6-Feb-14,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,Agora Google,0,7-Dec-13,N,
+HVN0558,SD0450,Ngô Ánh Dương,Ngo Anh ,Duong,15-Dec-11,Software Engineer,Mobile,,B1,2,SL2,5.00,2,7.00,Peninsula iOS,1-Nov-13,19-Nov-14,Y,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,,,X,X,Mobile Training; C++ from NT; Peninsula,108,15-Dec-11,Y,
+HVN0574,SD0457,Diệp Tú,Diep,Tu,4-Jan-12,Principal Software Engineer,PHP,,C1,4,SL1,4.95,3,3.00,Aussie,4-Jan-12,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,x,X,X,,Aussie,0,4-Jan-12,N,
+HVN0569,SD0458,Đặng Anh Toàn,Dang Anh ,Toan,9-Jan-12,Principal Software Engineer,DBA,,B1,4,SL2,4.93,7,11.93,Charles Taylor,15-Apr-12,28-Jul-14,N,N,50% (8/5- 28/7); Reserved_SWAT team,28-Jul-14,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,x,X,X,X,DBA in A&B; Charles Taylor,124,9-Jan-12,Y,
+HVN0577,SD0472,Mohamed Aly Pasha,Mohamed Aly ,Pasha,1-Feb-12,Senior QC Engineer,QC,,B1,3,SL1,4.87,,4.87,AP Responsive,27-Mar-14,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,APN; IIN Testing; OMG,0,1-Feb-12,N,
+HVN0576,SD0471,Nguyễn Anh Kiệt -QC,Nguyen Anh,Kiet,1-Feb-12,Senior QC Engineer,QC,,B1,3,SL1,4.87,,4.87,Eversheds,6-Jan-14,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,A&B; Evershed Testing,0,1-Feb-12,N,
+HVN0591,SD0477,Đoàn Vân An,Doan Van,An,15-Feb-12,QC Engineer,QC,,B1,2,SL2,4.83,,4.83,Thomsons,12-Feb-14,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Hearst; thomsons,0,15-Feb-12,N,
+HVN0593,SD0479,Đàm Chí Thoại,Dam Chi ,Thoai,22-Feb-12,Software Engineer,Microsoft,,B1,2,SL2,4.81,,4.81,CMS phase 4,11-Jun-12,8-Sep-14,N,N,50% in CMS Rewrite 1 May 2013- 5 Sep 2014 ,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,CMS; UT in CMS,118,22-Feb-12,Y,
+HVN0601,SD0485,Nguyễn Phước Duy,Nguyen Phuoc,Duy,22-Feb-12,Software Engineer,Front-End,,A2,2,SL1,4.81,,4.81,Adeptra,6-Mar-13,,N,N,,,,,Hung Lu The,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,X,X,X,X,Adeptra,0,22-Feb-12,N,
+HVN0597,SD0489,Trần Tường Vân,Tran Tuong,Van,27-Feb-12,Senior QC Engineer,QC,,C1,3,SL2,4.80,,4.80,Media Brands,19-Nov-12,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Media Brands,0,27-Feb-12,N,
+HVN0605,SD0490,Đoàn Tiến Minh,Doan Tien,Minh,27-Feb-12,Senior QC Engineer,QC NT,,B1,3,SL1,4.80,,4.80,Alpha,27-Feb-12,,N,N,,,,,Lan Ngo Thi Hoang,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,27-Feb-12,N,
+SD0512,SD0512,Lương Đại Quốc Nam,Luong Dai Quoc,Nam,5-Mar-12,Software Engineer,Front-End,,B1,2,SL2,4.78,,4.78,Bodog,8-Nov-13,,N,N,,,,,Tuan Luong Minh,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,x,,X,X,Hearst; Bodog,0,5-Mar-12,N,
+SD0513,SD0513,Phạm Đỗ Đức Anh,Pham Do Duc,Anh,5-Mar-12,Software Engineer,Microsoft,,B1,2,SL2,4.78,,4.78,Civica ASB,16-Sep-13,,N,N,,,,,Thien Le Vuong,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,WPF in A&B; Civica Rents,0,5-Mar-12,N,
+SD0516,SD0516,Nguyễn Thị Thúy Loan,Nguyen Thi Thuy,Loan,8-Mar-12,QC Engineer,QC,,B1,2,SL2,4.77,,4.77,IIN Testing,20-Jan-14,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Civica; ETWEB; IIN Testing,0,8-Mar-12,N,
+SD0507,SD0507,Hồ Thị Thanh Trúc,Ho Thi Thanh,Truc,19-Mar-12,Senior QC Engineer,QC,,B1,3,SL2,4.74,,4.74,IIN Testing,1-Apr-14,,N,N,Billed from 21Apr,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Genus Health,0,19-Mar-12,N,
+SD0506,SD0506,Nguyễn Thị Minh Thư,Nguyen Thi Minh ,Thu,19-Mar-12,Senior QC Engineer,QC,,C1,3,SL3,4.74,,4.74,AP CSSO-Automation,16-Sep-13,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Horsefarm; AP Auto,0,19-Mar-12,N,
+SD0528,SD0528,Trang Thanh Lộc,Trang Thanh,Loc,19-Mar-12,Software Engineer,DBA,,B1,2,SL2,4.74,,4.74,CMS Support,2-Jan-14,1-Aug-14,Y,N,,,,,Thien Le Vuong,Long Hoang Vu,NPNBDBA,NPNBDBA,NPNBDBA,NPNBDBA,NPNBDBA,NPNBDBA,x,,X,X,"Like DBA, good at SQL, Aussie, CVDB, ETWEB; CMS",124,19-Mar-12,Y,
+SD0501,SD0501,Nguyễn Tuấn Hải,Nguyen Tuan,Hai,19-Mar-12,Senior Software Engineer,Microsoft,,A2,3,SL2,4.74,,4.74,ITC,1-Jan-13,,N,N,,,,,Thien Le Vuong,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,ITC,0,19-Mar-12,N,
+SD0534,SD0534,Lê Quang Thiều,Le Quang,Thieu,27-Mar-12,Software Engineer,PHP,,A1,2,SL1,4.72,,4.72,AP Automation Testing,10-Mar-14,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,x,X,X,,Aussie; AP Auto,0,7-Nov-13,N,
+SD0547,SD0547,Phạm Thị Tuyết Trinh,Pham Thi Tuyet,Trinh,3-Apr-12,Senior Software Engineer,Mobile,,B1,3,SL1,4.70,,4.70,Bodog,19-Aug-13,,N,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,X,X,X,X,"Boylesports, Signet; Bodog",0,3-Apr-12,N,
+SD0549,SD0549,Phan Huy Thành,Phan Huy,Thanh,3-Apr-12,Software Engineer,Microsoft,,B1,2,SL2,4.70,,4.70,CDS Global,26-Aug-13,,N,N,,,,,Thien Le Vuong,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,"IMX, MVC, Civica training; CDS Global",0,3-Apr-12,N,
+SD0545,SD0545,Nguyễn Tường Duy,Nguyen Tuong,Duy,3-Apr-12,Software Engineer,Front-End,,C1,2,SL2,4.70,,4.70,Charles Taylor,3-Jul-13,,N,N,,,,,Tuan Luong Minh,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,x,,X,X,Holiday Booking; Charles Taylor,0,3-Apr-12,N,
+SD0562,SD0562,Lâm Đạo Vinh,Lam Dao,Vinh,16-Apr-12,Senior Software Engineer,Microsoft,,B2,3,SL1,4.67,,4.67,Internal Tools - SPS,24-Apr-12,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,SPS,0,16-Apr-12,N,
+SD0564,SD0564,Nguyễn Ngọc Phương Thảo,Nguyen Ngoc Phuong,Thao,16-Apr-12,Senior Software Engineer,Microsoft,,B2,3,SL2,4.67,,4.67,Charles Taylor,31-Mar-14,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"MVC, WPF, WCF, SQL
+CrossRail, MoneyCorp; Umbraco; Inventive",0,16-Apr-12,N,
+SD0566,SD0566,Nguyễn Thành Sơn,Nguyen Thanh,Son,16-Apr-12,Senior Software Engineer,Microsoft,,B1,3,SL2,4.67,,4.67,Civica CRM,18-Sep-13,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,CMS Rewrite; Civica Allocation,0,16-Apr-12,N,
+SD0569,SD0569,Nguyễn Minh Khoa 2,Nguyen Minh ,Khoa,16-Apr-12,Senior QC Engineer,QC,,B2,3,SL2,4.67,,4.67,Aussie,16-Apr-12,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aussie,0,16-Apr-12,N,
+SD0568,SD0568,Vũ Ngọc Hải,Vu Ngoc,Hai,16-Apr-12,Principal Software Engineer,Mobile,,A2,4,SL1,4.67,,4.67,SWAT team,9-Apr-14,,N,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,X,X,X,X,Civica rents,0,16-Apr-12,N,
+SD0565,SD0565,Nguyễn Thanh Danh,Nguyen Thanh,Danh,16-Apr-12,Senior QC Engineer,QC,,B2,3,SL3,4.67,,4.67,Weatherbys ODC,16-Apr-12,29-Sep-14,Y,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,Weatherbys,115,16-Apr-12,Y,
+SD0578,SD0578,Võ Mạnh Tuân,Vo Manh ,Tuan,23-Apr-12,QC Engineer,QC,,A2,2,SL2,4.65,,4.65,Civica CRM,23-Dec-13,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Hearst; ABS Germany; Civica CRM,0,2-Dec-13,N,
+SD0571,SD0571,Nông Thị Anh Thư,Nong Thi Anh,Thu,23-Apr-12,Senior QC Engineer,QC,,B1,3,SL2,4.65,,4.65,AP Automation Testing,2-Jul-12,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,AP,0,23-Apr-12,N,
+SD0572,SD0572,Tài Đại Chế Phương,Tai Dai Che,Phuong,23-Apr-12,Senior Software Engineer,Microsoft,,A2,3,SL1,4.65,,4.65,Inventive IT,8-Jul-13,31-Dec-14,Y,N,,,,,Thanh Nguyen Thi Kim,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Civica CommEngine, Inventive IT",102,23-Apr-12,Y,
+SD0588,SD0588,Ngô Quang Vũ,Ngo Quang,Vu,2-May-12,Senior QC Engineer,QC,,A2,3,SL2,4.62,,4.62,AP Automation Testing,16-Sep-13,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"IMX,  AP Automation test",0,2-May-12,N,
+SD0584,SD0584,Hoàng Quốc Việt,Hoang Quoc,Viet,2-May-12,Principal Software Engineer,PHP,,B1,4,SL1,4.62,,4.62,Aussie,2-May-12,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,x,X,X,,Aussie,0,2-May-12,N,
+SD0585,SD0585,Trần Ngọc Thủy,Tran Ngoc,Thuy,2-May-12,QC Engineer,QC,,B2,2,SL2,4.62,,4.62,Civica ASB,26-Aug-13,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aussie; Civica Rents,0,2-May-12,N,
+SD0586,SD0586,Nguyễn Minh Hoàng,Nguyen Minh ,Hoang,2-May-12,Software Engineer,Microsoft,,B1,2,SL1,4.62,,4.62,Bodog,19-Jun-14,,N,N,Billed from 1/7,,,,Thien Le Vuong,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,"Civica Rents, A&B; UT in CMS",0,2-May-12,N,2.5
+SD0576,SD0576,Phạm Thị Thùy Hương,Pham Thi Thuy,Huong,4-May-12,QC Engineer,QC,,B1,2,SL2,4.62,,4.62,Amdocs,14-Apr-14,,N,N,,,,,Khanh Nguyen Xuan Bao,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Genus GPS,0,4-May-12,N,
+SD0583,SD0583,Phan Tấn Quang Nam,Phan Tan Quang,Nam,7-May-12,Senior QC Engineer,QC,,B1,3,SL1,4.61,,4.61,NHSP,27-May-13,22-Jul-14,N,N,Reserved_Amdocs,30-Jun-14,,,Khanh Nguyen Xuan Bao,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"WPF in A&B, Holiday Booking",125,7-May-12,Y,
+SD0581,SD0581,Phạm Trần Trọng Minh,Pham Tran Trong,Minh,7-May-12,Senior Software Engineer,PHP,,B1,3,SL3,4.61,,4.61,Aussie,7-May-12,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,x,X,X,,Aussie,0,7-May-12,N,
+SD0590,SD0590,Nguyễn Văn Tung,Nguyen Van,Tung,14-May-12,Senior Software Engineer,java,,A2,3,SL1,4.59,,4.59,AP Responsive,28-Jun-12,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,Bjava,Bjava,Bjava,Bjava,Bjava,Bjava,X,X,X,X,AP,0,14-May-12,N,
+SD0596,SD0596,Trương Trọng Quân,Truong Trong,Quan,14-May-12,Senior Software Engineer,Microsoft,,B1,3,SL1,4.59,,4.59,Charles Taylor,16-Apr-14,,N,N,non-billed on 2/5,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Civica rents,0,17-Mar-14,N,
+SD0593,SD0593,Lưu Phương Anh,Luu Phuong,Anh,14-May-12,Principal QC Engineer,QC,,C1,4,SL1,4.59,,4.59,IIN Testing,19-May-14,19-Nov-14,N,N,Reserved_QC SWAT; 50% effort to play PM role in IIN,19-May-14,,,Nhan Nguyen Hoang,Nhan Nguyen Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Adeptra,108,14-May-12,Y,
+SD0607,SD0607,Nguyễn Thị Thức,Nguyen Thi,Thuc,21-May-12,Senior Software Engineer,PHP,,B1,3,SL2,4.57,,4.57,Aussie,21-May-11,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,x,X,X,,Aussie,0,21-May-12,N,
+SD0608,SD0608,Bùi Thiên Thơ,Bui Thien ,Tho,28-May-12,Senior Software Engineer,Front-End,,B2,3,SL3,4.55,,4.55,Maternity leave,28-Nov-13,27-May-14,Y,N,Proposed_Ocado,,,,Hung Lu The,Thao Le Huynh Cong,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,X,X,X,X,AP,133,28-May-12,Y,2
+SD0610,SD0610,Trần Nhung Thủy,Tran Nhung ,Thuy,1-Jun-12,Senior QC Engineer,QC,,B1,3,SL1,4.54,,4.54,IIN Testing,2-Apr-14,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aussie,0,1-Jun-12,N,
+SD0616,SD0616,Lê Hồng Phong,Le Hong ,Phong,4-Jun-12,Senior Software Engineer,Microsoft,,B1,3,SL3,4.53,,4.53,Inventive IT,8-Jul-13,31-Dec-14,N,N,Forecast_Inventive IT,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"MVC, PHP, eBillz, Money Corp; InventiveIT",102,4-Jun-12,Y,
+SD0613,SD0613,Trương Minh An Hòa,Truong Minh An ,Hoa,4-Jun-12,Senior QC Engineer,QC,,B1,3,SL2,4.53,,4.53,KCL,6-Aug-12,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,KCL,0,4-Jun-12,N,
+SD0612,SD0612,Võ Thị Trường An,Vo Thi Truong,An,4-Jun-12,QC Engineer,QC,,B1,2,SL2,4.53,,4.53,Aris Game Testing,7-Jun-12,,N,N,Billed Senior QC,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aris,0,4-Jun-12,N,
+SD0621,SD0621,Trần Thị Kim Tuyến,Tran Thi Kim ,Tuyen,11-Jun-12,QC Engineer,QC,,B1,2,SL2,4.51,,4.51,Charles Taylor,27-May-13,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"IMX, Charles Taylors",0,11-Jun-12,N,
+SD0620,SD0620,Huỳnh Trần Quốc Bửu,Huynh Tran Quoc ,Buu,11-Jun-12,Senior Software Engineer,Java,,B1,3,SL3,4.51,,4.51,Adeptra,23-Jul-12,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,Adeptra,0,11-Jun-12,N,
+SD0627,SD0627,Lâm Thị Thu Trúc,Lam Thi Thu ,Truc,18-Jun-12,Senior QC Engineer,QC,,,3,SL1,4.49,,4.49,Aussie,18-Jun-12,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aussie,0,18-Jun-12,N,
+SD0626,SD0626,Nguyễn Hoài Nam,Nguyen Hoai ,Nam,18-Jun-12,QC Engineer,QC,,A2,2,SL2,4.49,,4.49,IIN Testing,10-Feb-14,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Peninsula; CVDB; IIN Testing,0,18-Jun-12,N,
+SD0632,SD0632,Trần Minh Trực,Tran Minh,Truc,25-Jun-12,Software Engineer,Microsoft,,A2,2,SL2,4.47,,4.47,Publicis,23-Apr-14,,N,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,,,A&B; Adeptra,0,25-Jun-12,N,
+SD0629,SD0629,Lê Trọng Tín,Le Trong,Tin,25-Jun-12,Software Engineer,Front-End,,A2,2,SL2,4.47,,4.47,AP Responsive,2-Dec-13,,N,N,Billed 50% SSE + 50% SE(from 3/4); ,,,,Tuan Luong Minh,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,x,,X,X,Hearst; AP,0,25-Jun-12,N,
+SD0637,SD0637,Dương Thạnh Trị,Duong Thanh,Tri,2-Jul-12,Senior Software Engineer,Microsoft,,A2,3,SL3,4.45,,4.45,Civica ASB,16-Sep-13,,N,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,,,Horsefarm; Civica Allocation,0,2-Jul-12,N,
+SD0643,SD0643,Trần Thu Thảo,Tran Thu,Thao,2-Jul-12,Senior QC Engineer,QC,,B1,3,SL1,4.45,,4.45,SMI,9-Jul-12,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,SMI,0,2-Jul-12,N,
+SD0641,SD0641,Nguyễn Anh Quốc,Nguyen Anh ,Quoc,2-Jul-12,Software Engineer,C++,,B1,2,SL1,4.45,,4.45,Alpha,2-Jul-12,,N,N,,,,,Huy Bui Thanh,Huy Bui Thanh,BC++,BC++,BC++,BC++,BC++,BC++,,,,,,0,2-Jul-12,N,
+SD0642,SD0642,Vũ Thị Trâm Anh,Vu Thi Tram,Anh,2-Jul-12,Senior QC Engineer,QC,,B1,3,SL1,4.45,,4.45,Peninsula iOS,15-Oct-13,19-Nov-14,Y,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,Hearst; Peninsula,108,2-Jul-12,Y,
+SD0670,SD0670,Trương Thị Thùy Trang,Truong Thi Thuy ,Trang,16-Jul-12,Senior QC Engineer,QC,,B1,3,SL1,4.42,,4.42,Adeptra,23-Jul-12,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Adeptra,0,16-Jul-12,N,
+SD0664,SD0664,Nguyễn Hồng Linh,Nguyen Hong ,Linh,16-Jul-12,QC Engineer,QC,,B1,2,SL2,4.42,,4.42,Amdocs,5-May-14,,N,N,billed L3,,,,Long Vu Nguyen Phi,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aussie; NYCPM; Inventive IT,0,16-Jul-12,N,
+SD0660,SD0660,Cao Thị Hoàng Lê,Cao Thi Hoang,Le,16-Jul-12,Senior Software Engineer,Microsoft,,B1,3,SL2,4.42,,4.42,BCC AdVantage FIN,14-May-13,,N,N,,,,,Thanh Nguyen Thi Kim,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Civica, BCC",0,16-Jul-12,N,
+SD0668,SD0668,Trần Hải Lâm,Tran Hai,Lam,16-Jul-12,Software Engineer,Java,,A2,2,SL1,4.42,,4.42,Weatherbys ODC,4-Mar-13,29-Sep-14,Y,N,,,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,X,X,X,X,Weatherbys,115,16-Jul-12,Y,
+SD0667,SD0667,Tạ Thị Ngọc Hằng,Ta Thi Ngoc ,Hang,16-Jul-12,Senior Software Engineer,Microsoft,,A2,3,SL3,4.42,,4.42,SMI,16-Jul-12,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,SMI,0,16-Jul-12,N,
+SD0669,SD0669,Trịnh Khắc Duy,Trinh Khac ,Duy,16-Jul-12,Software Engineer,Mobile,,A1,2,SL2,4.42,,4.42,Signal Studio,31-Mar-14,5-May-14,Y,N,Proposed_Planecomm ,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,X,X,X,X,Civica Mobile; A&B; Artemisia,136,30-Nov-13,Y,
+SD0672,SD0672,Nguyễn Anh Tuấn 1,Nguyen Anh,Tuan 1,23-Jul-12,Senior Software Engineer,Microsoft,,A2,3,SL1,4.40,,4.40,CDS Global,12-Mar-14,14-Jul-14,N,N,Billed from 17Mar,,,,Phu Ha Vinh,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,,,WPF in A&B; Unit Test; DDD; Nhibernate; ASP.NET MVC 4; DotNetNuke ; CDS Global,126,4-Mar-14,Y,
+SD0675,SD0675,Võ Văn Thiện,Vo Van ,Thien,23-Jul-12,Senior Software Engineer,Front-End,,A2,3,SL2,4.40,,4.40,Bodog,28-Nov-13,,N,N,,,,,Hung Lu The,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,X,X,X,X,"Hearst, Nashtech Web; Bodog",0,23-Jul-12,N,
+SD0676,SD0676,Vũ Mạnh Hùng,Vu Manh ,Hung,23-Jul-12,Software Engineer,Java,,A2,2,SL2,4.40,,4.40,Adeptra,23-Jul-12,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,Adeptra,0,23-Jul-12,N,
+SD0673,SD0673,Nguyễn Đức Hạnh,Nguyen Duc ,Hanh,23-Jul-12,Principal Software Engineer,Microsoft,,B1,4,SL1,4.40,,4.40,Charles Taylor,22-Apr-13,,N,N,,,,,Phuong To Gia,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"WPF in A&B; SharePoint; A&B, Charles Taylor",0,23-Jul-12,N,
+SD0677,SD0677,Lê Trần Yến Ngọc,Le Tran Yen ,Ngoc,24-Jul-12,Senior Software Engineer,Microsoft,,A2,3,SL2,4.39,,4.39,Charles Taylor,3-Jul-13,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"WPF in A&B, MVC Training; Chalres Taylor",0,24-Jul-12,N,
+SD0686,SD0686,Trương Cẩm Vinh,Truong Cam ,Vinh,30-Jul-12,Senior Software Engineer,Java,,B1,3,SL1,4.38,,4.38,Adeptra,30-Jul-12,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,Adeptra,0,30-Jul-12,N,
+SD0684,SD0684,Nguyễn Văn Trọng,Nguyen Van,Trong,30-Jul-12,Senior Software Engineer,Microsoft,,B1,3,SL1,4.38,,4.38,Publicis Sydney,12-May-14,,N,N,submit resignation,27-Jun-14,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,,,"SMI, Asp.Net, Windows Forms; Umbraco; OMG",0,30-Jul-12,N,
+SD0682,SD0682,Nguyễn Thị Hồng Thuận,Nguyen Thi Hong ,Thuan,30-Jul-12,Software Engineer,Microsoft,,B2,2,SL2,4.38,,4.38,Civica ASB,5-Aug-13,,N,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,,,Civica rents,0,30-Jul-12,N,
+SD0679,SD0679,Đỗ Hữu Quang,Do Huu ,Quang,30-Jul-12,Senior Software Engineer,PHP,,A2,3,SL1,4.38,,4.38,VNUK network website,9-Jun-14,16-Jun-14,Y,N,Proposed_Technology Forge,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,x,X,X,,"PHP, Bodog",130,4-Mar-14,Y,1.5
+SD0683,SD0683,Nguyễn Thụy Kim Ngân,Nguyen Thuy Kim ,Ngan,30-Jul-12,QC Engineer,QC,,B1,2,SL2,4.38,,4.38,Aussie,1-Nov-13,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aussie,0,30-Jul-12,N,
+SD0689,SD0689,Đỗ Nguyễn Nguyệt Ngân,Do Nguyen Nguyet,Ngan,30-Jul-12,Principal Software Engineer,Microsoft,,B1,4,SL1,4.38,,4.38,Civica ASB,16-Sep-13,,N,N,,,,,Thien Le Vuong,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,Boylesports; Civica Allocation,0,30-Jul-12,N,
+SD0680,SD0680,Lê Huỳnh Quang Khánh,Le Huynh Quang,Khanh,30-Jul-12,Principal QC Engineer,QC NT,,C1,4,SL1,4.38,,4.38,Alpha,30-Jul-12,,N,N,,,,,Lan Ngo Thi Hoang,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,30-Jul-12,N,
+SD0685,SD0685,Trần Nam Khang,Tran Nam ,Khang,30-Jul-12,Principal Software Engineer,Microsoft,,C1,4,SL1,4.38,,4.38,CDS Global,1-Jan-13,,N,N,,,,,Loan Pham Thi Tuyet,Loan Pham Thi Tuyet,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,CDS,0,30-Jul-12,N,
+SD0687,SD0687,Võ Văn Dũng,Vo Van ,Dung,30-Jul-12,Software Engineer,PHP,,B2,2,SL2,4.38,,4.38,NashTech Web S&M,2-Aug-13,1-Aug-14,N,N,support 10% in UKABC,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,x,X,X,,"Aussie, PHP, Jquery, Javascript, Nashtech Web",124,30-Jul-12,Y,
+SD0681,SD0681,Đào Duy Vũ,Dao Duy ,Vu,6-Aug-12,Software Engineer,Microsoft,,A2,2,SL2,4.36,,4.36,CDS Global,24-Mar-14,14-Jul-14,Y,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,,,"C# .Net, ASP.Net, LINQ and T-SQL, XHTML, CSS, Dotnetnuke, WCF, SharePoint; Civica Rents",126,6-Aug-12,Y,
+SD0656,SD0656,Trần Minh Tuấn,Tran Minh ,Tuan,6-Aug-12,Principal Software Engineer,Microsoft,,B1,4,SL1,4.36,,4.36,KCL,6-Aug-12,,N,N,,,,,Loan Pham Thi Tuyet,Hien Nguyen Quang 1,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,KCL,0,6-Aug-12,N,
+SD0690,SD0690,Lý Thụy Phương Thảo,Ly Thuy Phuong,Thao,6-Aug-12,Senior UI Designer,UI,,A2,3,SL2,4.36,,4.36,Bodog,15-Jul-13,,N,N,,,,,Hung Lu The,Thao Le Huynh Cong,BUI,BUI,BUI,BUI,BUI,BUI,X,X,X,X,Boylesports; Bodog,0,6-Aug-12,N,
+SD0655,SD0655,Hứa Thái Phong,Hua Thai ,Phong,6-Aug-12,Senior Software Engineer,Microsoft,,B2,3,SL2,4.36,,4.36,KCL,6-Aug-12,,N,N,,,,,Thien Le Vuong,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,KCL,0,6-Aug-12,N,
+SD0694,SD0694,Nguyễn Trung Nguyên,Nguyen Trung,Nguyen,6-Aug-12,Software Engineer,Mobile,,A2,2,SL2,4.36,,4.36,MKI-WLS,12-May-14,4-Jul-14,N,N,billed from 26May ; 20% (6/6 - 4/7),,,,Phuoc Phan Vinh,Phuoc Phan Vinh,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,X,X,X,X,"Peninsula, WPF in A&B",128,30-Nov-13,Y,
+SD0634,SD0634,Bùi Duy Hòa,Bui Duy,Hoa,6-Aug-12,Software Engineer,Mobile,,A1,2,SL2,4.36,,4.36,Peninsula HTML5,1-Aug-13,19-May-14,Y,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,X,X,X,X,"Boylesports, Peninsula",134,6-Aug-12,Y,2
+SD0692,SD0692,Nguyễn Anh Duy,Nguyen Anh,Duy,6-Aug-12,Senior Software Engineer,Microsoft,,C1,3,SL3,4.36,,4.36,Peninsula,19-May-14,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"WPF in A&B;
+Good Tech lead",0,6-Aug-12,N,
+,SD0702,Nguyễn Anh Tuấn 2,Nguyen Anh,Tuan 2,13-Aug-12,Software Engineer,Microsoft,,Good,2,SL2,4.34,,4.34,Charles Taylor,28-Feb-14,,N,N,,,,,Phuong To Gia,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Genus GPS; Charles Taylor,0,13-Aug-12,N,
+SD0718,SD0718,Nguyễn Hoàng Quân,Nguyen Hoang,Quan,20-Aug-12,Software Engineer,Microsoft,,B2,2,SL2,4.32,,4.32,Charles Taylor,16-Dec-13,,N,N,,,,,Phuong To Gia,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,WPF in A&B; Charles Taylor,0,30-Nov-13,N,
+SD0714,SD0714,Huỳnh Tấn Lộc,Huynh Tan ,Loc,20-Aug-12,Software Engineer,Microsoft,,,2,SL2,4.32,,4.32,BCC Media,3-Dec-12,,N,N,,,,,Phuong To Gia,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,BCC; Sharepoint,0,20-Aug-12,N,
+SD0715,SD0715,Lưu Xuân Huy,Luu Xuan,Huy,20-Aug-12,Software Engineer,Mobile,,,2,SL2,4.32,,4.32,Kablamo,26-May-14,5-Jun-14,Y,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,X,X,X,X,Peninsula,132,20-Aug-12,Y,
+SD0719,SD0719,Nguyễn Lê Hoàng Ân,Nguyen Le Hoang,An,20-Aug-12,Software Engineer,Microsoft,,A2,2,SL2,4.32,,4.32,A&B Legacy,1-Jul-13,18-Apr-14,N,N,Publicis Sydney training,,30-Jun-14,,Phuong To Gia,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"WPF in A&B
+C#, ASP.NET, LINQ, Entity Framework, .NET 4.0, MVC 3.0, HTML.;SSRS training",139,20-Aug-12,Y,2.5
+SD0727,SD0727,Đỗ Thành Trung,Do Thanh ,Trung,4-Sep-12,Senior Software Engineer,Microsoft,,,3,SL1,4.28,,4.28,Civica ASB,5-Aug-13,,N,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,,,"SharePoint, ASP.NET, DotnetNuke; Civica Rents",0,4-Sep-12,N,
+SD0732,SD0732,Nguyễn Lê Quang Hùng,Nguyen Le Quang,Hung,4-Sep-12,Software Engineer,Microsoft,,Good,2,SL2,4.28,,4.28,Civica ASB,5-Aug-13,,N,N,,,,,Phuong To Gia,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Civica Rents,0,4-Sep-12,N,
+SD0730,SD0730,Trần Quốc Dũng,Tran Quoc,Dung,4-Sep-12,Software Engineer,Mobile,,Fair,2,SL2,4.28,,4.28,Bodog HTML5,10-Sep-13,,N,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,X,X,X,X,Signet;  mobile frontend training; Bodog,0,30-Oct-13,N,
+SD0733,SD0733,Đặng Ngọc Bình,Dang Ngoc ,Binh,4-Sep-12,Software Engineer,Mobile,,Fair,2,SL2,4.28,,4.28,Bodog,20-May-13,,N,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,X,X,X,X,"WPF in A&B, Bodog",0,4-Sep-12,N,
+SD0737,SD0737,Vũ Thành Lâm,Vu Thanh,Lam,10-Sep-12,Software Engineer,Microsoft,,Good,2,SL2,4.26,,4.26,Thomsons,15-Apr-14,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"WPF in A&B, ETWEB, VB.Net, PHP; CMS ",0,10-Sep-12,N,
+SD0739,SD0739,Đinh Nguyễn Minh Đức,Dinh Nguyen Minh ,Duc,17-Sep-12,Software Engineer,Mobile,,Good,2,SL2,4.24,,4.24,Bodog,20-May-13,,N,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,X,X,X,X,"WPF in A&B, Bodog",0,17-Sep-12,N,
+SD0752,SD0752,Nguyễn Thị Thu Bông,Nguyen Thi Thu,Bong,1-Oct-12,Senior Software Engineer,Microsoft,,Fair,3,SL2,4.21,,4.21,Media Brands,19-Nov-12,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,Media Brands,0,1-Oct-12,N,
+SD0753,SD0753,Phạm Trần Tiến,Pham Tran ,Tien,1-Oct-12,Senior Software Engineer,Microsoft,,Fair,3,SL3,4.21,,4.21,Fairfax,10-Apr-14,,N,N,,,,,Tri Hua Minh,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,Horsefarm; IMX Mobile; Crossrail,0,1-Oct-12,N,
+SD0755,SD0755,Trương Minh Anh Tuấn,Truong Minh Anh,Tuan,1-Oct-12,Software Engineer,Microsoft,,Fair,2,SL2,4.21,,4.21,BCC ENT Data Warehouse,12-Aug-13,,N,N,,,,,Thanh Nguyen Thi Kim,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Civica, DBA, MVC, Boylesports; BCC",0,1-Oct-12,N,
+SD0756,SD0756,Trần Quốc Việt,Tran Quoc,Viet,1-Oct-12,Senior Software Engineer,PHP,,Fair,3,SL2,4.21,,4.21,Aussie,5-Oct-12,14-Jul-14,Y,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,x,X,X,,Aussie,126,1-Oct-12,Y,
+SD0757,SD0757,Lưu Trường Thành,Luu Truong,Thanh,1-Oct-12,Senior Software Engineer,PHP,,Good,3,SL3,4.21,,4.21,Fiscal,24-Mar-14,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,x,X,X,,Aussie; Bodog,0,4-Mar-14,N,
+SD0760,SD0760,Lê Xuân Tạc,Le Xuan ,Tac,1-Oct-12,Senior Software Engineer,Microsoft,,Good,3,SL2,4.21,,4.21,CMS Support,20-Jan-14,1-Aug-14,Y,N,,,,,Tri Hua Minh,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,x,,X,X,"SMI, DBA, MVC; CMS",124,1-Oct-12,Y,
+SD0761,SD0761,Nguyễn Thiên Anh,Nguyen Thien,Anh,1-Oct-12,Software Engineer,Microsoft,,Fair,2,SL1,4.21,,4.21,Media Brands,8-May-13,,N,N,,,,,Tri Hua Minh,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,"Media Brands, PHP/MVC/WPF training",0,1-Oct-12,N,
+SD0762,SD0762,Diệp Lan Quỳnh,Diep Lan,Quynh,1-Oct-12,QC Engineer,QC,,Fair,2,SL1,4.21,,4.21,Aris Game Testing,8-Oct-12,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aris,0,1-Oct-12,N,
+SD0763,SD0763,Lê Công Minh Thuận,Le Cong Minh,Thuan,1-Oct-12,Software Engineer,Mobile,,Fair,2,SL2,4.21,,4.21,AP responsive,2-Jun-14,,N,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,X,X,X,X,"WPF in A&B, Peninsula; PHP, MySQL, HTML5, CSS3, PhoneGap, Apache, Android, iOS",0,1-Oct-12,N,1.5
+SD0754,SD0754,Nguyễn Thanh Tú,Nguyen Thanh,Tu,15-Oct-12,Software Engineer,C++,,Fair,2,SL2,4.17,,4.17,Alpha,15-Oct-12,,N,N,,,,,Khoa Le Dang,Khoa Le Dang,BC++,BC++,BC++,BC++,BC++,BC++,,X,,,,0,15-Oct-12,N,
+SD0766,SD0766,Ngô Thị Hiền,Ngo Thi,Hien,15-Oct-12,QC Engineer,QC,,Fair,2,SL2,4.17,,4.17,Fiscal,1-Apr-14,,N,N,50% --> 75% from 9/6/2014; 25% Peninsula (16/6-19/11),,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Hearst; Peninsula,0,15-Oct-12,N,
+SD0768,SD0768,Bảo Quang Vinh,Bao Quang,Vinh,15-Oct-12,Senior QC Engineer,QC,,Good,3,SL3,4.17,,4.17,SMI,23-Oct-12,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,SMI,0,15-Oct-12,N,
+,SD0767,Võ Anh Toàn,Vo Anh,Toan,15-Oct-12,Software Engineer,Java,,Good,2,SL1,4.17,,4.17,Fiscal,24-Mar-14,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,,,,,,0,3-Mar-14,N,
+SD0772,SD0772,Nguyễn Thái Bình,Nguyen Thai,Binh,22-Oct-12,Senior Software Engineer,Microsoft,,Fair,3,SL2,4.15,,4.15,Media Brands,19-Nov-12,,N,N,,,,,Tri Hua Minh,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,"Media Brands, MVC, jQuery",0,22-Oct-12,N,
+SD0773,SD0773,Vũ Anh Dzu,Vu Anh ,Dzu,22-Oct-12,Software Engineer,Microsoft,,Fair,2,SL1,4.15,,4.15,Media Brands,8-May-13,,N,N,,,,,Tri Hua Minh,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,"MVC, frontend training, Media Brands",0,22-Oct-12,N,
+SD0774,SD0774,Huỳnh Yến Linh,Huynh Yen,Linh,22-Oct-12,QC Engineer,QC,,Good,2,SL2,4.15,,4.15,CMS Rewrite,25-Nov-13,7-Jul-14,N,N,Reserved_Bodog,7-Jul-14,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,WPF in A&B; A&B R6; Adeptra; CMS,127,22-Oct-12,Y,
+SD0775,SD0775,Nguyễn Khoa Khanh,Nguyen Khoa,Khanh,22-Oct-12,Software Engineer,Mobile,,Good,2,SL1,4.15,,4.15,Peninsula .NET,23-Oct-13,31-Mar-14,N,N,Unpaid leave,31-Mar-14,30-Sep-14,,Phuoc Phan Vinh,Phuoc Phan Vinh,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,X,X,X,X,"IMX, MVC, mobile; Peninsula",141,22-Oct-12,Y,
+SD0783,SD0783,Nguyễn Thị Thanh Tuyền,Nguyen Thi Thanh,Tuyen,29-Oct-12,QC Engineer,QC,,Good,2,SL1,4.13,,4.13,CMS Rewrite,25-Nov-13,23-Jun-14,Y,N,Proposed_Ocado (RWD),1-Jul-14,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Civica; Agora Google; CMS Rewrite,129,29-Oct-12,Y,
+SD0790,SD0790,Võ Minh Mẫn,Vo Minh,Man,5-Nov-12,Senior Software Engineer,Microsoft,,Good,3,SL2,4.11,,4.11,Charles Taylor,12-Jun-14,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Media Brands, MVC, PHP",0,5-Nov-12,N,2.5 - 3
+SD0791,SD0791,Hoàng Đức Tuấn,Hoang Duc,Tuan,5-Nov-12,QC Engineer,QC,,Good,2,SL2,4.11,,4.11,Aussie,24-Mar-14,14-Jul-14,N,N,Forecast_Associated Press,14-Jul-14,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Horsefarm, Bodog; CMS Data Migrarion; Moneycorp",126,5-Nov-12,Y,
+SD0801,SD0801,Trần Thị Thu Nhân,Tran Thi Thu,Nhan,5-Nov-12,QC Engineer,QC,,Fair,2,SL1,4.11,,4.11,IIN Testing,10-Mar-14,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,CMS Rewrite; SMI; CMS Data Migration; IIN Testing,0,5-Nov-12,N,
+SD0794,SD0794,Đặng Thị Huyền Trang,Dang Thi Huyen,Trang,5-Nov-12,QC Engineer,QC,,Good,2,SL2,4.11,,4.11,Adeptra,11-Mar-13,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Adeptra,0,5-Nov-12,N,
+SD0796,SD0796,Trần Đình Nguyên,Tran Dinh,Nguyen,5-Nov-12,Senior UI Designer,UI,,Fair,3,SL2,4.11,,4.11,AP Design,9-Apr-13,,N,N,,,,,Hung Lu The,Thao Le Huynh Cong,BUI,BUI,BUI,BUI,BUI,BUI,X,X,X,X,AP,0,5-Nov-12,N,
+SD0805,SD0805,Bùi Thiện Khiêm,Bui Thien ,Khiem,12-Nov-12,Software Engineer,Microsoft,,Fair,2,SL2,4.09,,4.09,Civica ASB,5-May-14,31-Jan-15,Y,N,,,,,Hung Lu The,Hieu Nguyen Chi,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Genus GPS WPF; MVC 4, DI, Nhibernate, UT; JS; Civica Allocation; CMS",98,12-Nov-12,Y,
+SD0812,SD0812,Nguyễn Đức Châu Trí,Nguyen Duc Chau,Tri,19-Nov-12,Senior QC Engineer,QC,,Good,3,SL2,4.07,,4.07,Civica ASB,22-Jul-13,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Civica Rents,0,19-Nov-12,N,
+SD0813,SD0813,Lê Thanh Hoàng,Le Thanh ,Hoang,19-Nov-12,Senior Software Engineer,Microsoft,,Fair,3,SL1,4.07,,4.07,Civica ASB,9-Sep-13,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Civica Rents, MVC, CMS Rewrite",0,7-Jan-14,N,
+SD0820,SD0820,Tạ Thị Ái Nhi,Ta Thi Ai,Nhi,20-Nov-12,Senior QC Engineer,QC,,Good,3,SL2,4.07,,4.07,Inventive IT,8-Jul-13,31-Dec-14,Y,N,,,,,Lan Ngo Thi Hoang,Lam Pham Le Ngoc,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,InventiveIT,102,20-Nov-12,Y,
+SD0821,SD0821,Bùi Thị Hương,Bui Thi ,Huong,26-Nov-12,QC Engineer,QC,,Fair,2,SL2,4.05,,4.05,CDS Global,11-Mar-13,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,CDS Global,0,26-Nov-12,N,
+SD0823,SD0823,Huỳnh Lê Minh Quân,Huynh Le Minh,Quan,26-Nov-12,Software Engineer,Microsoft,,Fair,2,SL2,4.05,,4.05,Civica CRM,14-Feb-14,,N,N,,,,,Hung Lu The,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Release Management, Ruby on Rails, MSBuild, MSBuild, MySQL, Rails 4, Jenkins, Sonar, jQuery, ASP .NET MVC 4, DI, Nhibernate, UT, JS
+Civica Allocation",0,26-Nov-12,N,
+SD0827,SD0827,Thông Dựng,Thong,Dung,26-Nov-12,Software Engineer,Java,,Good,2,SL1,4.05,,4.05,Jira Tool,2-Jun-14,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,Weatherbys training; C++ from NT,0,26-Nov-12,N,3 - 3.5
+SD0826,SD0826,Nguyễn Quỳnh Như,Nguyen Quynh ,Nhu,3-Dec-12,QC Engineer,QC,,Good,2,SL1,4.03,,4.03,BCC AdVantage FIN,31-Mar-14,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,A&B R5; Civica Allocation; Crossrail,0,3-Dec-12,N,
+SD0832,SD0832,Nguyễn Sỹ Như Ngọc,Nguyen Sy Nhu,Ngoc,3-Dec-12,QC Engineer,QC,,Good,2,SL1,4.03,,4.03,IIN Testing,20-Jan-14,,N,N,,,,,Hoa Doan Thi Ngoc,Hoa Doan Thi Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Signet, Bodog; IMX Mobile; IIN Testing",0,3-Dec-12,N,
+SD0833,SD0833,Trần Tuấn Kiệt,Tran Tuan ,Kiet,3-Dec-12,QC Engineer,QC,,Fair ,2,SL1,4.03,,4.03,Aris Game Testing,14-Mar-13,,N,N,,,,,Hoa Doan Thi Ngoc,Hoa Doan Thi Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Aris,0,3-Dec-12,N,
+SD0834,SD0834,Nguyễn Văn Hiếu 2,Nguyen Van ,Hieu 2,3-Dec-12,Software Engineer,Microsoft,,Good,2,SL2,4.03,,4.03,Lumesse-ETAD,18-Feb-13,1-Jan-14,N,N,reserved_Publicis training,,13-Jun-14,,Hung Lu The,Hieu Nguyen Chi,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,ETWEB,154,5-Mar-14,Y,2 - 2.5
+SD0835,SD0835,Nguyễn Thị Kiều Trang,Nguyen Thi Kieu ,Trang,3-Dec-12,Senior Software Engineer,Microsoft,,Good,3,SL1,4.03,,4.03,KCL,21-Jan-14,,N,N,,,,,Thien Le Vuong,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,IMX; KCL,0,15-Oct-13,N,
+SD0837,SD0837,Trần Minh Xuân,Tran Minh,Xuan,3-Dec-12,Software Engineer,Microsoft,,Fair,2,SL1,4.03,,4.03,Civica Rents,16-Sep-13,11-Mar-14,Y,y,Proposed_KCL,,,,Thien Le Vuong,Hieu Nguyen Chi,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,x,,X,X,Sharepoint/Frontend/MVC Training; Civica Rents; UT in CMS; ETL skill,144,3-Dec-12,Y,2
+SD0838,SD0838,Lê Thị Ngọc Huệ,Le Thi Ngoc,Hue,3-Dec-12,QC Engineer,QC,,Good,2,SL2,4.03,,4.03,IIN Testing,25-Nov-13,,N,N,,,,,Lan Ngo Thi Hoang,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Genus GPS; IIN,0,13-Aug-13,N,
+SD0843,SD0843,Nguyễn Thị Phương Linh,Nguyen Thi Phuong,Linh,10-Dec-12,Senior QC Engineer,QC,,Fair,3,SL1,4.01,,4.01,BCC AdVantage MB,30-Sep-13,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Civica; BCC,0,10-Dec-12,N,
+SD0845,SD0845,Hồ Thanh Phong,Ho Thanh,Phong,10-Dec-12,Software Engineer,Microsoft,,Good,2,SL2,4.01,,4.01,Lumesse-ETAD,18-Feb-13,,N,N,,,,,Hung Lu The,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,ETWEB,0,10-Dec-12,N,
+SD0842,SD0842,Võ Minh Tâm,Vo Minh ,Tam,17-Dec-12,Senior Software Engineer,Microsoft,,Fair,3,SL2,3.99,,3.99,Bodog,31-Mar-14,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Civica CommEngine, MVC, Javascript, HTML/CSS; Civica Rents",0,17-Dec-12,N,
+SD0849,SD0849,Nguyễn Vũ Minh Nhật,Nguyen Vu Minh ,Nhat,17-Dec-12,Software Engineer,Microsoft,,Fair,2,SL1,3.99,,3.99,Internal Tools,16-May-13,31-Jul-14,Y,N,,,,,Hung Lu The,Hieu Nguyen Chi,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Sharepoint Training, Frontend training, MVC Training; Internal Tools",124,17-Dec-12,Y,
+SD0855,SD0855,Thái Bảo Long,Thai Bao,Long,24-Dec-12,Senior Software Engineer,Microsoft,,Good,3,SL2,3.98,,3.98,Charles Taylor,12-Jun-14,,N,N,,,,,Tri Hua Minh,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,IMX; Fairfax,0,12-Dec-13,N,2.5 - 3
+SD0857,SD0857,Huỳnh Thành Ý,Huynh Thanh,Y,24-Dec-12,QC Engineer,QC,,Fair,2,SL1,3.98,,3.98,Adeptra,18-Mar-13,,N,N,,,,,Hoa Doan Thi Ngoc,Hoa Doan Thi Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Adeptra,0,24-Dec-12,N,
+SD0858,SD0858,Lê Hồng Mạnh,Le Hong ,Manh,24-Dec-12,Senior Software Engineer,DBA,,Fair,3,SL3,3.98,,3.98,BCC Media Data Warehouse,24-Dec-12,,N,N,,,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,x,X,X,X,BCC,0,10-Dec-13,N,
+SD0863,SD0863,Lê Đăng Nam,Le Dang ,Nam ,2-Jan-13,Senior Software Engineer,Microsoft,,Fair,3,SL2,3.95,,3.95,Media Brands,7-Jan-13,,N,N,,,,,Tri Hua Minh,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,"Media Brands, MVC, ORM",0,2-Jan-13,N,
+SD0865,SD0865,Võ Hòa Hiệp,Vo Hoa ,Hiep,2-Jan-13,Software Engineer,Microsoft,,Fair,2,SL1,3.95,,3.95,Bodog,20-Jun-13,,N,N,,,,,Hung Lu The,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Sharepoint, MVC, frontend training, Bodog",0,2-Jan-13,N,
+SD0866,SD0866,Trương Thị Anh Đào,Truong Thi Anh,Dao,2-Jan-13,QC,QC,,Fair,#N/A,SL1,3.95,,3.95,AP responsive,27-Mar-14,,N,N,,,,,Hung Lu The,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,X,X,X,X,"Internal Tools, Bodog",0,6-Mar-14,N,
+SD0870,SD0870,Văn Thị Tuyết Nga,Van Thi Tuyet,Nga,2-Jan-13,Principal Software Engineer,Support Analyst,,Good,4,SL3,3.95,,3.95,Media Brands,7-Jan-13,,N,N,,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,X,X,X,X,Media Brands,0,2-Jan-13,N,
+SD0874,SD0874,Lương Thị Ngọc Trinh,Luong Thi Ngoc,Trinh,7-Jan-13,QC Engineer,QC NT,,Fair,2,SL1,3.94,,3.94,Alpha,7-Jan-13,,N,N,,,,,Lan Ngo Thi Hoang,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,,0,13-Aug-13,N,
+SD0875,SD0875,Đinh Duy Hải,Dinh Duy,Hai,7-Jan-13,Software Engineer,Microsoft,,,2,SL1,3.94,,3.94,Internal Tools,28-Nov-13,31-Jul-14,Y,N,,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Winform, VB.NET, C#, Internal tools, Sharepoint; NYCPM",124,26-Sep-13,Y,
+SD0877,SD0877,Nguyễn Thành Giao,Nguyen Thanh,Giao,14-Jan-13,Senior Software Engineer,Microsoft,,Fair,3,SL3,3.92,,3.92,Civica ASB,30-Sep-13,,N,N,,,,,Phuong To Gia,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"CMS Rewrite, MVC; Civica Allocation",0,14-Jan-13,N,
+SD0882,SD0882,Phạm Hoàng Minh 2,Pham Hoang,Minh 2,15-Jan-13,Software Engineer,Java,,Good,2,SL2,3.92,,3.92,Adeptra,15-Jan-13,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,X,X,X,X,Adeptra,0,15-Jan-13,N,
+SD0879,SD0879,Nguyễn Thành Đệ,Nguyen Thanh,De,15-Jan-13,Senior Software Engineer,PHP,,Fair,3,SL2,3.92,,3.92,Bodog HTML5,10-Sep-13,25-Apr-14,Y,N,Proposed_Technology Forge,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,x,X,X,,"Aussie,  mobile frontend training, Bodog",138,15-Jan-13,Y,2.5-3
+SD0881,SD0881,Nguyễn Quế Hoàng Cung,Nguyen Que Hoang,Cung,15-Jan-13,Software Engineer,Front-End,,Fair,2,SL1,3.92,,3.92,Bodog,3-Sep-13,,N,N,,,,,Tri Hua Minh,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,x,,X,X,"Hearst, WPF;  mobile frontend training, Sharepoint; Bodog",0,15-Jan-13,N,
+SD0889,SD0889,Lê Phương Uyên,Le Phuong,Uyen,21-Jan-13,QC Engineer,QC,,Good,2,SL1,3.90,,3.90,AP Responsive,19-May-14,,N,N,,,,,Hoa Doan Thi Ngoc,Hoa Doan Thi Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Internal Tools; AP,0,21-Jan-13,N,
+SD0891,SD0891,Phan Minh Nhựt,Phan Minh,Nhut,21-Jan-13,Senior Software Engineer,Mobile,,Good,3,SL1,3.90,,3.90,Degree53,28-Apr-14,,N,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,X,X,X,X,"Android, Front- End, Java
+Signet; Peninsula",0,21-Jan-13,N,
+SD0896,SD0896,Nguyễn Anh Minh 1,Nguyen Anh,Minh,28-Jan-13,Software Engineer,Microsoft,,Rather good,2,SL2,3.88,,3.88,BCC Enterprise Core,9-May-14,,N,N,billed from 12May,,,,Thanh Nguyen Thi Kim,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"Sharepoint Training, WPF Training, Frontend training, MCV Training, A&B Legacy",0,28-Jan-13,N,
+SD0897,SD0897,Phạm Siêu Nhiên,Pham Sieu,Nhien,28-Jan-13,Software Engineer,Microsoft,,Fair,2,SL1,3.88,,3.88,GroupM training,17-Apr-14,4-Jun-14,Y,y,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Sharepoint/WPF/Frontend/MVC Training, Bodog (PHP); Civica Rents; UT in CMS",132,28-Jan-13,Y,
+SD0900,SD0900,Trần Chí Nhân,Tran Chi ,Nhan,18-Feb-13,Software Engineer,Microsoft,,Good,2,SL2,3.82,,3.82,Publicis Sydney,9-Jun-14,,N,N,billed from 30 Jun,,6-Jun-14,,Thien Le Vuong,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,x,,X,X,"ETWEB, PHP; CMS Data Migration; SSRS training",0,18-Feb-13,N,2.5
+SD0901,SD0901,Lê Thanh Tâm,Le Thanh,Tam,18-Feb-13,Senior QC Engineer,QC,,Good,3,SL2,3.82,,3.82,Media Brands,25-Feb-13,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Media Brands,0,18-Feb-13,N,
+SD0903,SD0903,Diệp Trung Tín,Diep Trung,Tin,18-Feb-13,Software Engineer,Microsoft,,Good,2,SL2,3.82,,3.82,Lumesse-ETAD,18-Feb-13,,N,N,,,,,Thanh Nguyen Thi Kim,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,ETWEB,0,18-Feb-13,N,
+SD0904,SD0904,Huỳnh Ngọc Khuê,Huynh Ngoc,Khue,18-Feb-13,Software Engineer,Front-End,,Fair,2,SL1,3.82,,3.82,Bodog HTML5,23-Sep-13,,N,N,,,,,Phuong To Gia,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,X,X,X,X,Hearst;  mobile frontend training; Sharepoint; Bodog,0,18-Feb-13,N,
+SD0905,SD0905,Nguyễn Xuân Vinh 1,Nguyen Xuan ,Vinh 1,18-Feb-13,Software Engineer,Microsoft,,Fair,2,SL2,3.82,,3.82,Internal Tools - Dashboard,11-Mar-14,24-Jul-14,Y,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"SQL, team work, learning new technique: Sharepoint training
+Internal Tools; Civica Rents",125,18-Feb-13,Y,
+SD0911,SD0911,Nguyễn Hữu Quỳnh,Nguyen Huu,Quynh,18-Feb-13,QC Engineer,QC,,Good,2,SL1,3.82,,3.82,AP responsive,30-Sep-13,,N,N,,,,,Lan Ngo Thi Hoang,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,AP,0,18-Feb-13,N,
+SD0912,SD0912,Đinh Hoàng Minh,Dinh Hoang,Minh,25-Feb-13,Senior QC Engineer,QC,,Fair,3,SL1,3.80,,3.80,IIN Testing,5-Sep-13,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,CMS Rewrite; IIN Testing,0,25-Feb-13,N,
+SD0915,SD0915,Trần Minh Quân,Tran Minh,Quan,25-Feb-13,QC Engineer,QC,,Good,2,SL1,3.80,,3.80,Adeptra,8-Mar-13,,N,N,,,,,Hoa Doan Thi Ngoc,Hoa Doan Thi Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Adeptra,0,25-Feb-13,N,
+SD0927,SD0927,Hoàng Quốc Hưng,Hoang Quoc ,Hung,4-Mar-13,Senior Software Engineer,Microsoft,,Fairly Good,3,SL2,3.78,,3.78,Peninsula,27-May-13,19-Nov-14,Y,N,,,,,Phuong To Gia,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,X,X,X,X,"Web App, MVC; CrossRail, Peninsula",108,4-Mar-13,Y,
+SD0930,SD0930,Nguyễn Chí Cường,Nguyen Chi,Cuong,6-Mar-13,Senior Software Engineer,Microsoft,,Good,3,SL3,3.78,,3.78,BCC AdVantage MB,25-Mar-13,,N,N,,,,,Thanh Nguyen Thi Kim,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,X,X,X,X,"PHP, MS, management skill, MVC, WCF
+BCC",0,6-Mar-13,N,
+,SD0937,Trương Nguyễn Đăng Trường,Truong Nguyen Dang,Truong,18-Mar-13,QC Engineer,QC,,Good,2,SL1,3.75,,3.75,Adeptra,21-Mar-13,,N,N,,,,,Hoa Doan Thi Ngoc,Hoa Doan Thi Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Adeptra,0,18-Mar-13,N,
+,SD0938,Lê Thành Trung,Le Thanh,Trung,25-Mar-13,Principal Software Engineer,Microsoft,,Good,4,SL2,3.73,,3.73,ReMS,2-Jun-14,21-Jul-14,N,N,Reserved_OMG MPSC,22-Jul-14,,,Loan Pham Thi Tuyet,Loan Pham Thi Tuyet,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,X,X,X,"Good software implementation, OOP, clean code, unit test; BCC",125,25-Mar-13,Y,
+,SD0946,Nguyễn Ngọc Hậu,Nguyen Ngoc ,Hau,1-Apr-13,Senior QC Engineer,QC,,Good,3,SL2,3.71,,3.71,Charles Taylor,3-Jul-13,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,GIMO; Charles Taylor,0,1-Apr-13,N,
+,SD0949,Lý Thị Kim Chúc,Ly Thi Kim,Chuc,1-Apr-13,Senior QC Engineer,QC,,Fair ,3,SL1,3.71,,3.71,BCC Media Data Warehouse,16-Apr-13,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,BCC,0,1-Apr-13,N,
+,SD0950,Trương Kiện Hùng,Truong Kien,Hung,1-Apr-13,Software Engineer,Microsoft,,Fair,2,SL1,3.71,,3.71,Charles Taylor,5-May-14,,N,N,,,,,Phuong To Gia,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,X,X,X,Frontend/MVC/Civica/Automation Test Training; Civica Rents; UT in CMS,0,18-Mar-14,N,
+,SD0952,Nguyễn Trung Tín 2,Nguyen Trung ,Tin 2,1-Apr-13,Principal Software Engineer,Front-End,,Fair,4,SL1,3.71,,3.71,SWAT team,14-Mar-14,,N,N,,,,,Loan Pham Thi Tuyet,Loan Pham Thi Tuyet,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,,X,X,X,"PHP, Javascript, HTML5, ASP.Net, MVC, APN",0,1-Apr-13,N,
+,SD0954,Huỳnh Nguyên Khang,Huynh Nguyen,Khang,1-Apr-13,Software Engineer,Microsoft,,Fair,2,SL2,3.71,,3.71,Civica CRM,18-Oct-13,,N,N,Submit resignation,,,,Tri Hua Minh,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,X,X,"C#, PHP, Java, SQL Server, Oracle, MySql, Crystal Report, Active Report, Bodog
+Civica Allocation",0,1-Apr-13,N,
+,SD0957,Nguyễn Thị Tuyết Nhung,Nguyen Thi Tuyet,Nhung,8-Apr-13,QC Engineer,QC,,Fairly Good,2,SL1,3.69,,3.69,Aris Game Testing,1-Jan-14,,N,N,,,,,Hoa Doan Thi Ngoc,Hoa Doan Thi Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,NashtechWeb; Aris,0,8-Apr-13,N,
+,SD0958,Hồ Thanh Toàn,Ho Thanh,Toan,8-Apr-13,QC Engineer,QC,,Fair,2,SL2,3.69,,3.69,Media Brands,5-Jun-13,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Media Brands,0,8-Apr-13,N,
+,SD0959,Nguyễn Trung Dũng,Nguyen Trung,Dung,8-Apr-13,Senior QC Engineer,QC,,Good,3,SL2,3.69,,3.69,AP responsive,25-Jul-13,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Boylesports; AP,0,8-Apr-13,N,
+,SD0960,Nguyễn Lê Thúy Phương,Nguyen Le Thuy,Phuong,8-Apr-13,Senior UI Designer,UI,,Good,3,SL1,3.69,,3.69,AP Design,7-Oct-13,,N,N,,,,,Hung Lu The,Thao Le Huynh Cong,BUI,BUI,BUI,BUI,BUI,BUI,,X,X,X,CMS Rewrite; AP,0,8-Apr-13,N,
+,SD0963,Cao Tấn Phong,Cao Tan,Phong,15-Apr-13,Principal Software Engineer,Microsoft,,Fair,4,SL3,3.67,,3.67,ReMS,9-Jun-14,21-Jun-14,Y,N,,,,,Loan Pham Thi Tuyet,Loan Pham Thi Tuyet,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,X,X,X,"Java, Android; BCC",130,15-Apr-13,Y,
+,SD0964,Huỳnh Nhựt Tâm,Huynh Nhut,Tam,15-Apr-13,Software Engineer,Microsoft,,Fair,2,SL2,3.67,,3.67,BCC AdVantage MB,24-Mar-14,,N,N,,,,,Thanh Nguyen Thi Kim,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,X,X,X,"Asp.Net. MCV Training, A&B, Agora Google; Civica Rents",0,15-Apr-13,N,
+,SD0966,Nguyễn Khắc Minh,Nguyen Khac ,Minh,15-Apr-13,Software Engineer,Mobile,,Fair,2,SL2,3.67,,3.67,Peninsula iOS,23-Oct-13,19-Nov-14,Y,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,,X,X,X,Bodog; Peninsula,108,15-Apr-13,Y,
+,SD0968,Hoàng Việt ,Hoang ,Viet,15-Apr-13,Senior Software Engineer,Mobile,,Fair,3,SL2,3.67,,3.67,Bodog,20-May-13,,N,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,,X,X,X,"iOS, Android,Java, Bodog",0,15-Apr-13,N,
+,SD0970,Trần Thị Thùy Linh,Tran Thi Thuy,Linh,22-Apr-13,Senior QC Engineer,QC,,Fairly Good,3,SL1,3.65,,3.65,Bodog,3-Jan-14,,N,N,,,,,Khanh Nguyen Xuan Bao,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,KCL; Bodog,0,22-Apr-13,N,
+,SD0972,Trương Binh Phương Thúy,Truong Binh Phuong,Thuy,22-Apr-13,QC Engineer,QC,,Good,2,SL2,3.65,,3.65,Bodog,20-May-13,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Bodog,0,22-Apr-13,N,
+,SD0974,Trần Văn Tân,Tran Van,Tan,22-Apr-13,Senior Software Engineer,Front-End,,Fair,3,SL1,3.65,,3.65,Bodog,20-May-13,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,,X,X,,"Drupal, HTML, CSS, Bodog",0,22-Apr-13,N,
+,SD0988,Bùi Trần Thanh Nam,Bui Tran Thanh,Nam,6-May-13,Software Engineer,Microsoft,,Fair,2,SL2,3.61,,3.61,Civica ASB,5-Aug-13,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,X,X,X,"ASP .Net, MVC, Bodog Training; Civica Rents",0,6-May-13,N,
+,SD0989,Nguyễn Trung Dũng (2),Nguyen Trung ,Dung 2,6-May-13,Software Engineer,Microsoft,,Fair,2,SL2,3.61,,3.61,Civica ASB,5-Aug-13,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,X,X,X," MVC,Web App, SQL, HTML,CSS; Civica training; Civica Rents",0,6-May-13,N,
+,SD0990,Lê Thiên Phúc,Le Thien,Phuc,6-May-13,Senior QC Engineer,QC,,Fairly Good,3,SL1,3.61,,3.61,IIN Testing,14-Nov-13,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,IIN Testing,0,6-May-13,N,
+,SD0985,Nguyễn Sĩ Bảo Lộc,Nguyen Si Bao,Loc,6-May-13,Software Engineer,Java,,Fair,2,SL1,3.61,,3.61,Weatherbys ODC,26-Aug-13,29-Sep-14,Y,N,,,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,,X,X,X,Weatherbys,115,6-May-13,Y,
+,SD0986,Phạm Hương Thu,Pham Huong,Thu,6-May-13,QC Engineer,QC,,Fairly Good,2,SL2,3.61,,3.61,Bodog,23-May-13,,N,N,,,,,Tram Ho Thi Hong,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Bodog,0,6-May-13,N,
+,SD0987,Dương Chí Trưởng,Duong Chi,Truong,13-May-13,Senior Software Engineer,Microsoft,,Fair,3,SL1,3.59,,3.59,NHSP,18-Jul-13,22-Jul-14,Y,N,,,,,Thanh Nguyen Thi Kim,Hieu Nguyen Chi,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,X,X,X,"Web, MVC, MS SQL; Civica training; NHSP",125,13-May-13,Y,
+,SD0995,Nguyễn Huỳnh Anh Vũ,Nguyen Huynh Anh,Vu,13-May-13,Software Engineer,Mobile,,Fairly Good,2,SL2,3.59,,3.59,Bodog,20-May-13,,N,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,BMobile,BMobile,BMobile,BMobile,BMobile,BMobile,,X,X,X,Bodog,0,13-May-13,N,
+,SD0997,Nguyễn Thanh Sang,Nguyen Thanh,Sang,13-May-13,Principal Software Engineer,Mobile,,Good,4,SL1,3.59,,3.59,Peninsula iOS,9-Sep-13,19-Nov-14,Y,N,,,,,Phuoc Phan Vinh,Phuoc Phan Vinh,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,NPNBMobile,,X,X,X,Peninsula,108,30-Oct-13,Y,
+,SD1003,Nguyễn Viết Thuận 2,Nguyen Viet ,Thuan 2,20-May-13,Software Engineer,Microsoft,,Good,2,SL2,3.57,,3.57,Publicis,14-Apr-14,,N,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,X,,,"Good SQL, automation test; Civica Rents",0,20-May-13,N,
+,SD1001,Trần Duy Khanh,Tran Duy,Khanh,20-May-13,Principal Software Engineer,Java,,Fair,4,SL2,3.57,,3.57,Bodog,20-May-13,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,,X,X,X,Bodog,0,20-May-13,N,
+,SD1004,Vũ Tiến Đạt,Vu Tien,Dat,20-May-13,Software Engineer,Microsoft,,Fairly Good,2,SL1,3.57,,3.57,CMS Rewrite,20-Jan-14,28-Apr-14,N,N,reserved_Publicis training,,13-Jun-14,,Hung Lu The,Hieu Nguyen Chi,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,X,X,X,CMS Rewrite; Civica Allocation,137,20-May-13,Y,
+,SD1008,Trần Hoài Ân,Tran Hoai ,An,27-May-13,Principal Software Engineer,Java,,Fairly Good,4,SL1,3.55,,3.55,Weatherbys ODC,27-May-13,29-Sep-14,Y,N,,,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,,X,X,X,Weatherbys,115,27-May-13,Y,
+,SD1011,Văn Dân,Van,Dan,3-Jun-13,Senior Software Engineer,Microsoft,,Fair,3,SL3,3.53,,3.53,Media Brands,21-Jun-13,,N,N,,,,,Loan Pham Thi Tuyet,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,X,X,X,Sharepoint; Media Brands,0,3-Jun-13,N,
+,SD1010,Nguyễn Bá Đạt,Nguyen Ba,Dat 1,3-Jun-13,Software Engineer,PHP,,Fair,2,SL1,3.53,,3.53,AP Automation Testing,10-Mar-14,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,,X,X,,"Drupal, Bodog; AP Auto",0,5-Mar-14,N,
+,SD1012,Trần Quốc Phong,Tran Quoc ,Phong,3-Jun-13,Senior Software Engineer,Java,,Fair,3,SL1,3.53,,3.53,Bodog,3-Jun-13,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,,X,X,X,Bodog,0,3-Jun-13,N,
+,SD1013,Nguyễn Mạnh Cường,Nguyen Manh,Cuong,3-Jun-13,Senior Software Engineer,Front-End,,Fair,3,SL1,3.53,,3.53,AP Responsive,8-Jul-13,,N,N,,,,,Hung Lu The,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,,X,X,X,Front End - Mobile; AP,0,3-Jun-13,N,
+,SD1017,Nguyễn Hải Đăng,Nguyen Hai ,Dang,3-Jun-13,Senior Software Engineer,PHP,,Good,3,SL2,3.53,,3.53,IIN Drupal,10-Feb-14,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,,X,X,,"Zend, Babel; Magento; Python; Bodog; IIN",0,3-Jun-13,N,
+,SD1018,Đoàn Mạnh Hà,Doan Manh,Ha,3-Jun-13,Senior Software Engineer,Java,,Fair,3,SL1,3.53,,3.53,Bodog,3-Jun-13,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,,X,X,X,Bodog,0,3-Jun-13,N,
+,SD1022,Phạm Quang,Pham ,Quang,10-Jun-13,Senior Software Engineer,PHP,,Fairly Good,3,SL1,3.52,,3.52,Bodog,10-Jun-13,11-Apr-14,Y,N,Proposed_Technology Forge,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,,X,X,,Drupal; Bodog,140,10-Jun-13,Y,2.5 - 3
+,SD1024,Trương Tuấn Khanh,Truong Tuan,Khanh,10-Jun-13,Senior Software Engineer,PHP,,Good,3,SL1,3.52,,3.52,Bodog HTML5,10-Sep-13,,N,N,Submit resignation,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,,X,X,,Zend;  mobile frontend training; Bodog,0,10-Jun-13,N,
+,SD1032,Nguyễn Trần Minh,Nguyen Tran,Minh,17-Jun-13,Senior Software Engineer,PHP,,Fairly Good,3,SL2,3.50,,3.50,IIN Drupal,20-Mar-14,11-Apr-14,N,N,Billed 1/4 - 4/4;Proposed_Technology Forge,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,NPNBPHP,,,X,,"Drupal, Bodog",140,12-Mar-14,Y,2.5
+,SD1034,Lê Minh Mẫn,Le Minh ,Man,24-Jun-13,Software Engineer,Java,,Average,2,SL2,3.48,,3.48,Weatherbys ODC,24-Jun-13,28-Jul-14,Y,N,,,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,,,X,X,Weatherbys,124,24-Jun-13,Y,
+,SD1031,Tạ Hoàng Long,Ta Hoang,Long,1-Jul-13,Senior Software Engineer,Microsoft,,Fairly Good,3,SL1,3.46,,3.46,Civica ASB,5-Aug-13,14-May-14,N,N,Reserved_2 months off,14-May-14,13-Jul-14,,Phu Ha Vinh,Hieu Nguyen Chi,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,,"Web App, Winform ,MVC3, DB; Civica Rents",135,1-Jul-13,Y,
+,SD1039,Vũ Ngọc Linh,Vu Ngoc,Linh,1-Jul-13,Senior Software Engineer,Microsoft,,Fairly Good,3,SL1,3.46,,3.46,SMI,1-Jul-13,,N,N,,,,,Thanh Nguyen Thi Kim,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,X,X,Front-End; SMI,0,1-Jul-13,N,
+,SD0357,Hoàng Duy Vũ,Hoang Duy ,Vu,29-Jul-13,Senior Software Engineer,Microsoft,,Fair,3,SL2,3.38,,3.38,CMS Rewrite,25-Nov-13,23-Jun-14,Y,N,Proposed_Catalytic,,,,Phuong To Gia,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,X,X,"C#, ASP.NET, Win Form, WCF, WPF, LinQ, Agora Google; MVC 4, DI, Nhibernate, UT; JS; CMS",129,29-Jul-13,Y,
+,SD1033,Lâm Quang Vinh,Lam Quang,Vinh,7-Aug-13,Senior Software Engineer,DBA,,Good,3,SL2,3.36,,3.36,SMI,7-Aug-13,,N,N,Submit resignation,,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,,,X,X,SMI,0,7-Aug-13,N,
+,SD1053,Nguyễn Đình Tú ,Nguyen Dinh,Tu,12-Aug-13,Associate Support Analyst,Support Analyst,,Good,1,SL1,3.34,,3.34,Media Brands,12-Aug-13,,N,N,,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,,,X,X,Media Brands,0,12-Aug-13,N,
+,SD1059,Trần Lê Vinh,Tran Le,Vinh,3-Sep-13,Senior Software Engineer,Microsoft,,Fairly Good,3,SL1,3.28,,3.28,CMS Data Migration,7-Jan-14,7-Jul-14,N,N,Bill from 20th Jan; 50% (19/5 - 4/7),,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,X,X,"ETWEB, C#, ASP.Net, ASP Classic, VB Script, Jquery , WCF Service, SQL Server 2008, Oracle Data Warehouse, Hadoop, Sqoop, Hive, Oracle ODI (ELT), Oracle DB, Asp.net, VB.net, MySQL, CrystalReport, Sencha Ext JS, C#, WebGL(Google o3d), PostgreSQL",127,12-Dec-13,Y,
+,SD1064,Võ Anh Hoàng,Vo Anh,Hoang,9-Sep-13,Associate Software Engineer,Microsoft,,Fair,1,SL1,3.27,,3.27,CMS Rewrite Training,20-Jan-14,10-Feb-14,N,Y,Publicis Sydney training,,30-Jun-14,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,X,X,"ASP .NET MVC 4, DI, Nhibernate, UT; JS; SharePoint; Civica Allocation; CMS; UT in CMS; informatica;SSRS training",148,11-Mar-14,Y,2.5 - 3
+,SD1065,Đỗ Quang Huy,Do Quang,Huy,9-Sep-13,Software Engineer,Microsoft,,Good,2,SL1,3.27,,3.27,Civica ASB,28-Oct-13,,N,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,,"ASP .NET MVC 4, DI, Nhibernate, UT; JS; Civica Allocation",0,9-Sep-13,N,
+,SD1066,Nguyễn Lê Quốc Sơn,Nguyen Le Quoc,Son,9-Sep-13,Software Engineer,Microsoft,,Fair,2,SL1,3.27,,3.27,Civica CRM,28-Oct-13,,N,N,,,,,Phu Ha Vinh,Hieu Nguyen Chi,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,,"ASP .NET MVC 4, DI, Nhibernate, UT, JS; Civica Allocation",0,9-Sep-13,N,
+,SD1072,Nguyễn Minh Tiến,Nguyen Minh,Tien,23-Sep-13,Associate Software Engineer,Microsoft,,Good,1,SL1,3.23,,3.23,Publicis training,19-Mar-14,11-Apr-14,N,Y,Reserved_Adeptra,,,,Thanh Nguyen Thi Kim,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"Java, ASP .NET MVC 4, DI, Nhibernate, UT, Javascript, SharePoint; SSRS training",140,5-Mar-14,Y,2.5
+,SD1073,Nguyễn Hoàng Phi,Nguyen Hoang,Phi,23-Sep-13,Associate Software Engineer,Microsoft,,Fair,1,SL1,3.23,,3.23,CMS Rewrite,19-May-14,23-Jun-14,N,N,50% (19/5-27/5),,,,Thanh Nguyen Thi Kim,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"ASP .NET MVC 4, DI, Nhibernate, UT, JS, SharePoint; Genus Health; CMS Rewrite; ETL skill",129,23-Sep-13,Y,
+,SD1069,Hồ Xuân Nam,Ho Xuan ,Nam,30-Sep-13,Senior Software Engineer,Front-End,,Good,3,SL3,3.21,,3.21,AP Responsive,30-Sep-13,,N,N,,,,,Tuan Luong Minh,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,,,X,X,AP,0,30-Sep-13,N,
+,SD1078,Đỗ Lê Chi Đệ,Do Le Chi,De,30-Sep-13,Software Engineer,Microsoft,,Average,2,SL1,3.21,,3.21,Civica ASB,5-May-14,31-Jan-15,Y,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"ASP.Net, SQL server DBMS, ASP .NET MVC 4, DI, Nhibernate, UT, JS; NYCPM; Civica Allocation",98,30-Sep-13,Y,
+,SD1081,Nguyễn Thị Sông Hương,Nguyen Thi Song,Huong,30-Sep-13,Senior Software Engineer,Microsoft,,Fair,3,SL1,3.21,,3.21,Thomsons,21-Feb-14,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"Asp.Net, C#, Entity framework 4, SQL; MoneyCorp; VB.Net; thomsons",0,17-Dec-13,N,
+,SD1082,Châu Phước Bảo Thiện,Chau Phuoc Bao,Thien,30-Sep-13,QC Engineer,QC NT,,Fair,2,SL2,3.21,,3.21,MKI_Global Network Lab,30-Sep-13,,N,N,,,,,Lan Ngo Thi Hoang,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,Networking QC; MKI,0,30-Sep-13,N,
+,SD1083,Trần Văn Đức,Tran Van,Duc,30-Sep-13,QC Engineer,QC NT,,Good,2,SL2,3.21,,3.21,MKI_Global Network Lab,20-Sep-13,,N,N,,,,,Lan Ngo Thi Hoang,Lan Ngo Thi Hoang,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,BQC NT,,,,,Networking QC; MKI,0,30-Sep-13,N,
+,SD1079,Nguyễn Thị Ngọc Trâm 2 ,Nguyen Thi Ngoc ,Tram 2,30-Sep-13,Software Engineer,Microsoft,,Fairly Good,2,SL2,3.21,,3.21,Bodog,2-Jun-14,,N,N,billed from 16/6 to replace Tin,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"SQL DB, ASP.Net; ETWEB; Civica CRM
+- MVC 4, DI, Nhibernate, UT; JS; Groovy training; Bodog Training focus on Javascript and HTMl5 Game development",0,17-Mar-14,N,
+,SD1087,Huỳnh Minh Tú,Huynh Minh,Tu,7-Oct-13,Associate Software Engineer,Microsoft,,Good,1,SL1,3.19,,3.19,CMS Rewrite,20-Jan-14,28-Apr-14,N,Y,Bodog Training,,6-Jun-14,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"ASP .NET MVC 4, DI, Nhibernate, UT, Javascript, SharePoint; Civica Allocation; CMS; Bodog Training focus on Javascript and HTMl5 Game development",137,7-Oct-13,Y,2
+,SD1089,Võ Quang Huy,Vo Quang ,Huy,7-Oct-13,Software Engineer,Microsoft,,Average,2,SL1,3.19,,3.19,Civica Rents,11-Oct-13,11-Mar-14,N,Y,Bodog Training,,6-Jun-14,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"ASP.Net, MVC;ASP .NET MVC 4, DI, Nhibernate, UT, Javascript, SharePoint; Civica Rents; UT in CMS; Bodog Training focus on Javascript and HTMl5 Game development",144,7-Oct-13,Y,2
+,SD1092,Nguyễn Ngọc Thịnh  ,Nguyen Ngoc,Thinh,7-Oct-13,Software Engineer,Microsoft,,Fair,2,SL1,3.19,,3.19,Civica ASB,18-Oct-13,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"Net Webform, winform;ASP .NET MVC 4, DI, Nhibernate, UT, Javascript; Civica Allocation",0,7-Oct-13,N,
+,SD1090,Nguyễn Văn Diệt,Nguyen Van,Diet,7-Oct-13,Senior Software Engineer,Microsoft,,Fair,3,SL1,3.19,,3.19,CMS Rewrite,18-Nov-13,8-Sep-14,Y,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"- OOP, design pattern, WCF, MVC, js, quick learning, R&D, can join SWAT team; CMS Rewrite",118,7-Oct-13,Y,
+,SD1093,Đặng Ngọc Kim Long,Dang Ngoc Kim,Long,14-Oct-13,Support Analyst,Support Analyst,,Good,2,SL2,3.17,,3.17,Eversheds,14-Oct-13,,N,N,,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,,,,X,Eversheds Support,0,14-Oct-13,N,
+,SD1094,Huỳnh Thanh Quang,Huynh Thanh,Quang,14-Oct-13,Senior Software Engineer,Microsoft,,Good,3,SL3,3.17,,3.17,Fairfax,29-Oct-13,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"Web app, DBMS, Entity framework(ORM),MVC3 (~1year), PHP; Fairfax",0,14-Oct-13,N,
+,SD1095,Hoàng Nam,Hoang,Nam,14-Oct-13,Associate Software Engineer,Microsoft,,Fair,1,SL1,3.17,,3.17,Eversheds,17-Jun-14,18-Jul-14,Y,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"MVC 4, DI, Nhibernate, UT; JS; Release Management; UT in CMS; informatica;SSRS training",126,14-Oct-13,Y,1.5
+,SD1096,Lê Tấn Trung,Le Tan,Trung,14-Oct-13,Associate Software Engineer,Microsoft,,Fair,1,SL1,3.17,,3.17,Civica ASB,5-May-14,31-Jan-15,Y,Y,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"Java; MVC 4, DI, Nhibernate, UT; JS; Civica Allocation; UT in CMS",98,4-Mar-14,Y,
+,SD1097,Phạm Danh Vu,Pham Danh,Vu,14-Oct-13,Associate Software Engineer,Microsoft,,Good,1,SL1,3.17,,3.17,Charles Taylor,18-Nov-13,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,DBA; Charles Taylor,0,14-Oct-13,N,
+,SD1098,Lê Chí Thọ,Le Chi,Tho,14-Oct-13,Software Engineer,Microsoft,,Fair,2,SL1,3.17,,3.17,Jira Tool,22-May-14,6-Jun-14,Y,N,Proposed_KCL,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"C#, ASP .net, web App; NHSP; MVC 4, DI, Nhibernate, UT; JS; CMs Rewrite; Umbraco",132,14-Oct-13,Y,2.5 - 3
+,SD1100,Lê Quang Thái ,Le Quang,Thai,21-Oct-13,Senior Software Engineer,Microsoft,,Fair,3,SL1,3.15,,3.15,BCC AdVantage FIN,4-Nov-13,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"Web development, MVC; BCC",0,21-Oct-13,N,
+,SD1101,Dương Duy Cường,Duong Duy,Cuong,21-Oct-13,SharePoint Administrator,Sharepoint,,Excellent,1,SL1,3.15,,3.15,Charles Taylor,21-Oct-13,,N,N,,,,,Cuong Luc Tu,Phuong Le Duy Tung,BSharepoint,BSharepoint,BSharepoint,BSharepoint,BSharepoint,BSharepoint,,,,,Charles Taylor,0,21-Oct-13,N,
+,SD1104,Lê Công Trung,Le Cong,Trung,28-Oct-13,Software Engineer,Microsoft,,Good,2,SL2,3.13,,3.13,CMS Rewrite,18-Nov-13,23-Jun-14,N,N,billed 50% (19/5-30/5) for transition,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"ASP .Net, MVC, Entity framework; CMS Rewrite",129,28-Oct-13,Y,
+,SD1105,Phan Phước Lâm,Phan Phuoc,Lam,28-Oct-13,Software Engineer,Microsoft,,Poor,2,SL1,3.13,,3.13,Civica CRM,9-Dec-13,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"ASP .Net, Nhiberate, LINQ, MVC 4, DI, Nhibernate, UT; JS; Civica CRM",0,28-Oct-13,N,
+,SD1107,Tăng Hải Ngọc Sơn,Tang Hai Ngoc,Son,28-Oct-13,Senior Software Engineer,Java,,Excellent,3,SL1,3.13,,3.13,Bodog,7-Apr-14,,N,N,Billed from 11Apr; plan to rotate out of Bodog in Oct2014,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,,,,X,Microdec,0,28-Oct-13,N,
+,SD1111,Trần Ngọc Ánh,Tran Ngoc,Anh,4-Nov-13,Software Engineer,Microsoft,,Fair,2,SL2,3.11,,3.11,Communisis,23-Nov-13,7-Jul-14,Y,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"WCF, MVC architecture, thread, V-model; MVC 4, DI, Nhibernate, UT; JS; Communisis",127,4-Nov-13,Y,
+,SD1112,Hồ An Huy,Ho An,Huy,4-Nov-13,Associate Software Engineer,Microsoft,,Good,1,SL1,3.11,,3.11,CMS Rewrite,18-Nov-13,21-Apr-14,N,N,Billed 50%,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"MVC 4, DI, Nhibernate, UT; JS; CMS Rewrite",138,4-Nov-13,Y,2.5
+,SD1113,Nguyễn Hồ Quang Minh,Nguyen Ho Quang,Minh,4-Nov-13,Associate Software Engineer,Microsoft,,Fairly Good,1,SL1,3.11,,3.11,Moneycorp,19-Jun-14,28-Jun-14,N,N,50% (26/6 & 27/6),,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"MVC 4, DI, Nhibernate, UT; JS; Inventive IT; SSRS training",129,4-Nov-13,Y,2.5 - 3
+,SD1114,Nguyễn Việt Quang,Nguyen Viet ,Quang,4-Nov-13,Software Engineer,Microsoft,,Fair,2,SL2,3.11,,3.11,CMS Rewrite,18-Nov-13,23-Jun-14,N,N,billed 50% (19/5-30/5) for transition,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"ASP.Net, Web-service, JS (normal), MVC 4, DI, Nhibernate, UT; JS; CMS Rewrite",129,4-Nov-13,Y,
+,SD1120,Lê Quang Tấn Lợi,Le Quang Tan,Loi,11-Nov-13,Associate Software Engineer,Microsoft,,Good,1,SL1,3.09,,3.09,Bullhorn,6-Mar-14,12-May-14,N,N,Billed from 13Mar,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,SharePoint; Bullhorn,135,4-Mar-14,Y,3
+,SD1121,Trần Thị Bích Tuyền,Tran Thi Bich,Tuyen,11-Nov-13,Associate Software Engineer,Microsoft,,Fairly Good,1,SL1,3.09,,3.09,NYCPM,2-Jun-14,1-Sep-14,Y,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,SharePoint,119,6-Mar-14,Y,
+,SD1122,Hồng Tiến Đạt,Hong Tien,Dat,11-Nov-13,Software Engineer,Java,,Good,2,SL2,3.09,,3.09,Jira Tool,2-Jun-14,,N,N,,,,,Trung Truong Quoc,Trung Truong Quoc,BJava,BJava,BJava,BJava,BJava,BJava,,,,X,Weatherbys,0,11-Nov-13,N,2.5
+,SD1126,Võ Chí Trường,Vo Chi,Truong,18-Nov-13,Principal Software Engineer,Microsoft,,Fairly Good,4,SL1,3.07,,3.07,Civica CRM,25-Nov-13,,N,N,,,,,Loan Pham Thi Tuyet,Hien Nguyen Quang 1,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X," ASP.Net webform, good explanation, communication, design pattern (common), lack front end,DB; Civica CRM",0,18-Nov-13,N,
+,SD1127,Lê Tuấn Kiệt,Le Tuan,Kiet,18-Nov-13,Software Engineer,Microsoft,,Fair,2,SL2,3.07,,3.07,Thomsons,12-Feb-14,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"OOP, Web app, ASP.Net MVC, Entity Framework, Front End; MVC 4, DI, Nhibernate, UT; JS; Civica Allocation; Thomsons",0,18-Nov-13,N,
+,SD1128,Nguyễn Lê Anh Tuấn,Nguyen Le Anh,Tuan,18-Nov-13,Software Engineer,Microsoft,,Fair,2,SL1,3.07,,3.07,Inventive IT,25-Nov-13,5-Aug-14,Y,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"ASP.Net web form, need more training: process, MVC, Unit test and ORM, EF/Nhibernate; MVC 4, DI, Nhibernate, UT; JS; CMS Rewrite; Umbraco; Inventive IT",123,18-Nov-13,Y,
+,SD1130,Nguyễn Phi Hùng,Nguyen Phi,Hung,18-Nov-13,Senior Software Engineer,Microsoft,,Fair,3,SL2,3.07,,3.07,CMS Rewrite,30-Dec-13,7-Jul-14,Y,N,Proposed_Charles Taylor,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"ASP.Net, MVC, CI (continuous Integration), Unit test (TDD), can build to join SWAT team; CMS Rewrite",127,18-Nov-13,Y,
+,SD1131,Nguyễn Đăng Khoa,Nguyen Dang,Khoa,18-Nov-13,Principal Software Engineer,Microsoft,,Good,4,SL1,3.07,,3.07,Charles Taylor,25-Nov-13,,N,N,,,,,Loan Pham Thi Tuyet,Hien Nguyen Quang 1,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"ASP .Net, MVC, WCF, jQuery, code review, not have chance to join pre-sale support, good at attitude and manners good logical thinking; Charles Taylor",0,18-Nov-13,N,
+,SD1132,Huỳnh Lâm Hoài Sơn,Huynh Lam Hoai,Son,18-Nov-13,Associate Software Engineer,Microsoft,,Fair,1,SL1,3.07,,3.07,Eversheds,17-Jun-14,18-Jul-14,Y,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"MVC 4, DI, Nhibernate, UT; JS;Civica Allocation; UT in CMS; informatica;SSRS training",126,4-Mar-14,Y,2
+,SD1133,Nguyễn Đức Quốc Thái,Nguyen Duc Quoc,Thai,18-Nov-13,Associate Software Engineer,Microsoft,,Good,1,SL1,3.07,,3.07,Civica CRM,23-Dec-13,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"MVC 4, DI, Nhibernate, UT; JS; Civica CRM",0,18-Nov-13,N,
+,SD1134,Nguyễn Quách Tập Lễ,Nguyen Quach Tap,Le,25-Nov-13,Software Engineer,Microsoft,,Poor,2,SL2,3.05,,3.05,CDS Global,9-Jun-14,14-Jul-14,N,N,billed from 23 Jun,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"- Webform (ASP.Net), Ecommerce, SQL; MVC 4, DI, Nhibernate, UT; JS; Inventive IT;SSRS training",126,25-Nov-13,Y,2.5
+,SD1136,Mai Anh Phương,Mai Anh,Phuong,25-Nov-13,Associate Software Engineer,Java,,Fairly Good,1,SL1,3.05,,3.05,Weatherbys ODC,24-Jan-14,29-Sep-14,N,N,Billed from 17 Feb,,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,,,,X,Weatherbys,115,25-Nov-13,Y,
+,SD1138,Đào Trung Kiên,Dao Trung,Kien,25-Nov-13,Associate Software Engineer,Microsoft,,Fair,1,SL1,3.05,,3.05,Internal Tools,28-Nov-13,31-Jul-14,Y,Y,,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"Winform; MVC 4, DI, Nhibernate, UT; JS; Internal Tools",124,25-Nov-13,Y,
+,SD1139,Lê Minh Tâm,Le Minh,Tam,25-Nov-13,Software Engineer,Microsoft,,Fair,2,SL1,3.05,,3.05,Civica CRM,23-Dec-13,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"ASP .Net, MVC, winform; MVC 4, DI, Nhibernate, UT; JS; Civica CRM",0,25-Nov-13,N,
+,SD1140,Đặng Quốc Đạt,Dang Quoc,Dat,25-Nov-13,Software Engineer,Java,,Average,2,SL1,3.05,,3.05,Weatherbys training,2-Jun-14,13-Jun-14,N,Y,Forecast_Weatherbys,,,,Trung Truong Quoc,Trung Truong Quoc,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,NPNBJava,,,,X,Weatherbys,131,25-Nov-13,Y,
+,SD1129,Nguyễn Tuân Bưng,Nguyen Tuan,Bung,2-Dec-13,Software Engineer,Microsoft,,Poor,2,SL1,3.04,,3.04,Civica CRM,23-Dec-13,7-Mar-14,Y,Y,Proposed_KCL,,,,Dung Le Hoang,Dung Le Hoang,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"ASP.net MVC, WPF, MVC 4, DI, Nhibernate, UT; JS; Civica CRM; UT in CMS; Bodog Training focus on Javascript and HTMl5 Game development; Bodog Training",145,17-Mar-14,Y,2.5
+,SD1142,Nguyễn Đình Luân,Nguyen Dinh,Luan,2-Dec-13,Software Engineer,Microsoft,,Fair,2,SL2,3.04,,3.04,Civica CRM,17-Dec-13,,N,N,,,,,Thao Nguyen Thi Ngoc,Thao Nguyen Thi Ngoc,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"ASP.Net, MVC; - MVC 4, DI, Nhibernate, UT; JS; Civica CRM",0,2-Dec-13,N,
+,SD1143,Nguyễn Tuần,Nguyen,Tuan,2-Dec-13,Software Engineer,Microsoft,,Fair,2,SL1,3.04,,3.04,Civica CRM,23-Dec-13,,N,N,,,,,Phuong Le Duy Tung,Phuong Le Duy Tung,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,X,"SharePoint (web port), asp.net; - MVC 4, DI, Nhibernate, UT; JS; Civica CRM",0,2-Dec-13,N,
+,SD1144,Lê Minh Tú,Le Minh,Tu,2-Dec-13,Software Engineer,Microsoft,,Good,2,SL1,3.04,,3.04,CMS Rewrite,20-Jan-14,28-Apr-14,N,Y,Reserved_Publicis training,,13-Jun-14,,Phuong Le Duy Tung,Phuong Le Duy Tung,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,NPNBMicrosoft,,,,X,"Basic knowledge, OOP, need more training on web development; - MVC 4, DI, Nhibernate, UT; JS; CMS",137,2-Dec-13,Y,2.5
+,SD1146,Trịnh Khắc Thắng,Trinh Khac ,Thang,9-Dec-13,Principal Software Engineer,DBA,,Fairly Good,4,SL2,3.02,,3.02,OMG,24-Jun-14,,N,N,50% (24/6 - 22/7),,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,,,,X,"Good Oracle DB knowledge, SQL , build end to end BI solution with MS BI, sharepoint, hand on ETL design, implementation; OMG",0,9-Dec-13,N,2.5
+,SD1151,Hồ Ngọc Lân,Ho Ngoc,Lan,23-Dec-13,Senior Software Engineer,Microsoft,,Fairly Good,3,SL2,2.98,,2.98,Fairfax-TheVine,6-Jan-14,,N,N,,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,,"ASP.Net MVC, SQL, LINQ, ecommerce, domain knowledge, can catch up requirements; Fairfax",0,10-Dec-13,N,
+,SD1154,Phan Nguyễn Đạt Thịnh,Phan Nguyen Dat,Thinh,13-Jan-14,Support Analyst,Support Analyst,,Good,2,SL2,2.92,,2.92,Media Brands,13-Jan-14,,N,N,Billed from 27 Jan,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,,,,,"Good communication, Persuading and Influencing, SQL, Oracle, Experience in Media Industry, finance
+Media Brands",0,14-Jan-14,N,
+,SD1164,Phan Nguyễn Minh Trường,Phan Nguyen Minh,Truong,10-Feb-14,Senior Software Engineer,DBA,,Fair,3,SL2,2.84,,2.84,OMG,31-Mar-14,1-Jul-14,N,N,forecast_OMG,1-Jul-14,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,,,,,"Data Warehouse/BI concept,IBM Cognos 10, Microsoft BI, Oracle; Medium SQL Server; OMG
+     ",128,10-Feb-14,Y,
+,SD1165,Trần Thị Huỳnh Anh,Tran Thi Huynh,Anh,10-Feb-14,QC Engineer,QC,,Fair,2,SL2,2.84,,2.84,IIN Testing,17-Feb-14,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,IIN Testing,0,10-Feb-14,N,
+,SD1171,Võ Thị Thu An,Vo Thi Thu,An,17-Feb-14,Senior Software Engineer,DBA,,Good,3,SL1,2.82,,2.82,Charles Taylor,7-Apr-14,,N,N,"Billed 50% (8/5 - 25/7), 100% from 28/7 ",,,,Long Hoang Vu,Long Hoang Vu,BDBA,BDBA,BDBA,BDBA,BDBA,BDBA,,,,,"SQL server, Good communication",0,17-Feb-14,N,
+,SD1173,Nguyễn Thị Lệ Trinh,Nguyen Thi Le ,Trinh,24-Feb-14,QC Engineer,QC,,Fair,2,SL1,2.81,,2.81,Charles Taylor,28-Feb-14,,N,N,,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,Charles Taylor,0,24-Feb-14,N,
+,SD1179,Nguyễn Thị Trà Nhi,Nguyen Thi Tra,Nhi,10-Mar-14,Senior QC Engineer,QC,,Good,3,SL1,2.77,,2.77,IIN Testing,14-Mar-14,,N,N,Billed from 31Mar,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,IIN Testing,0,10-Mar-14,N,
+,SD1180,Phạm Đức Thành,Pham Duc,Thanh,17-Mar-14,Senior QC Engineer,QC,,Good,3,SL1,2.75,,2.75,Media Brands,21-Mar-14,,N,N,Billed from 16/4 as QC,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Has knowledge about management but not strong
+- Experience in testing but need improve testing techniques
+- Good Eng, can work directly with client
+- Want to work as tester, not leader",0,17-Mar-14,N,
+,SD0932,Đặng Thị Kiều Anh,Dang Thi Kieu,Anh,17-Mar-14,Senior QC Engineer,QC,,Good,3,SL1,2.75,,2.75,IIN Testing,24-Mar-14,,N,N,Billed from 7/4,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Have good performance before leaving HvN, tenative to promote to SQC
+- Solve family issue and come back HvN
+- Do not take in probation time
+",0,17-Mar-14,N,
+,SD1181,Nguyễn Anh Khoa 1,Nguyen Anh,Khoa 1,24-Mar-14,Support Analyst,Support Analyst,,Fair,2,SL1,2.73,,2.73,Publicis,1-Apr-14,,N,N,,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,,,,,"- Good communication
+- BA skills are not strong
+- Has good SLA/ ITIL experience(pratical)
+- Has no media background
+- Has basic finance/ accounting background
+- Good SQL skills
+- Calm, has problem solving, customer oriented, quality oriented
+- Demonstrate work commitment
+- Has leadership skills
+- English is avarage, can oral communicate
+",0,24-Mar-14,N,
+,SD1194,Nguyễn Thanh Bình 4,Nguyen Thanh,Binh 4,7-Apr-14,Senior Software Engineer,UI,,Fair,3,SL1,2.69,,2.69,AP Design,10-Apr-14,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BUI,BUI,BUI,BUI,BUI,BUI,,,,,,0,7-Apr-14,N,
+,SD1193,Nguyễn Trọng Đức,Nguyen Trong,Duc,7-Apr-14,Senior Software Engineer,PHP,,Fair,3,SL2,2.69,,2.69,IIN Drupal,7-Apr-14,,N,N,,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BPHP,BPHP,BPHP,BPHP,BPHP,BPHP,,,,,"Good developer, strong in Drupal, JS,OOP ",0,7-Apr-14,N,
+,SD1195,Trần Đình Khôi 2,Tran Dinh,Khoi,7-Apr-14,Senior Software Engineer,Microsoft,,Average,3,SL1,2.69,,2.69,ITC,7-Apr-14,,N,N,Billed from 12 May,,,,Dung Le Hoang,Dung Le Hoang,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,BMicrosoft,,,,,"- ASP .Net, web forms, window forms,.Net Nuke Kendo UI, lack of Unit test, DI, normal design principle
+- Smart, fast learning
+",0,7-Apr-14,N,
+,SD1196,Nguyễn Hữu Thắng,Nguyen Huu,Thang,7-Apr-14,QC Engineer,QC,,Fair,2,SL1,2.69,,2.69,IIN Testing,10-Apr-14,,N,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"- Fair testing theory & practice
+- Basic Jmeter, need improve English writing & speaking",0,7-Apr-14,N,
+,SD1198,Đỗ Thanh Lâm,Do Thanh ,Lam,7-Apr-14,Senior Software Engineer,Front-End,,Good,3,SL3,2.69,,2.69,Bodog,10-Apr-14,,N,N,Billed from 2May,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,BFront-End,,,,,,0,7-Apr-14,N,
+,SD1205,Nguyễn Võ Quốc Cường,Nguyen Vo Quoc,Cuong,14-Apr-14,QC Engineer,QC,,Fair,2,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Good communication
+Fair English. Can try to work with client directly
+Not too strong at testing practice & testing technique
+Not carefull enough but can be trained
+",0,,,
+,SD1206,Thái Phan Hiếu,Thai Phan,Hieu,14-Apr-14,QC Engineer,QC,,Fair,2,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"experience in telecom testing, can adapt business domain of Amdocs.
+Hieu is eager to learn new technology in testing, can adapt high pressure.
+Can be hired as level 2 for Amdocs. Technical skill is good, understand testing concept
+",0,,,
+,SD1203,Đặng Bá Minh,Dang Ba ,Minh,14-Apr-14,Associate QC Engineer,QC,,Good,1,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"He has good QC mindset
+Proactive in learning new thing.
+Can handle pressure and work overtime
+",0,,,
+,SD1204,Bùi Thị Thoại Huyền,Bui Thi Thoai ,Huyen,14-Apr-14,Associate QC Engineer,QC,,Fair,1,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Has basic knowledge of software testing. Does not understand deeply software testing theory. Need to improve software testing knowledge
+- Huyen is a hard working employee, responsilble with her task. She is willing to learn new knowledge.
+- Overall candidate is good. Very enthusiastic and eager to learn. Has some exp in testing and can be trained
+",0,,,
+,SD1207,Nguyễn Hoàn,Nguyen,Hoan,14-Apr-14,Associate QC Engineer,QC,,Fair,1,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"He has learnt the testing course at TMA, has not worked in software testing
+Does not know most testing technique
+Eager to learn, can be trained to be QC
+",0,,,
+,SD1208,Nguyễn Minh Khánh,Nguyen Minh ,Khanh,14-Apr-14,Associate QC Engineer,QC,,Fair,1,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"He knows black box/white box/ grey box only
+Has not worked as tester in real project
+eager to learn & work in software testing
+Can find many cases of test in practice
+",0,,,
+,SD1209,Nguyễn Xuân Quảng,Nguyen Xuan ,Quang,14-Apr-14,Associate QC Engineer,QC,,Fair,1,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Has experience in hardware testing only
+Looks fine in testing mindset
+Suitable for Amdocs
+",0,,,
+,SD1210,Nguyễn Thanh Toàn,Nguyen Thanh ,Toan,14-Apr-14,Associate QC Engineer,QC,,Fair,1,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Need to answer directly in communication, more focus.
+Fair at testing practice and need to learn more testing techniques
+Eager to learn new things
+",0,,,
+,SD1212,Hoàng Nhật Minh,Hoang Nhat ,Minh,14-Apr-14,Associate QC Engineer,QC,,Fair,1,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"English: not good
+Communication: average
+Working attitude: good
+Pratice: fair
+",0,,,
+,SD1201,Nguyễn Phương Kiều,Nguyen Phuong,Kieu,14-Apr-14,Associate QC Engineer,QC,,Good,1,SL1,2.67,,2.67,Amdocs,14-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"English: Fair
+Has no exp in testing yet
+Practice: fair
+Communication: fair
+Potential
+",0,,,
+,SD1215,Nguyễn Đức Huy,Nguyen Duc,Huy,14-Apr-14,Associate QC Engineer,QC,,Good,1,SL1,2.67,,2.67,Kablamo,2-Jun-14,5-Jun-14,Y,N,Proposed_Degree53,18-Jun-14,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Has not worked in anywhere
+Very good at English
+Good at testing practise (does not know theory)
+Good communication
+",132,,,
+,SD1216,Nguyễn Tiến Thành,Nguyen Tien,Thanh,14-Apr-14,Associate QC Engineer,QC,,Good,1,SL1,2.67,,2.67,CDS Global,9-Jun-14,,N,N,billed from 23 Jun,,,,Hoa Doan Thi Ngoc,Hoa Doan Thi Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Testing mindset: below average
+suitable for Amdocs
+Not willing to travel longer than 2 months
+Good communication
+[Amdocs]
+Very enthusiastic and eager to learn new things, flexible for shift hours.
+",0,,,
+,SD1213,Châu Minh Hoàng,Chau Minh,Hoang,16-Apr-14,Associate QC Engineer,QC,,Fair,1,SL1,2.67,,2.67,Amdocs,16-Apr-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,BQC,BQC,BQC,BQC,BQC,BQC,,,,,,0,,,
+,SD1218,Nguyễn Hùng Huy,Nguyen Hung ,Huy,21-Apr-14,QC Engineer,QC,,Fairly Good,2,SL1,2.65,,2.65,Eversheds,18-Jun-14,8-Aug-14,Y,N,,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,"- Strong point: Mobile testing
+- Weak point: web testing & testing theory, needs to be trained more to be a good QC
+- Friendly and patient. good working attitude & responsibility.",123,,,
+,SD1220,Trương Quang Hùng,Truong Quang,Hung,21-Apr-14,QC Engineer,QC,,Fairly Good,2,SL1,2.65,,2.65,AP Responsive,22-Apr-14,,N,Y,billed from 8-May,,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,PNBQC,PNBQC,PNBQC,PNBQC,PNBQC,PNBQC,,,,,"Does not know most testing theories => need improve
+Fair performing on testing practise
+Eager to work in software testing (7 months on web testing, 12 months on win app testing)
+",0,,,
+,SD1224,Đỗ Thanh Hà,Do Thanh ,Ha,5-May-14,QC Engineer,QC,,Fairly Good,2,SL2,2.61,,2.61,AP Automation Testing,26-May-14,,N,N,Billed from 9 Jun,,,,Long Vu Nguyen Phi,Long Vu Nguyen Phi,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"- Fair at Mobile testing, automation
+- Weak at testing techniques (manual)
+",0,,,
+,SD1228,Lại Thiên Thảo,Lai Thien,Thao,5-May-14,Senior QC Engineer,QC,,Good,3,SL1,2.61,,2.61,BCC,23-May-14,,N,N,,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Good at speaking English
+Proficiency in Scrum process
+Good at testing knowledge/theory
+Good at writing test case practice
+",0,,,
+,SD1229,Trần Hoàng Long,Tran Hoang,Long,5-May-14,Associate Support Analyst,Support Analyst,,Good,1,SL1,2.61,,2.61,Publicis training,6-May-14,4-Jul-14,Y,Y,Proposed_Eversheds,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,NPNBSupport Analyst,NPNBSupport Analyst,NPNBSupport Analyst,NPNBSupport Analyst,NPNBSupport Analyst,NPNBSupport Analyst,,,,,"Has experience in business analysis and problem solving skills. Know a bit on Scrum, SAP. Not much experience
+Not strong in SQL
+[Hang Dang]:
+- Good communication in English
+- Have a good knowledge in BA and analysis skill
+- Good attitude
+",128,,,
+,SD1230,Lê Công Minh,Le Cong ,Minh,5-May-14,Senior Support Analyst,Support Analyst,,Good,3,SL2,2.61,,2.61,Charles Taylor,6-May-14,,N,N,,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,,,,,"Specialist only unique for CT project, contract term as to follow contract CT",0,,,
+,SD1227,Tăng Hiến Phát,Tang Hien,Phat,5-May-14,Support Analyst,Support Analyst,,Good,2,SL2,2.61,,2.61,Eversheds,6-May-14,,N,N,,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,,,,,"Suitable for SPA sublevel 2
+Experience in Application support
+SQL experience, and problem analysis 
+",0,,,
+,SD1226,Trần Thị Thanh Phương,Tran Thi Thanh,Phuong,5-May-14,Senior QC Engineer,QC,,Good,3,SL1,2.61,,2.61,IIN Testing,16-Jun-14,30-Jun-14,N,N,Reserved_Associated Press,30-Jun-14,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"- Good English
+- Fair problem solving, fair testing techniques
+- Good learning skill
+",128,,,
+,SD1231,Nguyễn Trọng Nguyên,Nguyen Trong,Nguyen,6-May-14,Senior Software Engineer,C/C++,,Fairly Good,3,SL1,2.61,,2.61,Alpha,6-May-14,,N,N,,,,,Bon Nguyen Ba,Bon Nguyen Ba,BC/C++,BC/C++,BC/C++,BC/C++,BC/C++,BC/C++,,,,,"Good C/C++, MFC, suitable for RMT-Alpha team",0,,,
+,SD1242,Lê Văn Phú,Le Van,Phu,12-May-14,Support Analyst,Support Analyst,,Good,2,SL2,2.59,,2.59,Publicis Sydney,22-May-14,,N,N,,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,,,,,"Confident in communication, Proactive. Experience in IT service support, AD Administrator skill",0,,,
+,SD1244,Trần Ngọc Hưng,Tran Ngoc,Hung,19-May-14,Associate QC Engineer,QC,,Fair,1,SL1,2.58,,2.58,IIN Testing training,21-May-14,,N,Y,he is additional resource to cover the risks which Thi is in pregant.,,,,Vinh Pham Phu,Vinh Pham Phu,PNBQC,PNBQC,PNBQC,PNBQC,PNBQC,PNBQC,,,,,"Good working communication
+Clever & agile
+Have a little bit in testing theory
+Have no experience in testing
+",0,,,
+,SD1245,Nguyễn Ngọc Dung,Nguyen Ngoc,Dung,19-May-14,Associate QC Engineer,QC,,Fairly Good,1,SL1,2.58,,2.58,AP Automation training,26-May-14,20-Jun-14,N,y,AP Automation training in 4 weeks,,,,Vinh Pham Phu,Vinh Pham Phu,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,"English speaking: fairly good
+She has had 2 years experience in web dev before learning. Master degree in Korea(2014)
+Working attitude: good
+Willing to learn
+",130,,,
+,SD1247,Lê Nguyên Minh,Le Nguyen,Minh,19-May-14,Associate QC Engineer,QC,,Good,1,SL1,2.58,,2.58,AP Automation training,26-May-14,20-Jun-14,N,Y,AP Automation training in 4 weeks,,,,Vinh Pham Phu,Vinh Pham Phu,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,NPNBQC,,,,,"English is good
+Have testing mindset
+Have experience in development and testing before (in robot not software)
+Have good communication, attitude
+[Amdocs]
+More inclined towards Development, please set expectations accordingly for Testing
+",130,,,
+,SD1249,Tô Thiện,To,Thien,19-May-14,Associate Software Engineer,Front-End,,Fair,1,SL1,2.58,,2.58,,,,Y,N,Proposed_Bodog,,,,Thao Le Huynh Cong,Thao Le Huynh Cong,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,NPNBFront-End,,,,,He's potential & fast growing to be SE for F-E team in short time,134,,,3
+,SD1252,Ung Tiến Dũng,Ung Tien,Dung,26-May-14,Software Engineer,C/C++,,Fair,2,SL1,2.56,,2.56,Small Cell,26-May-14,,N,N,,,,,Khoa Le Dang,Khoa Le Dang,BC/C++,BC/C++,BC/C++,BC/C++,BC/C++,BC/C++,,,,,,0,,,
+,SD1253,Nguyễn Mạnh Hưng,Nguyen Manh,Hung,26-May-14,Associate Support Analyst,Support Analyst,,Excellent,1,SL1,2.56,,2.56,Publicis training,26-May-14,25-Jul-14,Y,Y,Proposed_Eversheds,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,NPNBSupport Analyst,NPNBSupport Analyst,NPNBSupport Analyst,NPNBSupport Analyst,NPNBSupport Analyst,NPNBSupport Analyst,,,,,"Good English. Good communication. Problem solving and root cause analysis is fine. Good attitude. Has support / analysis mindset.
+Domain, experience in support. SQL are lack",125,,,
+,SD1257,Võ Thị Loan Minh,Vo Thi Loan,Minh,2-Jun-14,Senior QC Engineer,QC,,Fairly Good,3,SL1,2.54,,2.54,,,,Y,N,Proposed_MoneyCorp,18-Jun-14,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"Good in testing theory
+Basic knowledge about test complete( write/modify, test script with c#) – Strong tester
+Honest;
+",132,,,
+,SD1256,Nguyễn Hoàng Phúc Vinh,Nguyen Hoang Phuc,Vinh,2-Jun-14,Support Analyst,Support Analyst,,Fairly Good,2,SL2,2.54,,2.54,Media Brands,2-Jun-14,,N,N,billed from 16 Jun,,,,Tuyen Phan Le Minh,Tuyen Phan Le Minh,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,BSupport Analyst,,,,,"[Nga Van] Vinh has good communication and he can quick response to the question on the interview with the logic support mindset. 
+Vinh knows the SLA concepts
+Vinh has good analysis experience on application troubleshooting. 
+",0,,,
+,SD1262,Phùng Ngô Việt Tiến,Phung Ngoc Viet,Tien,9-Jun-14,QC Engineer,QC,,Fairly Good,2,SL1,2.52,,2.52,IIN Testing,13-Jun-14,,N,N,Is to replace Linh - Billed from 16 Jun,,,,Hai Pham Hoang,Hai Pham Hoang,BQC,BQC,BQC,BQC,BQC,BQC,,,,,"- Have good English
+- Smart, can learn & adapt quickly
+- Not much experience of testing technique
+- No experience in web testing but major in mobile win app
+
+",0,,,
+,SD1264,Trương Thị Thu Hiền,Truong Thi Thu ,Hien,16-Jun-14,QC Engineer,QC,,Fair,2,SL2,2.50,,2.50,,,,Y,N,Proposed_Care724,18-Jun-14,,,Lam Pham Le Ngoc,Lam Pham Le Ngoc,,,,,,,,,,,,130,,,
+,SD1267,Phạm Quốc Vị,Pham Quoc ,Vi,16-Jun-14,Software Engineer,C/C++,,Fair,2,SL2,2.50,,2.50,,,,,,Reserved_Small Cell,16-Jun-14,,,Bien Van Thi,Bien Van Thi,,,,,,,,,,,"- Good English, self confident, good communication skill, trouble shooting
+- ETL, Finance biz domain, TFS, MVC, Entity Framework,WPF, Windows Forms, SSIS, can lead team
+",130,,,
+,SD1268,Trần Tuy,Tran,Tuy,16-Jun-14,QC Engineer,QC,,Fair,2,SL1,2.50,,2.50,Amdocs,16-Jun-14,,N,N,,16-Jun-14,,,Vinh Pham Phu,Vinh Pham Phu,,,,,,,,,,,"Below average Eng speaking
+Weak in testing process & theory
+Average in BAV practice, but weak in Equivalance
+Fair in writing test case practice
+A bit slow but potential
+[Amdocs]
+Has 1,5 testing experience & high motivation to work in Testing Amdocs systems
+",0,,,
+,SD1269,Nguyễn Huy Thắng,Nguyen Huynh Anh,Thang,16-Jun-14,Senior QC Engineer,QC,,Fair,3,SL1,2.50,,2.50,Amdocs,16-Jun-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,,,,,,,,,,,"Good analytical thinking 
+Good at testing practice
+Good working attitude
+Have experience in mobile application testing 
+Good at networking test
+Potential for Leader
+",0,,,
+,SD1270,Nguyễn Tấn Trung,Nguyen Tan,Trung,16-Jun-14,QC Engineer,QC,,Good,2,SL2,2.50,,2.50,Amdocs,16-Jun-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,,,,,,,,,,,"Have good English communication
+Have experience in testing (~ 3 years)
+Have good mindset testing
+Have good attitude & communication
+Be potential candidate for Senior level
+[Amdocs]
+he has 2.5 testing experience and high motivation for challenges
+",0,,,
+,SD1271,Võ Thị Ngân Huyền,Vo Thi Ngan,Huyen,16-Jun-14,QC Engineer,QC,,Fair,2,SL2,2.50,,2.50,Amdocs,16-Jun-14,,N,N,,,,,Vinh Pham Phu,Vinh Pham Phu,,,,,,,,,,,"English is average
+Good communication & attitude
+Have good view in testing
+Smart -> can learn & adapt new environment soon
+Have no experience in leading -> potential to be leader
+Have no exp in web testing
+Can apply for Amdocs team - L3
+[Amdocs]
+Selected as level 2 – Mature, confident, understands testing. not enough experience for level 3.
+",0,,,
+,SD1263,Nguyễn Thanh Hoàng,Nguyen Thanh,Hoang,23-Jun-14,Senior Software Engineer,,Microsoft,Good,3,SL3,2.48,,2.48,,,,,,,,,,Dung Le Hoang,Dung Le Hoang,,,,,,,,,,,"- Good English, self confident, good communication skill, trouble shooting
+- ETL, Finance biz domain, TFS, MVC, Entity Framework,WPF, Windows Forms, SSIS, can lead team
+",129,,,
+,SD1276,Nguyễn Thành Hưng,Nguyen Thanh ,Hung,23-Jun-14,QC Engineer,,QC,Fair,2,SL1,2.48,,2.48,,,,,,,,,,,Pham Hoang Hai,,,,,,,,,,,"- English: Above average
+- Testing knowledge: average
+- Test case writing: Average
+-  UI Test and BAV technique: Above average
+- 3+ years experience in end2end game testing on mobile and web
+- Good working attitude
+",,,,
+,SD1277,Nguyễn Hữu Sự,Nguyen Huu,Su,23-Jun-14,QC Engineer,,QC,Fairly Good,2,SL1,2.48,,2.48,,,,,,,,,,,Pham Le Ngoc Lam,,,,,,,,,,,"Talk so fast, need more slowly
+Good at browser testing
+Game Testing on mobile
+Acceptable at testing practise, not good at testing theory
+Not strong tester but eager to learn & work in testing
+",,,,
+,SD1279,Lê Hoàng Bích Ngọc,Le Hoang Bich,Ngoc,23-Jun-14,QC Engineer,,QC,Fairly Good,2,SL2,2.48,,2.48,,,,,,,,,,,Pham Le Ngoc Lam,,,,,,,,,,,"English: Fairly good
+- Testing knowledge: Fairly good
+- Testing technique: BAV, Equivalence partition
+- Experience in Mobile App as well as Web testing
+- Experience in Srum process
+- Fairly good at Browser testing
+- Potential for leadership
+- Good at communication
+- Sharp and agile
+",,,,
+,,Trần Quốc Linh,Tran Quoc,Linh,1-Jul-14,QC Engineer,,QC,Good,2,SL1,2.46,,2.46,,,,,,,,,,,,,,,,,,,,,,"- Good English speaking and proactive
+- 2 year experience in automation test for desktop application
+- Advanced knowledge/skill in QTP automation
+- No experience in Web and Mobile testing
+- Average in manual functional test practices
+- Good presentation and communication skills
+- Review after probation (QC SL2 for Automation)
+",,,,
+,,Nguyễn Duy Kỳ,Nguyen Duy,Ky,1-Jul-14,QC Engineer,,QC,Good,2,SL2,2.46,,2.46,,,,,,,,,,,,,,,,,,,,,,"Has advanced knowledge about automation Coded UI
+Basic knowledge about Selenium C#
+Fairly good testing knowledge
+Above average in wring test case
+English: Good ; Mature, good attitude, potential to develop Senior level in short time
+",,,,
+,SD1278,Lê Trần Huy Hậu,Le Tran Huy,Hau,14-Jul-14,QC Engineer,,QC,Fairly Good,2,SL2,2.42,,2.42,,,,,,Reserved_KCL,,,,,Pham Le Ngoc Lam,,,,,,,,,,,"Experience working with virtual team (working with Idian team daily)
+A "hungry learner"
+Can work well under pressure
+English skills: fairly good
+[Long Vu]:
+Be focused anf be prepared: Above average 
+Attention in detail: Fair
+He knows details in UI testing
+Testing process and knowledge: Fair (He knows 2 techniques: BAV and EP of blackbox. However, he's not good at EP.
+Has experience with Desktop App test only
+He does not know about Browser testing
+He's working in Amdocs (TMA) and would like to to work in this work again in HVN if given a chance
+""xperience working with virtual team (working with Idian team daily)
+A "hungry learner"
+Can work well under pressure
+English skills: fairly good
+[Long Vu]:
+Be focused anf be prepared: Above average 
+Attention in detail: Fair
+He knows details in UI testing
+Testing process and knowledge: Fair (He knows 2 techniques: BAV and EP of blackbox. However, he's not good at EP.
+Has experience with Desktop App test only
+He does not know about Browser testing
+He's working in Amdocs (TMA)""perience working with virtual team (working with Idian team daily)
+A "hungry learner"
+Can work well under pressure
+English skills: fairly good
+[Long Vu]:
+Be focused anf be prepared: Above average 
+Attention in detail: Fair
+He knows details in UI testing
+Testing process and knowledge: Fair (He knows 2 techniques: BAV and EP of blackbox. However, he's not good at EP.
+Has experience with Desktop App test on""erience working with virtual team (working with Idian team daily)
+A "hungry learner"
+Can work well under pressure
+English skills: fairly good
+[Long Vu]:
+Be focused anf be prepared: Above average 
+Attention in detail: Fair
+He knows details in UI testing
+Testing process and knowledge: Fair (He knows 2 techniques: BAV and EP of blackbox. ""rience working with virtual team (working with Idian team daily)
+A "hungry learner"
+Can work well under pressure
+English skills: fairly good
+[Long Vu]:
+Be focused anf be prepared: Above average 
+Attention in detail: Fair
+He knows details in UI testing
+Testing process ""ience working with virtual team (working with Idian team daily)
+A "hungry learner"
+Can work well under pressure
+English skills: fairly good
+[Long Vu]:
+Be focused anf be prepared: Above average 
+Attent""ence working with virtual team (working with Idian team daily)
+A "hungry learner"
+Can work well under pressure
+English skills: fairly""nce working with virtual team (working with Idian team daily)
+A "hu""ce",,,,
+,,Nguyễn Thị Phương Thảo,Nguyen Thi Phuong,Thao,14-Jul-14,QC Engineer,,QC,Average,2,SL2,2.42,,2.42,,,,,,Reserved_Amdoc,,,,Vinh Pham Phu,Vinh Pham Phu,,,,,,,,,,,"- English is average
+- Have good communication and attitude
+- Smart - can learn & adapt new environment fast
+- Know theory but not deep in testing technique
+- Have mindset of testing
+- Web testing exp: around 14 months
+[Amdocs]
+- Mature, good communication, understands testing
+",,,,
+,,Huỳnh Bá Hùng,Huynh Ba,Hung,14-Jul-14,QC Engineer,,QC,Fair,2,SL2,2.42,,2.42,,,,,,Reserved_Amdoc,,,,Vinh Pham Phu,Vinh Pham Phu,,,,,,,,,,,"Have demi-average English
+Not much knowledge in testing techniques
+Have good attitude & communication
+Have exp in game testing & leading team
+6 months in web testing
+Have exp working in Amdocs proj at TMA, but leave TMA more than 1 year.
+Suitable for L2 Amdocs.
+[Amdocs]
+Mature, confident, very good communication, experienced and understand testing. 
+Selected as L3
+",,,,
+,SD1275,Nguyễn Minh Thiện,Nguyen Minh,Thien,TBD,QC Engineer,,QC,Fairly Good,2,SL2,#VALUE!,,#VALUE!,,,,,,,,,,,Vu Nguyen Phi Long,,,,,,,,,,,"- English: fairly good at speaking
+- Knowledge  in Automation with Watir (Ruby)
+- Basic knowledge with Selenium 
+- Testing knowledge: Average
+- Test case technique: BAV
+- Test case writing practice: fairly good 
+",,,,
