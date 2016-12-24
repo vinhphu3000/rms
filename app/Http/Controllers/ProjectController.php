@@ -57,7 +57,14 @@ class ProjectController extends BaseController {
 
     public function add()
     {
-        return view('project.add');
+        $roles = \App\Models\ProjectRole::all();
+        $employee_exp = \App\Models\EmployeeExp::all();
+        return view('project.add', ['roles' => $roles, 'employee_exp' => $employee_exp]);
+    }
+
+    public function doAdd(\Illuminate\Http\Request $request)
+    {
+        var_dump($request);die;
     }
 
 

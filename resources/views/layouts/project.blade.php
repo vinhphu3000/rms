@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{ asset("gentelella/vendors/nprogress/nprogress.css") }}" />
 
     <link rel="stylesheet" href="{{ asset("gentelella/vendors/select2/dist/css/select2.css") }}" />
+    <!-- Icheck-->
+    <link href="{{ asset("gentelella/vendors/iCheck/skins/flat/green.css") }}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{ asset("gentelella/build/css/custom.css") }}" />
     <link href="{{ asset("js/vendor/jalert/jAlert.css") }}" rel="stylesheet" type="text/css" media="screen" />
@@ -103,6 +105,8 @@
 <script src="{{ asset("gentelella/vendors/select2/dist/js/select2.full.js") }}"></script>
 <!-- NProgress -->
 <script src="{{ asset("gentelella/vendors/nprogress/nprogress.js") }}"></script>
+<!-- icheck -->
+<script src="{{ asset("gentelella/vendors/iCheck/icheck.min.js") }}"></script>
 
 <!-- Gantt chart -->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>

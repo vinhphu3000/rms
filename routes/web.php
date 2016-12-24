@@ -39,7 +39,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/employee/upload-excel', 'EmployeeController@doUploadExcel');
     Route::post('/employee/import', 'EmployeeController@doImport');
     Route::post('/employee/upload-cv', 'EmployeeController@doUploadCV');
-    Route::post('/employee/experience-save', 'EmployeeController@doExperienceSave');
+
+
+    /**
+     * project
+     */
+    Route::post('/project/experience-save', 'EmployeeController@doExperienceSave');
+    Route::post('/project/add', 'ProjectController@doAdd');
 
 
 });

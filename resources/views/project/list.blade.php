@@ -47,7 +47,7 @@
                             <tr>
                                 <td>#</td>
                                 <td>
-                                    <a>{{$item->name}}</a>
+                                    <a class="project-item" href="javascript:void(0);" url="{{ url ('project/details/' . $item->id) }}">{{$item->name}}</a>
                                     <br />
                                     <small>Created {{$item->created_at}}</small>
                                 </td>
@@ -70,7 +70,7 @@
                                     <button type="button" class="btn btn-{{\App\Models\Project::$project_status[$item->status]['class']}} btn-xs">{{\App\Models\Project::$project_status[$item->status]['lable']}}</button>
                                 </td>
                                 <td>
-                                    <a href="#" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
+                                    <a class="project-item" href="javascript:void(0);" url="{{ url ('project/details/' . $item->id) }}" class="btn btn-primary btn-xs"><i class="fa fa-folder"></i> View </a>
                                     <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
                                     <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                                 </td>

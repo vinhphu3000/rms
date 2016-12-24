@@ -10,7 +10,7 @@ class Project extends Eloquent
     protected $table = 'project';
     protected $dates = ['created_at', 'updated_at'];
     protected $fillable = ['name','status','desc','icon', 'user_id','created_at','updated_at'];
-    public static $project_status = [2 => ['lable' => 'BID', 'class' => 'warning'], 1 => ['lable' => 'Completed', 'class' => 'success'], 0 => ['lable' => 'Bid fail', 'class' => 'danger'], 3 => ['lable' => 'Progressing', 'class' => 'info']];
+    public static $project_status = [2 => ['lable' => 'BID', 'class' => 'warning'], 0 => ['lable' => 'Bid fail', 'class' => 'danger'], 3 => ['lable' => 'Progressing', 'class' => 'info'], 1 => ['lable' => 'Completed', 'class' => 'success']];
     public static function getTableColumns() {
         return \DB::connection()->getSchemaBuilder()->getColumnListing('project');
     }
