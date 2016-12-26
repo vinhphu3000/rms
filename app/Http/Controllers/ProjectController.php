@@ -22,14 +22,18 @@ class ProjectController extends BaseController {
 	|
 	*/
 
-    protected  static $_user_infor;
+    protected  $user;
 
     /**
      * Constructor function
      * Set current user information
      */
     public function __construct() {
-        self::$_user_infor = Auth::getAuthInfo();
+        $this->middleware(function ($request, $next) {
+            $this->user = \App\Authentication\Service::getAuthInfo();
+            return $next($request);
+        });
+
     }
 
     /**
@@ -37,21 +41,7 @@ class ProjectController extends BaseController {
      */
     public function listing(\Illuminate\Http\Request $request)
     {
-        $limit = 30;
-        $builder = Project::query();
-        $search_param = [
-            'kw' => $request['kw'],
-            'order_by' => empty($request['order_by']) ? 'id' : $request['order_by'],
-            'order_type' => $request['order_type'] == 'asc' ? 'asc' : 'desc',
-        ];
-        Session::set('search_param', $search_param);
-
-        if(!empty($search_param['kw'])){
-            $builder->where('name', 'LIKE', "%{$search_param['kw']}%");
-        }
-        $result = $builder->orderBy($search_param['order_by'], $request['order_type'])->paginate($limit);
-
-        return view('project.list', ['result' => $result, 'search_param' => $search_param]);
+        return view('project.list', ['result' => Project::all()]);
     }
 
 
@@ -64,7 +54,16 @@ class ProjectController extends BaseController {
 
     public function doAdd(\Illuminate\Http\Request $request)
     {
-        var_dump($request);die;
+        $project_data = [
+                'name' => $request->input('name'),
+                'client' => $request->input('client'),
+                'status' => $request->input('status'),
+                'estimate_type' => $request->input('estimate_type'),
+                'estimate' => $request->input('estimate'),
+                'user_id' => $this->user->id,
+        ];
+        $project = Project::create($project_data);
+        return redirect('/project/details/' . $project->id);
     }
 
 

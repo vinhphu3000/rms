@@ -1,3 +1,6 @@
+@extends('layouts.project')
+@section('page_heading','Project')
+@section('section')
 <div class="clearfix"></div>
 <div>
     <div class="col-md-12">
@@ -22,14 +25,14 @@
                         </li>
                         <li class="hidden-phone">
                             <span class="name"> Estimated project duration </span>
-                            <span class="value text-success"> {{$project->estimate_manday}} manday </span>
+                            <span class="value text-success"> {{$project->estimate}}  {{$project->estimate_type}} </span>
                         </li>
                     </ul>
                     <br />
 
                     <div id="mainb">
                         <h4>Booking</h4>
-                        <div class="gantt"></div>
+                        <div class="gantt" data-url="{{ url('project/booking-data/' . $project->id) }}"></div>
                     </div>
                     <br/>
                     <div>
@@ -100,54 +103,4 @@
         </div>
     </div>
 </div>
-
-<script>
-    /*jslint unparam: true */
-    /*global window, $ */
-    $(function () {
-        'use strict';
-
-        $.ajax({
-            url: "{{ url('project/booking-data/' . $project->id) }}",
-            dataType: "json",
-            success: function(reponse) {
-                $(".gantt").gantt({
-                    source: reponse,
-                    navigate: "scroll",
-                    scale: "days",
-                    maxScale: "months",
-                    minScale: "days",
-                    itemsPerPage: 10,
-                    useCookie: false,
-                    onItemClick: function(data) {
-                        alert("Item clicked - show some details");
-                    },
-                    onAddClick: function(dt, rowId) {
-                        alert("Empty space clicked - add an item!");
-                    },
-                    onRender: function() {
-                        if (window.console && typeof console.log === "function") {
-                            console.log("chart rendered");
-                        }
-                    }
-                });
-
-//                $(".gantt").popover({
-//                    selector: ".bar",
-//                    title: "I'm a popover",
-//                    content: "And I'm the content of said popover.",
-//                    trigger: "hover"
-//                });
-
-                prettyPrint();
-            }
-
-        });
-
-
-
-
-    });
-
-
-</script>
+@stop

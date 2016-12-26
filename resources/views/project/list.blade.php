@@ -54,17 +54,14 @@
                                 <td>
                                     <ul class="list-inline">
                                         <?php foreach ($item->memeber() as $member) : ?>
-
                                             <li>
                                                 <img title='{{$member->employee->first_name . ' ' . $member->employee->last_name}}' alt='{{$member->employee->first_name . ' ' . $member->employee->last_name}}' src="{{ asset(Config::get('constants.PATH_AVATAR') . empty($member->employee->avatar) ? Config::get('constants.PATH_AVATAR') . Config::get('constants.DEFAULT_AVATAR') : $member->employee->avatar) }}" class="avatar" alt="Avatar">
-
                                             </li>
                                         <?php endforeach; ?>
-
                                     </ul>
                                 </td>
                                 <td>
-                                    {{$item->estimate_manday}} <small>Man-day</small>
+                                    {{$item->estimate}} <small>{{$item->estimate_type}}</small>
                                 </td>
                                 <td>
                                     <button type="button" class="btn btn-{{\App\Models\Project::$project_status[$item->status]['class']}} btn-xs">{{\App\Models\Project::$project_status[$item->status]['lable']}}</button>

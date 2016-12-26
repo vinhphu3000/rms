@@ -10,13 +10,13 @@
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Name<span class="required">*</span></label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="text" class="form-control" name="name" placeholder="Project name">
+                    <input type="text" class="form-control required-input"  name="name" placeholder="Project name">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Client <span class="required">*</span></label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="text" class="form-control" name="client" placeholder="Client company">
+                    <input type="text" class="form-control required-input" name="client" placeholder="Client company">
                 </div>
             </div>
             <div class="form-group">
@@ -24,7 +24,7 @@
                 <div class="col-md-9 col-sm-9 col-xs-12">
                     <select class="form-control" name="status">
                         <?php foreach(\App\Models\Project::$project_status  as $k => $status): ?>
-                            <option {{$k}}>{{$status['lable']}}</option>
+                            <option value="{{$k}}">{{$status['lable']}}</option>
                         <?php endforeach; ?>
                     </select>
                 </div>
@@ -35,8 +35,9 @@
                 <div class="col-md-9 col-sm-9 col-xs-12">
                     <input type="number" name="estimate" class="form-control">
                     <select name="estimate_type" class="form-control">
-                        <option>Manday</option>
-                        <option>hour</option>
+                        <?php foreach (\App\Models\Project::$estimate_type as $estimate_type):  ?>
+                        <option value="{{$estimate_type}}">{{$estimate_type}}</option>
+                        <?php endforeach ?>
                     </select>
                 </div>
             </div>
@@ -188,7 +189,6 @@
                 if ($(this).parent().parent().parent().find('tr').length > 1) {
                     $(this).parent().parent().remove();
                 }
-
             });
         });
 
@@ -199,7 +199,16 @@
         });
 
         $('.btn-project-save').click( function () {
-            $('.add-project').submit();
+            var isValid = true;
+            $('.required-input').each( function() {
+                if ($(this).val() == '') {
+                    isValid = false;
+                    $(this).css('border', '1px solid red');
+                }
+            });
+            if (isValid) {
+                $('.add-project').submit();
+            }
         });
     });
 </script>

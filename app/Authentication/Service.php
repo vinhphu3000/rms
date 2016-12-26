@@ -32,7 +32,7 @@ class Service
     public static function isAuthenticated()
     {
         $authInfo = Session::get('userinfo');
-       
+
         if (!empty($authInfo->id)) {
             return true;
         }
@@ -45,7 +45,7 @@ class Service
         if(Session::has('userinfo')){
             return Session::get('userinfo');
         }
-        
+
         return null;
     }
     
@@ -66,7 +66,7 @@ class Service
     public static function clearAuthInfo()
     {
         Session::forget('userinfo');
-        
+
     }
     
     public static function encodeCredential($credential)

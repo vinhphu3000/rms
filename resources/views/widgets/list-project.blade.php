@@ -2,8 +2,8 @@
 	<div class="menu_section">
 		<ul class="nav side-menu">
 			<?php foreach ($result as $item): ?>
-				<li>
-					<a class="project-item" href="javascript:void(0);" url="{{ url ('project/details/' . $item->id) }}"> <span style="border-bottom:1px solid #e6e9ed;">{{$item->name}}</span><br/>
+				<li <?php echo !empty($project->id) && $project->id == $item->id ? 'class="active"' : ''?> >
+					<a  href="{{ url ('project/details/' . $item->id) }}"> <span style="border-bottom:1px solid #e6e9ed;">{{$item->name}}</span><br/>
 						<small>Client: {{$item->client}}</small><br/>
 						<small>Created by: {{isset($item->user->name) ? $item->user->name : '-'}}</small>
 					</a>

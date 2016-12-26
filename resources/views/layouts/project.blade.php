@@ -169,6 +169,57 @@
             });
         });
 
+        function granttLoadData(name)
+        {
+            if ($(name).length) {
+                $.ajax({
+                    url: $(name).attr('data-url'),
+                    dataType: "json",
+                    success: function(reponse) {
+                        if (!reponse.length) {
+                            $(name).html('<div style="width: 100%;text-align:center;" >Nothing to show</div>');
+                            return;
+                        }
+
+                        $(name).gantt({
+                            source: reponse,
+                            navigate: "scroll",
+                            scale: "days",
+                            maxScale: "months",
+                            minScale: "days",
+                            itemsPerPage: 10,
+                            useCookie: false,
+                            onItemClick: function(data) {
+                                alert("Item clicked - show some details");
+                            },
+                            onAddClick: function(dt, rowId) {
+                                alert("Empty space clicked - add an item!");
+                            },
+                            onRender: function() {
+                                if (window.console && typeof console.log === "function") {
+                                    console.log("chart rendered");
+                                }
+                            }
+                        });
+
+//                $(".gantt").popover({
+//                    selector: ".bar",
+//                    title: "I'm a popover",
+//                    content: "And I'm the content of said popover.",
+//                    trigger: "hover"
+//                });
+
+                        prettyPrint();
+                    }
+
+                });
+            }
+        }
+
+        granttLoadData('.gantt');
+
+
+
     });
     $(document).on({
         ajaxStart: function() { $("body").addClass("loading"); },
