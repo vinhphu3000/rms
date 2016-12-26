@@ -5,8 +5,8 @@
 </div>
 
 <div class="modal-body">
-    <form class="form-horizontal form-label-left input_mask add-project" action="{{ url('project/add') }}" method="post">
     <div>
+        <form class="form-horizontal form-label-left input_mask add-project" action="{{ url('project/add') }}" method="post">
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Name<span class="required">*</span></label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
@@ -35,8 +35,8 @@
                 <div class="col-md-9 col-sm-9 col-xs-12">
                     <input type="number" name="estimate" class="form-control">
                     <select name="estimate_type" class="form-control">
-                        <?php foreach (\App\Models\Project::$estimate_type as $estimate_type):  ?>
-                        <option value="{{$estimate_type}}">{{$estimate_type}}</option>
+                        <?php foreach (\App\Models\Project::$estimate_type as $key => $estimate_type):  ?>
+                        <option value="{{$key}}">{{$estimate_type}}</option>
                         <?php endforeach ?>
                     </select>
                 </div>
@@ -52,7 +52,11 @@
                     </div>
                 </div>
             </div>
+            <input type="hidden" name="_token" value="{{ csrf_token()}}">
+            <input type="hidden" name="request_param">
+            <input type="hidden" name="request_note">
 
+        </form>
     </div>
     <div class="request-content" style="border-top: 0px;display:none;">
     <div class="ln_solid"></div>
@@ -70,15 +74,15 @@
         <tbody>
         <tr style="display: none;">
             <td >
-                <select name="request[role][]" style="width: 100px;">
+                <select name="role" style="width: 100px;">
                     <?php foreach($roles as $role) : ?>
                     <option value="<?php echo $role->id ?>"><?php echo $role->name ?></option>
                     <?php endforeach; ?>
                 </select>
             </td>
-            <td ><input name="request[number][]" style="width: 50px;" type="number"/></td>
+            <td ><input name="number" style="width: 50px;" type="number"/></td>
             <td >
-                <select name="request[skill][]" class="select2_fisrt_multiple form-control" style="width: 200px;" multiple="multiple">
+                <select name="skill" class="select2_fisrt_multiple form-control" style="width: 200px;" multiple="multiple">
                     <?php $last_type = ''; ?>
                     <?php foreach ($employee_exp as $option) : ?>
                     <?php if ($option->type != $last_type) :  ?>
@@ -93,20 +97,20 @@
                     </optgroup>
                 </select>
             </td>
-            <td><input name="request[year_of_exp][]" style="width: 50px;" type="number"/></td>
+            <td><input name="year_of_exp" style="width: 50px;" type="number"/></td>
             <td><a href="javascript:void(0);" class="role-request-remove" ><i class="fa fa-minus-square-o"></i></a></td>
         </tr>
         <tr>
             <td >
-                <select name="request[role][]" style="width: 100px;">
+                <select name="role" style="width: 100px;">
                     <?php foreach($roles as $role) : ?>
                         <option value="<?php echo $role->id ?>"><?php echo $role->name ?></option>
                     <?php endforeach; ?>
                 </select>
             </td>
-            <td ><input name="request[number][]" style="width: 50px;" type="number"/></td>
+            <td ><input name="number" style="width: 50px;" type="number"/></td>
             <td >
-                <select name="request[skill][]" class="select2_multiple form-control" style="width: 200px;" multiple="multiple">
+                <select name="skill" class="select2_multiple form-control" style="width: 200px;" multiple="multiple">
                     <?php $last_type = ''; ?>
                     <?php foreach ($employee_exp as $option) : ?>
                     <?php if ($option->type != $last_type) :  ?>
@@ -121,7 +125,7 @@
                     </optgroup>
                 </select>
             </td>
-            <td><input name="request[year_of_exp][]" style="width: 50px;" type="number"/></td>
+            <td><input name="year_of_exp" style="width: 50px;" type="number"/></td>
             <td><a href="javascript:void(0);" class="role-request-remove" ><i class="fa fa-minus-square-o"></i></a></td>
         </tr>
         </tbody>
@@ -138,10 +142,9 @@
                 </div>
             </div>
         </div>
-            </div>
-        <input type="hidden" name="_token" value="{{ csrf_token()}}">
+        </div>
     </div>
-</form>
+
 </div>
 <div class="modal-footer">
     <input type="hidden" name="file_name" value="">
@@ -206,9 +209,40 @@
                     $(this).css('border', '1px solid red');
                 }
             });
-            if (isValid) {
-                $('.add-project').submit();
+
+            if (!isValid) {
+                return;
             }
+
+            var request_param = [];
+
+            $('.request-content-table tbody tr').each( function () {
+                var role = $(this).find('select[name=role]').find('option:selected').val();
+                var number = $(this).find('input[name=number]').val();
+                var skill = [];
+
+                $(this).find('select[name=skill] option:selected').each (function () {
+                    skill.push($(this).val());
+                });
+
+                var year_of_exp = $(this).find('input[name=year_of_exp]').val();
+
+                if (role && number) {
+                    request_param.push({
+                        role: role,
+                        number: number,
+                        skill: skill,
+                        year_of_exp: year_of_exp,
+                    });
+                }
+
+            });
+            $('input[name=request_param]').val(JSON.stringify(request_param));
+            $('input[name=request_note]').val($('textarea[name=note]').val());
+
+            $('.add-project').submit();
         });
+
+
     });
 </script>

@@ -25,7 +25,7 @@
                         </li>
                         <li class="hidden-phone">
                             <span class="name"> Estimated project duration </span>
-                            <span class="value text-success"> {{$project->estimate}}  {{$project->estimate_type}} </span>
+                            <span class="value text-success"> {{$project->estimate}}  {{empty(\App\Models\Project::$estimate_type[$project->estimate_type]) ? '-' : \App\Models\Project::$estimate_type[$project->estimate_type] }}</span>
                         </li>
                     </ul>
                     <br />

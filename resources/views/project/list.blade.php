@@ -61,7 +61,7 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    {{$item->estimate}} <small>{{$item->estimate_type}}</small>
+                                    {{$item->estimate}} <small>{{empty(\App\Models\Project::$estimate_type[$item->estimate_type]) ? '-' : \App\Models\Project::$estimate_type[$item->estimate_type] }}</small>
                                 </td>
                                 <td>
                                     <button type="button" class="btn btn-{{\App\Models\Project::$project_status[$item->status]['class']}} btn-xs">{{\App\Models\Project::$project_status[$item->status]['lable']}}</button>

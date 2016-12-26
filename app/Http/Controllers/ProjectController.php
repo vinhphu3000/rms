@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use League\Flysystem\Exception;
 use App\Models\Project;
+use App\Models\ProjectRequest;
 use App\Models\ProjectBooking;
 use App\Models\Employee;
 use Request;
@@ -63,6 +64,18 @@ class ProjectController extends BaseController {
                 'user_id' => $this->user->id,
         ];
         $project = Project::create($project_data);
+
+        if(!empty($project->id)) {
+            $request_data = [
+                'project_id' => $project->id,
+                'params' => $request->input('request_param'),
+                'note' => $request->input('request_note'),
+                'user_id' => $this->user->id,
+            ];
+            ProjectRequest::create($request_data);
+        }
+
+
         return redirect('/project/details/' . $project->id);
     }
 
