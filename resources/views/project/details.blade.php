@@ -6,7 +6,12 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4 class="green"><i class="fa fa-paint-brush"></i> {{$project->name}}</h4>
+                <h4 class="green" style="float: left"><i class="fa fa-paint-brush"></i> {{$project->name}}</h4>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><button type="button" class="btn btn-trans link-popup" url = "{{ url('request/add/' . $project->id) }}"><i class="glyphicon glyphicon-plus" aria-hidden = true></i> Create new request</button>
+                    </li>
+
+                </ul>
                 <div class="clearfix"></div>
             </div>
 
@@ -41,54 +46,25 @@
 
                         <!-- end of user messages -->
                         <ul class="messages">
+                            <?php  foreach ($activity as $ac) : ?>
                             <li>
-                                <img src="images/img.jpg" class="avatar" alt="Avatar">
+                                <img  src="{{ asset(Config::get('constants.PATH_AVATAR') . empty($ac->user->avatar) ? Config::get('constants.PATH_AVATAR') . Config::get('constants.DEFAULT_AVATAR') : $ac->user->avatar) }}" class="avatar" alt="{{$ac->user->name}}">
                                 <div class="message_date">
-                                    <h3 class="date text-info">24</h3>
-                                    <p class="month">May</p>
+                                    <h3 class="date text-info">{{$ac->created_at->diffForHumans()}}</h3>
                                 </div>
                                 <div class="message_wrapper">
-                                    <h4 class="heading">Desmond Davison</h4>
-                                    <blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>
+                                    <h4 class="heading">{{$ac->user->name}}</h4>
+                                    <blockquote class="message">{{$ac->content}}</blockquote>
                                     <br />
+                                    <?php if(!empty($ac->request_id)): ?>
                                     <p class="url">
                                         <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
-                                        <a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc </a>
+                                        <a href="#"><i class="glyphicon glyphicon-refresh"></i> View request details </a>
                                     </p>
+                                    <?php endif; ?>
                                 </div>
                             </li>
-                            <li>
-                                <img src="images/img.jpg" class="avatar" alt="Avatar">
-                                <div class="message_date">
-                                    <h3 class="date text-error">21</h3>
-                                    <p class="month">May</p>
-                                </div>
-                                <div class="message_wrapper">
-                                    <h4 class="heading">Brian Michaels</h4>
-                                    <blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>
-                                    <br />
-                                    <p class="url">
-                                        <span class="fs1" aria-hidden="true" data-icon=""></span>
-                                        <a href="#" data-original-title="">Download</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/img.jpg" class="avatar" alt="Avatar">
-                                <div class="message_date">
-                                    <h3 class="date text-info">24</h3>
-                                    <p class="month">May</p>
-                                </div>
-                                <div class="message_wrapper">
-                                    <h4 class="heading">Desmond Davison</h4>
-                                    <blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>
-                                    <br />
-                                    <p class="url">
-                                        <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
-                                        <a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc </a>
-                                    </p>
-                                </div>
-                            </li>
+                             <?php endforeach; ?>
                         </ul>
                         <!-- end of user messages -->
 

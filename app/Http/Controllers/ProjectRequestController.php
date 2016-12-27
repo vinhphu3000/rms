@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller as BaseController;
 use App\Events\ResourceRequest;
 
 
-class ProjectController extends BaseController {
+class ProjectRequestController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -43,15 +43,16 @@ class ProjectController extends BaseController {
      */
     public function listing(\Illuminate\Http\Request $request)
     {
-        return view('project.list', ['result' => Project::all()]);
+        return view('request.list', ['result' => ProjectRequest::all()]);
     }
 
 
-    public function add()
+    public function add($project_id)
     {
         $roles = \App\Models\ProjectRole::all();
         $employee_exp = \App\Models\EmployeeExp::all();
-        return view('project.add', ['roles' => $roles, 'employee_exp' => $employee_exp]);
+        $project = Project::find((int)$project_id);
+        return view('request.add', ['roles' => $roles, 'employee_exp' => $employee_exp, 'project' => $project]);
     }
 
     public function doAdd(\Illuminate\Http\Request $request)
@@ -92,11 +93,5 @@ class ProjectController extends BaseController {
         return view('project.details', ['project' => $project, 'result' => Project::all(), 'activity' => $activity]);
     }
 
-    public function bookingData($project_id)
-    {
-        $booking = ProjectBooking::where('project_id', (int)$project_id)->get();
-        $gantt_chart_data = ProjectBooking::convertDataGanttChart($booking);
-        return json_encode($gantt_chart_data);
-    }
 
 }

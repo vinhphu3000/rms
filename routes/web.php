@@ -34,6 +34,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/project', 'ProjectController@listing');
     Route::get('/project/add', 'ProjectController@add');
 
+    /**
+     * Request
+     */
+    Route::get('/request/add/{project_id}', 'ProjectRequestController@add');
+
+
     Route::get('/logout','UserController@doLogout');
 
     Route::post('/employee/upload-excel', 'EmployeeController@doUploadExcel');

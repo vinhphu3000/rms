@@ -8,136 +8,94 @@
     <form class="form-horizontal form-label-left input_mask add-project" action="{{ url('request/add') }}" method="post">
     <div>
             <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Name<span class="required">*</span></label>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Project name<span class="required">*</span></label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="text" class="form-control required-input"  name="name" placeholder="Project name">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Client <span class="required">*</span></label>
-                <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="text" class="form-control required-input" name="client" placeholder="Client company">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Status</label>
-                <div class="col-md-9 col-sm-9 col-xs-12">
-                    <select class="form-control" name="status">
-                        <?php foreach(\App\Models\Project::$project_status  as $k => $status): ?>
-                            <option value="{{$k}}">{{$status['lable']}}</option>
-                        <?php endforeach; ?>
-                    </select>
+                   <h4> {{$project->name}} </h4>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Estimate </label>
-                <div class="col-md-9 col-sm-9 col-xs-12">
-                    <input type="number" name="estimate" class="form-control">
-                    <select name="estimate_type" class="form-control">
-                        <option value="Manday">Manday</option>
-                        <option value="Hour">Hour</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Send request resource
-                </label>
-                <div class="col-md-9 col-sm-9 col-xs-12">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" name="is_send_request" class="flat send-request-resource">
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-    </div>
-    <div class="request-content" style="border-top: 0px;display:none;">
-    <div class="ln_solid"></div>
-
-    <table class="table request-content-table"  style="border-top: 0px;">
-        <thead>
-        <tr>
-            <th>Role</th>
-            <th>Number</th>
-            <th>Skill</th>
-            <th>Year of exp</th>
-            <th><a href="javascript:void(0);" class="role-request-add" ><i class="fa fa-plus-square"></i></a></th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr style="display: none;">
-            <td >
-                <select name="request[role][]" style="width: 100px;">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Request resource<span class="required">*</span></label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <select class="form-control" name="role">
                     <?php foreach($roles as $role) : ?>
                     <option value="<?php echo $role->id ?>"><?php echo $role->name ?></option>
                     <?php endforeach; ?>
                 </select>
-            </td>
-            <td ><input name="request[number][]" style="width: 50px;" type="number"/></td>
-            <td >
-                <select name="request[skill][]" class="select2_fisrt_multiple form-control" style="width: 200px;" multiple="multiple">
-                    <?php $last_type = ''; ?>
-                    <?php foreach ($employee_exp as $option) : ?>
-                    <?php if ($option->type != $last_type) :  ?>
-                    <?php if ($last_type != '') : ?>
-                    </optgroup>
-                    <?php endif; ?>
-                    <optgroup label="{{$option->type}}">
-                        <?php endif;?>
-                        <option value="{{$option->id}}">{{$option->name}}</option>
-                        <?php $last_type = $option->type; ?>
-                        <?php endforeach; ?>
-                    </optgroup>
-                </select>
-            </td>
-            <td><input name="request[year_of_exp][]" style="width: 50px;" type="number"/></td>
-            <td><a href="javascript:void(0);" class="role-request-remove" ><i class="fa fa-minus-square-o"></i></a></td>
-        </tr>
-        <tr>
-            <td >
-                <select name="request[role][]" style="width: 100px;">
-                    <?php foreach($roles as $role) : ?>
-                        <option value="<?php echo $role->id ?>"><?php echo $role->name ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </td>
-            <td ><input name="request[number][]" style="width: 50px;" type="number"/></td>
-            <td >
-                <select name="request[skill][]" class="select2_multiple form-control" style="width: 200px;" multiple="multiple">
-                    <?php $last_type = ''; ?>
-                    <?php foreach ($employee_exp as $option) : ?>
-                    <?php if ($option->type != $last_type) :  ?>
-                    <?php if ($last_type != '') : ?>
-                    </optgroup>
-                    <?php endif; ?>
-                    <optgroup label="{{$option->type}}">
-                        <?php endif;?>
-                        <option value="{{$option->id}}">{{$option->name}}</option>
-                        <?php $last_type = $option->type; ?>
-                        <?php endforeach; ?>
-                    </optgroup>
-                </select>
-            </td>
-            <td><input name="request[year_of_exp][]" style="width: 50px;" type="number"/></td>
-            <td><a href="javascript:void(0);" class="role-request-remove" ><i class="fa fa-minus-square-o"></i></a></td>
-        </tr>
-        </tbody>
-    </table>
-        <div class="row">
-        <div class="form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12">Note
-            </label>
-            <div class="col-md-9 col-sm-9 col-xs-12">
-                <div class="checkbox">
-                    <label>
-                        <textarea class="form-control" name="note" rows="3" cols="60"></textarea>
-                    </label>
+                <a href="javascript:void(0);" class="role-tab-add" ><i class="fa fa-plus-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="request-content">
+        <div class="ln_solid"></div>
+
+        <div class="col-xs-3">
+            <!-- required for floating -->
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs tabs-left">
+
+            </ul>
+        </div>
+
+        <div class="col-xs-9">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane tab-pane-first" style="display: none">
+                    <div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Number<span class="required">*</span></label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input name="number"  value="1" type="number"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Start time
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input  class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Skill<span class="required">*</span></label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <select name="skill" class="select2_fisrt_multiple form-control" style="width: 200px;" multiple="multiple">
+                                    <?php $last_type = ''; ?>
+                                    <?php foreach ($employee_exp as $option) : ?>
+                                    <?php if ($option->type != $last_type) :  ?>
+                                    <?php if ($last_type != '') : ?>
+                                    </optgroup>
+                                    <?php endif; ?>
+                                    <optgroup label="{{$option->type}}">
+                                        <?php endif;?>
+                                        <option value="{{$option->id}}">{{$option->name}}</option>
+                                        <?php $last_type = $option->type; ?>
+                                        <?php endforeach; ?>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Year of exp<span class="required">*</span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input name="year_of_exp" type="number"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Note
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <textarea class="form-control" name="note" rows="3" cols="60"></textarea>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-            </div>
+
         <input type="hidden" name="_token" value="{{ csrf_token()}}">
     </div>
 </form>
@@ -152,14 +110,9 @@
 <script >
     $(function () {
         'use strict';
-        $('input.flat').iCheck({
-            checkboxClass: 'icheckbox_flat-green',
-            radioClass: 'iradio_flat-green'
-        });
 
-        $( ".iCheck-helper" ).click(function() {
-            $( ".request-content" ).toggle();
-        });
+
+
 
         $(".select2_multiple").select2({
             maximumSelectionLength: 4,
@@ -167,35 +120,54 @@
             allowClear: true
         });
         var index = 1;
-        $('.role-request-add').click(function () {
-            var tr_ = $('.request-content-table tbody').find('tr:first');
-            var new_tr = tr_.clone();
-            new_tr.removeAttr('style');
 
+        $('.role-tab-add').click(function () {
 
-            new_tr.find('.select2_fisrt_multiple').addClass("select2_fisrt_multiple" + index);
-            $('.request-content-table tbody').append(new_tr);
+            var li = '<li role="' + $('select[name=role] option:selected').val() + '"><i style="cursor: pointer;position: absolute;margin-left: -14px; margin-top: 0px" class="fa fa-minus-square-o role-request-remove" remove-id="' + index + '"></i><a id="a' + index + '" href="#tab' + index + '" data-toggle="tab">' + $('select[name=role] option:selected').text() + ' (1)</a></li>';
+            $('.nav-tabs').append(li);
 
+            var pane = $('.tab-pane-first').clone();
+            pane.removeAttr('style');
+            pane.attr('id', 'tab' + index);
+
+            pane.find('.select2_fisrt_multiple').addClass("select2_fisrt_multiple" + index);
+            pane.find('input[name=number]').attr('tab-tile','#a' + index);
+            pane.find('input[name=number]').addClass('number' + index);
+            $('.tab-content').append(pane);
+            var tab_current = $('#a' + index);
+            tab_current.click();
+            $('.number' + index).change( function() {
+                var tab_title = $('select[name=role] option:selected').text() + ' (' + $(this).val() + ')';
+                tab_current.html(tab_title);
+            });
             $(".select2_fisrt_multiple" + index).select2({
                 maximumSelectionLength: 4,
                 placeholder: "Select skill of request",
                 allowClear: true
             });
 
+            $('#tab' + index).find('.date-picker').daterangepicker({
+                singleDatePicker: true,
+                calender_style: "picker_4"
+            }, function(start, end, label) {
+                console.log(start.toISOString(), end.toISOString(), label);
+            });
 
             $('.role-request-remove').unbind();
             $('.role-request-remove').click(function () {
-                if ($(this).parent().parent().parent().find('tr').length > 1) {
-                    $(this).parent().parent().remove();
+                var is_active = $(this).parent().hasClass('active');
+                $(this).parent().remove();
+                var content_tab_id =  '#tab' + $(this).attr('remove-id');
+                $(content_tab_id).remove();
+                if(is_active){
+                    $('.nav-tabs li:first a').click();
                 }
             });
+
+            index++;
+
         });
 
-        $('.role-request-remove').click(function () {
-            if ($(this).parent().parent().parent().find('tr').length > 1) {
-                $(this).parent().parent().remove();
-            }
-        });
 
         $('.btn-project-save').click( function () {
             var isValid = true;

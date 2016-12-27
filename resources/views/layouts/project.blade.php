@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="{{ asset("gentelella/vendors/select2/dist/css/select2.css") }}" />
     <!-- Icheck-->
     <link href="{{ asset("gentelella/vendors/iCheck/skins/flat/green.css") }}" rel="stylesheet">
+
+    <!-- bootstrap-daterangepicker -->
+    <link href="{{ asset("gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css") }}" rel="stylesheet">
+
+
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{ asset("gentelella/build/css/custom.css") }}" />
     <link href="{{ asset("js/vendor/jalert/jAlert.css") }}" rel="stylesheet" type="text/css" media="screen" />
@@ -113,7 +118,9 @@
 <script src="{{ asset("js/vendor/jQuery.Gantt/js/jquery.fn.gantt.js") }}"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
-
+<!--date picker-->
+<script src="{{ asset("gentelella/vendors/moment/min/moment.min.js") }}"></script>
+<script src="{{ asset("gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js") }}"></script>
 <!-- Custom Theme Scripts -->
 <script src="{{ asset("gentelella/build/js/custom.min.js") }}"></script>
 

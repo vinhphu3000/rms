@@ -18,6 +18,9 @@ class User extends Eloquent
      */
     protected $fillable = ['name','email','password','avatar', 'active','email_confirm','remember_token','agency_entity_id','agency_parent_id','agency_name','agency_id','group_id','created_at','updated_at'];
 
-   
+    public function fullName()
+    {
+        return $this->last_name . ' ' . $this->first_name;
+    }
 }
 
