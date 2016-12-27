@@ -147,7 +147,6 @@
 
 </div>
 <div class="modal-footer">
-    <input type="hidden" name="file_name" value="">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
     <button type="button" class="btn btn-primary btn-project-save">Save</button>
 </div>
@@ -237,8 +236,11 @@
                 }
 
             });
-            $('input[name=request_param]').val(JSON.stringify(request_param));
-            $('input[name=request_note]').val($('textarea[name=note]').val());
+            if (request_param.length) {
+                $('input[name=request_param]').val(JSON.stringify(request_param));
+                $('input[name=request_note]').val($('textarea[name=note]').val());
+            }
+
 
             $('.add-project').submit();
         });

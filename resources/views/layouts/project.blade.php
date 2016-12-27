@@ -48,7 +48,7 @@
 <body class="nav-md">
 <div class="container body ">
     <!-- top navigation -->
-        @include('widgets.navbar')
+        @include('widgets.navbar-project')
     <!-- /top navigation -->
     <div class="main_container ">
         <div class="col-md-3 left_col menu_fixed">

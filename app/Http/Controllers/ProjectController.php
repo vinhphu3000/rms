@@ -67,11 +67,12 @@ class ProjectController extends BaseController {
         $project = Project::create($project_data);
         event(new CreateProject($project));
 
+        $request_param = $request->input('request_param');
 
-        if(!empty($project->id)) {
+        if(!empty($project->id) && !empty($request_param)) {
             $request_data = [
                 'project_id' => $project->id,
-                'params' => $request->input('request_param'),
+                'params' => $request_param,
                 'note' => $request->input('request_note'),
                 'user_id' => $this->user->id,
             ];
@@ -88,7 +89,7 @@ class ProjectController extends BaseController {
     public function details($id)
     {
         $project = Project::find((int)$id);
-        $activity = Activity::where('project_id', (int)$id)->get()->take(10);
+        $activity = Activity::where('project_id', (int)$id)->orderBy('created_at','desc')->get()->take(10);
         return view('project.details', ['project' => $project, 'result' => Project::all(), 'activity' => $activity]);
     }
 

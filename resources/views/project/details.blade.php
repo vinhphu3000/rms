@@ -26,7 +26,7 @@
                         </li>
                         <li>
                             <span class="name"> Total amount spent </span>
-                            <span class="value text-success"> $ 2000 </span>
+                            <span class="value text-success"> - </span>
                         </li>
                         <li class="hidden-phone">
                             <span class="name"> Estimated project duration </span>
@@ -59,7 +59,7 @@
                                     <?php if(!empty($ac->request_id)): ?>
                                     <p class="url">
                                         <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
-                                        <a href="#"><i class="glyphicon glyphicon-refresh"></i> View request details </a>
+                                        <a href="javascript:void(0)" class="link-popup" url = "{{ url('request/details/' . $ac->request_id) }}"><i class="glyphicon glyphicon-refresh"></i> View request details </a>
                                     </p>
                                     <?php endif; ?>
                                 </div>

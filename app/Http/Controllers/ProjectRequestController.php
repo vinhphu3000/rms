@@ -57,21 +57,11 @@ class ProjectRequestController extends BaseController {
 
     public function doAdd(\Illuminate\Http\Request $request)
     {
-        $project_data = [
-                'name' => $request->input('name'),
-                'client' => $request->input('client'),
-                'status' => $request->input('status'),
-                'estimate_type' => $request->input('estimate_type'),
-                'estimate' => $request->input('estimate'),
-                'user_id' => $this->user->id,
-        ];
-        $project = Project::create($project_data);
-        event(new CreateProject($project));
+        $project_id = (int)$request->input('project_id');
 
-
-        if(!empty($project->id)) {
+        if(!empty($project_id)) {
             $request_data = [
-                'project_id' => $project->id,
+                'project_id' => $project_id,
                 'params' => $request->input('request_param'),
                 'note' => $request->input('request_note'),
                 'user_id' => $this->user->id,
@@ -82,15 +72,15 @@ class ProjectRequestController extends BaseController {
         }
 
 
-        return redirect('/project/details/' . $project->id);
+        return redirect('/project/details/' . $project_id);
     }
 
 
     public function details($id)
     {
-        $project = Project::find((int)$id);
-        $activity = Activity::where('project_id', (int)$id)->get()->take(10);
-        return view('project.details', ['project' => $project, 'result' => Project::all(), 'activity' => $activity]);
+        $request = ProjectRequest::find((int)$id);
+        $project = Project::find((int)$request->project_id);
+        return view('request.details', ['request' => $request, 'project' => $project]);
     }
 
 

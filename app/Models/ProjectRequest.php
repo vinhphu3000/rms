@@ -26,6 +26,11 @@ class ProjectRequest extends Eloquent
         return $this->belongsTo('App\Models\User');
     }
 
+    public function params()
+    {
+        return json_decode($this->params);
+    }
+
 
 }
 

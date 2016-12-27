@@ -38,6 +38,7 @@ Route::group(['middleware' => 'auth'], function () {
      * Request
      */
     Route::get('/request/add/{project_id}', 'ProjectRequestController@add');
+    Route::get('/request/details/{id}', 'ProjectRequestController@details');
 
 
     Route::get('/logout','UserController@doLogout');
@@ -52,6 +53,11 @@ Route::group(['middleware' => 'auth'], function () {
      */
     Route::post('/project/experience-save', 'EmployeeController@doExperienceSave');
     Route::post('/project/add', 'ProjectController@doAdd');
+
+    /**
+     * Request
+     */
+    Route::post('/request/add', 'ProjectRequestController@doAdd');
 
 
 });
