@@ -45,7 +45,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Number<span class="required">*</span></label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
-                                <input name="number"  value="1" type="number"/>
+                                <input name="number"  value="1" class="form-control" type="number"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -80,7 +80,7 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Year of exp<span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input name="year_of_exp" type="number"/>
+                                <input name="year_of_exp" class="form-control" type="number"/>
                             </div>
                         </div>
 
