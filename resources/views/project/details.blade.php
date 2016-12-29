@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4 class="green" style="float: left"><i class="fa fa-paint-brush"></i> {{$project->name}}</h4>
+                <h4 class="green" style="float: left"><i class="fa fa-paint-brush"></i> {{$project->name}}<span class="label label-{{\App\Models\Project::$project_status[$project->status]['class']}}" style="margin-left: 10px;font-size: 55%;color: #ffffff;">{{\App\Models\Project::$project_status[$project->status]['lable'] ?? ''}}</span></h4>
                 <ul class="nav navbar-right panel_toolbox">
                     <li><button type="button" class="btn btn-trans link-popup" url = "{{ url('request/add/' . $project->id) }}"><i class="glyphicon glyphicon-plus" aria-hidden = true></i> Create new request</button>
                     </li>
