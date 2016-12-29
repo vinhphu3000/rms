@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="form-group">
-            <label class="control-label col-md-3 col-sm-3 col-xs-12">Resource<span class="required">*</span></label>
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Request resource<span class="required">*</span></label>
             <div class="col-md-9 col-sm-9 col-xs-12">
                 <select class="form-control" name="role">
                     <?php foreach($roles as $role) : ?>
@@ -65,7 +65,6 @@
                                 <input  class="date-picker form-control col-md-7 col-xs-12" name="start_time" type="text">
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Skill<span class="required">*</span></label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
@@ -93,8 +92,6 @@
                                 <input name="year_of_exp" class="form-control" type="number"/>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>

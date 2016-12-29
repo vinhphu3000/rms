@@ -53,14 +53,14 @@
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Number</label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
-                                {{$param->number}}
+                                {{$param->number??'-'}}
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Start time
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                {{$param->start_time}}
+                                {{$param->start_time??'-'}}
                             </div>
                         </div>
 
@@ -77,7 +77,7 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Year of exp<span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                {{$param->year_of_exp}} year
+                                {{$param->year_of_exp??'-'}} year
                             </div>
                         </div>
 
