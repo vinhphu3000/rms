@@ -130,6 +130,7 @@
 
             var pane = $('.tab-pane-first').clone();
             pane.removeAttr('style');
+            pane.removeClass('tab-pane-first');
             pane.attr('id', 'tab' + index);
             pane.attr('role', role_id);
 
