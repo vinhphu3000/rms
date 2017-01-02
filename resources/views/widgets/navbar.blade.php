@@ -14,8 +14,8 @@
 
             </li>
 
-            <li {{ (Request::is('employee-explorer') ? 'class=active' : '') }}>
-                <a href="{{ url ('employee-explorer') }}"  >
+            <li {{ (Request::is('employee/search') ? 'class=active' : '') }}>
+                <a href="{{ url ('employee/search') }}"  >
                     <i class="fa fa-users" ></i>
                 </a>
             </li>

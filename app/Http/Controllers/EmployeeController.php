@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use App\Models\Employee;
 use App\Models\EmployeeExp;
+use App\Models\Project;
 use Illuminate\Support\Facades\App;
 use League\Flysystem\Exception;
 use Request;
@@ -33,7 +34,28 @@ class EmployeeController extends BaseController {
         self::$_user_infor = Auth::getAuthInfo();
     }
 
+    public function doSearch(\Illuminate\Http\Request $request)
+    {
+        $limit = 30;
+        $builder = EmployeeModel::query();
+        $search_param = [
+            'kw' => $request['kw'],
+            'order_by' => empty($request['order_by']) ? 'id' : $request['order_by'],
+            'order_type' => $request['order_type'] == 'asc' ? 'asc' : 'desc',
+        ];
+        Session::set('search_param', $search_param);
 
+        if(!empty($search_param['kw'])){
+            $builder->where('full_name', 'LIKE', "%{$search_param['kw']}%");
+            $builder->orWhere('last_name', 'LIKE', "%{$search_param['kw']}%");
+            $builder->orWhere('skills', 'LIKE', "%{$search_param['kw']}%");
+            $builder->orWhere('first_name', 'LIKE', "%{$search_param['kw']}%");
+            $builder->orWhere('code', 'LIKE', "%{$search_param['kw']}%");
+        }
+        $employees = $builder->orderBy($search_param['order_by'], $request['order_type'])->paginate($limit);
+
+        return view('employee.search',['employees' => $employees, 'result' => Project::all()]);
+    }
     /**
      * listing action
      */

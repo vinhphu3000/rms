@@ -21,6 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/experience-popup', 'EmployeeController@experience');
     Route::get('/import-popup', 'EmployeeController@import');
     Route::get('/employee/download-cv/{token}', 'EmployeeController@doDownloadCSV');
+    Route::get('/employee/search', 'EmployeeController@doSearch');
 
     /**
      * Project
