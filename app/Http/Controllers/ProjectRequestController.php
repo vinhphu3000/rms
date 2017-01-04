@@ -75,7 +75,6 @@ class ProjectRequestController extends BaseController {
         return redirect('/project/details/' . $project_id);
     }
 
-
     public function details($id)
     {
         $request = ProjectRequest::find((int)$id);

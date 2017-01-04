@@ -27,6 +27,13 @@ class Employee extends Eloquent
         return $this->belongsTo('App\Models\Office', 'office_id');
     }
 
+    public function fullName()
+    {
+        return $this->first_name . ' ' .  $this->last_name;
+    }
+
+
+
     public static function getTableColumns() {
         return \DB::connection()->getSchemaBuilder()->getColumnListing('employee');
     }
