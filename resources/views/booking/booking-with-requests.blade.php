@@ -3,14 +3,14 @@
 @section('section')
     <div class="">
           <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-8">
                 <div class="">
                     <div class="x_content">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <h2>Employee</h2>
+                                        <h2>{{$project->name}}<small>Booking resource</small></h2>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
@@ -23,10 +23,9 @@
                                                         <div class="input-group">
                                                             <input class="form-control" placeholder="Search for..." value="" name="kw" type="text">
                                                             <span class="input-group-btn">
-                                                        <button class="btn btn-default" type="submit">Go!</button>
-                                                    </span>
-                                                                        </div>
-
+                                                                <button class="btn btn-default" type="submit">Go!</button>
+                                                            </span>
+                                                        </div>
                                                     </form>
                                                 </div>
 
@@ -104,7 +103,7 @@
                 </div>
             </div>
 
-              <div class="col-md-3">
+              <div class="col-md-4">
                   <div class="">
                       <div class="x_content">
                           <div class="row">
@@ -130,50 +129,48 @@
                                           <div class="clearfix"></div>
                                       </div>
                                       <div class="x_content">
-
-                                          <div style="text-align: center; margin-bottom: 17px">
-                              <span class="chart" data-percent="86">
-                                                  <span class="percent">86</span>
-                              <canvas height="110" width="110"></canvas></span>
-                                          </div>
-
-                                          <div class="pie_bg" style="text-align: center; display: none; margin-bottom: 17px">
-                                              <canvas id="canvas_doughnut4" height="130"></canvas>
-                                          </div>
-
-                                          <div style="text-align: center;">
-                                              <div class="btn-group" role="group" aria-label="First group">
-                                                  <button type="button" class="btn btn-default btn-sm">1 D</button>
-                                                  <button type="button" class="btn btn-default btn-sm">1 W</button>
-                                                  <button type="button" class="btn btn-default btn-sm">1 M</button>
-                                                  <button type="button" class="btn btn-default btn-sm">1 Y</button>
+                                          <div>
+                                              <div class="form-group">
+                                                  <h4 style="border-bottom:1px solid #e6e9ed;">{{date('m/d/Y', strtotime($request->created_at))}} - {{$request->user->name}}</h4>
                                               </div>
-                                          </div>
-                                          <div style="text-align: center; overflow: hidden; margin: 10px 5px 3px;"><iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"></iframe>
-                                              <canvas id="canvas_line4" height="148" width="234" style="width: 234px; height: 148px;"></canvas>
+
+                                              <div class="form-group">
+
+                                                  <div>
+                                                      {{$request->note}}
+                                                  </div>
+                                              </div>
+
                                           </div>
                                           <div>
+                                              </label>
                                               <ul class="list-inline widget_tally">
+                                                  <?php foreach ($request->params() as $key => $param): ?>
                                                   <li>
                                                       <p>
-                                                          <span class="month">12 December 2014 </span>
-                                                          <span class="count">+12%</span>
+                                                          <span class="month" style="font-weight: bold;">{{$param->number??'-'}} {{$param->role}} </span>
+                                                          <span class="count">{{$param->year_of_exp??'-'}} years</span>
                                                       </p>
-                                                  </li>
-                                                  <li>
                                                       <p>
-                                                          <span class="month">29 December 2014 </span>
-                                                          <span class="count">+12%</span>
+                                                          <span class="month">
+                                                              <?php if(is_array($param->skill)) : ?>
+                                                                <?php echo implode(', ', $param->skill); ?>
+                                                              <?php endif; ?>
+                                                          </span>
+
                                                       </p>
-                                                  </li>
-                                                  <li>
                                                       <p>
-                                                          <span class="month">16 January 2015 </span>
-                                                          <span class="count">+12%</span>
+                                                          <span class="month">Need from:
+                                                             {{$param->start_time??'-'}}
+                                                          </span>
+
                                                       </p>
                                                   </li>
+                                                      <?php endforeach; ?>
+
                                               </ul>
                                           </div>
+                                          <div class="text-center"><button>Close</button></div>
                                       </div>
                                   </div>
                               </div>
