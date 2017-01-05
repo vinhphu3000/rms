@@ -53,18 +53,8 @@
     <div class="main_container ">
         <div class="col-md-3 left_col menu_fixed">
             <div class="left_col scroll-view">
-                <div class="left-filter" style="height:40px;">
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                            <span class="input-group-btn">
-                                              <button type="button" class="btn btn-primary">Go!</button>
-                                          </span>
-                    </div>
-                </div>
 
-
-                <div class="clearfix"></div>
-                @include('widgets.list-project')
+                @include('widgets.list-request')
                 <div class="sidebar-footer hidden-small">
                     <a class="link-popup" url="{{ url('project/add') }}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add new project">
                         <span class="fa fa-plus-circle" aria-hidden="true"></span> New project
@@ -133,6 +123,8 @@
     /*global window, $ */
     $(function () {
         'use strict';
+
+        $(".select2").select2();
         /*Add new catagory Event*/
         /**
          * event to click select all check box

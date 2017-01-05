@@ -39,13 +39,24 @@ class BookingController extends BaseController {
     }
 
 
-    public function booking($request_id)
+    public function booking($project_id, $request_id)
     {
-        $request = ProjectRequest::find((int)$request_id);
+        if (!empty($request_id) && is_integer($request_id) ) {
+            $request = ProjectRequest::find((int)$request_id);
+        } else {
+            $request = ProjectRequest::orderBy('updated_at','desc')->first();
+        }
+
         $project = Project::find((int)$request->project_id);
         $projects = Project::all();
+        if (!empty($project_id) && is_integer($project_id)) {
+            $requests = ProjectRequest::where('project_id', $project_id)->orderBy('updated_at','desc')->get();
+        } else {
+            $requests = ProjectRequest::orderBy('updated_at','desc')->get();
+        }
+
         $employees = Employee::all();
-        return view('booking.booking-with-requests', ['request' => $request, 'project' => $project, 'result' => $projects, 'employees' => $employees]);
+        return view('booking.booking-with-requests', ['request' => $request, 'project' => $project, 'requests' => $requests, 'employees' => $employees, 'projects' => $projects, 'project_id' => $project_id]);
     }
 
 
