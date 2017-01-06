@@ -24,6 +24,7 @@
     <link href="{{ asset("gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css") }}" rel="stylesheet">
 
 
+
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{ asset("gentelella/build/css/custom.css") }}" />
     <link href="{{ asset("js/vendor/jalert/jAlert.css") }}" rel="stylesheet" type="text/css" media="screen" />
@@ -43,6 +44,9 @@
             box-sizing: content-box;
         }
     </style>
+
+    <!-- popbox -->
+    <link href="{{ asset("js/vendor/gristmill-jquery-popbox/popbox.css") }}" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -96,6 +100,10 @@
 <script src="{{ asset("gentelella/vendors/jquery/dist/jquery.min.js") }}"></script>
 <!-- Bootstrap -->
 <script src="{{ asset("gentelella/vendors/bootstrap/dist/js/bootstrap.min.js") }}"></script>
+
+<!-- popbox -->
+<script src="{{ asset("js/vendor/gristmill-jquery-popbox/popbox.js") }}" type="text/javascript"></script>
+
 <!-- FastClick -->
 <script src="{{ asset("gentelella/vendors/select2/dist/js/select2.full.js") }}"></script>
 <!-- NProgress -->
@@ -112,10 +120,11 @@
 <script src="{{ asset("gentelella/vendors/moment/min/moment.min.js") }}"></script>
 <script src="{{ asset("gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js") }}"></script>
 <!-- Custom Theme Scripts -->
-<script src="{{ asset("gentelella/build/js/custom.min.js") }}"></script>
+<script src="{{ asset("gentelella/build/js/custom.js") }}"></script>
 
 <script src="{{ asset("js/vendor/jalert/jAlert.js") }}" type="text/javascript"></script>
 <script src="{{ asset("js/vendor/jalert/jAlert-functions.js") }}" type="text/javascript"></script>
+
 
 
 <script>
@@ -123,7 +132,13 @@
     /*global window, $ */
     $(function () {
         'use strict';
-
+        $('.popbox').popbox({
+            open          : '.open',
+            box           : '.box-tooltip',
+            arrow         : '.arrow',
+            arrow_border  : '.arrow-border',
+            close         : '.close'
+        });
         $(".select2").select2();
         /*Add new catagory Event*/
         /**

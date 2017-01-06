@@ -936,7 +936,7 @@ h2 {
  }
 
 .x_title {
-  border-bottom: 2px solid #E6E9ED;
+  border-bottom: 1px solid #E6E9ED;
   padding: 1px 5px 6px;
   margin-bottom: 10px; }
 
@@ -4156,4 +4156,23 @@ ul.notifications {
   line-height: 1;
   text-align: center;
 }
+.employee-sm {
+  border: 1px solid #d9dee4;
+  background-color: #f7f8f8;
+  border-radius: 4px;
+  height: 25px;
+  padding-top: 1px;
+  margin-top: 6px;
+}
 
+.avatar-sm-1, .avatar-sm-2, .avatar-sm-3 {
+  float: left;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  margin-left: -7px;
+}
+.avatar-sm-1 {
+  width: 9.667%;
+}

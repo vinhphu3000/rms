@@ -49,48 +49,23 @@
                                                         </div>
                                                         <div class="col-xs-12 text-right">
                                                             <button type="button" class="btn btn-info btn-xs"> <i class="glyphicon glyphicon-pushpin"></i> Reserve</button>
-                                                            <button type="button" class="btn btn-primary btn-xs">  <i class="fa fa-plus-square"></i> Booking</button>
+                                                            <button type="button" class="btn btn-primary btn-xs box-tooltip-link">  <i class="fa fa-plus-square"></i> Booking</button>
+                                                            <div class='box-tooltip-contain'>
+                                                                <div>
+                                                                    <div class='box-tooltip'>
+                                                                        <div class='arrow'></div>
+                                                                        <div class='arrow-border'></div>
+
+                                                                        aa
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <?php endforeach; ?>
 
-                                                <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
-                                                    <div class="well profile_view">
-                                                        <div class="col-sm-12">
-                                                            <div class="left col-xs-7">
-                                                                <h2>Nicole Pearson</h2>
-                                                                <p><strong>About: </strong> Web Designer / UI. </p>
-                                                                <ul class="list-unstyled">
-                                                                    <li><i class="fa fa-building"></i> Address: </li>
-                                                                    <li><i class="fa fa-phone"></i> Phone #: </li>
-                                                                </ul>
-                                                            </div>
-                                                            <div class="right col-xs-5 text-center">
-                                                                <img src="images/user.png" alt="" class="img-circle img-responsive">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xs-12 bottom text-center">
-                                                            <div class="col-xs-12 col-sm-6 emphasis">
-                                                                <p class="ratings">
-                                                                    <a>4.0</a>
-                                                                    <a href="#"><span class="fa fa-star"></span></a>
-                                                                    <a href="#"><span class="fa fa-star"></span></a>
-                                                                    <a href="#"><span class="fa fa-star"></span></a>
-                                                                    <a href="#"><span class="fa fa-star"></span></a>
-                                                                    <a href="#"><span class="fa fa-star-o"></span></a>
-                                                                </p>
-                                                            </div>
-                                                            <div class="col-xs-12 col-sm-6 emphasis">
-                                                                <button type="button" class="btn btn-success btn-xs"> <i class="fa fa-user">
-                                                                    </i> <i class="fa fa-comments-o"></i> </button>
-                                                                <button type="button" class="btn btn-primary btn-xs">
-                                                                    <i class="fa fa-user"> </i> View Profile
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -111,21 +86,7 @@
                                   <div class="x_panel">
                                       <div class="x_title">
                                           <h2>{{$project->name}}<small>Booking resource</small></h2>
-                                          <ul class="nav navbar-right panel_toolbox">
-                                              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                              </li>
-                                              <li class="dropdown">
-                                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                  <ul class="dropdown-menu" role="menu">
-                                                      <li><a href="#">Settings 1</a>
-                                                      </li>
-                                                      <li><a href="#">Settings 2</a>
-                                                      </li>
-                                                  </ul>
-                                              </li>
-                                              <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                              </li>
-                                          </ul>
+
                                           <div class="clearfix"></div>
                                       </div>
                                       <div class="x_content">
@@ -141,9 +102,41 @@
                                                       </p>
 
                                                       <div class="col-md-12 col-xs-12 ">
-                                                        <div class="well profile_view">
-                                                                <span>Hanh Luong Thi Kim</span>
+                                                        <div class="employee-sm">
+                                                            <div class="left avatar-sm-1">
+                                                                <img src="http://rms.local/images/avatars/default.png" alt="" class="img-circle img-responsive">
+                                                            </div>
+                                                            <div class="right">
+                                                                <span><a href="#">Hanh Luong Thi Kim</a></span>
+                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i></a>
+                                                                <ul class="dropdown-menu" role="menu">
+                                                                    <li><a href="#">Settings 1</a>
+                                                                    </li>
+                                                                    <li><a href="#">Settings 2</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
                                                         </div>
+
+                                                          <div class="employee-sm">
+                                                              <div class="left avatar-sm-1">
+                                                                  <img src="http://rms.local/images/avatars/default.png" alt="" class="img-circle img-responsive">
+                                                              </div>
+                                                              <div class="right">
+                                                                  <span><a href="#">Hanh Luong Thi Kim</a></span>
+                                                              </div>
+
+                                                          </div>
+                                                          <div class="employee-sm">
+                                                              <div class="left avatar-sm-1">
+                                                                  <img src="http://rms.local/images/avatars/default.png" alt="" class="img-circle img-responsive">
+                                                              </div>
+                                                              <div class="right">
+                                                                  <span><a href="#">Hanh Luong Thi Kim</a></span>
+                                                              </div>
+
+                                                          </div>
                                                       </div>
 
                                                   </li>
@@ -229,4 +222,5 @@
               </div>
         </div>
     </div>
+
 @stop
