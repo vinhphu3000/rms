@@ -45,7 +45,8 @@ Route::group(['middleware' => 'auth'], function () {
      * booking
      */
 
-    Route::get('/booking/{project_id}/{request_id}', 'BookingController@booking');
+    Route::get('/request/booking', 'BookingController@booking');
+    Route::get('/booking/popup', 'BookingController@popupBooking');
 
 
     Route::get('/logout','UserController@doLogout');
@@ -65,6 +66,10 @@ Route::group(['middleware' => 'auth'], function () {
      * Request
      */
     Route::post('/request/add', 'ProjectRequestController@doAdd');
+    /**
+     * Booking
+     */
+    Route::post('/booking/add', 'BookingController@doBooking');
 
 
 });

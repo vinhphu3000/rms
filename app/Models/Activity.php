@@ -36,6 +36,19 @@ class Activity extends Eloquent
         ];
     }
 
+    /**
+     * created notification after created booking
+     */
+    public static function createFromBooking(ProjectBooking $project_booking)
+    {
+        return [
+            'content' => $project_booking->user->name . ' add ' . $project_booking->employee->fullName() . ' role ' . $project_booking->role->name,
+            'project_id' => $project_booking->project_id,
+            'booking_id' => $project_booking->id,
+            'user_id' => $project_booking->user->id
+        ];
+    }
+
     public function user()
     {
         return $this->belongsTo('App\Models\User');

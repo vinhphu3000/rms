@@ -14,66 +14,27 @@
 
             </li>
 
-            <li {{ (Request::is('employee-explorer') ? 'class=active' : '') }}>
-                <a href="{{ url ('employee-explorer') }}"  >
-                    <i class="fa fa-users" ></i>
-                </a>
-            </li>
-
             <li>
                 <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                     <i class="glyphicon glyphicon-refresh"></i>
                     <span class="badge bg-green">6</span>
                 </a>
                 <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <?php foreach (\App\Models\Notification::all() as $item): ?>
                     <li>
-                        <a>
-                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <a href="{{$item->link}}">
+                            <span class="image"><img src="{{ asset(Config::get('constants.PATH_AVATAR') . empty($item->user->avatar) ? Config::get('constants.PATH_AVATAR') . Config::get('constants.DEFAULT_AVATAR') : $item->user->avatar) }}" alt="Profile Image" /></span>
                 <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
+                          <span>{{$item->user->name}}</span>
+                          <span class="time">{{$item->created_at->diffForHumans()}}</span>
                         </span>
                 <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                          {{$item->content}}
                         </span>
                         </a>
                     </li>
-                    <li>
-                        <a>
-                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a>
-                            <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                        </a>
-                    </li>
+                        <?php endforeach; ?>
+
                     <li>
                         <div class="text-center">
                             <a>

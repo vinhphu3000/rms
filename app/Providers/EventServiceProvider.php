@@ -21,6 +21,10 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\SendRequestNotification@createProject',
             'App\Listeners\ActivityLog@createProject',
         ],
+        'App\Events\ResourceBooking' => [
+            'App\Listeners\SendRequestNotification@createBooking',
+            'App\Listeners\ActivityLog@createBooking',
+        ],
     ];
 
     /**

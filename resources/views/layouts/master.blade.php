@@ -35,8 +35,6 @@
             </div>
         </div>
 
-
-
         <!-- page content -->
         <div class="right_col" role="main" style="min-height: 827px;">
             <div class="breadcrumb-line">

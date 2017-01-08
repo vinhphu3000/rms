@@ -28,25 +28,8 @@
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="{{ asset("gentelella/build/css/custom.css") }}" />
     <link href="{{ asset("js/vendor/jalert/jAlert.css") }}" rel="stylesheet" type="text/css" media="screen" />
-    <!-- Gantt css -->
-    <link href="{{ asset("js/vendor/jQuery.Gantt/css/style.css") }}" type="text/css" rel="stylesheet">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        .gantt table th:first-child {
-            width: 200px;
-        }
-        /* Bootstrap 3.x re-reset */
-        .fn-gantt *,
-        .fn-gantt *:after,
-        .fn-gantt *:before {
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-            box-sizing: content-box;
-        }
-    </style>
 
-    <!-- popbox -->
-    <link href="{{ asset("js/vendor/gristmill-jquery-popbox/popbox.css") }}" rel="stylesheet">
+
 </head>
 
 <body class="nav-md">
@@ -101,8 +84,6 @@
 <!-- Bootstrap -->
 <script src="{{ asset("gentelella/vendors/bootstrap/dist/js/bootstrap.min.js") }}"></script>
 
-<!-- popbox -->
-<script src="{{ asset("js/vendor/gristmill-jquery-popbox/popbox.js") }}" type="text/javascript"></script>
 
 <!-- FastClick -->
 <script src="{{ asset("gentelella/vendors/select2/dist/js/select2.full.js") }}"></script>
@@ -111,11 +92,6 @@
 <!-- icheck -->
 <script src="{{ asset("gentelella/vendors/iCheck/icheck.min.js") }}"></script>
 
-<!-- Gantt chart -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-<script src="{{ asset("js/vendor/jQuery.Gantt/js/jquery.fn.gantt.js") }}"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 <!--date picker-->
 <script src="{{ asset("gentelella/vendors/moment/min/moment.min.js") }}"></script>
 <script src="{{ asset("gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js") }}"></script>
@@ -132,13 +108,6 @@
     /*global window, $ */
     $(function () {
         'use strict';
-        $('.popbox').popbox({
-            open          : '.open',
-            box           : '.box-tooltip',
-            arrow         : '.arrow',
-            arrow_border  : '.arrow-border',
-            close         : '.close'
-        });
         $(".select2").select2();
         /*Add new catagory Event*/
         /**
@@ -154,8 +123,8 @@
         });
 
 
-        $('.view-matrix').click(function() {
-            var data = {employee_ids: [$(this).attr('id')] };
+        $('.booking').click(function() {
+            var data = {employee_id: $(this).attr('employee-id'), project_id: $(this).attr('project-id') };
 
             openPopup($(this).attr('url'), data)
         });
@@ -183,54 +152,6 @@
             });
         });
 
-        function granttLoadData(name)
-        {
-            if ($(name).length) {
-                $.ajax({
-                    url: $(name).attr('data-url'),
-                    dataType: "json",
-                    success: function(reponse) {
-                        if (!reponse.length) {
-                            $(name).html('<div style="width: 100%;text-align:center;" >Nothing to show</div>');
-                            return;
-                        }
-
-                        $(name).gantt({
-                            source: reponse,
-                            navigate: "scroll",
-                            scale: "days",
-                            maxScale: "months",
-                            minScale: "days",
-                            itemsPerPage: 10,
-                            useCookie: false,
-                            onItemClick: function(data) {
-                                alert("Item clicked - show some details");
-                            },
-                            onAddClick: function(dt, rowId) {
-                                alert("Empty space clicked - add an item!");
-                            },
-                            onRender: function() {
-                                if (window.console && typeof console.log === "function") {
-                                    console.log("chart rendered");
-                                }
-                            }
-                        });
-
-//                $(".gantt").popover({
-//                    selector: ".bar",
-//                    title: "I'm a popover",
-//                    content: "And I'm the content of said popover.",
-//                    trigger: "hover"
-//                });
-
-                        prettyPrint();
-                    }
-
-                });
-            }
-        }
-
-        granttLoadData('.gantt');
 
 
 

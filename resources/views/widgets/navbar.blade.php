@@ -13,13 +13,6 @@
                 </a>
 
             </li>
-
-            <li {{ (Request::is('employee/search') ? 'class=active' : '') }}>
-                <a href="{{ url ('employee/search') }}"  >
-                    <i class="fa fa-users" ></i>
-                </a>
-            </li>
-
             <li>
                 <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                     <i class="glyphicon glyphicon-refresh"></i>

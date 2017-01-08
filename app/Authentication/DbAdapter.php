@@ -57,12 +57,8 @@ class DbAdapter extends AbstractAdapter implements AdapterInterface
      */
     public function setAuthInfo($authInfo)
     {
-        
-        $authInfo->agencyId = $authInfo->agency_id;
+
         $authInfo->confirmation = $authInfo->email_confirm;
-        $authInfo->agencyEntityId = $authInfo->agency_entity_id;
-        $authInfo->parentAgencyId = $authInfo->agency_parent_id;
-        $authInfo->agencyName = $authInfo->agency_name;
         $this->_authInfo = $authInfo;
     }
     /**

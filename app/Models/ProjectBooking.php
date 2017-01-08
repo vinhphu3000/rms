@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 class ProjectBooking extends Eloquent
 {
     protected $table = 'project_booking';
+    protected $fillable = ['id','employee_id','project_id','take_part_per','project_role_id','start_date','end_date','spent_hour','request_type','book_type','user_id','note','created_at','updated_at'];
 
     public static function getTableColumns() {
         return \DB::connection()->getSchemaBuilder()->getColumnListing('project');
@@ -45,6 +46,20 @@ class ProjectBooking extends Eloquent
         return $this->belongsTo('App\Models\ProjectRole', 'project_role_id');
     }
 
+    public function joinLable()
+    {
+        if ($this->book_type == 'Reserve') {
+            return $this->book_type;
+        }
+
+        if ($this->take_part_per == 100) {
+            return 'Fulltime';
+        }
+
+        return $this->take_part_per . '%';
+
+    }
+
     public static function convertDataGanttChart($project_booking)
     {
         $gantt_data = [];
@@ -63,6 +78,8 @@ class ProjectBooking extends Eloquent
         }
         return $gantt_data;
     }
+
+
 
 }
 

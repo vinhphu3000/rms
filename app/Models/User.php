@@ -22,5 +22,6 @@ class User extends Eloquent
     {
         return $this->last_name . ' ' . $this->first_name;
     }
+
 }
 
