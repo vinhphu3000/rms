@@ -29,7 +29,6 @@
     <link href="{{ asset("js/vendor/jalert/jAlert.css") }}" rel="stylesheet" type="text/css" media="screen" />
     <!-- Gantt css -->
     <link href="{{ asset("js/vendor/jQuery.Gantt/css/style.css") }}" type="text/css" rel="stylesheet">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" rel="stylesheet" type="text/css">
     <style type="text/css">
         .gantt table th:first-child {
             width: 200px;
@@ -114,15 +113,12 @@
 <script src="{{ asset("gentelella/vendors/iCheck/icheck.min.js") }}"></script>
 
 <!-- Gantt chart -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="{{ asset("js/vendor/jQuery.Gantt/js/jquery.fn.gantt.js") }}"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 <!--date picker-->
 <script src="{{ asset("gentelella/vendors/moment/min/moment.min.js") }}"></script>
 <script src="{{ asset("gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js") }}"></script>
 <!-- Custom Theme Scripts -->
-<script src="{{ asset("gentelella/build/js/custom.min.js") }}"></script>
+<script src="{{ asset("gentelella/build/js/custom.js") }}"></script>
 
 <script src="{{ asset("js/vendor/jalert/jAlert.js") }}" type="text/javascript"></script>
 <script src="{{ asset("js/vendor/jalert/jAlert-functions.js") }}" type="text/javascript"></script>
@@ -133,7 +129,6 @@
     /*global window, $ */
     $(function () {
         'use strict';
-        /*Add new catagory Event*/
         /**
          * event to click select all check box
          */
@@ -197,10 +192,11 @@
                             itemsPerPage: 10,
                             useCookie: false,
                             onItemClick: function(data) {
-                                alert("Item clicked - show some details");
+                                openPopup("{{url('booking/details')}}" + "/" + data.booking_id, []);
+                                console.log(data);
                             },
                             onAddClick: function(dt, rowId) {
-                                alert("Empty space clicked - add an item!");
+
                             },
                             onRender: function() {
                                 if (window.console && typeof console.log === "function") {
@@ -209,14 +205,6 @@
                             }
                         });
 
-//                $(".gantt").popover({
-//                    selector: ".bar",
-//                    title: "I'm a popover",
-//                    content: "And I'm the content of said popover.",
-//                    trigger: "hover"
-//                });
-
-                        prettyPrint();
                     }
 
                 });

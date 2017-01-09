@@ -6,6 +6,7 @@ use App\Events\CreateProject;
 use App\Events\ResourceBooking;
 use App\Events\ResourceRequest;
 use App\Models\Notification;
+use App\Models\Project;
 use App\Models\User;
 
 class SendRequestNotification
@@ -20,7 +21,7 @@ class SendRequestNotification
     public function resourceRequest(ResourceRequest $event)
     {
         $notification = Notification::createFromRequest($event->request);
-        foreach (User::where('type','admin').get() as $user) {
+        foreach (User::where('type','admin')->get() as $user) {
             $notification['sent_to'] = $user->id;
             Notification::create($notification);
         }
@@ -36,7 +37,7 @@ class SendRequestNotification
     public function createProject(CreateProject $event)
     {
         $notification = Notification::createFromProject($event->project);
-        foreach (User::where('type','admin').get() as $user) {
+        foreach (User::where('type','admin')->get() as $user) {
             $notification['sent_to'] = $user->id;
             Notification::create($notification);
         }
@@ -52,10 +53,8 @@ class SendRequestNotification
     public function createBooking(ResourceBooking $event)
     {
         $notification = Notification::createFromBooking($event->booking);
+        $notification['send_to'] = $event->booking->getUserRelated()->id;
+        Notification::create($notification);
 
-        foreach (User::where('type','member').get() as $user) {
-            $notification['sent_to'] = $user->id;
-            Notification::create($notification);
-        }
     }
 }

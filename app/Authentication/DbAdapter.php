@@ -2,6 +2,7 @@
 namespace App\Authentication;
 use App\Authentication\AdapterInterface;
 use App\Authentication\AbstractAdapter;
+use App\Models\User;
 use DB;
 /* 
  * This is class to authentication through database
@@ -27,15 +28,18 @@ class DbAdapter extends AbstractAdapter implements AdapterInterface
      */
     public function authenticate() {
 
-        $user = DB::table('users')->where('email', $this->identity)->first();
+        $user = User::where('email', $this->identity)->first();
         
         if(empty($user->password)) {
             return false;
         }
         
         if ($user->password === $this->encodeCredential($this->credential)) {
-          
+
+            $user->last_login = date('Y-m-d H:i:s');
+            $user->save();
             $this->setAuthInfo($user);
+
             
             return true;
         }

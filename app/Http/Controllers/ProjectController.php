@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use App\Events\CreateProject;
 use App\Models\Activity;
+use App\Models\Notification;
 use League\Flysystem\Exception;
 use App\Models\Project;
 use App\Models\ProjectRequest;
@@ -33,6 +34,11 @@ class ProjectController extends BaseController {
     public function __construct() {
         $this->middleware(function ($request, $next) {
             $this->user = \App\Authentication\Service::getAuthInfo();
+            $notification = Notification::where('send_to', $this->user->id)->get()->take(5);
+            $count_notify = Notification::where('send_to', $this->user->id)->where('status_seen', 0)->count();
+            view()->share('my', $this->user);
+            view()->share('notification', $notification);
+            view()->share('count_notify', $count_notify);
             return $next($request);
         });
 
@@ -43,7 +49,12 @@ class ProjectController extends BaseController {
      */
     public function listing(\Illuminate\Http\Request $request)
     {
-        return view('project.list', ['result' => Project::all()]);
+        if ($this->user->type == 'admin') {
+            $projects = Project::all();
+        } else {
+            $projects = Project::where('user_id', $this->user->id)->get();
+        }
+        return view('project.list', ['result' => $projects]);
     }
 
 
@@ -89,10 +100,20 @@ class ProjectController extends BaseController {
     public function details($id)
     {
         $project = Project::find((int)$id);
+        if ($this->user->type == 'admin') {
+            $projects = Project::all();
+        } else {
+            $projects = Project::where('user_id', $this->user->id)->get();
+        }
+
         $activity = Activity::where('project_id', (int)$id)->orderBy('created_at','desc')->get()->take(10);
-        return view('project.details', ['project' => $project, 'result' => Project::all(), 'activity' => $activity]);
+        return view('project.details', ['project' => $project, 'result' => $projects, 'activity' => $activity]);
     }
 
+    /**
+     * @param $project_id
+     * @return string
+     */
     public function bookingData($project_id)
     {
         $booking = ProjectBooking::where('project_id', (int)$project_id)->get();

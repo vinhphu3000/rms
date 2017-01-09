@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use App\Models\Employee;
 use App\Models\EmployeeExp;
+use App\Models\Notification;
 use App\Models\Project;
 use Illuminate\Support\Facades\App;
 use League\Flysystem\Exception;
@@ -24,14 +25,21 @@ class EmployeeController extends BaseController {
 	|
 	*/
 
-    protected  static $_user_infor;
-
     /**
      * Constructor function
      * Set current user information
      */
     public function __construct() {
-        self::$_user_infor = Auth::getAuthInfo();
+        $this->middleware(function ($request, $next) {
+            $this->user = \App\Authentication\Service::getAuthInfo();
+            $notification = Notification::where('send_to', $this->user->id)->get()->take(5);
+            $count_notify = Notification::where('send_to', $this->user->id)->where('status_seen', 0)->count();
+            view()->share('my', $this->user);
+            view()->share('notification', $notification);
+            view()->share('count_notify', $count_notify);
+            return $next($request);
+        });
+
     }
 
     public function doSearch(\Illuminate\Http\Request $request)

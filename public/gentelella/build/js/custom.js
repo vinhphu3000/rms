@@ -278,3 +278,32 @@ if (typeof NProgress != 'undefined') {
     });
 }
 
+/**
+ * extend event show/hide
+ */
+(function ($) {
+$('.info-number').click(function(){
+    var data = [];
+    $('.notification').each(function () {
+        if ($(this).hasClass('unseen')) {
+            data.push($(this).attr('id'));
+        }
+    });
+    $.ajax({
+        url: $(this).attr('data-ajax-url'),
+        data: {id:data.join(',')},
+        dataType: "html",
+        success: function(reponse) {
+            setTimeout(function(){
+                $('.unread-notify').remove();
+                $('.notification').each(function () {
+                    $(this).removeClass('unseen');
+                    $(this).addClass('seen');
+                });
+            }, 1000);
+
+        }
+    });
+});
+})(jQuery);
+

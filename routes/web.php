@@ -47,9 +47,18 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/request/booking', 'BookingController@booking');
     Route::get('/booking/popup', 'BookingController@popupBooking');
+    Route::get('/booking/details/{id}', 'BookingController@details');
 
 
     Route::get('/logout','UserController@doLogout');
+    Route::get('/user','UserController@listing');
+
+    /**
+     * Notification
+     */
+    Route::get('/notification/seen','UserController@doUpdateNotification');
+
+
 
     Route::post('/employee/upload-excel', 'EmployeeController@doUploadExcel');
     Route::post('/employee/import', 'EmployeeController@doImport');

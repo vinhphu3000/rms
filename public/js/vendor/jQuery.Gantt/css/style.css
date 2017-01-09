@@ -424,4 +424,8 @@
 .row:after {
     clear: both;
 }
+.fn-label {
+    cursor: pointer;
+}
+
 

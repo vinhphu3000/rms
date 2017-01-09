@@ -11,39 +11,9 @@
                 <a href="{{ url ('project') }}" >
                     <i class="fa fa-th-large"></i>
                 </a>
-
             </li>
-
             <li>
-                <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                    <i class="glyphicon glyphicon-refresh"></i>
-                    <span class="badge bg-green">6</span>
-                </a>
-                <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <?php foreach (\App\Models\Notification::all() as $item): ?>
-                    <li>
-                        <a href="{{$item->link}}">
-                            <span class="image"><img src="{{ asset(Config::get('constants.PATH_AVATAR') . empty($item->user->avatar) ? Config::get('constants.PATH_AVATAR') . Config::get('constants.DEFAULT_AVATAR') : $item->user->avatar) }}" alt="Profile Image" /></span>
-                <span>
-                          <span>{{$item->user->name}}</span>
-                          <span class="time">{{$item->created_at->diffForHumans()}}</span>
-                        </span>
-                <span class="message">
-                          {{$item->content}}
-                        </span>
-                        </a>
-                    </li>
-                        <?php endforeach; ?>
-
-                    <li>
-                        <div class="text-center">
-                            <a>
-                                <strong>See All Alerts</strong>
-                                 <i class="fa fa-angle-right"></i>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                @include('widgets.notification')
             </li>
 
 
@@ -52,12 +22,13 @@
         <li class="">
             @include('widgets.profile')
         </li>
-
+          <?php if ($my->type == 'admin'): ?>
         <li role="presentation" class="dropdown">
-          <a href="javascript:;" class="active" >
+          <a href="{{url('user')}}" >
             <i class="glyphicon glyphicon-align-justify"></i>
           </a>
         </li>
+          <?php endif; ?>
       </ul>
     </nav>
   </div>

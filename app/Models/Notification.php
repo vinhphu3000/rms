@@ -28,7 +28,9 @@ class Notification extends Eloquent
             'title' => 'Create new request resource on ' . $request->project->name . ' project',
             'content' => $request->user->name . ' created new request resource on ' . $request->project->name . ' project',
             'send_to' => 24,
-            'user_id' => $request->user_id
+            'user_id' => $request->user_id,
+            'request_id' => $request->id,
+            'link' => url('request/booking?project_id=' . $request->project_id . '&request_id=' . $request->id)
         ];
     }
 
@@ -57,7 +59,7 @@ class Notification extends Eloquent
             'content' => $project_booking->user->name . ' assign ' . $project_booking->employee->fullName() . ' role ' . $project_booking->role->name,
             'send_to' => 24,
             'user_id' => $project_booking->user->id,
-            'link' => url('project/booking/' . $project_booking->id)
+            'link' => url('project/details/' . $project_booking->project->id)
         ];
     }
 

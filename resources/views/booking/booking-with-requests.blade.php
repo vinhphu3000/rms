@@ -2,7 +2,6 @@
 @section('page_heading','Booking')
 @section('section')
     <div class="">
-
         <div class="row">
             <div class="col-md-8">
                 <div class="">

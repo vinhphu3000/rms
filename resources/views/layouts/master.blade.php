@@ -37,12 +37,12 @@
 
         <!-- page content -->
         <div class="right_col" role="main" style="min-height: 827px;">
-            <div class="breadcrumb-line">
-                <ul class="breadcrumb">
-                    <li><a href="index.html"><i class="icon-config position-left"></i> Config</a></li>
-                    <li class="active">Employee</li>
-                </ul>
-            </div>
+            {{--<div class="breadcrumb-line">--}}
+                {{--<ul class="breadcrumb">--}}
+                    {{--<li><a href="index.html"><i class="icon-config position-left"></i> Config</a></li>--}}
+                    {{--<li class="active">Employee</li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
             @yield('section')
         </div>
         <!-- /page content -->
@@ -66,7 +66,7 @@
 <script src="{{ asset("gentelella/vendors/nprogress/nprogress.js") }}"></script>
 
 <!-- Custom Theme Scripts -->
-<script src="{{ asset("gentelella/build/js/custom.min.js") }}"></script>
+<script src="{{ asset("gentelella/build/js/custom.js") }}"></script>
 
 <script src="{{ asset("js/vendor/jalert/jAlert.js") }}" type="text/javascript"></script>
 <script src="{{ asset("js/vendor/jalert/jAlert-functions.js") }}" type="text/javascript"></script>

@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 use App\Events\ResourceBooking;
-use App\Models\Activity;
+use App\Models\Notification;
 use League\Flysystem\Exception;
 use App\Models\Project;
 use App\Models\ProjectRequest;
@@ -33,6 +33,11 @@ class BookingController extends BaseController {
     public function __construct() {
         $this->middleware(function ($request, $next) {
             $this->user = \App\Authentication\Service::getAuthInfo();
+            $notification = Notification::where('send_to', $this->user->id)->get()->take(5);
+            $count_notify = Notification::where('send_to', $this->user->id)->where('status_seen', 0)->count();
+            view()->share('my', $this->user);
+            view()->share('notification', $notification);
+            view()->share('count_notify', $count_notify);
             return $next($request);
         });
 
@@ -98,6 +103,12 @@ class BookingController extends BaseController {
 
         }
         return view('widgets.booking-item',['booking' => $booking]);
+    }
+
+    public function details($id)
+    {
+        $booking = ProjectBooking::find($id);
+        return view('booking.details', ['booking' => $booking]);
     }
 
 

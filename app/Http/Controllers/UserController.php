@@ -1,4 +1,6 @@
 <?php namespace App\Http\Controllers;
+use App\Models\Notification;
+use App\Models\User;
 use Request;
 use Mail;
 use Session;
@@ -22,14 +24,25 @@ class UserController extends Controller {
 	|
 	*/
 
-    protected  static $_user_infor;
+    protected  $user;
 
     /**
      * Constructor function
      * Set current user information
      */
     public function __construct() {
-        self::$_user_infor = Auth::getAuthInfo();
+        $this->middleware(function ($request, $next) {
+            $this->user = \App\Authentication\Service::getAuthInfo();
+            if (!empty($this->user->id)) {
+                $notification = Notification::where('send_to', $this->user->id)->get()->take(5);
+                $count_notify = Notification::where('send_to', $this->user->id)->where('status_seen', 0)->count();
+                view()->share('my', $this->user);
+                view()->share('notification', $notification);
+                view()->share('count_notify', $count_notify);
+            }
+
+            return $next($request);
+        });
     }
 
 	/**
@@ -73,13 +86,54 @@ class UserController extends Controller {
             Session::flash('flash_error',trans('messages.user_was_blocked'));
             return redirect('/login');
         }
-        return redirect('/employee');
+        return redirect('/project');
     }
 
     public function doLogout()
     {
         Auth::clearAuthInfo();
         return redirect('/login');
+    }
+
+    public function doUpdateNotification(\Illuminate\Http\Request $request)
+    {
+        $id = $request->input('id');
+        if (!empty($id)) {
+            $ids = explode(',', $id);
+            if (count($ids)) {
+                Notification::whereIn('id', $ids)->where('send_to', $this->user->id)->update(['status_seen' => 1]);
+            }
+
+        }
+
+    }
+
+    public function notification()
+    {
+
+    }
+
+    /**
+     * listing action
+     */
+    public function listing(\Illuminate\Http\Request $request)
+    {
+        $limit = 30;
+        $builder = User::query();
+        $search_param = [
+            'kw' => $request['kw'],
+            'order_by' => empty($request['order_by']) ? 'id' : $request['order_by'],
+            'order_type' => $request['order_type'] == 'asc' ? 'asc' : 'desc',
+        ];
+        Session::set('search_param', $search_param);
+
+        if(!empty($search_param['kw'])){
+            $builder->where('name', 'LIKE', "%{$search_param['kw']}%");
+            $builder->orWhere('email', 'LIKE', "%{$search_param['kw']}%");
+        }
+        $result = $builder->orderBy($search_param['order_by'], $request['order_type'])->paginate($limit);
+
+        return view('user.list', ['result' => $result, 'search_param' => $search_param]);
     }
 
 }

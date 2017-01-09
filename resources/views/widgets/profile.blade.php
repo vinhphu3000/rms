@@ -1,5 +1,5 @@
 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-	<img src="{{ asset(Config::get('constants.PATH_AVATAR') . empty(\App\Authentication\Service::getAuthInfo()->avatar) ? Config::get('constants.PATH_AVATAR') . Config::get('constants.DEFAULT_AVATAR') : \App\Authentication\Service::getAuthInfo()->avatar) }}" alt=""><?php echo \App\Authentication\Service::getAuthInfo()->name?>
+	<img src="{{ asset($my->avatarPath()) }}" alt=""><?php echo $my->name?>
 	<span class=" fa fa-angle-down"></span>
 </a>
 <ul class="dropdown-menu dropdown-usermenu pull-right">
