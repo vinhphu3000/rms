@@ -39,17 +39,10 @@
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Join</label>
             <div class="col-md-9 col-sm-9 col-xs-12">
                 <select class="select2" style="width:300px" name="take_part_per">
-                    <?php  ?>
                     <option value="100">Full-time</option>
-                    <option value="90">90%</option>
-                    <option value="80">80%</option>
-                    <option value="70">70%</option>
-                    <option value="70">60%</option>
-                    <option value="50">50%</option>
-                    <option value="40">40%</option>
-                    <option value="30">30%</option>
-                    <option value="20">20%</option>
-                    <option value="10">10%</option>
+                    <?php  foreach ([90,80,70,60,50,40,30,20,10] as $value) : ?>
+                        <option value="{{$value}}">{{$value}}%</option>
+                    <?php endforeach; ?>
                 </select>
             </div>
         </div>
