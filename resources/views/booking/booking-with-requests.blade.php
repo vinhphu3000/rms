@@ -10,7 +10,7 @@
                             <div class="col-md-12 col-xs-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <h4>{{date('m/d/Y', strtotime($request->created_at))}} - {{$request->user->name}}</h4>
+                                        <h4>{{$request->titleWithUser()}}</h4>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
@@ -69,12 +69,13 @@
                                         <div class="x_content">
                                             <div class="row">
                                                 <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                                                    <form class="form-horizontal form-label-left" action="http://rms.local/employee" method="get">
-
+                                                    <form class="form-horizontal form-label-left" action="{{ url ('request/booking')}}" method="get" >
                                                         <div class="input-group">
-                                                            <input class="form-control" placeholder="Search for..." value="" name="kw" type="text">
+                                                            <input class="form-control" style="height: 34px;" placeholder="Search for id, name, email, skill ..." value="{{$search_param['kw']}}" name="kw" type="text">
+                                                            <input type="hidden" name="project_id" value="{{$request->project_id}}">
+                                                            <input type="hidden" name="request_id" value="{{$request->id}}">
                                                             <span class="input-group-btn">
-                                                                <button class="btn btn-default" type="submit">Go!</button>
+                                                                <button class="btn btn-primary" type="submit">Go!</button>
                                                             </span>
                                                         </div>
                                                     </form>
@@ -82,7 +83,7 @@
 
                                                 <div class="clearfix"></div>
                                                 <?php foreach ($employees as $item) : ?>
-                                                <div class="col-md-12 col-sm-12 col-xs-12 profile_details">
+                                                <div class="col-md-12 col-sm-12 col-xs-12 profile_details" employee="{{$item->id}}">
                                                     <div class="well profile_view">
                                                         <div class="col-sm-12">
                                                             <div class="left col-sm-2 text-center">
@@ -91,10 +92,12 @@
                                                             <div class="right col-xs-10">
                                                                 <h4>{{$item->fullName()}}</h4>
                                                                 <p><strong>Skill: </strong> {{$item->skills}} </p>
-                                                                <ul class="list-unstyled">
-                                                                    <li><i class="fa fa-envelope"></i> {{$item->email}} </li>
-                                                                    <li><i class="fa fa-phone"></i>{{$item->phone}}</li>
-                                                                </ul>
+                                                                <p><?php echo $item->availableInfo();?></p>
+
+                                                                {{--<ul class="list-unstyled">--}}
+                                                                    {{--<li><i class="fa fa-envelope"></i> {{$item->email}} </li>--}}
+                                                                    {{--<li><i class="fa fa-phone"></i>{{$item->phone}}</li>--}}
+                                                                {{--</ul>--}}
                                                             </div>
 
                                                         </div>
@@ -111,7 +114,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
                         </div>
                     </div>

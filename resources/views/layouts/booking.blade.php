@@ -42,11 +42,7 @@
             <div class="left_col scroll-view">
 
                 @include('widgets.list-request')
-                <div class="sidebar-footer hidden-small">
-                    <a class="link-popup" url="{{ url('project/add') }}" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add new project">
-                        <span class="fa fa-plus-circle" aria-hidden="true"></span> New project
-                    </a>
-                </div>
+
             </div>
         </div>
 
@@ -65,7 +61,7 @@
     <!-- footer content -->
     <footer>
         <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+           RMS
         </div>
         <div class="clearfix"></div>
     </footer>
@@ -125,6 +121,13 @@
 
         $('.booking').click(function() {
             var data = {employee_id: $(this).attr('employee-id'), project_id: $(this).attr('project-id') };
+
+            openPopup($(this).attr('url'), data)
+        });
+
+
+        $('.book-edit').click(function() {
+            var data = {id: $(this).attr('id')};
 
             openPopup($(this).attr('url'), data)
         });

@@ -18,7 +18,7 @@
             <div class="col-md-9 col-sm-9 col-xs-12">
                 <select class="select2" style="width:300px" name="project_role_id">
                     <?php foreach($roles as $role) : ?>
-                    <option value="<?php echo $role->id ?>"><?php echo $role->name ?></option>
+                    <option <?php echo $booking->role->id == $role->id ? 'selected' : '' ?> value="<?php echo $role->id ?>"><?php echo $role->name ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -30,7 +30,7 @@
             <div class="col-md-6">
                 <div id="during" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
                     <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-                    <span></span> <b class="caret"></b>
+                    <span>{{$booking->start_date->format('m/d/Y')}} - {{$booking->end_date->format('m/d/Y')}}</span> <b class="caret"></b>
                 </div>
             </div>
         </div>
@@ -39,6 +39,7 @@
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Join</label>
             <div class="col-md-9 col-sm-9 col-xs-12">
                 <select class="select2" style="width:300px" name="take_part_per">
+                    <?php  ?>
                     <option value="100">Full-time</option>
                     <option value="90">90%</option>
                     <option value="80">80%</option>

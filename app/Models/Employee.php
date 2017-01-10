@@ -32,6 +32,20 @@ class Employee extends Eloquent
         return $this->first_name . ' ' .  $this->last_name;
     }
 
+    public function availableInfo()
+    {
+        $last = ProjectBooking::where('employee_id', $this->id)->orderBy('end_date', 'desc')->first();
+        if (empty($last->end_date)) {
+            return '<span class="label label-success">Available from now</span>';
+        }
+
+        $last_end_date =  $last->end_date->format('m/d/Y');
+        if ($last_end_date == date('m/d/Y')) {
+            return '<span class="label label-success">Available from now</span>';
+        }
+        return '<span class="label label-info">Available from ' . $last->end_date->format('m/d/Y') . '</span>';
+    }
+
 
 
     public static function getTableColumns() {

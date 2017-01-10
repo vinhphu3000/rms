@@ -54,10 +54,10 @@
             <div class="left_col scroll-view">
                 <div class="left-filter" style="height:40px;">
                     <div class="input-group">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" style="height: 34px">
                             <span class="input-group-btn">
-                                              <button type="button" class="btn btn-primary">Go!</button>
-                                          </span>
+                                   <button type="button" class="btn btn-primary">Go!</button>
+                            </span>
                     </div>
                 </div>
 

@@ -41,17 +41,17 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Send request resource
-                </label>
-                <div class="col-md-9 col-sm-9 col-xs-12">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" name="is_send_request" class="flat send-request-resource">
-                        </label>
-                    </div>
-                </div>
-            </div>
+            {{--<div class="form-group">--}}
+                {{--<label class="control-label col-md-3 col-sm-3 col-xs-12">Send request resource--}}
+                {{--</label>--}}
+                {{--<div class="col-md-9 col-sm-9 col-xs-12">--}}
+                    {{--<div class="checkbox">--}}
+                        {{--<label>--}}
+                            {{--<input type="checkbox" name="is_send_request" class="flat send-request-resource">--}}
+                        {{--</label>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
             <input type="hidden" name="_token" value="{{ csrf_token()}}">
             <input type="hidden" name="request_param">
             <input type="hidden" name="request_note">

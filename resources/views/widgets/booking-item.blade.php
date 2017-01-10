@@ -7,13 +7,14 @@
         <span><small>{{$booking->joinLable()}}</small></span>
 
     </div>
-    {{--<div class="left">--}}
-        {{--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i></a>--}}
-        {{--<ul class="dropdown-menu" role="menu">--}}
-            {{--<li><a href="#">Settings 1</a>--}}
-            {{--</li>--}}
-            {{--<li><a href="#">Settings 2</a>--}}
-            {{--</li>--}}
-        {{--</ul>--}}
-    {{--</div>--}}
+    <div class="left setting" >
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog"></i></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="javascript:void(0)" url="{{url('book/edit')}}" class=".book-edit" id="{{$booking->id}}">Edit</a>
+            </li>
+            <li>
+                <a href="#">Cancel</a>
+            </li>
+        </ul>
+    </div>
 </div>
