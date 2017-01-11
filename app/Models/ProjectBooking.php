@@ -56,7 +56,7 @@ class ProjectBooking extends Eloquent
     public function joinLable()
     {
         if ($this->book_type == 'Reserve') {
-            return $this->book_type;
+            return $this->book_type . ' for 1 week';
         }
 
         if ($this->take_part_per == 100) {

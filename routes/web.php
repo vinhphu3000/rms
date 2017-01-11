@@ -48,6 +48,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/request/booking', 'BookingController@booking');
     Route::get('/booking/popup', 'BookingController@popupBooking');
     Route::get('/booking/details/{id}', 'BookingController@details');
+    Route::get('/booking/edit/{id}', 'BookingController@edit');
 
 
     Route::get('/logout','UserController@doLogout');
@@ -79,6 +80,7 @@ Route::group(['middleware' => 'auth'], function () {
      * Booking
      */
     Route::post('/booking/add', 'BookingController@doBooking');
+    Route::post('/booking/edit', 'BookingController@doEdit');
 
 
 });

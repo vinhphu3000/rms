@@ -147,7 +147,33 @@ class BookingController extends BaseController {
     public function details($id)
     {
         $booking = ProjectBooking::find($id);
-        return view('booking.details', ['booking' => $booking]);
+        return view('booking.details', ['booking' => $booking,]);
+    }
+
+    public function edit($id)
+    {
+        $booking = ProjectBooking::find($id);
+        $roles = \App\Models\ProjectRole::all();
+        return view('booking.edit', ['booking' => $booking, 'roles' => $roles]);
+    }
+
+    public function doUpdate(\Illuminate\Http\Request $request)
+    {
+        $project_id = (int)$request->input('project_id');
+
+        if(!empty($project_id)) {
+            $booking_data = [
+                'project_id' => $project_id,
+                'project_role_id' => $request->input('project_role_id'),
+                'take_part_per' => $request->input('take_part_per'),
+                'start_date' => $request->input('start_date'),
+                'end_date' => $request->input('end_date'),
+                'employee_id' => $request->input('employee_id'),
+                'book_type' => 'Reserve',
+                'user_id' => $this->user->id,
+            ];
+            $booking = ProjectBooking::create($booking_data);
+        }
     }
 
 

@@ -116,8 +116,8 @@
 
         $(".select2").select2();
 
-        var start = moment().subtract(29, 'days');
-        var end = moment();
+        var start = moment();
+        var end = moment().add(1, 'months');
 
         function cb(start, end) {
             $('input[name=start_date]').val(start.format('YYYY-MM-D'));

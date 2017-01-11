@@ -1,7 +1,7 @@
 <div class="modal-header">
 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
 </button>
-<h4 class="modal-title" id="myModalLabel">{{$employee->fullName()}}</h4>
+<h4 class="modal-title" id="myModalLabel">{{$booking->employee->fullName()}}</h4>
 </div>
 
 <div class="modal-body">
@@ -10,7 +10,7 @@
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Project name</label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                   <strong> {{$project->name}} </strong>
+                   <strong> {{$booking->project->name}} </strong>
                 </div>
             </div>
         <div class="form-group">
@@ -41,13 +41,13 @@
                 <select class="select2" style="width:300px" name="take_part_per">
                     <option value="100">Full-time</option>
                     <?php  foreach ([90,80,70,60,50,40,30,20,10] as $value) : ?>
-                        <option value="{{$value}}">{{$value}}%</option>
+                        <option <?php echo $booking->take_part_per == $value ? 'selected' : '' ?> value="{{$value}}">{{$value}}%</option>
                     <?php endforeach; ?>
                 </select>
             </div>
         </div>
-        <input type="hidden" name="project_id" value="{{$project->id}}">
-        <input type="hidden" name="employee_id" value="{{$employee->id}}">
+        <input type="hidden" name="project_id" value="{{$booking->project->id}}">
+        <input type="hidden" name="employee_id" value="{{$booking->employee->id}}">
         <input type="hidden" name="start_date">
         <input type="hidden" name="end_date">
         <input type="hidden" name="_token" value="{{ csrf_token()}}">
@@ -56,16 +56,16 @@
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary btn-book-save-ajax">Booking</button>
+    <button type="button" class="btn btn-primary btn-book-save">Update</button>
 </div>
 <div class="clearfix"></div>
 
 <script >
     $(function () {
         'use strict';
-        $('.btn-book-save-ajax').click( function() {
+        $('.btn-book-save').click( function() {
             $.ajax({
-                url:'{{ url ('booking/add') }}',
+                url:'{{ url ('booking/edit') }}',
                 data: $("#booking-add").serialize(),
                 async:false,
                 type:'post',
@@ -110,8 +110,8 @@
 
         $(".select2").select2();
 
-        var start = moment().subtract(29, 'days');
-        var end = moment();
+        var start = moment('{{$booking->start_date}}');
+        var end = moment('{{$booking->end_date}}');
 
         function cb(start, end) {
             $('input[name=start_date]').val(start.format('YYYY-MM-D'));

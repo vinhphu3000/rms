@@ -115,7 +115,6 @@
 
         $('.link-popup').click(function (e) {
             openPopup($(this).attr('url'), []);
-            e.preventDefault();
         });
 
 
