@@ -15,7 +15,7 @@
                 <li><a href="javascript:void(0)" url="{{url('booking/edit/' . $booking->id)}}" class="link-popup" id="{{$booking->id}}">Edit</a>
                 </li>
                 <li>
-                    <a href="#">Remove</a>
+                    <a href="javascript:void(0)" class="remove-book-item" url="{{url('booking/remove/' . $booking->id)}}" id="{{$booking->id}}">Remove</a>
                 </li>
             </ul>
         </li>

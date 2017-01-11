@@ -5,7 +5,7 @@
 </div>
 
 <div class="modal-body">
-    <form class="form-horizontal form-label-left input_mask" id="booking-add" action="{{ url('booking/add') }}" method="post">
+    <form class="form-horizontal form-label-left input_mask" id="booking-add" action="{{ url('booking/edit') }}" method="post">
     <div>
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Project name</label>
@@ -47,6 +47,7 @@
             </div>
         </div>
         <input type="hidden" name="project_id" value="{{$booking->project->id}}">
+        <input type="hidden" name="id" value="{{$booking->id}}">
         <input type="hidden" name="employee_id" value="{{$booking->employee->id}}">
         <input type="hidden" name="start_date">
         <input type="hidden" name="end_date">
@@ -70,11 +71,7 @@
                 async:false,
                 type:'post',
                 success:function(response) {
-                    var role = {id: $('select[name=project_role_id] option:selected').val(), name: $('select[name=project_role_id] option:selected').text()};
-                    $('div[employee=' + $('input[name=employee_id]').val() + ']').remove();
-                    $("#myModal .close").click();
-                    addRole(role);
-                    $('.booking-list').find('#role' + role.id + ' .employee-list').append(response);
+                    location.reload();
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     errorAlert('An error occurs during save data, please try again');

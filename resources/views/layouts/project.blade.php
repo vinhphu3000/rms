@@ -160,6 +160,8 @@
             });
         }
 
+
+
         $('.project-item').click(function () {
             $.ajax({
                 url: $(this).attr('url'),

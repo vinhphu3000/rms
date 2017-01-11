@@ -43,18 +43,10 @@ class BookingController extends BaseController {
 
     }
 
-
-    public function booking(\Illuminate\Http\Request $params)
+    public function listing(\Illuminate\Http\Request $params)
     {
         $project_id = (int)$params->input('project_id');
-        $request_id = (int)$params->input('request_id');
-        if (!empty($request_id) && is_integer($request_id) ) {
-            $request = ProjectRequest::find((int)$request_id);
-        } else {
-            $request = ProjectRequest::orderBy('updated_at','desc')->first();
-        }
-
-        $project = Project::find((int)$request->project_id);
+        $project = Project::find((int)$project_id);
         $projects = Project::all();
         if (!empty($project_id) && is_integer($project_id)) {
             $requests = ProjectRequest::where('project_id', $project_id)->orderBy('updated_at','desc')->get();
@@ -62,7 +54,36 @@ class BookingController extends BaseController {
             $requests = ProjectRequest::orderBy('updated_at','desc')->get();
         }
 
-        $bookings = ProjectBooking::where('project_id', $project_id)->orderBy('project_role_id')->get();
+        return view('request.list', ['projects' => $projects, 'project' => $project, 'requests' => $requests, 'project_id' => $project_id]);
+    }
+
+    public function booking(\Illuminate\Http\Request $params)
+    {
+        $project_id = (int)$params->input('project_id');
+        $request_id = (int)$params->input('request_id');
+
+        $project = Project::find((int)$project_id);
+        $projects = Project::all();
+
+        if (!empty($project_id) && is_integer($project_id)) {
+            $requests = ProjectRequest::where('project_id', $project_id)->orderBy('updated_at','desc')->get();
+        } else {
+            $requests = ProjectRequest::orderBy('updated_at','desc')->get();
+        }
+
+
+        if (!empty($request_id) && is_integer($request_id) ) {
+            $request = ProjectRequest::find((int)$request_id);
+        } else {
+            foreach($requests as $item) {
+                $request = $item;
+                break;
+            }
+
+        }
+
+
+        $bookings = ProjectBooking::where('project_id', $project_id)->where('remove',0)->orderBy('project_role_id')->get();
 
         $limit = 100;
         $builder = Employee::query();
@@ -157,23 +178,42 @@ class BookingController extends BaseController {
         return view('booking.edit', ['booking' => $booking, 'roles' => $roles]);
     }
 
-    public function doUpdate(\Illuminate\Http\Request $request)
+    /**
+     * @param $id
+     * @return string
+     */
+    public function doRemove($id)
+    {
+        ProjectBooking::where('id', $id)->update(['remove' => 1, 'remove_by' => $this->user->id]);
+        return '';
+    }
+
+    /**
+     * @param $id
+     * @return string
+     */
+    public function doOfficial($id)
+    {
+
+        ProjectBooking::where('id', $id)->update(['book_type' => 'Official']);
+        return '';
+    }
+
+    public function doEdit(\Illuminate\Http\Request $request)
     {
         $project_id = (int)$request->input('project_id');
 
         if(!empty($project_id)) {
             $booking_data = [
-                'project_id' => $project_id,
                 'project_role_id' => $request->input('project_role_id'),
                 'take_part_per' => $request->input('take_part_per'),
                 'start_date' => $request->input('start_date'),
                 'end_date' => $request->input('end_date'),
-                'employee_id' => $request->input('employee_id'),
-                'book_type' => 'Reserve',
-                'user_id' => $this->user->id,
             ];
-            $booking = ProjectBooking::create($booking_data);
+
+            ProjectBooking::where('id', $request->input('id'))->update($booking_data);
         }
+        return '';
     }
 
 

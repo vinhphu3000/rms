@@ -131,6 +131,30 @@
             openPopup($(this).attr('url'), data)
         });
 
+        $('.remove-book-item').click(function() {
+            var url = $(this).attr('url');
+            confirm(function() {
+                $.ajax({
+                    url: url,
+                    async:false,
+                    type:'get',
+                    success:function(response) {
+                        location.reload();
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        errorAlert('An error occurs during save data, please try again');
+
+                    }
+                });
+            });
+        });
+        $('.filter-by-project').change( function() {
+            if ($(this).find('') == '')
+                location.href='{{url('request')}}' + '?project_id=' + $(this).selected();
+            else
+                location.href='{{url('request')}}';
+        });
+
         function openPopup(url, data) {
             $.ajax({
                 url: url,

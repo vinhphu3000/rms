@@ -49,6 +49,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/booking/popup', 'BookingController@popupBooking');
     Route::get('/booking/details/{id}', 'BookingController@details');
     Route::get('/booking/edit/{id}', 'BookingController@edit');
+    Route::get('/booking/remove/{id}', 'BookingController@doRemove');
+    Route::get('/booking/official/{id}', 'BookingController@doOfficial');
+    Route::get('/request', 'BookingController@listing');
+
 
 
     Route::get('/logout','UserController@doLogout');

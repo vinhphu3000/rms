@@ -38,14 +38,7 @@
         <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Status</label>
             <div class="col-md-9 col-sm-9 col-xs-12">
-                <?php if($booking->book_type == 'Reserve'): ?>
-                <select class="select2" style="width:300px" name="book_type">
-                    <option <?php echo ($booking->book_type == 'Official') ? 'selected' : '' ?> value="Official">Official</option>
-                    <option <?php echo ($booking->book_type == 'Reserve') ? 'selected' : '' ?> value="Reserve">Reserve</option>
-                </select>
-                <?php else: ?>
                     <strong> {{$booking->book_type}}</strong>
-                <?php endif; ?>
             </div>
         </div>
         <div class="form-group">
@@ -61,7 +54,8 @@
 <div class="modal-footer">
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
     <?php if($booking->book_type == 'Reserve'): ?>
-        <button type="button" class="btn btn-primary btn-book-update-type">Update</button>
+        <button type="button" class="btn btn-warning remove-book-item">Cancel booking</button>
+        <button type="button" class="btn btn-primary update-official">Make official</button>
     <?php endif; ?>
 </div>
 <div class="clearfix"></div>
@@ -69,5 +63,38 @@
     $(function () {
         'use strict';
         $(".select2").select2();
+        $('.update-official').click(function() {
+            var url = '{{url('booking/official/' . $booking->id)}}';
+                $.ajax({
+                    url: url,
+                    async:false,
+                    type:'get',
+                    success:function(response) {
+                        location.reload();
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        errorAlert('An error occurs during save data, please try again');
+
+                    }
+                });
+        });
+    });
+
+    $('.remove-book-item').click(function() {
+        var url = '{{url('booking/remove/' . $booking->id)}}';
+        confirm(function() {
+            $.ajax({
+                url: url,
+                async:false,
+                type:'get',
+                success:function(response) {
+                    location.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    errorAlert('An error occurs during save data, please try again');
+
+                }
+            });
+        });
     });
 </script>

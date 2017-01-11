@@ -57,7 +57,9 @@ class ProjectController extends BaseController {
         return view('project.list', ['result' => $projects]);
     }
 
-
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function add()
     {
         $roles = \App\Models\ProjectRole::all();
@@ -116,7 +118,7 @@ class ProjectController extends BaseController {
      */
     public function bookingData($project_id)
     {
-        $booking = ProjectBooking::where('project_id', (int)$project_id)->get();
+        $booking = ProjectBooking::where('project_id', (int)$project_id)->where('remove', 0)->get();
         $gantt_chart_data = ProjectBooking::convertDataGanttChart($booking);
         return json_encode($gantt_chart_data);
     }

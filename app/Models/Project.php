@@ -26,7 +26,7 @@ class Project extends Eloquent
 
     public function memeber()
     {
-        return ProjectBooking::where('project_id', $this->id)->get();
+        return ProjectBooking::where('project_id', $this->id)->where('remove',0)->get();
     }
 
 }
