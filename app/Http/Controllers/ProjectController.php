@@ -93,8 +93,6 @@ class ProjectController extends BaseController {
             event(new ResourceRequest($request));
 
         }
-
-
         return redirect('/project/details/' . $project->id);
     }
 

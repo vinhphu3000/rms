@@ -14,7 +14,7 @@
 		<ul class="nav side-menu">
 			<?php foreach ($requests as $item): ?>
 				<li <?php echo !empty($request->id) && $request->id == $item->id ? 'class="active"' : ''?> >
-					<a  href="{{ url ('request/booking?project_id=' . $item->project_id . '&request_id=' . $item->id) }}"> <span style="border-bottom:1px solid #e6e9ed;font-weight: bold;">{{$item->titleWithProject()}}</span><br/>
+					<a  href="{{ url ('request/booking?project_id=' . $project_id . '&request_id=' . $item->id) }}"> <span style="border-bottom:1px solid #e6e9ed;font-weight: bold;">{{$item->titleWithProject()}}</span><br/>
 						<small>
 							<?php foreach ($item->params() as $key => $param): ?>
 							{{$key == 0 ? '' : ','}}

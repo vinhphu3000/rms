@@ -8,8 +8,22 @@
             <div class="x_title">
                 <h4 class="green" style="float: left"><i class="fa fa-paint-brush"></i> {{$project->name}}<span class="label label-{{\App\Models\Project::$project_status[$project->status]['class']}}" style="margin-left: 10px;font-size: 55%;color: #ffffff;">{{\App\Models\Project::$project_status[$project->status]['lable'] ?? ''}}</span></h4>
                 <ul class="nav navbar-right panel_toolbox">
+                    <?php if($my->type == 'member') :  ?>
                     <li><button type="button" class="btn btn-trans link-popup" url = "{{ url('request/add/' . $project->id) }}"><i class="glyphicon glyphicon-plus" aria-hidden = true></i> Create new request</button>
                     </li>
+                    <?php else: ?>
+                        <li class="dropdown">
+                            <a href="#"  style="color: #5a738e;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-align-justify"></i>  Booking</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href = "{{ url('booking?project_id=' . $project->id) }}">New booking</a>
+                                </li>
+                                <li><a  href = "{{ url('request/booking?project_id=' . $project->id) }}">Booking with request</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                    <?php endif; ?>
 
                 </ul>
                 <div class="clearfix"></div>

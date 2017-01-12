@@ -2,8 +2,7 @@
   <div class="nav_menu">
     <nav>
         <div class="navbar nav_title">
-            <a href="index.html"><h3 style="text-align: center; color:#ecf0f1">RMS</h3></a>
-
+            <a href="{{url('project')}}"><h3 style="text-align: center; color:#ecf0f1">RMS</h3></a>
         </div>
 
         <ul class="nav navbar-nav navbar-left">

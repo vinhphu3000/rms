@@ -14,8 +14,6 @@
                     </div>
                     <div class="x_content">
 
-                        <p>Simple table with project listing with progress and editing options</p>
-
                         <!-- start project list -->
                         <table class="table table-striped projects">
                             <thead>

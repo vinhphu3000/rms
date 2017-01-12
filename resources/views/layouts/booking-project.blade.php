@@ -40,9 +40,7 @@
     <div class="main_container ">
         <div class="col-md-3 left_col menu_fixed">
             <div class="left_col scroll-view">
-
-                @include('widgets.list-request')
-
+                @include('widgets.booking-list-project')
             </div>
         </div>
 

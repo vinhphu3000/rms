@@ -1,4 +1,4 @@
-@extends('layouts.booking')
+@extends('layouts.booking-project')
 @section('page_heading','Booking')
 @section('section')
     <div class="">
@@ -7,73 +7,25 @@
                 <div class="">
                     <div class="x_content">
                         <div class="row">
-                            <div class="col-md-12 col-xs-12 ">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h4>{{$request->titleWithUser()}}</h4>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <div>
-
-                                            <div class="form-group">
-
-                                                <div>
-                                                    {{$request->note}}
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div>
-                                            </label>
-                                            <ul class="list-inline widget_tally">
-                                                <?php foreach ($request->params() as $key => $param): ?>
-                                                <li>
-                                                    <p>
-                                                        <span class="month" style="font-weight: bold;">{{$param->number??'-'}} {{$param->role}} </span>
-                                                        <span class="count">{{$param->year_of_exp??'-'}} years</span>
-                                                    </p>
-                                                    <p>
-                                                          <span class="month">
-                                                              <?php if(is_array($param->skill)) : ?>
-                                                                <?php echo implode(', ', $param->skill); ?>
-                                                              <?php endif; ?>
-                                                          </span>
-
-                                                    </p>
-                                                    <p>
-                                                          <span class="month">Need from:
-                                                              {{$param->start_time??'-'}}
-                                                          </span>
-
-                                                    </p>
-                                                </li>
-                                                <?php endforeach; ?>
-
-                                            </ul>
-                                        </div>
-                                        <div style="text-align: center"><button class="btn close-link">Close</button></div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <h2>Employee<small>Search</small></h2>
+                                        <h4 class="green" style="float: left"><i class="fa fa-paint-brush"></i> {{$project->name}}<small style="margin-left: 4px">Booking</small></h4>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                            <li><a  class="btn btn-trans" href = "{{ url('project/details/' . $project->id) }}"  style="color: #5a738e;"><i class="glyphicon glyphicon-arrow-left" aria-hidden = true></i> Back to project detail</a>
+                                            </li>
+
+                                        </ul>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
                                         <div class="x_content">
                                             <div class="row">
                                                 <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                                                    <form class="form-horizontal form-label-left" action="{{ url ('request/booking')}}" method="get" >
+                                                    <form class="form-horizontal form-label-left" action="{{ url ('booking')}}" method="get" >
                                                         <div class="input-group">
                                                             <input class="form-control" style="height: 34px;" placeholder="Search for id, name, email, skill ..." value="{{$search_param['kw']}}" name="kw" type="text">
                                                             <input type="hidden" name="project_id" value="{{$project_id}}">
-                                                            <input type="hidden" name="request_id" value="{{$request->id}}">
                                                             <span class="input-group-btn">
                                                                 <button class="btn btn-primary" type="submit">Go!</button>
                                                             </span>
