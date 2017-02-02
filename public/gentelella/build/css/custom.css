@@ -1539,7 +1539,7 @@ h5.graph_title i {
 
 span.right {
   float: right;
-  font-size: 14px !important; }
+}
 
 .tile_info a {
   text-overflow: ellipsis; }
@@ -3876,7 +3876,7 @@ fieldset {
   background-color: #26B99A; }
 
 .progress_summary .progress {
-  margin: 5px 0 12px !important; }
+  margin: 4px 13px 10px !important;}
 
 .progress_summary .row {
   margin-bottom: 5px; }
@@ -4197,4 +4197,19 @@ ul.notifications {
 .employee-sm:hover .setting{
   background-color: #f5f5f5;
   display: block;
+}
+
+.employee_prs {
+  margin-bottom: 10px !important;
+  border-bottom: 1px solid;
+}
+.progress_lb_start {
+  margin-left: -10px;
+  font-size: 10px;
+  margin-top: -10px;
+}
+.progress_lb_end {
+  margin-right: -9px;
+  font-size: 10px;
+  margin-top: -10px;
 }

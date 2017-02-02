@@ -50,7 +50,32 @@
                     <br />
 
                     <div id="mainb">
-                        <h4>Booking</h4>
+                        <h4>Member booking</h4>
+                        <div class="col-xs-12 bg-white progress_summary">
+                            <?php foreach($booking as $item) : ?>
+                            <div class="col-xs-3" style="margin-right:50px;">
+                                <div class="row employee_prs">
+                                    <div class="progress_title">
+                                        <span class="left">{{$item->employee->fullName()}}</span>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="col-xs-12">
+                                        <div class="progress progress_sm">
+                                            <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$item->getPerOfSpentDay()}}" style="width: {{$item->getPerOfSpentDay()}}%;" aria-valuenow="{{$item->getPerOfSpentDay()}}"></div>
+                                        </div>
+                                        <span class="left progress_lb_start">{{$item->start_date->format('Y/m/d')}}</span>
+                                        <span class="right progress_lb_end">{{$item->end_date->format('Y/m/d')}}</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                                <?php endforeach; ?>
+                        </div>
+                        <br/>
+                        <br/><br/>
+                        <br/>
+                        <h4>Grantt chart</h4>
                         <div class="gantt" data-url="{{ url('project/booking-data/' . $project->id) }}"></div>
                     </div>
                     <br/>
@@ -62,7 +87,7 @@
                         <ul class="messages">
                             <?php  foreach ($activity as $ac) : ?>
                             <li>
-                                <img  src="{{ asset(Config::get('constants.PATH_AVATAR') . empty($ac->user->avatar) ? Config::get('constants.PATH_AVATAR') . Config::get('constants.DEFAULT_AVATAR') : $ac->user->avatar) }}" class="avatar" alt="{{$ac->user->name}}">
+                                <img  src="{{ asset($my->avatarPath()) }}" class="avatar" alt="{{$ac->user->name}}">
                                 <div class="message_date">
                                     <h3 class="date text-info">{{$ac->created_at->diffForHumans()}}</h3>
                                 </div>

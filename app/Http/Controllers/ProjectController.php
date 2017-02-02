@@ -106,8 +106,10 @@ class ProjectController extends BaseController {
             $projects = Project::where('user_id', $this->user->id)->get();
         }
 
+        $booking = ProjectBooking::where('project_id', (int)$id)->where('remove', 0)->get();
+
         $activity = Activity::where('project_id', (int)$id)->orderBy('created_at','desc')->get()->take(10);
-        return view('project.details', ['project' => $project, 'result' => $projects, 'activity' => $activity]);
+        return view('project.details', ['project' => $project, 'result' => $projects, 'activity' => $activity, 'booking' => $booking]);
     }
 
     /**
