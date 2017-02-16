@@ -10,7 +10,7 @@
                             <div class="col-md-12 col-xs-12 ">
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <h4>{{$request->titleWithUser()}}</h4>
+                                        <h4>Proposal for this request</h4>
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
@@ -27,26 +27,14 @@
                                         <div>
                                             </label>
                                             <ul class="list-inline widget_tally">
-                                                <?php foreach ($request->params() as $key => $param): ?>
+                                                <?php foreach ($proposal as $key => $item): ?>
                                                 <li>
-                                                    <p>
-                                                        <span class="month" style="font-weight: bold;">{{$param->number??'-'}} {{$param->role}} </span>
-                                                        <span class="count">{{$param->year_of_exp??'-'}} years</span>
-                                                    </p>
-                                                    <p>
-                                                          <span class="month">
-                                                              <?php if(is_array($param->skill)) : ?>
-                                                                <?php echo implode(', ', $param->skill); ?>
-                                                              <?php endif; ?>
-                                                          </span>
-
-                                                    </p>
-                                                    <p>
-                                                          <span class="month">Need from:
-                                                              {{$param->start_time??'-'}}
-                                                          </span>
-
-                                                    </p>
+                                                    <b>{{$item->created_at->format('Y-m-d H:i')}} proposal by {{$item->user->name}}</b>
+                                                    <ul class="list-inline widget_tally">
+                                                        <?php foreach($item->getEmployeeProposal() as $emp_proposal) :?>
+                                                        <li>Name: {{$emp_proposal->employee->fullname()}} /  Proposal role: {{$emp_proposal->role->name}} / Status: {{$emp_proposal->status}}</li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
                                                 </li>
                                                 <?php endforeach; ?>
 
@@ -125,39 +113,53 @@
                       <div class="x_content">
                           <div class="row">
                               <div class="col-md-12 col-xs-12 ">
+
                                   <div class="x_panel">
                                       <div class="x_title">
-                                          <h2>{{$request->project->name}}<small>Booking resource</small></h2>
-
+                                          <h4>{{$request->titleWithUser()}}</h4>
                                           <div class="clearfix"></div>
                                       </div>
                                       <div class="x_content">
+                                          <div>
 
+                                              <div class="form-group">
+
+                                                  <div>
+                                                      {{$request->note}}
+                                                  </div>
+                                              </div>
+
+                                          </div>
                                           <div>
                                               </label>
-                                              <ul class="list-inline widget_tally booking-list">
-                                                  <?php $last = ''; ?>
-                                                  <?php foreach ($bookings as $key => $item): ?>
+                                              <ul class="list-inline widget_tally">
+                                                  <?php foreach ($request->params() as $key => $param): ?>
+                                                  <li>
+                                                      <p>
+                                                          <span class="month" style="font-weight: bold;">{{$param->number??'-'}} {{$param->role}} </span>
+                                                          <span class="count">{{$param->year_of_exp??'-'}} years</span>
+                                                      </p>
+                                                      <p>
+                                                          <span class="month">
+                                                              <?php if(is_array($param->skill)) : ?>
+                                                                <?php echo implode(', ', $param->skill); ?>
+                                                              <?php endif; ?>
+                                                          </span>
 
-                                                    <?php if ($last != $item->role->name) : ?>
-                                                          <?php if ($last != '') : ?>
-                                                            </div>
-                                                            </li>
+                                                      </p>
+                                                      <p>
+                                                          <span class="month">Need from:
+                                                              {{$param->start_time??'-'}}
+                                                          </span>
 
-                                                          <?php endif; ?>
-
-                                                      <li id = 'role{{$item->role->id}}'>
-                                                          <p>
-                                                              <span class="month" style="font-weight: bold;">{{$item->role->name}} </span>
-                                                          </p>
-                                                          <div class="col-md-12 col-xs-12 employee-list">
-                                                      <?php endif; ?>
-                                                        @include('widgets.booking-item',['booking' => $item])
-                                                      <?php $last = $item->role->name; ?>
-                                                      <?php endforeach; ?>
+                                                      </p>
+                                                  </li>
+                                                  <?php endforeach; ?>
 
                                               </ul>
                                           </div>
+                                          <div style="text-align: center"><button class="btn close-link">Close</button></div>
+
                                       </div>
                                   </div>
                               </div>

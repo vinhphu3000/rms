@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 use App\Events\ResourceBooking;
 use App\Models\Notification;
+use App\Models\Proposal;
 use League\Flysystem\Exception;
 use App\Models\Project;
 use App\Models\ProjectRequest;
@@ -82,6 +83,8 @@ class BookingController extends BaseController {
 
         }
 
+        $proposal = Proposal::where('request_id', $request->id)->orderBy('created_at', 'desc')->get();
+
         $bookings = ProjectBooking::where('project_id', $request->project->id)->where('remove',0)->orderBy('project_role_id')->get();
 
         $limit = 100;
@@ -114,7 +117,7 @@ class BookingController extends BaseController {
         $employees = $builder->orderBy($search_param['order_by'], $request['order_type'])->paginate($limit);
 
 
-        return view('booking.booking-with-requests', [ 'search_param' => $search_param,'request' => $request, 'project' => $project, 'requests' => $requests, 'employees' => $employees, 'projects' => $projects, 'project_id' => $project_id, 'bookings' => $bookings]);
+        return view('booking.booking-with-requests', [ 'search_param' => $search_param,'request' => $request, 'project' => $project, 'requests' => $requests, 'employees' => $employees, 'projects' => $projects, 'project_id' => $project_id, 'bookings' => $bookings, 'proposal' => $proposal]);
     }
 
 

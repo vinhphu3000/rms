@@ -61,8 +61,10 @@
                                     </div>
 
                                     <div class="col-xs-12">
-                                        <div class="progress progress_sm">
+                                        <div class="progress progress_sm {{$item->book_type == 'Reserve' ? 'reserve' : ''}}" >
+                                            <?php if ($item->book_type == 'Official' && $item->getPerOfSpentDay() > 0) : ?>
                                             <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="{{$item->getPerOfSpentDay()}}" style="width: {{$item->getPerOfSpentDay()}}%;" aria-valuenow="{{$item->getPerOfSpentDay()}}"></div>
+                                            <?php endif; ?>
                                         </div>
                                         <span class="left progress_lb_start">{{$item->start_date->format('Y/m/d')}}</span>
                                         <span class="right progress_lb_end">{{$item->end_date->format('Y/m/d')}}</span>
