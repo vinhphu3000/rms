@@ -14,10 +14,18 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Request content
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Start date
                 </label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                    {{$request->note}}
+                    {{$request->start_date}}
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Start date
+                </label>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    {{$request->end_date}}
                 </div>
             </div>
 
@@ -25,7 +33,7 @@
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Created by
             </label>
             <div class="col-md-9 col-sm-9 col-xs-12">
-                {{$request->user->fullName()}}
+                {{$request->user->name}}
             </div>
         </div>
 
@@ -54,13 +62,6 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Number</label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
                                 {{$param->number??'-'}}
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Start time
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                {{$param->start_time??'-'}}
                             </div>
                         </div>
 

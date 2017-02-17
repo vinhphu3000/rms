@@ -14,10 +14,18 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Request content
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Start date
                 </label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                    <textarea class="form-control" name="request_note" rows="3" cols="60"></textarea>
+                    <input  class="date-picker form-control col-md-7 col-xs-12" name="start_date" type="text">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">End date
+                </label>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input  class="date-picker form-control col-md-7 col-xs-12" name="end_date" type="text">
                 </div>
             </div>
             <div class="form-group">
@@ -56,13 +64,6 @@
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Number<span class="required">*</span></label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
                                 <input name="number"  value="1" class="form-control" type="number"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Start time
-                            </label>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input  class="date-picker form-control col-md-7 col-xs-12" name="start_time" type="text">
                             </div>
                         </div>
                         <div class="form-group">
@@ -112,7 +113,15 @@
     $(function () {
         'use strict';
 
-
+        $('.date-picker').daterangepicker({
+            singleDatePicker: true,
+            locale: {
+                format: 'YYYY-MM-DD'
+            },
+            calender_style: "picker_4"
+        }, function(start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+        });
 
 
         $(".select2_multiple").select2({
@@ -150,12 +159,7 @@
                 allowClear: true
             });
 
-            $('#tab' + index).find('.date-picker').daterangepicker({
-                singleDatePicker: true,
-                calender_style: "picker_4"
-            }, function(start, end, label) {
-                console.log(start.toISOString(), end.toISOString(), label);
-            });
+
 
             $('.role-request-remove').unbind();
             $('.role-request-remove').click(function () {
@@ -197,7 +201,6 @@
                 $(this).find('select[name=skill] option:selected').each (function () {
                     skill.push($(this).val());
                 });
-                var start_time = $(this).find('input[name=start_time]').val();
                 var year_of_exp = $(this).find('input[name=year_of_exp]').val();
 
                 if (role && number) {
@@ -205,8 +208,7 @@
                         role: role,
                         number: number,
                         skill: skill,
-                        year_of_exp: year_of_exp,
-                        start_time: start_time,
+                        year_of_exp: year_of_exp
                     });
                 }
 

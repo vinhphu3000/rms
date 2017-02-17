@@ -69,7 +69,8 @@ class ProjectRequestController extends BaseController {
             $request_data = [
                 'project_id' => $project_id,
                 'params' => $request->input('request_param'),
-                'note' => $request->input('request_note'),
+                'start_date' => $request->input('start_date'),
+                'end_date' => $request->input('end_date'),
                 'user_id' => $this->user->id,
             ];
             $request = ProjectRequest::create($request_data);

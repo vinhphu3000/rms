@@ -118,8 +118,8 @@
         });
 
 
-        $('.booking').click(function() {
-            var data = {employee_id: $(this).attr('employee-id'), project_id: $(this).attr('project-id') };
+        $('.add-proposal').click(function() {
+            var data = {employee_id: $(this).attr('employee-id'), request_id: $(this).attr('request-id') };
 
             openPopup($(this).attr('url'), data)
         });
@@ -178,6 +178,18 @@
                 }
             });
         });
+
+        function addProposalPopup(object, data) {
+            $.ajax({
+                url: url,
+                data:data,
+                dataType: "html",
+                success: function(reponse) {
+                    $('.modal-content').html(reponse);
+                    $('#myModal').modal({show:true});
+                }
+            });
+        }
 
 
 

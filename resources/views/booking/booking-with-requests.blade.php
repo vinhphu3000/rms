@@ -27,6 +27,7 @@
                                         <div>
                                             </label>
                                             <ul class="list-inline widget_tally">
+                                                <?php if (count($proposal)) : ?>
                                                 <?php foreach ($proposal as $key => $item): ?>
                                                 <li>
                                                     <b>{{$item->created_at->format('Y-m-d H:i')}} proposal by {{$item->user->name}}</b>
@@ -37,10 +38,13 @@
                                                     </ul>
                                                 </li>
                                                 <?php endforeach; ?>
+                                                <?php else: ?>
+                                                <li>There are not proposal for this request! </li>
+                                                <?php endif ?>
 
                                             </ul>
                                         </div>
-                                        <div style="text-align: center"><button class="btn close-link">Close</button></div>
+
 
                                     </div>
                                 </div>
@@ -91,7 +95,7 @@
                                                         </div>
                                                         <div class="col-xs-12 text-right">
                                                             {{--<button type="button" class="btn btn-info btn-xs reserve"> <i class="glyphicon glyphicon-pushpin"></i> Reserve</button>--}}
-                                                            <button type="button" employee-id="{{$item->id}}" project-id="{{$request->project->id}}" url="{{url('booking/popup')}}" class="btn btn-primary btn-xs booking">  <i class="fa fa-plus-square"></i> Booking</button>
+                                                            <button type="button" employee-id="{{$item->id}}" request-id="{{$request->id}}" url="{{url('booking/popup')}}" class="btn btn-primary btn-xs booking">  <i class="fa fa-plus-square"></i> Proposal</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -125,13 +129,12 @@
                                               <div class="form-group">
 
                                                   <div>
-                                                      {{$request->note}}
+                                                      Need from <strong>{{$request->start_date}}</strong> to <strong>{{$request->end_date}}</strong>
                                                   </div>
                                               </div>
 
                                           </div>
                                           <div>
-                                              </label>
                                               <ul class="list-inline widget_tally">
                                                   <?php foreach ($request->params() as $key => $param): ?>
                                                   <li>
@@ -147,12 +150,7 @@
                                                           </span>
 
                                                       </p>
-                                                      <p>
-                                                          <span class="month">Need from:
-                                                              {{$param->start_time??'-'}}
-                                                          </span>
 
-                                                      </p>
                                                   </li>
                                                   <?php endforeach; ?>
 

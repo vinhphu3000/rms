@@ -9,7 +9,7 @@ class ProjectRequest extends Eloquent
 {
     protected $table = 'project_request';
     protected $dates = ['created_at', 'updated_at'];
-    protected $fillable = ['user_id','project_id','type','params', 'note','created_at','updated_at'];
+    protected $fillable = ['user_id','project_id','type','params', 'note','created_at','updated_at', 'start_date', 'end_date'];
     /**
      * Get the phone record associated with the user.
      */
