@@ -9,5 +9,13 @@ class EmployeeExpMatrix extends Eloquent
 {
    protected $table = 'employee_exp_matrix';
    protected $fillable = ['id','employee_id','exp_id','level','month','note'];
+
+   /**
+    * Get the EmployeeExp record associated with the user.
+    */
+   public function exp()
+   {
+      return $this->belongsTo('App\Models\EmployeeExp', 'exp_id');
+   }
 }
 

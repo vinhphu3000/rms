@@ -20,6 +20,14 @@ class Proposal extends Eloquent
     }
 
     /**
+     * Get the user record associated with the propasal.
+     */
+    public function project()
+    {
+        return $this->belongsTo('App\Models\Project');
+    }
+
+    /**
      * return all employee propasal
      * @return mixed
      */

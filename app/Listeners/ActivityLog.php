@@ -5,6 +5,8 @@ namespace App\Listeners;
 use App\Events\CreateProject;
 use App\Events\ResourceBooking;
 use App\Events\ResourceRequest;
+use App\Events\ProposalRequest;
+use App\Events\ProposalEmployeeStatus;
 use App\Models\Activity;
 use App\Models\Project;
 use Faker\Provider\cs_CZ\DateTime;
@@ -21,6 +23,30 @@ class ActivityLog
     public function resourceRequest(ResourceRequest $event)
     {
         $activity = Activity::createFromRequest($event->request);
+        Activity::create($activity);
+    }
+
+    /**
+     * Handle the event.
+     *
+     * @param  ProposalRequest  $event
+     * @return void
+     */
+    public function proposalRequest(ProposalRequest $event)
+    {
+        $activity = Activity::createFromProposalRequest($event->proposal_employee);
+        Activity::create($activity);
+    }
+
+    /**
+     * Handle the event.
+     *
+     * @param  ProposalEmployeeStatus  $event
+     * @return void
+     */
+    public function proposalEmployeeStatus(ProposalEmployeeStatus $event)
+    {
+        $activity = Activity::createFromProposalEmployeeStatus($event->proposal_employee_status);
         Activity::create($activity);
     }
 

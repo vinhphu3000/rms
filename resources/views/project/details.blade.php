@@ -49,6 +49,52 @@
                     </ul>
                     <br />
 
+                                <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12" style="{{count($new_proposal) ? '' : 'display:none;' }}">
+
+
+                                                <?php foreach ($new_proposal as $key => $item): ?>
+                                                <div class="col-xs-12">
+                                                    <b>Proposal by {{$item->user->name}} {{$item->created_at->diffForHumans()}}</b>
+                                                    <div class="list-inline widget_tally" style="margin-left: 10px;">
+                                                        <?php foreach($item->getEmployeeProposal() as $emp_proposal) :?>
+                                                        <div class="col-md-12" style="margin-bottom: 8px; border-bottom: solid 1px rgba(2, 0, 5, 0.08)">
+                                                            <div class="col-md-8">
+                                                                Name: <b><a href="{{url('employee/' . $emp_proposal->employee->id)}}" >{{$emp_proposal->employee->fullname()}} </a></b>/ Role: <b>{{$emp_proposal->role->name}} </b> / Work on : <b>{{$emp_proposal->workOn()}} </b>
+                                                            </div>
+                                                            <div class="col-md-2"><a href="{{url('employee/download-cv/' . $emp_proposal->employee->getCV()['md5_name'])}}">CV</a> | <a href="{{url('employee/download-cv/' . $emp_proposal->employee->getCV()['md5_name'])}}"> History</a></div>
+                                                            <div class="col-md-2">
+                                                                <?php if ($emp_proposal->status()->status == 'Accepted' || $emp_proposal->status()->status == 'Rejected') :  ?>
+                                                                Status :<a href="#" style="color: blue"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{$emp_proposal->status()->status}}</a>
+                                                                    <?php else: ?>
+                                                                <li class="dropdown">
+                                                                    Status :<a href="#" style="color: blue"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{$emp_proposal->status()->status}}</a>
+                                                                    <ul class="dropdown-menu" role="menu">
+                                                                        <?php if ($emp_proposal->status()->status == 'New') :  ?>
+                                                                                <li><a href = "{{ url( 'proposal/employee/interview?project_id=' . $project->id . '&id=' . $emp_proposal->id ) }}">Interview request</a></li>
+                                                                                <li><a  href = "{{ url( 'proposal/employee/accept?project_id=' . $project->id . '&id=' . $emp_proposal->id ) }}">Accept book</a></li>
+                                                                                <li><a href="javascript:void(0);" class="link-popup" url = "{{ url( 'proposal/employee/reject?project_id=' . $project->id . '&id=' . $emp_proposal->id ) }}">Reject</a></li>
+                                                                        <?php endif ?>
+
+                                                                            <?php if ($emp_proposal->status()->status == 'Request Interview') :  ?>
+                                                                            <li><a  href = "{{ url( 'proposal/employee/accept?project_id=' . $project->id . '&id=' . $emp_proposal->id ) }}">Accept book</a></li>
+                                                                            <li><a  href="javascript:void(0);" class="link-popup" url = "{{ url( 'proposal/employee/reject?project_id=' . $project->id . '&id=' . $emp_proposal->id ) }}">Reject</a></li>
+                                                                            <?php endif ?>
+                                                                    </ul>
+                                                                </li>
+                                                                <?php endif; ?>
+                                                            </div>
+
+                                                        </div>
+                                                        <?php endforeach; ?>
+                                                    </div>
+                                                    <br/>
+                                                </div>
+                                                <?php endforeach; ?>
+                                        </div>
+                                    </div>
+
+<br>
                     <div id="mainb">
                         <h4>Member booking</h4>
                         <div class="col-xs-12 bg-white progress_summary">

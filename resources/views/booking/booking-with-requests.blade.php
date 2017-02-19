@@ -14,37 +14,38 @@
                                         <div class="clearfix"></div>
                                     </div>
                                     <div class="x_content">
-                                        <div>
 
-                                            <div class="form-group">
-
-                                                <div>
-                                                    {{$request->note}}
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div>
-                                            </label>
-                                            <ul class="list-inline widget_tally">
+                                            <ul class="list-inline widget_tally proposal-list">
+                                                <li class="proposal-new" style="{{count($proposal_temp) ? '' : 'display:none;' }}">
+                                                    <h4>New proposal by {{$my->name}}</h4>
+                                                    <ul class="list-inline widget_tally item">
+                                                        <?php foreach($proposal_temp as $term_item) : ?>
+                                                            <li>Name: <b>{{$term_item['employee_name']}}</b> / Role: <b>{{$term_item['role_name']}}({{$term_item['take_part_per_text']}})</b> / From <b> {{$term_item['start_date']}} </b> to <b>{{$term_item['end_date']}}</b> </li>
+                                                        <?php endforeach; ?>
+                                                    </ul>
+                                                    <br/>
+                                                    <ul  class="list-inline widget_tally">
+                                                        <li style="border: none; text-align: center;"><a href="{{ url('proposal/cancel?request_id=' . $request->id . '&project_id=' . $request->project->id) }}" class="btn btn-default">Cancel</a><a href="{{ url('proposal/send?request_id=' . $request->id . '&project_id=' . $request->project->id) }}" class="btn btn-primary">Send</a></li>
+                                                    </ul>
+                                                </li>
                                                 <?php if (count($proposal)) : ?>
                                                 <?php foreach ($proposal as $key => $item): ?>
                                                 <li>
-                                                    <b>{{$item->created_at->format('Y-m-d H:i')}} proposal by {{$item->user->name}}</b>
+                                                    <b>Proposal by {{$item->user->name}} {{$item->created_at->diffForHumans()}}</b>
                                                     <ul class="list-inline widget_tally">
                                                         <?php foreach($item->getEmployeeProposal() as $emp_proposal) :?>
-                                                        <li>Name: {{$emp_proposal->employee->fullname()}} /  Proposal role: {{$emp_proposal->role->name}} / Status: {{$emp_proposal->status}}</li>
+                                                        <li>Name: <b>{{$emp_proposal->employee->fullname()}} </b>/ Role: <b>{{$emp_proposal->role->name}}({{$emp_proposal->take_part_per}})</b> / Status: <b>{{$emp_proposal->status()->status}}</b></li>
                                                         <?php endforeach; ?>
                                                     </ul>
                                                 </li>
                                                 <?php endforeach; ?>
                                                 <?php else: ?>
-                                                <li>There are not proposal for this request! </li>
+                                                <?php if (!count($proposal_temp)) : ?>
+                                                    <li class="have-no-proposal">There are not proposal for this request! </li>
+                                                <?php endif ?>
                                                 <?php endif ?>
 
                                             </ul>
-                                        </div>
-
 
                                     </div>
                                 </div>
@@ -95,7 +96,7 @@
                                                         </div>
                                                         <div class="col-xs-12 text-right">
                                                             {{--<button type="button" class="btn btn-info btn-xs reserve"> <i class="glyphicon glyphicon-pushpin"></i> Reserve</button>--}}
-                                                            <button type="button" employee-id="{{$item->id}}" request-id="{{$request->id}}" url="{{url('booking/popup')}}" class="btn btn-primary btn-xs booking">  <i class="fa fa-plus-square"></i> Proposal</button>
+                                                            <button type="button" employee-id="{{$item->id}}" request-id="{{$request->id}}" url="{{url('booking/popup')}}" class="btn btn-primary btn-xs add-proposal">  <i class="fa fa-plus-square"></i> Proposal</button>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -1,8 +1,13 @@
 <?php namespace App\Http\Controllers;
+use App\Models\Activity;
 use App\Models\Employee;
 use App\Models\EmployeeExp;
+use App\Models\EmployeeExpMatrix;
+use App\Models\EmployeeProposal;
 use App\Models\Notification;
 use App\Models\Project;
+use App\Models\ProjectBooking;
+use App\Models\Proposal;
 use Illuminate\Support\Facades\App;
 use League\Flysystem\Exception;
 use Request;
@@ -40,6 +45,15 @@ class EmployeeController extends BaseController {
             return $next($request);
         });
 
+    }
+
+    public function profile($id)
+    {
+        $employee = EmployeeModel::find((int)$id);
+        $projects_booking = ProjectBooking::where('employee_id', $employee->id)->orderBy('created_at', 'desc')->get();
+        $skill = EmployeeExpMatrix::where('employee_id', (int)$id)->get();
+        $activity = Activity::where('employee_id', (int)$id)->orderBy('created_at','desc')->get()->take(10);
+        return view('employee.profile',['employee' => $employee, 'result' => Project::all(), 'projects_booking' => $projects_booking, 'skill' => $skill, 'activity' => $activity]);
     }
 
     public function doSearch(\Illuminate\Http\Request $request)
@@ -317,6 +331,22 @@ class EmployeeController extends BaseController {
          */
         \App\Models\EmployeeExpMatrix::where('employee_id', $employee_id)->whereNotIn('id', $id_not_deleted)->delete();
         return json_encode(['success'=>true]);
+    }
+
+    /**
+     * @param $project_id
+     * @return string
+     */
+    public function timelineData($id)
+    {
+        $employeeProposal = EmployeeProposal::where('employee_id', (int)$id)->orderBy('created_at', 'asc')->get();
+        $proposal = [];
+        foreach ($employeeProposal as $item ) {
+            $proposal[] =  ['proposal' => Proposal::find($item->proposal_id), 'employee_proposal' => $item];
+        }
+
+        $timeline_data = Employee::convertTimeline($proposal);
+        return json_encode($timeline_data);
     }
 
 

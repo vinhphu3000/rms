@@ -9,7 +9,7 @@ class EmployeeProposal extends Eloquent
 {
     protected $table = 'employee_proposal';
     protected $dates = ['created_at', 'updated_at'];
-    protected $fillable = ['role_id','start_time','end_time', 'proposal_id', 'employee_id', 'status', 'comment'];
+    protected $fillable = ['role_id','start_date','end_date', 'proposal_id', 'employee_id', 'take_part_per', 'user_id'];
 
     /**
      * Get the user record associated with the propasal.
@@ -41,6 +41,32 @@ class EmployeeProposal extends Eloquent
     public function proposal()
     {
         return $this->belongsTo('App\Models\Proposal');
+    }
+
+
+    /**
+     * Get the status record associated with the user.
+     */
+    public function status()
+    {
+        return EmployeeProposalStatus::where('employee_proposal_id', $this->id)->orderBy('created_at', 'desc')->first();
+    }
+
+    /**
+     * Get the status record associated with the user.
+     */
+    public function getAllStatus()
+    {
+        return EmployeeProposalStatus::where('employee_proposal_id', $this->id)->orderBy('created_at', 'asc')->get();
+    }
+
+    public function workOn()
+    {
+        if ($this->take_part_per == 100) {
+            return 'Fulltime';
+        }
+
+        return $this->take_part_per . '%';
     }
 
 

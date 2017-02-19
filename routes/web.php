@@ -53,6 +53,18 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/booking/official/{id}', 'BookingController@doOfficial');
     Route::get('/request', 'BookingController@listing');
     Route::get('/booking', 'BookingController@booking');
+    Route::get('/proposal/cancel', 'BookingController@proposalCancel');
+    Route::get('/proposal/send', 'BookingController@proposalSend');
+    Route::get('/proposal/employee/interview', 'BookingController@requestInterview');
+    Route::get('/proposal/employee/accept', 'BookingController@accept');
+    Route::get('/proposal/employee/reject', 'BookingController@reject');
+    Route::get('/employee/timeline-data/{id}', 'EmployeeController@timelineData');
+
+
+    Route::get('/employee/{id}', 'EmployeeController@profile');
+
+
+
 
 
 
@@ -86,6 +98,14 @@ Route::group(['middleware' => 'auth'], function () {
      */
     Route::post('/booking/add', 'BookingController@doBooking');
     Route::post('/booking/edit', 'BookingController@doEdit');
+
+    /**
+     * Update proposal
+     */
+
+    Route::post('/proposal/update', 'BookingController@doProposalUpdate');
+    Route::post('/proposal/employee/reject/confirm', 'BookingController@doReject');
+
 
 
 });

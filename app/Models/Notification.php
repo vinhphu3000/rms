@@ -52,6 +52,38 @@ class Notification extends Eloquent
     /**
      * created notification after created project
      */
+    public static function createFromProposal(EmployeeProposal $employee_proposal)
+    {
+        $project = Project::find($employee_proposal->proposal->project_id);
+        return [
+            'title' => $employee_proposal->user->name . ' have proposal ' . $employee_proposal->employee->fullName() . ' to project ' . $project->name,
+            'content' => $employee_proposal->user->name . ' have proposal ' . $employee_proposal->employee->fullName() . ' to project ' . $project->name,
+            'send_to' => $project->user->id,
+            'user_id' => $employee_proposal->user->id,
+            'link' => url('project/details/' . $project->id)
+        ];
+    }
+
+    /**
+     * created notification after created project
+     */
+    public static function createFromProposalEmployeeStatus(EmployeeProposalStatus $employee_proposal_status)
+    {
+        $employee = Employee::find($employee_proposal_status->employeeProposal->employee_id);
+        $proposal = Proposal::find($employee_proposal_status->employeeProposal->proposal_id);
+
+        return [
+            'title' => $employee_proposal_status->user->name . ' have ' . $employee_proposal_status->status . ' ' . $employee->fullName() . '  in project ' . $proposal->project->name,
+            'content' => $employee_proposal_status->user->name . ' have ' . $employee_proposal_status->status . ' ' . $employee->fullName() . '  in project ' . $proposal->project->name,
+            'send_to' => $employee_proposal_status->employeeProposal->user_id,
+            'user_id' => $employee_proposal_status->user->id,
+            'link' => url('project/details/' . $proposal->project->id)
+        ];
+    }
+
+    /**
+     * created notification after created project
+     */
     public static function createFromBooking(ProjectBooking $project_booking)
     {
         return [

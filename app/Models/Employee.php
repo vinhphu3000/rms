@@ -1,6 +1,7 @@
 <?php
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model as Eloquent;
+use Illuminate\Support\Facades\Config;
 /**
  * Employee Model class
  * @author Thieu Le Quang <quangthieuagu@gmail.com>
@@ -77,6 +78,31 @@ class Employee extends Eloquent
 
     }
 
+    public function getCV()
+    {
+        if (!empty($this->cv_file)) {
+
+            $arr = explode('_', $this->cv_file);
+            $display_cv_file_name= implode('_', array_slice($arr, 1, 3));
+            $ext = pathinfo($display_cv_file_name, PATHINFO_EXTENSION);
+            $cvFileName = md5($this->cv_file) . md5('aaaaaaawwwwqqqxxxx') . '.' . $ext;
+            return [
+                'display_name' => $display_cv_file_name,
+                'real_name' => $cvFileName,
+                'md5_name' => md5($this->cv_file) . '.' . $ext,
+                'db_name' => $this->cv_file
+            ];
+        }
+
+        return [
+            'display_name' => '',
+            'real_name' => '',
+            'md5_name' => '',
+            'db_name' => ''
+        ];
+
+    }
+
     public static function generateCVFileName($id, $ext, $format = '')
     {
         $display_cv_file_name = 'cv_file_' . date('Y-m-d-h-i-s'). '.' . $ext;
@@ -90,6 +116,38 @@ class Employee extends Eloquent
             'db_name' => $cv_db_file_name
         ];
     }
+
+    public function avatarPath()
+    {
+        if (!empty($this->avatar)) {
+            return Config::get('constants.PATH_AVATAR') . $this->avatar;
+        }
+        return Config::get('constants.PATH_AVATAR') . Config::get('constants.DEFAULT_AVATAR');
+    }
+
+    public static function convertTimeline($proposal)
+    {
+        $timeline_data = [];
+
+        foreach ($proposal as $item) {
+            $description = [];
+            $description[]= '- Be proposal to project ' . $item['proposal']->project->name . ' by ' . $item['proposal']->user->name;
+            foreach ($item['employee_proposal']->getAllStatus() as $status) {
+                $description[] = '- ' . $status->created_at->format('F d, Y') . ' be ' . $status->status . ' by ' . $status->user->name . ' ' . (!empty($status->comment) ? ' with reason : ' . $status->comment : '');
+            }
+
+            $description_text = implode('<br/>', $description);
+            $timeline_data[] = [
+                'title' => $item['proposal']->created_at->format('Y, F d'),
+                'description' => $description_text,
+                'startDate' =>  $item['proposal']->created_at->format('F m, Y h:i:s A'),
+                'endDate'=> null
+
+            ];
+        }
+        return $timeline_data;
+    }
+
 
 }
 

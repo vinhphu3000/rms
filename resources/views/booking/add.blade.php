@@ -10,7 +10,7 @@
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Project name</label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                   <strong> {{$project->name}} </strong>
+                   <strong> {{$request->project->name}} </strong>
                 </div>
             </div>
         <div class="form-group">
@@ -52,8 +52,9 @@
                 </select>
             </div>
         </div>
-        <input type="hidden" name="project_id" value="{{$project->id}}">
+        <input type="hidden" name="request_id" value="{{$request->id}}">
         <input type="hidden" name="employee_id" value="{{$employee->id}}">
+        <input type="hidden" name="employee_name" value="{{$employee->fullName()}}">
         <input type="hidden" name="start_date">
         <input type="hidden" name="end_date">
         <input type="hidden" name="_token" value="{{ csrf_token()}}">
@@ -61,53 +62,65 @@
     </form>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary btn-book-save-ajax">Booking</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+    <button type="button" class="btn btn-primary btn-ok-save-ajax">OK</button>
 </div>
 <div class="clearfix"></div>
 
 <script >
     $(function () {
         'use strict';
-        $('.btn-book-save-ajax').click( function() {
+        $('.btn-ok-save-ajax').click( function() {
+            var employee_name = $('input[name=employee_name]').val();
+            var employee_id = $('input[name=employee_id]').val();
+            var role_name = $('select[name=project_role_id] option:selected').text();
+            var role_id = $('select[name=project_role_id] option:selected').val();
+            var per = $('select[name=take_part_per] option:selected').text();
+            var per_val = $('select[name=take_part_per] option:selected').val();
+            var start_date = $('input[name=start_date]').val();
+            var end_date = $('input[name=end_date]').val();
+            var request_id = $('input[name=request_id]').val();
+            var token = $('input[name=_token]').val();
+
+            var html = '<li>Name: <b>' + employee_name + '</b> / Role: <b>' + role_name + '(' + per + ')</b> / <b>From ' + start_date + ' to ' + end_date +  '</b>   </li> ';
+
+            if ($('.have-no-proposal').length) {
+                $('.have-no-proposal').remove();
+            }
+            $("#myModal .close").click();
+
+            $('.proposal-new').show();
+            $('.proposal-new').find('.item').append(html);
+            $('div[employee=' + employee_id + ']').remove();
+
+            var data = {
+                            employee_name : employee_name,
+                            employee_id : employee_id,
+                            role_name: role_name,
+                            role_id: role_id,
+                            take_part_per: per_val,
+                            take_part_per_text: per,
+                            start_date: start_date,
+                            request_id: request_id,
+                            end_date: end_date,
+                            _token : token
+            };
             $.ajax({
-                url:'{{ url ('booking/add') }}',
-                data: $("#booking-add").serialize(),
+                url:'{{ url ('proposal/update') }}',
+                data: data,
                 async:false,
                 type:'post',
                 success:function(response) {
-                    var role = {id: $('select[name=project_role_id] option:selected').val(), name: $('select[name=project_role_id] option:selected').text()};
-                    $('div[employee=' + $('input[name=employee_id]').val() + ']').remove();
-                    $("#myModal .close").click();
-                    addRole(role);
-                    $('.booking-list').find('#role' + role.id + ' .employee-list').append(response);
+
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
-                    errorAlert('An error occurs during save data, please try again');
+                    errorAlert('An error occurs, please try again');
 
                 }
             });
+
         });
-        /**
-         * Add role
-         * @param role
-         */
-        function addRole(role)
-        {
-            if ($('.booking-list').find('#role' + role.id).length) {
-                return ;
-            }
 
-            var html = '<li id="role' + role.id + '">' +
-                '<p>' +
-                    '<span class="month" style="font-weight: bold;">' + role.name + '</span>' +
-                '</p>' +
-                '<div class="col-md-12 col-xs-12 employee-list">' +
-                '</div>' +
-            '</li>';
-
-            $('.booking-list').append(html);
-        }
 
         $('.btn-book-save').click( function() {
             $('.btn-book-save').submit();
@@ -116,8 +129,8 @@
 
         $(".select2").select2();
 
-        var start = moment();
-        var end = moment().add(1, 'months');
+        var start = moment('{{$request->start_date}}');
+        var end = moment('{{$request->end_date}}');
 
         function cb(start, end) {
             $('input[name=start_date]').val(start.format('YYYY-MM-D'));

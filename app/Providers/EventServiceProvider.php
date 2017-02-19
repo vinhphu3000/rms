@@ -24,6 +24,15 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\SendRequestNotification@createBooking',
             'App\Listeners\ActivityLog@createBooking',
         ],
+        'App\Events\ProposalRequest' => [
+            'App\Listeners\SendRequestNotification@proposalRequest',
+            'App\Listeners\ActivityLog@proposalRequest',
+        ],
+
+        'App\Events\EmployeeProposalStatus' => [
+            'App\Listeners\SendRequestNotification@proposalEmployeeStatus',
+            'App\Listeners\ActivityLog@proposalEmployeeStatus',
+        ],
     ];
 
     /**

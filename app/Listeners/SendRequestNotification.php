@@ -3,8 +3,10 @@
 namespace App\Listeners;
 
 use App\Events\CreateProject;
+use App\Events\ProposalEmployeeStatus;
 use App\Events\ResourceBooking;
 use App\Events\ResourceRequest;
+use App\Events\ProposalRequest;
 use App\Models\Notification;
 use App\Models\Project;
 use App\Models\User;
@@ -42,6 +44,37 @@ class SendRequestNotification
             Notification::create($notification);
         }
 
+    }
+
+    /**
+     * Handle the event.
+     *
+     * @param  ProposalRequest  $event
+     * @return void
+     */
+    public function proposalRequest(ProposalRequest $event)
+    {
+
+        $notification = Notification::createFromProposal($event->proposal_employee);
+        Notification::create($notification);
+
+    }
+
+
+    /**
+     * Handle the event.
+     *
+     * @param  ProposalRequest  $event
+     * @return void
+     */
+    public function proposalEmployeeStatus(ProposalEmployeeStatus $event)
+    {
+
+        $notification = Notification::createFromProject($event->proposal_employee_status);
+        foreach (User::where('type','admin')->get() as $user) {
+            $notification['sent_to'] = $user->id;
+            Notification::create($notification);
+        }
     }
 
     /**
