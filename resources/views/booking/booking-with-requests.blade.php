@@ -20,7 +20,7 @@
                                                     <h4>New proposal by {{$my->name}}</h4>
                                                     <ul class="list-inline widget_tally item">
                                                         <?php foreach($proposal_temp as $term_item) : ?>
-                                                            <li>Name: <b>{{$term_item['employee_name']}}</b> / Role: <b>{{$term_item['role_name']}}({{$term_item['take_part_per_text']}})</b> / From <b> {{$term_item['start_date']}} </b> to <b>{{$term_item['end_date']}}</b> </li>
+                                                            <li>Name: <b><a href="{{url('employee/' . $term_item['employee_id'])}}" >{{$term_item['employee_name']}}</a></b> / Role: <b>{{$term_item['role_name']}}({{$term_item['take_part_per_text']}})</b> / From <b> {{$term_item['start_date']}} </b> to <b>{{$term_item['end_date']}}</b> </li>
                                                         <?php endforeach; ?>
                                                     </ul>
                                                     <br/>
@@ -34,7 +34,7 @@
                                                     <b>Proposal by {{$item->user->name}} {{$item->created_at->diffForHumans()}}</b>
                                                     <ul class="list-inline widget_tally">
                                                         <?php foreach($item->getEmployeeProposal() as $emp_proposal) :?>
-                                                        <li>Name: <b>{{$emp_proposal->employee->fullname()}} </b>/ Role: <b>{{$emp_proposal->role->name}}({{$emp_proposal->take_part_per}})</b> / Status: <b>{{$emp_proposal->status()->status}}</b></li>
+                                                        <li>Name: <b><a href="{{url('employee/' . $emp_proposal->employee->id)}}" >{{$emp_proposal->employee->fullname()}} </a></b>/ Role: <b>{{$emp_proposal->role->name}}({{$emp_proposal->take_part_per}})</b> / Status: <b>{{$emp_proposal->status()->status}}</b></li>
                                                         <?php endforeach; ?>
                                                     </ul>
                                                 </li>

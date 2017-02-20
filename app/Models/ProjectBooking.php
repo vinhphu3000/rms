@@ -59,6 +59,17 @@ class ProjectBooking extends Eloquent
 
     }
 
+    public function getSpentDay()
+    {
+        $current = \Carbon\Carbon::now();
+        $spend_days = $current->diffInDays($this->start_date);
+        if ($spend_days <= 0) {
+            return 0;
+        }
+        return $spend_days;
+
+    }
+
     /**
      * Get the phone record associated with the user.
      */

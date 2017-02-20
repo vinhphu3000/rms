@@ -156,18 +156,8 @@
                             previousButton: $("#prev-link"),
                             showDate: false
                         });
-
-
                     }
-
                 });
-
-
-
-
-
-
-
     });
     $(document).on({
         ajaxStart: function() { $("body").addClass("loading"); },

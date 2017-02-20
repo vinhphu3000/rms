@@ -124,7 +124,7 @@
                                                 <th>#</th>
                                                 <th>Project Name</th>
                                                 <th>Client Company</th>
-                                                <th class="hidden-phone">Hours Spent</th>
+                                                <th class="hidden-phone">Day Spent</th>
                                                 <th>Contribution</th>
                                             </tr>
                                             </thead>
@@ -134,11 +134,17 @@
                                                 <td>{{$key + 1}}</td>
                                                 <td>{{$booking->project->name}}</td>
                                                 <td>{{$booking->project->client}}</td>
-                                                <td class="hidden-phone">18</td>
+                                                <td class="hidden-phone">{{$booking->getSpentDay()}}</td>
                                                 <td class="vertical-align-mid">
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-success" data-transitiongoal="35"></div>
+                                                    <div class="col-xs-12">
+                                                        <div class="progress progress_sm" >
+                                                            <div class="progress-bar progress-bar-success" role="progressbar" data-toggle="tooltip" title="{{$booking->getPerOfSpentDay()}}% of success" data-transitiongoal="{{$booking->getPerOfSpentDay()}}" style="width: {{$booking->getPerOfSpentDay()}}%;" aria-valuenow="{{$booking->getPerOfSpentDay()}}"></div>
+
+                                                        </div>
+                                                        <span class="left progress_lb_start">{{$booking->start_date->format('Y/m/d')}}</span>
+                                                        <span class="right progress_lb_end">{{$booking->end_date->format('Y/m/d')}}</span>
                                                     </div>
+
                                                 </td>
                                             </tr>
                                             <?php endforeach; ?>

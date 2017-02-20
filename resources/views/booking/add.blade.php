@@ -82,7 +82,7 @@
             var request_id = $('input[name=request_id]').val();
             var token = $('input[name=_token]').val();
 
-            var html = '<li>Name: <b>' + employee_name + '</b> / Role: <b>' + role_name + '(' + per + ')</b> / <b>From ' + start_date + ' to ' + end_date +  '</b>   </li> ';
+            var html = '<li>Name: <b><a href="{{url('employee')}}/' + employee_id + '" >' + employee_name + '</a></b> / Role: <b>' + role_name + '(' + per + ')</b> / <b>From ' + start_date + ' to ' + end_date +  '</b>   </li> ';
 
             if ($('.have-no-proposal').length) {
                 $('.have-no-proposal').remove();

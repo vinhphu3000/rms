@@ -102,7 +102,7 @@
                             <div class="col-xs-3" style="margin-right:50px;">
                                 <div class="row employee_prs">
                                     <div class="progress_title">
-                                        <span class="left">{{$item->employee->fullName()}}</span>
+                                        <span class="left"><a href="{{url('employee/' . $item->employee->id)}}" >{{$item->employee->fullName()}}</a></span>
                                         <div class="clearfix"></div>
                                     </div>
 
