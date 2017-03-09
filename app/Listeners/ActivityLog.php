@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Events\CreateProject;
+use App\Events\Project as ProjectEvent;
 use App\Events\ResourceBooking;
 use App\Events\ResourceRequest;
 use App\Events\ProposalRequest;
@@ -57,7 +57,7 @@ class ActivityLog
      * @param  Project  $event
      * @return void
      */
-    public function createProject(CreateProject $event)
+    public function createProject(ProjectEvent $event)
     {
         $activity = Activity::createFromProject($event->project);
         Activity::create($activity);

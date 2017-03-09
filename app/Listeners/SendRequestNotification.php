@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Events\CreateProject;
+use App\Events\Project as ProjectEvent;
 use App\Events\ProposalEmployeeStatus;
 use App\Events\ResourceBooking;
 use App\Events\ResourceRequest;
@@ -33,10 +33,10 @@ class SendRequestNotification
     /**
      * Handle the event.
      *
-     * @param  CreateProject  $event
+     * @param  ProjectEvent  $event
      * @return void
      */
-    public function createProject(CreateProject $event)
+    public function createProject(ProjectEvent $event)
     {
         $notification = Notification::createFromProject($event->project);
         foreach (User::where('type','admin')->get() as $user) {
