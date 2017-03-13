@@ -33,5 +33,6 @@ class User extends Eloquent
         return Config::get('constants.PATH_AVATAR') . Config::get('constants.DEFAULT_AVATAR');
     }
 
+
 }
 

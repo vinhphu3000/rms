@@ -1,5 +1,4 @@
 <?php namespace App\Http\Controllers;
-use App\Models\Activity;
 use App\Models\Employee;
 use App\Models\EmployeeExp;
 use App\Models\EmployeeExpMatrix;
@@ -8,6 +7,7 @@ use App\Models\Notification;
 use App\Models\Project;
 use App\Models\ProjectBooking;
 use App\Models\Proposal;
+use App\Models\UserActivity;
 use Illuminate\Support\Facades\App;
 use League\Flysystem\Exception;
 use Request;
@@ -52,7 +52,7 @@ class EmployeeController extends BaseController {
         $employee = EmployeeModel::find((int)$id);
         $projects_booking = ProjectBooking::where('employee_id', $employee->id)->orderBy('created_at', 'desc')->get();
         $skill = EmployeeExpMatrix::where('employee_id', (int)$id)->get();
-        $activity = Activity::where('employee_id', (int)$id)->orderBy('created_at','desc')->get()->take(10);
+        $activity = UserActivity::where('employee_id', (int)$id)->orderBy('created_at','desc')->get()->take(10);
         return view('employee.profile',['employee' => $employee, 'result' => Project::all(), 'projects_booking' => $projects_booking, 'skill' => $skill, 'activity' => $activity]);
     }
 

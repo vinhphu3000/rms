@@ -8,10 +8,10 @@ use App\Models\ProjectRequest;
  * Activity Model class
  * @author Thieu Le Quang <quangthieuagu@gmail.com>
  */
-class Activity extends Eloquent
+class UserActivity extends Eloquent
 {
     protected $table = 'user_activity';
-    protected $fillable = ['id','user_id','project_id','content','created_at','updated_at','request_id', 'employee_id', 'proposal_id', 'type'];
+    protected $fillable = ['id','user_id','project_id','content','created_at','updated_at','request_id', 'employee_id', 'proposal_id', 'type', 'proposal_employee_status_id'];
     const TYPE = ['CreateProject' => 1,
                     'ProposalRequest' => 2,
                         'ResourceBooking' => 3,
@@ -27,7 +27,8 @@ class Activity extends Eloquent
             'content' => $request->user->fullName() . ' created new request resource on ' . $request->project->name . ' project',
             'project_id' => $request->project->id,
             'user_id' => $request->user->id,
-            'request_id' => $request->id
+            'request_id' => $request->id,
+            'type' => self::TYPE['ResourceRequest']
         ];
     }
 
@@ -39,7 +40,8 @@ class Activity extends Eloquent
         return [
             'content' => $project->user->fullName() . ' created new an project ' . $project->name,
             'project_id' => $project->id,
-            'user_id' => $project->user->id
+            'user_id' => $project->user->id,
+            'type' => self::TYPE['CreateProject']
         ];
     }
 
@@ -53,7 +55,8 @@ class Activity extends Eloquent
             'project_id' => $project_booking->project_id,
             'booking_id' => $project_booking->id,
             'user_id' => $project_booking->user->id,
-            'employee_id' => $project_booking->employee_id
+            'employee_id' => $project_booking->employee_id,
+            'type' => self::TYPE['ResourceBooking']
         ];
     }
 
@@ -67,14 +70,15 @@ class Activity extends Eloquent
             'project_id' => $proposal_request->proposal->project_id,
             'proposal_id' => $proposal_request->id,
             'user_id' => $proposal_request->user->id,
-            'employee_id' => $proposal_request->employee_id
+            'employee_id' => $proposal_request->employee_id,
+            'type' => self::TYPE['ProposalRequest']
         ];
     }
 
     /**
      * created active after update status proposal
      */
-    public static function createFromProposalEmployeeStatus(EmployeeProposalStatus $proposal_employee_status)
+    public static function  createFromProposalEmployeeStatus(EmployeeProposalStatus $proposal_employee_status)
     {
         $employee = Employee::find($proposal_employee_status->employeeProposal->employee_id);
         $proposal = Proposal::find($proposal_employee_status->employeeProposal->proposal_id);
@@ -83,8 +87,10 @@ class Activity extends Eloquent
             'content' => $proposal_employee_status->user->name . ' have ' . $proposal_employee_status->status . ' ' . $employee->fullName(),
             'project_id' => $proposal->project->id,
             'proposal_id' => $proposal->id,
-            'user_id' => $proposal_employee_status->user,
-            'employee_id' => $proposal_employee_status->employeeProposal->employee_id
+            'proposal_employee_status_id' => $proposal_employee_status->id,
+            'user_id' => $proposal_employee_status->user->id,
+            'employee_id' => $proposal_employee_status->employeeProposal->employee_id,
+            'type' => self::TYPE['ProposalEmployeeStatus']
         ];
     }
 
@@ -94,9 +100,28 @@ class Activity extends Eloquent
         return $this->belongsTo('App\Models\User');
     }
 
+    public function project()
+    {
+        return $this->belongsTo('App\Models\Project');
+    }
+
     public function createdAt()
     {
         return new \DateTime($this->created_at);
+    }
+
+    /**
+     * @param $user_id
+     * @return mixed
+     */
+    public function getProposalActivity($user_id)
+    {
+        return self::leftJoin('user_activity_involved',
+                                function ($join) use ($user_id) {
+                                                $join->on('user_activity.id', '=', 'user_activity_involved.user_activity_id')
+                                                ->where('user_activity_involved.user_id', '=', $user_id)->where('user_activity_involved.read', '=', 0);
+                                }
+        )->whereIn('type', [self::TYPE['ProposalRequest'], self::TYPE['ProposalEmployeeStatus']])->get();
     }
 
 }

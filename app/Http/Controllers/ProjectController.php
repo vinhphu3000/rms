@@ -1,8 +1,8 @@
 <?php namespace App\Http\Controllers;
-use App\Events\CreateProject;
-use App\Models\Activity;
+use App\Events\Project as ProjectEvent;
 use App\Models\Notification;
 use App\Models\Proposal;
+use App\Models\UserActivity;
 use League\Flysystem\Exception;
 use App\Models\Project;
 use App\Models\ProjectRequest;
@@ -79,7 +79,7 @@ class ProjectController extends BaseController {
                 'user_id' => $this->user->id,
         ];
         $project = Project::create($project_data);
-        event(new CreateProject($project));
+        event(new ProjectEvent($project));
 
         $request_param = $request->input('request_param');
 
@@ -111,7 +111,7 @@ class ProjectController extends BaseController {
 
         $booking = ProjectBooking::where('project_id', (int)$id)->where('remove', 0)->get();
 
-        $activity = Activity::where('project_id', (int)$id)->orderBy('created_at','desc')->get()->take(10);
+        $activity = UserActivity::where('project_id', (int)$id)->orderBy('created_at','desc')->get()->take(10);
         return view('project.details', ['project' => $project, 'result' => $projects, 'activity' => $activity, 'booking' => $booking, 'new_proposal' => $new_proposal]);
     }
 

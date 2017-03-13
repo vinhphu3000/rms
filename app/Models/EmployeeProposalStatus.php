@@ -19,13 +19,6 @@ class EmployeeProposalStatus extends Eloquent
         return $this->belongsTo('App\Models\User');
     }
 
-    /**
-     * Get the role record associated with the user.
-     */
-    public function role()
-    {
-        return $this->belongsTo('App\Models\ProjectRole', 'role_id');
-    }
 
     /**
      * Get the employee record associated with the user.

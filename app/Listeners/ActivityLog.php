@@ -7,8 +7,10 @@ use App\Events\ResourceBooking;
 use App\Events\ResourceRequest;
 use App\Events\ProposalRequest;
 use App\Events\ProposalEmployeeStatus;
-use App\Models\Activity;
 use App\Models\Project;
+use App\Models\User;
+use App\Models\UserActivity;
+use App\Models\UserActivityInvolved;
 use Faker\Provider\cs_CZ\DateTime;
 
 class ActivityLog
@@ -22,8 +24,13 @@ class ActivityLog
      */
     public function resourceRequest(ResourceRequest $event)
     {
-        $activity = Activity::createFromRequest($event->request);
-        Activity::create($activity);
+        $activity = UserActivity::createFromRequest($event->request);
+        $user_activity = UserActivity::create($activity);
+
+        foreach (User::where('type','admin')->get() as $user) {
+            UserActivityInvolved::create(['user_activity_id' => $user_activity->id, 'user_id' => $user->id]);
+        }
+
     }
 
     /**
@@ -34,8 +41,9 @@ class ActivityLog
      */
     public function proposalRequest(ProposalRequest $event)
     {
-        $activity = Activity::createFromProposalRequest($event->proposal_employee);
-        Activity::create($activity);
+        $activity = UserActivity::createFromProposalRequest($event->proposal_employee);
+        $user_activity = UserActivity::create($activity);
+        UserActivityInvolved::create(['user_activity_id' => $user_activity->id, 'user_id' => $user_activity->project->user_id]);
     }
 
     /**
@@ -46,8 +54,9 @@ class ActivityLog
      */
     public function proposalEmployeeStatus(ProposalEmployeeStatus $event)
     {
-        $activity = Activity::createFromProposalEmployeeStatus($event->proposal_employee_status);
-        Activity::create($activity);
+        $activity = UserActivity::createFromProposalEmployeeStatus($event->proposal_employee_status);
+        $user_activity = UserActivity::create($activity);
+        UserActivityInvolved::create(['user_activity_id' => $user_activity->id, 'user_id' => $user_activity->project->user_id]);
     }
 
 
@@ -59,20 +68,25 @@ class ActivityLog
      */
     public function createProject(ProjectEvent $event)
     {
-        $activity = Activity::createFromProject($event->project);
-        Activity::create($activity);
+        $activity = UserActivity::createFromProject($event->project);
+
+        $user_activity = UserActivity::create($activity);
+        foreach (User::where('type','admin')->get() as $user) {
+            UserActivityInvolved::create(['user_activity_id' => $user_activity->id, 'user_id' => $user->id]);
+        }
    }
 
     /**
      * Handle the event.
      *
-     * @param  Project  $event
+     * @param  ResourceBooking  $event
      * @return void
      */
     public function createBooking(ResourceBooking $event)
     {
-        $activity = Activity::createFromBooking($event->booking);
-        Activity::create($activity);
+        $activity = UserActivity::createFromBooking($event->booking);
+        $user_activity = UserActivity::create($activity);
+        UserActivityInvolved::create(['user_activity_id' => $user_activity->id, 'user_id' => $user_activity->project->user_id]);
     }
 
 
