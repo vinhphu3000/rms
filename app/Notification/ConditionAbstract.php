@@ -8,13 +8,16 @@ namespace App\Notification;
 abstract class ConditionAbstract
 {
 
+
     abstract protected function getResource();
 
     abstract protected function getParam();
 
-    abstract protected function getLogicList();
+    abstract protected static function getEventList();
 
     abstract protected function getLogic();
+
+    abstract protected function getEvent();
 
     /**
      * Get logic list
@@ -43,6 +46,31 @@ abstract class ConditionAbstract
             return $this->{$logic_list[$logic]}();
         }
         return false;
+    }
+
+    /**
+     * @return null
+     */
+    public function getFuncLogic()
+    {
+        $list_logic = $this->getLogicList();
+        if (isset($list_logic[$this->getLogic()]['logic_func'])) {
+            return $list_logic[$this->getLogic()]['logic_func'];
+        }
+        return null;
+    }
+
+    /**
+     * @return array
+     */
+    public function getLogicList()
+    {
+        $list_event = self::getEventList();
+        if (isset($list_event[$this->getEvent()]['logicList'])) {
+            return $list_event[$this->getEvent()]['logicList'];
+        }
+
+        return [];
     }
 
     /**

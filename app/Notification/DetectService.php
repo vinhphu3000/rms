@@ -5,14 +5,27 @@ namespace App\Notification;
  * @author Thieu.LeQuang <quangthieuagu@gmail.com>
  */
 
+use App\Models\UserNotificationConfig;
+
 class DetectService
 {
 
     private $_condition;
+    private $_config_data;
 
-    public function setCondition($condition)
+    public function __construct($user_id)
     {
-        $this->_condition = $condition;
+
+    }
+
+    public function setConfig(UserNotificationConfig $config)
+    {
+        $this->_config_data = $config;
+    }
+
+    public function start()
+    {
+
     }
 
 }

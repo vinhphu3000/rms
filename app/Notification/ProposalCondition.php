@@ -27,12 +27,25 @@ class ProposalCondition extends ConditionAbstract
 
     }
 
-    public static function child()
+    public static function getEventList()
     {
         return [
-                'new_proposal'                       => 'When add new',
+                'proposal'              => [
+                                                    'title' => 'Proposal',
+                                                    'logicList' => [
+                                                                        'new' => [
+                                                                                    'title' => 'Add new',
+                                                                                    'logic_func' => 'newProposal',
+                                                                                    'param' => false,
+                                                                        ],
+                                                                        'expire' => [
+                                                                                    'title' => 'Add new over time (hours)',
+                                                                                    'logic_func' => 'expireProposal',
+                                                                                    'param' => true,
+                                                                        ]
+                                                                    ]
+                                                ],
                 'proposal_employee_status'  => 'When change status of employee',
-                'proposal_expire'                    => 'When expire'
         ];
     }
 
@@ -52,62 +65,20 @@ class ProposalCondition extends ConditionAbstract
         return $this->_condition_data->logic;
     }
 
+    public function getEvent()
+    {
+        return $this->_condition_data->event;
+    }
+
 
     public function newProposal()
     {
-        $this->_logic->setResource();
-        return $this->_logic->check($this->_condition_data);
+
     }
 
-    public function listen_expire()
-    {
-        return $this->_condition->check($this->_condition_data);
-    }
 
-    /**
-     *
-     */
-    public function sendMailNotification()
+    public function proposalExpire()
     {
 
     }
-
-    public function showPopupNotification()
-    {
-
-    }
-
-    /**
-     * Get logic list
-     * @return array
-     */
-    public function getLogicList()
-    {
-        return [
-            '=' => 'equal',
-            '>' => 'bigger',
-            '<' => 'less',
-            '>=' => 'biggerOrEqual',
-            '<=' => 'lessOrEqual'
-        ];
-    }
-
-    /**
-     * Get action list
-     * @return array
-     */
-    public function getActionList()
-    {
-        return [ 'show_popup' => 'showPopupNotification','send_mail' => 'sendMailNotification'];
-    }
-
-    /**
-     * Get sub event
-     * @return array
-     */
-    public function getSubEvent()
-    {
-        return [ 'status' => 'Proposal Status', 'expire' => 'Proposal Expire'];
-    }
-
 }
