@@ -114,15 +114,27 @@ class UserActivity extends Eloquent
      * @param $user_id
      * @return mixed
      */
-    public function getProposalActivity($user_id)
+    public function getNewProposalActivity($user_id)
     {
-        return self::leftJoin('user_activity_involved',
-                                function ($join) use ($user_id) {
-                                                $join->on('user_activity.id', '=', 'user_activity_involved.user_activity_id')
-                                                ->where('user_activity_involved.user_id', '=', $user_id)->where('user_activity_involved.read', '=', 0);
-                                }
-        )->whereIn('type', [self::TYPE['ProposalRequest'], self::TYPE['ProposalEmployeeStatus']])->get();
+        $in_id = UserActivityInvolved::getAllActivityIdByUser($user_id);
+        return self::where('type', self::TYPE['ProposalRequest'])->whereIn('id',$in_id) ->get();
     }
+
+
+    public function getSpentHoursFromAtCreated()
+    {
+        $current = \Carbon\Carbon::now();
+        return $current->diffInHours($this->created_at);
+
+    }
+
+    public function getSpentDaysFromAtCreated()
+    {
+        $current = \Carbon\Carbon::now();
+        return $current->diffInDays($this->created_at);
+    }
+
+
 
 }
 

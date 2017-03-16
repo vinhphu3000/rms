@@ -52,7 +52,7 @@ class ProposalCondition extends ConditionAbstract
 
     public function getResource()
     {
-        return UserActivity::getProposalActivity(Auth::getAuthInfo()->id);
+        return null;
     }
 
     public function getParam()
@@ -73,12 +73,29 @@ class ProposalCondition extends ConditionAbstract
 
     public function newProposal()
     {
+        $user_new_proposal_activity = UserActivity::getNewProposalActivity($this->_condition_data->user_id);
 
+        if (!count($user_new_proposal_activity)) {
+            return false;
+        }
+
+        return true;
     }
 
-
+    /**
+     * @return bool
+     */
     public function proposalExpire()
     {
+        $in_id = UserActivityInvolved::getAllActivityIdByUser($this->_condition_data->user_id);
+        $user_activity = UserActivity::whereIn('id',$in_id)->where('type', self::TYPE['ProposalRequest'])->get();
+        $proposal_over = [];
+        foreach ($user_activity as $item) {
+            if ($item->getSpentHoursFromAtCreated() > $this->getParam()) {
+                $proposal_over[] = $item->proposal_id;
+            }
+        }
 
+        return count($proposal_over) ?  true : false;
     }
 }

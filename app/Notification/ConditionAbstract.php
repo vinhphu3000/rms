@@ -40,11 +40,8 @@ abstract class ConditionAbstract
      */
     public function check()
     {
-        $logic = $this->getLogic();
-        $logic_list = $this->getLogicList();
-        if (in_array($logic, array_keys($logic_list))) {
-            return $this->{$logic_list[$logic]}();
-        }
+        $logic_func = $this->getFuncLogic();
+        return $this->{$logic_func}();
         return false;
     }
 
