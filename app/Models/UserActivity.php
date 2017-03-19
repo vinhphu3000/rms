@@ -120,6 +120,19 @@ class UserActivity extends Eloquent
         return self::where('type', self::TYPE['ProposalRequest'])->whereIn('id',$in_id) ->get();
     }
 
+    /**
+     * @return array
+     */
+    public function getAllUserInvolved()
+    {
+        $user_activity_involved = UserActivityInvolved::where('user_activity_id', $this->id);
+        $users = [];
+        foreach ($user_activity_involved as $item) {
+            $users[] = $item->user;
+        }
+        return $users;
+    }
+
 
     public function getSpentHoursFromAtCreated()
     {

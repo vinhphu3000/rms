@@ -6,27 +6,24 @@ namespace App\Notification;
  */
 use App\Models\UserActivity;
 use App\Models\UserActivityInvolved;
-use App\Notification\ConditionAbstract;
-use App\Authentication\Service as Auth;
 
 class ProposalCondition extends ConditionAbstract
 {
 
     private $_condition_data;
 
+    /**
+     * ProposalCondition constructor.
+     * @param UserNotificationCondition $condition
+     */
     public function __construct(UserNotificationCondition $condition)
     {
         $this->_condition_data = $condition;
     }
 
     /**
-     * initialize
+     * @return array
      */
-    public function init()
-    {
-
-    }
-
     public static function getEventList()
     {
         return [
@@ -79,6 +76,8 @@ class ProposalCondition extends ConditionAbstract
             return false;
         }
 
+        $this->_result = $user_new_proposal_activity;
+
         return true;
     }
 
@@ -89,13 +88,17 @@ class ProposalCondition extends ConditionAbstract
     {
         $in_id = UserActivityInvolved::getAllActivityIdByUser($this->_condition_data->user_id);
         $user_activity = UserActivity::whereIn('id',$in_id)->where('type', self::TYPE['ProposalRequest'])->get();
-        $proposal_over = [];
+        $user_proposal_activity_over = [];
         foreach ($user_activity as $item) {
             if ($item->getSpentHoursFromAtCreated() > $this->getParam()) {
-                $proposal_over[] = $item->proposal_id;
+                $user_proposal_activity_over[] = $item;
             }
         }
 
-        return count($proposal_over) ?  true : false;
+        $this->_result = $user_proposal_activity_over;
+
+        return count($user_proposal_activity_over) ?  true : false;
     }
+
+
 }

@@ -19,6 +19,8 @@ abstract class ConditionAbstract
 
     abstract protected function getEvent();
 
+    protected $_result;
+
     /**
      * Get logic list
      * @return array
@@ -68,6 +70,11 @@ abstract class ConditionAbstract
         }
 
         return [];
+    }
+
+    public function getResultData()
+    {
+        return $this->_result ? $this->_result : null;
     }
 
     /**
