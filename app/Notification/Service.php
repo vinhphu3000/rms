@@ -1,6 +1,5 @@
 <?php
 namespace App\Notification;
-use App\Models\UserActivity;
 use App\Models\UserNotificationCondition;
 use App\Models\UserNotificationConfig;
 use App\Models\UserNotificationMessage;

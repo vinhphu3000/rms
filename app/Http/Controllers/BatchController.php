@@ -37,14 +37,13 @@ class BatchController extends BaseController {
     }
 
     /**
-     *  scan message
+     *  Scan message
      */
     public function scanMessage()
     {
         $notification_service = new \App\Notification\Service();
-        $notification_service->scanForMessage($this->user_id);
+        $notification_service->scanForMessage($this->user->id);
 
     }
-
 
 }
