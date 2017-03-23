@@ -31,6 +31,11 @@ class Service
 
 
     /**
+     * @return array
+     */
+    public static $_event_list = ['project', 'proposal', 'employee', 'CV'];
+
+    /**
      * Scan for event to notification
      * @param null $user_id
      */

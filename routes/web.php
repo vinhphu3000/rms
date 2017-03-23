@@ -106,6 +106,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/proposal/update', 'BookingController@doProposalUpdate');
     Route::post('/proposal/employee/reject/confirm', 'BookingController@doReject');
 
+    /**
+     * Config Notification
+     */
+    Route::get('/config/notification', 'UserController@configNotification');
+
 
 
 });

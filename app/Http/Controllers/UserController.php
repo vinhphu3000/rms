@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 use App\Models\Notification;
 use App\Models\User;
+use App\Models\UserNotificationConfig;
+use App\Notification\Service;
 use Request;
 use Mail;
 use Session;
@@ -108,9 +110,15 @@ class UserController extends Controller {
 
     }
 
-    public function notification()
+    public function configNotification()
     {
+       $notify = UserNotificationConfig::where('user_id', $this->user->id)->get();
+        return view('user.notify-config', ['result' => $notify]);
+    }
 
+    public function addConfigNotification()
+    {
+        return view('user.notify-config', ['event' => Service::$_event_list]);
     }
 
     /**
