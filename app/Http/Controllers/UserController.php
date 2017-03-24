@@ -121,6 +121,11 @@ class UserController extends Controller {
         return view('user.notify-config', ['event' => Service::$_event_list]);
     }
 
+    public function addConfigNotificationPopup()
+    {
+        return view('user.popup-add-notify-config', ['event' => Service::$_event_list]);
+    }
+
     /**
      * listing action
      */

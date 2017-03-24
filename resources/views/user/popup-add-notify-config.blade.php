@@ -98,17 +98,6 @@
     $(function () {
         'use strict';
 
-        $('.date-picker').daterangepicker({
-            singleDatePicker: true,
-            locale: {
-                format: 'YYYY-MM-DD'
-            },
-            calender_style: "picker_4"
-        }, function(start, end, label) {
-            console.log(start.toISOString(), end.toISOString(), label);
-        });
-
-
         $(".select2_multiple").select2({
             maximumSelectionLength: 4,
             placeholder: "Select skill of request",
