@@ -9,7 +9,7 @@
                     <div class="x_title">
                         <h2>User notification <small>Config</small></h2>
                         <ul class="nav navbar-right panel_toolbox">
-                            <li><button type="button" class="btn btn-trans link-popup" url="{{ url('config/notification/add-popup') }}"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i> New config</button>
+                            <li><button type="button" class="btn btn-trans link-popup" url="{{ url('notification/config/add-popup') }}"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i> New config</button>
                             </li>
 
 

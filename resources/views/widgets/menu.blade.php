@@ -3,7 +3,7 @@
 		<ul class="nav side-menu">
 			<li {{ (Request::is('dash') ? 'class="active"' : '') }} ><a href="{{ url ('user') }}"><i class="fa fa-user"></i> User </a></li>
 			<li {{ (Request::is('employee') ? 'class="active"' : '') }} ><a href="{{ url ('employee') }}"><i class="fa fa-users"></i> Employee</a></li>
-			<li {{ (Request::is('config/notification') ? 'class="active"' : '') }} ><a href="{{ url ('config/notification') }}"><i class="fa fa-bell"></i> Notification</a></li>
+			<li {{ (Request::is('notification/config') ? 'class="active"' : '') }} ><a href="{{ url ('notification/config') }}"><i class="fa fa-bell"></i> Notification</a></li>
 		</ul>
 	</div>
 </div>

@@ -33,7 +33,7 @@ class Service
     /**
      * @return array
      */
-    public static $_event_list = ['project', 'proposal', 'employee', 'CV'];
+    public static $_event_list = ['proposal','project',  'employee', 'CV'];
 
     /**
      * Scan for event to notification
@@ -56,7 +56,7 @@ class Service
 
             foreach ($conditions_data as $condition) {
 
-                $condition_class_name = $this->getMapConditionClass($condition->event);
+                $condition_class_name = self::getMapConditionClass($condition->event);
                 $condition_object = new $condition_class_name($condition);
 
                 $checked_status = $condition_object->check();
@@ -72,7 +72,7 @@ class Service
             if ($is_action) {
 
                 foreach ( $notification_msg as $event => $msg ) {
-                    $msg_class_name = $this->getMapMessageClass( $event );
+                    $msg_class_name = self::getMapMessageClass( $event );
                     $service_msg= new $msg_class_name( $msg, self::$_action_list[$config->action]['func_msg_default'], $condition->user_id );
                     $this->storageMessage( $service_msg->buildMessage() );
                 }
@@ -130,10 +130,11 @@ class Service
      * @param $condition_name
      * @return string | null
      */
-    public function getMapConditionClass($condition_name)
+    private static function getMapConditionClass($condition_name)
     {
         $mapping = [
                     'proposal' => 'App\Notification\ProposalCondition',
+                    'project' => 'App\Notification\ProjectCondition',
                     'proposal_employee_status' => 'App\Notification\ProposalCondition',
         ];
 
@@ -149,7 +150,7 @@ class Service
      * @param $event
      * @return null | string
      */
-    public function getMapMessageClass($event)
+    private static function getMapMessageClass($event)
     {
         $mapping = [
             'proposal' => 'App\Notification\ProposalMessage',
@@ -160,6 +161,16 @@ class Service
         }
 
         return null;
+    }
+
+    /**
+     * @param $event
+     * @return mixed
+     */
+    public static function getLogicList($event)
+    {
+        $condition_class_name = self::getMapConditionClass($event);
+        return $condition_class_name::getEventList()[$event];
     }
 
 }

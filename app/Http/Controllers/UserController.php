@@ -110,22 +110,6 @@ class UserController extends Controller {
 
     }
 
-    public function configNotification()
-    {
-       $notify = UserNotificationConfig::where('user_id', $this->user->id)->get();
-        return view('user.notify-config', ['result' => $notify]);
-    }
-
-    public function addConfigNotification()
-    {
-        return view('user.notify-config', ['event' => Service::$_event_list]);
-    }
-
-    public function addConfigNotificationPopup()
-    {
-        return view('user.popup-add-notify-config', ['event' => Service::$_event_list]);
-    }
-
     /**
      * listing action
      */

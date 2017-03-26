@@ -109,8 +109,9 @@ Route::group(['middleware' => 'auth'], function () {
     /**
      * Config Notification
      */
-    Route::get('/config/notification', 'UserController@configNotification');
-    Route::get('/config/notification/add-popup', 'UserController@addConfigNotificationPopup');
+    Route::get('/notification/config', 'NotificationController@config');
+    Route::get('/notification/config/add-popup', 'NotificationController@addConfigPopup');
+    Route::get('/notification/condition', 'NotificationController@loadCondition');
 
 
 
