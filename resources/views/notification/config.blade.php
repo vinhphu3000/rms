@@ -29,7 +29,7 @@
                                     <th>
                                         Updated at
                                     </th>
-
+                                    <th></th>
 
                                 </tr>
                                 </thead>
@@ -38,6 +38,7 @@
                                     <tr>
                                         <td>{{$item->description}}</td>
                                         <td>{{\Carbon\Carbon::parse($item->updated_at)->diffForHumans()}}</td>
+                                        <td><button type="button" class="btn btn-trans link-popup" url="{{ url('notification/config/edit-popup?id=' . $item->id) }}"><i class="glyphicon glyphicon-edit" aria-hidden="true"></i>Edit</button></td>
                                     </tr>
                                 <?php endforeach; ?>
                                 </tbody>

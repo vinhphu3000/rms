@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 class UserNotificationConfig extends Eloquent
 {
    protected $table = 'user_notification_config';
-
+   protected $fillable = ['id','description','all_is_net','user_id','action','action_param','created_at','updated_at'];
     /**
      * Get the phone record associated with the user.
      */

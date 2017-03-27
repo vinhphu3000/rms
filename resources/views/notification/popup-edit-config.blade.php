@@ -10,7 +10,7 @@
             <div class="form-group">
                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Description<span class="required">*</span></label>
                 <div class="col-md-9 col-sm-9 col-xs-12">
-                    <textarea class="form-control required-input" name="description" rows="3" cols="60"></textarea>
+                    <textarea class="form-control required-input" name="description" rows="3" cols="60"><?php echo $config->description ?></textarea>
                 </div>
             </div>
 
@@ -21,12 +21,13 @@
                 <div class="col-md-9 col-sm-9 col-xs-12">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" checked value="1" onclick="if(this.checked) this.value=1;else this.value=0" name="all_is_net" class="flat send-request-resource">
+                            <input type="checkbox" <?php echo $config->all_is_net ? 'checked value="1"' : 'value = "0" ' ?> onclick="if(this.checked) this.value=1;else this.value=0" name="all_is_net" class="flat send-request-resource">
                         </label>
                     </div>
                 </div>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token()}}">
+            <input type="hidden" name="id" value="{{ $config->id }}">
             <input type="hidden" name="condition_param">
             <input type="hidden" name="action_param">
 
@@ -65,27 +66,29 @@
                 </td>
                 <td><a href="javascript:void(0);" class="condition-remove" ><i class="fa fa-minus-square-o"></i></a></td>
             </tr>
+            <?php foreach ($conditions as $condition) : ?>
             <tr>
                 <td >
                     <select class="event form-control" name="event">
                         <?php foreach($event as $item) : ?>
-                        <option value="<?php echo $item ?>"><?php echo $item ?></option>
+                        <option <?php echo $condition->event == $item ? 'selected' : '' ?> value="<?php echo $item ?>"><?php echo $item ?></option>
                         <?php endforeach; ?>
                     </select>
                 </td>
                 <td >
                     <select name="logic" class="logic form-control">
-                        <?php foreach($default_condition_list['logicList'] as $key => $item) : ?>
-                        <option param="<?php echo $item['param'] ?>" value="<?php echo $key ?>"><?php echo $item['title'] ?></option>
+                        <?php foreach($condition->getLogicList()['logicList'] as $key => $item) : ?>
+                        <option <?php echo $condition->logic == $key ? 'selected' : '' ?>  param="<?php echo $item['param'] ?>" value="<?php echo $key ?>"><?php echo $item['title'] ?></option>
                         <?php endforeach; ?>
                     </select>
                 </td>
                 <td>
-                    <input name="param" style="{{!$default_condition_param ? 'display:none;' : ''}}" type="text"/>
+                    <input name="param" value="<?php echo $condition->param ?>" style="{{!$condition->getLogicList()['logicList'][$condition->logic]['param'] ? 'display:none;' : ''}}" type="text"/>
                 </td>
 
                 <td><a href="javascript:void(0);" class="role-request-remove" ><i class="fa fa-minus-square-o"></i></a></td>
             </tr>
+            <?php endforeach; ?>
             </tbody>
         </table>
     </div>
@@ -96,7 +99,7 @@
             <div class="col-md-9 col-sm-9 col-xs-12">
                 <select class="form-control" name="action">
                     <?php foreach($action as $key => $item) : ?>
-                    <option value="<?php echo $key ?>"><?php echo $item['title'] ?></option>
+                    <option <?php echo $config->action == $key ? 'selected' : '' ?>  value="<?php echo $key ?>"><?php echo $item['title'] ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
@@ -230,7 +233,6 @@
             });
             if (condition_param.length) {
                 $('input[name=condition_param]').val(JSON.stringify(condition_param));
-
             }
 
             $('.add-config-notify').submit();
