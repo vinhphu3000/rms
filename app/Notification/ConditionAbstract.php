@@ -13,7 +13,7 @@ abstract class ConditionAbstract
 
     abstract protected function getParam();
 
-    abstract protected static function getEventList();
+    abstract protected function getEventList();
 
     abstract protected function getLogic();
 
@@ -64,7 +64,7 @@ abstract class ConditionAbstract
      */
     public function getLogicList()
     {
-        $list_event = self::getEventList();
+        $list_event = $this->getEventList();
         if (isset($list_event[$this->getEvent()]['logicList'])) {
             return $list_event[$this->getEvent()]['logicList'];
         }

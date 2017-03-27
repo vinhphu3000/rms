@@ -1,7 +1,7 @@
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
     </button>
-    <h4 class="modal-title" id="myModalLabel"><span class="fa fa-plus-circle"></span>  Add config</h4>
+    <h4 class="modal-title" id="myModalLabel"><span class="fa fa-plus-circle"></span>  Update config</h4>
 </div>
 
 <div class="modal-body">
@@ -86,7 +86,7 @@
                     <input name="param" value="<?php echo $condition->param ?>" style="{{!$condition->getLogicList()['logicList'][$condition->logic]['param'] ? 'display:none;' : ''}}" type="text"/>
                 </td>
 
-                <td><a href="javascript:void(0);" class="role-request-remove" ><i class="fa fa-minus-square-o"></i></a></td>
+                <td><a href="javascript:void(0);" class="condition-remove" ><i class="fa fa-minus-square-o"></i></a></td>
             </tr>
             <?php endforeach; ?>
             </tbody>

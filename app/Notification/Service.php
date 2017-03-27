@@ -39,7 +39,7 @@ class Service
      * Scan for event to notification
      * @param null $user_id
      */
-    public function scanForMessage($user_id = null)
+    public static function scanForMessage($user_id = null)
     {
         if ($user_id) {
             $notification_configs = UserNotificationConfig::where('user_id', $user_id)->get();
@@ -49,7 +49,7 @@ class Service
 
         foreach ($notification_configs as $config) {
 
-            $conditions_data = UserNotificationCondition::where('user_notification_config_id', $config->id);
+            $conditions_data = UserNotificationCondition::where('user_notification_config_id', $config->id)->get();
 
             $is_action = false;
             $notification_msg = [];
@@ -57,8 +57,8 @@ class Service
             foreach ($conditions_data as $condition) {
 
                 $condition_class_name = self::getMapConditionClass($condition->event);
-                $condition_object = new $condition_class_name($condition);
 
+                $condition_object = new $condition_class_name($condition);
                 $checked_status = $condition_object->check();
                 $is_action = $config->is_all_net ? ($is_action && $checked_status) : ($is_action || $checked_status);
                 if ($checked_status && $condition_object->getResultData() != null) {
@@ -74,7 +74,7 @@ class Service
                 foreach ( $notification_msg as $event => $msg ) {
                     $msg_class_name = self::getMapMessageClass( $event );
                     $service_msg= new $msg_class_name( $msg, self::$_action_list[$config->action]['func_msg_default'], $condition->user_id );
-                    $this->storageMessage( $service_msg->buildMessage() );
+                    self::storageMessage( $service_msg->buildMessage() );
                 }
             }
         }
@@ -99,13 +99,14 @@ class Service
     /**
      * Return json to show inline red
      */
-    public function inlineRedAction()
+    public static function inlineRedAction($user_id)
     {
         $inline_item = [];
-        foreach (UserNotificationMessage::where('has_send', 0)->get() as $item) {
+        foreach (UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->get() as $item) {
+
             $inline_item[] = [
                 'link' => 'proposal/' . $item->propsal_id,
-                'title' => $item->title
+                'title' => $item->message
             ];
 
         }
@@ -117,7 +118,7 @@ class Service
      * Storage message to database
      * @param $messages
      */
-    public function storageMessage($messages)
+    public static function storageMessage($messages)
     {
         foreach ($messages as $item ) {
             UserNotificationMessage::create($item);

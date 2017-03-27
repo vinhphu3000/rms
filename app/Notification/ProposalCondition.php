@@ -6,6 +6,7 @@ namespace App\Notification;
  */
 use App\Models\UserActivity;
 use App\Models\UserActivityInvolved;
+use App\Models\UserNotificationCondition;
 
 class ProposalCondition extends ConditionAbstract
 {
@@ -24,7 +25,7 @@ class ProposalCondition extends ConditionAbstract
     /**
      * @return array
      */
-    public static function getEventList()
+    public function getEventList()
     {
         return [
                 'proposal'              => [

@@ -114,7 +114,7 @@ class UserActivity extends Eloquent
      * @param $user_id
      * @return mixed
      */
-    public function getNewProposalActivity($user_id)
+    public static function getNewProposalActivity($user_id)
     {
         $in_id = UserActivityInvolved::getAllActivityIdByUser($user_id);
         return self::where('type', self::TYPE['ProposalRequest'])->whereIn('id',$in_id) ->get();

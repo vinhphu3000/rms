@@ -24,7 +24,7 @@ class ProjectCondition extends ConditionAbstract
     /**
      * @return array
      */
-    public static function getEventList()
+    public function getEventList()
     {
         return [
                 'project'              => [

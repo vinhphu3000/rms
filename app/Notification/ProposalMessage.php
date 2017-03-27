@@ -24,7 +24,7 @@ class ProposalMessage
      */
     public function buildMessage()
     {
-        $action_function_name = $this>_action . 'BuildMsg';
+        $action_function_name = $this->_action . 'BuildMsg';
        return $this->{$action_function_name}();
     }
 
@@ -33,7 +33,7 @@ class ProposalMessage
      */
     public function sendMailBuildMsg()
     {
-        return $this->baseBuildMsg('email', 'New proposal have created');
+        return $this->baseBuildMsg('email');
     }
 
     /**
@@ -41,7 +41,7 @@ class ProposalMessage
      */
     public function popupBuildMsg()
     {
-        return $this->baseBuildMsg('Popup', 'New proposal have created');
+        return $this->baseBuildMsg('Popup');
     }
 
     /**
@@ -49,7 +49,7 @@ class ProposalMessage
      */
     public function inlineRedBuildMsg()
     {
-        return $this->baseBuildMsg('inline red', 'New proposal have created');
+        return $this->baseBuildMsg('inline red');
     }
 
     /**
@@ -58,18 +58,17 @@ class ProposalMessage
      * @param array $param
      * @return array
      */
-    public function baseBuildMsg($title, $message = null, $param = [])
+    public function baseBuildMsg($title, $param = '')
     {
         $msg = [];
 
         foreach ($this->_resource as $item) {
-
             $msg[] = [
-                'function' => $this>_action,
+                'function' => $this->_action,
                 'title' => $title,
                 'params' => $param,
                 'send_to' => $this->_user_id,
-                'message' => $message,
+                'message' => $item->content,
                 'user_activity_id' => $item->id,
             ];
         }

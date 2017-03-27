@@ -87,6 +87,17 @@ class NotificationController extends Controller {
         return json_encode($list);
     }
 
+    public function scanNotify()
+    {
+        Service::scanForMessage($this->user->id);
+        return null;
+    }
+
+    public function getInlineRedMessage()
+    {
+        return Service::inlineRedAction($this->user->id);
+    }
+
     public function doSaveConfig(\Illuminate\Http\Request $request)
     {
         $id = $request->input('id');

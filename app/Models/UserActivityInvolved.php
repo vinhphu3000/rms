@@ -26,7 +26,7 @@ class UserActivityInvolved extends Eloquent
         return $this->belongsTo('App\Models\UserActivity');
     }
 
-    public function getAllActivityIdByUser($user_id)
+    public static function getAllActivityIdByUser($user_id)
     {
         $user_activity_involed = self::where('user_id', $user_id)->where('read', 0)->get();
         $activity_id = [];
