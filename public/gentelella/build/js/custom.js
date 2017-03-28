@@ -168,11 +168,6 @@ $(document).ready(function() {
 });
 // /Tooltip
 
-// Progressbar
-if ($(".progress .progress-bar")[0]) {
-    $('.progress .progress-bar').progressbar();
-}
-// /Progressbar
 
 // Switchery
 $(document).ready(function() {
@@ -265,18 +260,9 @@ $(document).ready(function() {
             $expand.text("+");
         }
     });
+
 });
 
-// NProgress
-if (typeof NProgress != 'undefined') {
-    $(document).ready(function () {
-        NProgress.start();
-    });
-
-    $(window).load(function () {
-        NProgress.done();
-    });
-}
 
 /**
  * extend event show/hide
@@ -305,5 +291,6 @@ $('.info-number').click(function(){
         }
     });
 });
+
 })(jQuery);
 

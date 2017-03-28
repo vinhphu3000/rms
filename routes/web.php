@@ -115,6 +115,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/notification/config/edit-popup', 'NotificationController@editConfigPopup');
     Route::get('/notification/scan', 'NotificationController@scanNotify');
     Route::get('/notification/get-red-inline-message', 'NotificationController@getInlineRedMessage');
+    Route::get('/notification/get-popup-message', 'NotificationController@getPopupMessage');
+
 
 
     Route::post('/notification/config/add', 'NotificationController@doSaveConfig');

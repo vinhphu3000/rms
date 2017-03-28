@@ -98,6 +98,11 @@ class NotificationController extends Controller {
         return Service::inlineRedAction($this->user->id);
     }
 
+    public function getPopupMessage()
+    {
+        return Service::popupAction($this->user->id);
+    }
+
     public function doSaveConfig(\Illuminate\Http\Request $request)
     {
         $id = $request->input('id');

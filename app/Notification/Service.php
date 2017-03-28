@@ -115,6 +115,24 @@ class Service
     }
 
     /**
+     * Return json to show inline red
+     */
+    public static function popupAction($user_id)
+    {
+        $inline_item = [];
+        foreach (UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','popup')->get() as $item) {
+
+            $inline_item[] = [
+                'message' => $item->message . ' '. $item->when()->diffForHumans()
+            ];
+
+        }
+        UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','popup')->update(['has_send' => 1]);
+
+        return json_encode($inline_item);
+    }
+
+    /**
      * Storage message to database
      * @param $messages
      */

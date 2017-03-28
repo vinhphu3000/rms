@@ -42,6 +42,12 @@
             box-sizing: content-box;
         }
     </style>
+
+    <!-- PNotify -->
+    <link href="{{ asset("gentelella/vendors/pnotify/dist/pnotify.css") }}" rel="stylesheet">
+    <link href="{{ asset("gentelella/vendors/pnotify/dist/pnotify.buttons.css") }}" rel="stylesheet">
+    <link href="{{ asset("gentelella/vendors/pnotify/dist/pnotify.nonblock.css") }}" rel="stylesheet">
+
 </head>
 
 <body class="nav-md">
@@ -122,6 +128,10 @@
 
 <script src="{{ asset("js/vendor/jalert/jAlert.js") }}" type="text/javascript"></script>
 <script src="{{ asset("js/vendor/jalert/jAlert-functions.js") }}" type="text/javascript"></script>
+<!-- PNotify -->
+<script src="{{ asset("gentelella/vendors/pnotify/dist/pnotify.js") }}"></script>
+<script src="{{ asset("gentelella/vendors/pnotify/dist/pnotify.buttons.js") }}"></script>
+<script src="{{ asset("gentelella/vendors/pnotify/dist/pnotify.nonblock.js") }}"></script>
 
 
 <script>
@@ -225,6 +235,42 @@
 
 
 </script>
+<script>
+    $(document).ready(function() {
+        setInterval( function ()
+        {
+            $.ajax({
+                url: "{{url('notification/scan')}}",
+                dataType: "json",
+            });
+        }, 20000);
+        setInterval( function ()
+        {
+            $.ajax({
+                url: "{{url('notification/get-popup-message')}}",
+                dataType: "json",
+                success: function(reponse) {
+                    console.log(reponse);
+                    $.each(reponse, function(key, value){
+                        new PNotify({
+                            title: "Project Notify",
+                            text: value.message,
+                            styling: 'bootstrap3',
+                        });
+                    });
+                }
+
+            });
+        }, 20000);
+
+
+
+
+
+
+    });
+</script>
+
 <div class="animationload">
 <div class="loader">
     <p class="loader-msg">Loading...</p>

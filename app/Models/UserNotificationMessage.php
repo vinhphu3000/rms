@@ -18,6 +18,14 @@ class UserNotificationMessage extends Eloquent
         return $this->belongsTo('App\Models\User', 'send_to');
     }
 
+    /**
+     * Get the phone record associated with the user.
+     */
+    public function when()
+    {
+        return UserActivity::find($this->user_activity_id)->created_at;
+    }
+
 
     /**
      * created notification after created request
