@@ -46,31 +46,42 @@ class NotificationController extends Controller {
     }
 
 
-
+    /**
+     * View list of notification config
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function config()
     {
        $notify = UserNotificationConfig::where('user_id', $this->user->id)->get();
         return view('notification.config', ['result' => $notify]);
     }
 
-
+    /**
+     * Add config popup
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function addConfigPopup()
     {
         $event_list  = Service::$_event_list;
-        $default_event = $event_list[0];
+        $default_event = key($event_list);
         $default_condition_list = Service::getLogicList($default_event);
         $default_condition_param = $default_condition_list['logicList'][key($default_condition_list['logicList'])]['param'];
         $action = Service::$_action_list;
         return view('notification.popup-add-config', ['action' => $action, 'event' => Service::$_event_list, 'default_condition_list' => $default_condition_list, 'default_condition_param' => $default_condition_param]);
     }
 
+    /**
+     * edit notification config popup
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function editConfigPopup(\Illuminate\Http\Request $request)
     {
         $id_config = $request['id'];
         $config = UserNotificationConfig::find($id_config);
         $condition = UserNotificationCondition::where('user_notification_config_id', $config->id)->get();
         $event_list  = Service::$_event_list;
-        $default_event = $event_list[0];
+        $default_event = key($event_list);
         $default_condition_list = Service::getLogicList($default_event);
         $default_condition_param = $default_condition_list['logicList'][key($default_condition_list['logicList'])]['param'];
         $action = Service::$_action_list;
@@ -87,22 +98,38 @@ class NotificationController extends Controller {
         return json_encode($list);
     }
 
+    /**
+     * Scan for notification and build message
+     * @return null
+     */
     public function scanNotify()
     {
         Service::scanForMessage($this->user->id);
         return null;
     }
 
+    /**
+     * get all inline red message of current user
+     * @return string
+     */
     public function getInlineRedMessage()
     {
         return Service::inlineRedAction($this->user->id);
     }
 
+    /**
+     * get all popup message of current user
+     * @return string
+     */
     public function getPopupMessage()
     {
         return Service::popupAction($this->user->id);
     }
 
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function doSaveConfig(\Illuminate\Http\Request $request)
     {
         $id = $request->input('id');

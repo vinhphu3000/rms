@@ -49,8 +49,8 @@
             <tr style="display: none;">
                 <td >
                     <select class="form-control" name="event">
-                        <?php foreach($event as $item) : ?>
-                        <option value="<?php echo $item ?>"><?php echo $item ?></option>
+                        <?php foreach($event as $key => $item) : ?>
+                        <option value="<?php echo $key ?>"><?php echo $item ?></option>
                         <?php endforeach; ?>
                     </select>
                 </td>
@@ -70,8 +70,8 @@
             <tr>
                 <td >
                     <select class="event form-control" name="event">
-                        <?php foreach($event as $item) : ?>
-                        <option <?php echo $condition->event == $item ? 'selected' : '' ?> value="<?php echo $item ?>"><?php echo $item ?></option>
+                        <?php foreach($event as $key => $item) : ?>
+                        <option <?php echo $condition->event == $key ? 'selected' : '' ?> value="<?php echo $key ?>"><?php echo $item ?></option>
                         <?php endforeach; ?>
                     </select>
                 </td>

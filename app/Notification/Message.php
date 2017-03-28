@@ -5,12 +5,9 @@ namespace App\Notification;
  * @author Thieu.LeQuang <quangthieuagu@gmail.com>
  */
 
-class Message
+class Message extends MessageAbstract
 {
-    private $_resource;
-    private $_action;
-    private $_user_id;
-
+    private static $_msg_new_proposal = "%s have send new proposal to you in %s project";
 
     public function __construct($resource, $action, $user_id)
     {
@@ -20,59 +17,24 @@ class Message
     }
 
     /**
-     * @return mixed
-     */
-    public function buildMessage()
-    {
-        $action_function_name = $this->_action . 'BuildMsg';
-        return $this->{$action_function_name}();
-    }
-
-    /**
-     * @return mixed
-     */
-    public function sendMailBuildMsg()
-    {
-        return $this->baseBuildMsg('email');
-    }
-
-    /**
-     * @return mixed
-     */
-    public function popupBuildMsg()
-    {
-        return $this->baseBuildMsg('Popup');
-    }
-
-    /**
      * @return array
      */
-    public function inlineRedBuildMsg()
-    {
-        return $this->baseBuildMsg('inline red');
-    }
-
-    /**
-     * @param $title
-     * @param string $param
-     * @return array
-     */
-    public function baseBuildMsg($title, $param = '')
+    public function newProposalMessage()
     {
         $msg = [];
 
         foreach ($this->_resource as $item) {
             $msg[] = [
                 'function' => $this->_action,
-                'title' => $title,
-                'params' => $param,
+                'title' => $this->_action,
+                'params' => '',
                 'send_to' => $this->_user_id,
-                'message' => $item->content,
+                'message' => sprintf(self::$_msg_new_proposal, $item->user->name, $item->project->name),
                 'user_activity_id' => $item->id,
             ];
         }
 
         return $msg;
-
     }
+
 }

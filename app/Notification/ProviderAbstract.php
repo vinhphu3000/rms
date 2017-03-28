@@ -2,10 +2,10 @@
 namespace App\Notification;
 
 /* 
- * ConditionAbstract
+ * ProviderAbstract
  * @author Thieu.LeQuang <quangthieuagu@gmail.com>
  */
-abstract class ConditionAbstract
+abstract class ProviderAbstract
 {
 
     protected $_condition_data;
@@ -51,6 +51,18 @@ abstract class ConditionAbstract
         $list_logic = $this->getLogicList();
         if (isset($list_logic[$this->_condition_data->logic]['logic_func'])) {
             return $list_logic[$this->_condition_data->logic]['logic_func'];
+        }
+        return null;
+    }
+
+    /**
+     * @return null
+     */
+    public function getFuncMsg()
+    {
+        $list_logic = $this->getLogicList();
+        if (isset($list_logic[$this->_condition_data->logic]['msg_func'])) {
+            return $list_logic[$this->_condition_data->logic]['msg_func'];
         }
         return null;
     }

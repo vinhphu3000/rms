@@ -8,7 +8,7 @@ use App\Models\UserActivity;
 use App\Models\UserActivityInvolved;
 use App\Models\UserNotificationCondition;
 
-class ResourceRequestCondition extends ConditionAbstract
+class Proposal extends ProviderAbstract
 {
 
     /**
@@ -26,73 +26,74 @@ class ResourceRequestCondition extends ConditionAbstract
     public static function getEventConfig()
     {
         return [
-                'resource_request'              => [
+                'proposal'              => [
                                                     'title' => 'Proposal',
                                                     'logicList' => [
                                                                         'new' => [
-                                                                                    'title' => 'New resource request',
-                                                                                    'logic_func' => 'newRequest',
+                                                                                    'title' => 'Add new',
+                                                                                    'logic_func' => 'newProposal',
+                                                                                    'msg_func' => 'newProposalMessage',
                                                                                     'param' => false,
                                                                         ],
                                                                         'expire' => [
-                                                                                    'title' => 'New request be over time (hours)',
-                                                                                    'logic_func' => 'expireRequest',
+                                                                                    'title' => 'Add new over time (hours)',
+                                                                                    'logic_func' => 'expireProposal',
+                                                                                    'msg_func' => 'expireProposalMessage',
                                                                                     'param' => true,
                                                                         ]
                                                                     ]
                                                 ],
+                'proposal_employee_status'  => 'When change status of employee',
         ];
     }
 
-    /**
-     * @return null
-     */
+
     public function getResource()
     {
         return null;
     }
 
-    /**
-     * @return mixed
-     */
     public function getParam()
     {
         return $this->_condition_data->param;
     }
 
-
     /**
      * @return bool
      */
-    public function newRequest()
+    public function newProposal()
     {
-        $user_new_request_activity = UserActivity::getNewResourceRequestActivity($this->_condition_data->user_id);
+        $user_new_proposal_activity = UserActivity::getNewProposalActivity($this->_condition_data->user_id);
 
-        if (!count($user_new_request_activity)) {
+        if (!count($user_new_proposal_activity)) {
             return false;
         }
 
-        $this->setResultData($user_new_request_activity);
+        $this->setResultData($user_new_proposal_activity);
 
         return true;
     }
 
+
+
     /**
      * @return bool
      */
-    public function expireRequest()
+    public function proposalExpire()
     {
         $in_id = UserActivityInvolved::getAllActivityIdByUser($this->_condition_data->user_id);
-        $user_activity = UserActivity::whereIn('id', $in_id)->where('type', UserActivity::TYPE['ResourceRequest'])->get();
-        $user_activity_over = [];
+        $user_activity = UserActivity::whereIn('id',$in_id)->where('type', UserActivity::TYPE['ProposalRequest'])->get();
+        $user_proposal_activity_over = [];
         foreach ($user_activity as $item) {
             if ($item->getSpentHoursFromAtCreated() > $this->getParam()) {
-                $user_activity_over[] = $item;
+                $user_proposal_activity_over[] = $item;
             }
         }
 
-        $this->setResultData($user_activity_over);
+        $this->setResultData($user_proposal_activity_over);
 
-        return count($user_activity_over) ?  true : false;
+        return count($user_proposal_activity_over) ?  true : false;
     }
+
+
 }
