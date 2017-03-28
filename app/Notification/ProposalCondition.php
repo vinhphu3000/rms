@@ -11,8 +11,6 @@ use App\Models\UserNotificationCondition;
 class ProposalCondition extends ConditionAbstract
 {
 
-    private $_condition_data;
-
     /**
      * ProposalCondition constructor.
      * @param UserNotificationCondition $condition
@@ -25,7 +23,7 @@ class ProposalCondition extends ConditionAbstract
     /**
      * @return array
      */
-    public function getEventList()
+    public static function getEventConfig()
     {
         return [
                 'proposal'              => [
@@ -58,17 +56,9 @@ class ProposalCondition extends ConditionAbstract
         return $this->_condition_data->param;
     }
 
-    public function getLogic()
-    {
-        return $this->_condition_data->logic;
-    }
-
-    public function getEvent()
-    {
-        return $this->_condition_data->event;
-    }
-
-
+    /**
+     * @return bool
+     */
     public function newProposal()
     {
         $user_new_proposal_activity = UserActivity::getNewProposalActivity($this->_condition_data->user_id);
@@ -77,7 +67,7 @@ class ProposalCondition extends ConditionAbstract
             return false;
         }
 
-        $this->_result = $user_new_proposal_activity;
+        $this->setResultData($user_new_proposal_activity);
 
         return true;
     }
@@ -88,7 +78,7 @@ class ProposalCondition extends ConditionAbstract
     public function proposalExpire()
     {
         $in_id = UserActivityInvolved::getAllActivityIdByUser($this->_condition_data->user_id);
-        $user_activity = UserActivity::whereIn('id',$in_id)->where('type', self::TYPE['ProposalRequest'])->get();
+        $user_activity = UserActivity::whereIn('id',$in_id)->where('type', UserActivity::TYPE['ProposalRequest'])->get();
         $user_proposal_activity_over = [];
         foreach ($user_activity as $item) {
             if ($item->getSpentHoursFromAtCreated() > $this->getParam()) {
@@ -96,7 +86,7 @@ class ProposalCondition extends ConditionAbstract
             }
         }
 
-        $this->_result = $user_proposal_activity_over;
+        $this->setResultData($user_proposal_activity_over);
 
         return count($user_proposal_activity_over) ?  true : false;
     }

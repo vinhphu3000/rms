@@ -8,18 +8,14 @@ namespace App\Notification;
 abstract class ConditionAbstract
 {
 
+    protected $_condition_data;
 
     abstract protected function getResource();
 
     abstract protected function getParam();
 
-    abstract protected function getEventList();
 
-    abstract protected function getLogic();
-
-    abstract protected function getEvent();
-
-    protected $_result;
+    private $_result;
 
     /**
      * Get logic list
@@ -53,8 +49,8 @@ abstract class ConditionAbstract
     public function getFuncLogic()
     {
         $list_logic = $this->getLogicList();
-        if (isset($list_logic[$this->getLogic()]['logic_func'])) {
-            return $list_logic[$this->getLogic()]['logic_func'];
+        if (isset($list_logic[$this->_condition_data->logic]['logic_func'])) {
+            return $list_logic[$this->_condition_data->logic]['logic_func'];
         }
         return null;
     }
@@ -64,12 +60,18 @@ abstract class ConditionAbstract
      */
     public function getLogicList()
     {
-        $list_event = $this->getEventList();
-        if (isset($list_event[$this->getEvent()]['logicList'])) {
-            return $list_event[$this->getEvent()]['logicList'];
+        $class = get_called_class();
+        $list_event = $class::getEventConfig();
+        if (isset($list_event[$this->_condition_data->event]['logicList'])) {
+            return $list_event[$this->_condition_data->event]['logicList'];
         }
 
         return [];
+    }
+
+    public function setResultData($result)
+    {
+        $this->_result = $result;
     }
 
     public function getResultData()

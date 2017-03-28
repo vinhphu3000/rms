@@ -1,11 +1,11 @@
 <?php
 namespace App\Notification;
 /* 
- * ProposalMessage
+ * Message
  * @author Thieu.LeQuang <quangthieuagu@gmail.com>
  */
 
-class ProposalMessage
+class Message
 {
     private $_resource;
     private $_action;
@@ -25,7 +25,7 @@ class ProposalMessage
     public function buildMessage()
     {
         $action_function_name = $this->_action . 'BuildMsg';
-       return $this->{$action_function_name}();
+        return $this->{$action_function_name}();
     }
 
     /**
@@ -54,8 +54,7 @@ class ProposalMessage
 
     /**
      * @param $title
-     * @param null $message
-     * @param array $param
+     * @param string $param
      * @return array
      */
     public function baseBuildMsg($title, $param = '')

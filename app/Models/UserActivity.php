@@ -121,6 +121,16 @@ class UserActivity extends Eloquent
     }
 
     /**
+     * @param $user_id
+     * @return mixed
+     */
+    public static function getNewResourceRequestActivity($user_id)
+    {
+        $in_id = UserActivityInvolved::getAllActivityIdByUser($user_id);
+        return self::where('type', self::TYPE['ResourceRequest'])->whereIn('id',$in_id) ->get();
+    }
+
+    /**
      * @return array
      */
     public function getAllUserInvolved()

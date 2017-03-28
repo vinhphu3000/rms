@@ -33,7 +33,7 @@ class Service
     /**
      * @return array
      */
-    public static $_event_list = ['proposal','project',  'employee', 'CV'];
+    public static $_event_list = ['proposal','resource_request'];
 
     /**
      * Scan for event to notification
@@ -135,7 +135,7 @@ class Service
     {
         $mapping = [
                     'proposal' => 'App\Notification\ProposalCondition',
-                    'project' => 'App\Notification\ProjectCondition',
+                    'resource_request' => 'App\Notification\ResourceRequestCondition',
                     'proposal_employee_status' => 'App\Notification\ProposalCondition',
         ];
 
@@ -154,7 +154,8 @@ class Service
     private static function getMapMessageClass($event)
     {
         $mapping = [
-            'proposal' => 'App\Notification\ProposalMessage',
+            'proposal' => 'App\Notification\Message',
+            'resource_request' => 'App\Notification\Message',
         ];
 
         if (isset($mapping[$event])) {
@@ -171,7 +172,7 @@ class Service
     public static function getLogicList($event)
     {
         $condition_class_name = self::getMapConditionClass($event);
-        return $condition_class_name::getEventList()[$event];
+        return $condition_class_name::getEventConfig()[$event];
     }
 
 }

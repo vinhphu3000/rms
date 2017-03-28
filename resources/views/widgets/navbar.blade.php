@@ -22,13 +22,13 @@
         <li class="">
             @include('widgets.profile')
         </li>
-<?php if ($my->type == 'admin'): ?>
+
         <li role="presentation" class="dropdown active">
           <a href="{{url('user')}}" >
             <i class="glyphicon glyphicon-align-justify"></i>
           </a>
         </li>
-<?php endif; ?>
+
       </ul>
     </nav>
   </div>

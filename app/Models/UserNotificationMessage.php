@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model as Eloquent;
 class UserNotificationMessage extends Eloquent
 {
     protected $table = 'user_notification_message';
-    protected $fillable = ['id','function','title','message','params','send_to','user_notfication_id','seen','read','created_at', 'updated_at'];
+    protected $fillable = ['id','function','title','message','params','send_to','user_activity_id','seen','read','created_at', 'updated_at'];
 
     /**
      * Get the phone record associated with the user.

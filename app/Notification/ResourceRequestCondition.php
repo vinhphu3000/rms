@@ -6,11 +6,10 @@ namespace App\Notification;
  */
 use App\Models\UserActivity;
 use App\Models\UserActivityInvolved;
+use App\Models\UserNotificationCondition;
 
-class ProjectCondition extends ConditionAbstract
+class ResourceRequestCondition extends ConditionAbstract
 {
-
-    private $_condition_data;
 
     /**
      * ProposalCondition constructor.
@@ -24,20 +23,20 @@ class ProjectCondition extends ConditionAbstract
     /**
      * @return array
      */
-    public function getEventList()
+    public static function getEventConfig()
     {
         return [
-                'project'              => [
+                'resource_request'              => [
                                                     'title' => 'Proposal',
                                                     'logicList' => [
                                                                         'new' => [
-                                                                                    'title' => 'Add new project',
-                                                                                    'logic_func' => 'newProposal',
+                                                                                    'title' => 'New resource request',
+                                                                                    'logic_func' => 'newRequest',
                                                                                     'param' => false,
                                                                         ],
                                                                         'expire' => [
-                                                                                    'title' => 'Add new over time (hours)',
-                                                                                    'logic_func' => 'expireProposal',
+                                                                                    'title' => 'New request be over time (hours)',
+                                                                                    'logic_func' => 'expireRequest',
                                                                                     'param' => true,
                                                                         ]
                                                                     ]
@@ -45,37 +44,35 @@ class ProjectCondition extends ConditionAbstract
         ];
     }
 
-
+    /**
+     * @return null
+     */
     public function getResource()
     {
         return null;
     }
 
+    /**
+     * @return mixed
+     */
     public function getParam()
     {
         return $this->_condition_data->param;
     }
 
-    public function getLogic()
+
+    /**
+     * @return bool
+     */
+    public function newRequest()
     {
-        return $this->_condition_data->logic;
-    }
+        $user_new_request_activity = UserActivity::getNewResourceRequestActivity($this->_condition_data->user_id);
 
-    public function getEvent()
-    {
-        return $this->_condition_data->event;
-    }
-
-
-    public function newProposal()
-    {
-        $user_new_proposal_activity = UserActivity::getNewProposalActivity($this->_condition_data->user_id);
-
-        if (!count($user_new_proposal_activity)) {
+        if (!count($user_new_request_activity)) {
             return false;
         }
 
-        $this->_result = $user_new_proposal_activity;
+        $this->setResultData($user_new_request_activity);
 
         return true;
     }
@@ -83,21 +80,19 @@ class ProjectCondition extends ConditionAbstract
     /**
      * @return bool
      */
-    public function proposalExpire()
+    public function expireRequest()
     {
         $in_id = UserActivityInvolved::getAllActivityIdByUser($this->_condition_data->user_id);
-        $user_activity = UserActivity::whereIn('id',$in_id)->where('type', self::TYPE['ProposalRequest'])->get();
-        $user_proposal_activity_over = [];
+        $user_activity = UserActivity::whereIn('id', $in_id)->where('type', UserActivity::TYPE['ResourceRequest'])->get();
+        $user_activity_over = [];
         foreach ($user_activity as $item) {
             if ($item->getSpentHoursFromAtCreated() > $this->getParam()) {
-                $user_proposal_activity_over[] = $item;
+                $user_activity_over[] = $item;
             }
         }
 
-        $this->_result = $user_proposal_activity_over;
+        $this->setResultData($user_activity_over);
 
-        return count($user_proposal_activity_over) ?  true : false;
+        return count($user_activity_over) ?  true : false;
     }
-
-
 }
