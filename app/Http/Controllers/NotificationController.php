@@ -114,7 +114,8 @@ class NotificationController extends Controller {
      */
     public function getInlineRedMessage()
     {
-        return Service::inlineRedAction($this->user->id);
+        $item_inline_red = Service::inlineRedAction($this->user->id);
+        return view('notification.inline-red-item', ['item_inline_red' => $item_inline_red]);
     }
 
     /**

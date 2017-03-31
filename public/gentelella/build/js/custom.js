@@ -291,6 +291,21 @@ $('.info-number').click(function(){
         }
     });
 });
+function resetNumberOfInlineRed()
+{
+    var number = 0;
+    $('.notification').each(function () {
+        if ($(this).hasClass('unseen')) {
+            number ++;
+        }
+    });
+    if ($('.unread-notify').length) {
+        $('.unread-notify').text(number);
+    } else {
+        $('.info-number').append('<span class="badge unread-notify bg-green">' + number + '</span>');
+    }
+
+}
 
 })(jQuery);
 

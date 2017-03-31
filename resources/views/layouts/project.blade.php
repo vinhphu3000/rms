@@ -158,17 +158,7 @@
             openPopup($(this).attr('url'), data)
         });
 
-        function openPopup(url, data) {
-            $.ajax({
-                url: url,
-                data:data,
-                dataType: "html",
-                success: function(reponse) {
-                    $('.modal-content').html(reponse);
-                    $('#myModal').modal({show:true});
-                }
-            });
-        }
+
 
 
 
@@ -262,9 +252,52 @@
 
             });
         }, 20000);
+        setInterval( function ()
+        {
+            $.ajax({
+                url: "{{url('notification/get-red-inline-message')}}",
+                dataType: "html",
+                success: function(reponse) {
+                    console.log(reponse);
+                    $('.msg_list').prepend(reponse);
+
+                    var number = 0;
+                    $('.notification').each(function () {
+                        if ($(this).hasClass('unseen')) {
+                            number ++;
+                        }
+                    });
+                    if(number  > 0) {
+                        if ($('.unread-notify').length) {
+                            $('.unread-notify').text(number);
+                        } else {
+                            $('.info-number').append('<span class="badge unread-notify bg-green">' + number + '</span>');
+
+                        }
+                    }
+
+                    $('.link-popup').unbind('click');
+                    $('.link-popup').click(function (e) {
+                        openPopup($(this).attr('url'), []);
+                        e.preventDefault();
+                    });
+                }
+
+            });
+        }, 20000);
 
 
-
+        function openPopup(url, data) {
+            $.ajax({
+                url: url,
+                data:data,
+                dataType: "html",
+                success: function(reponse) {
+                    $('.modal-content').html(reponse);
+                    $('#myModal').modal({show:true});
+                }
+            });
+        }
 
 
 

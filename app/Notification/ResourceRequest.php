@@ -32,6 +32,7 @@ class ResourceRequest extends ProviderAbstract
                                                                         'new' => [
                                                                                     'title' => 'New resource request',
                                                                                     'logic_func' => 'newRequest',
+                                                                                    'msg_func' => 'newRequestMessage',
                                                                                     'param' => false,
                                                                         ],
                                                                         'expire' => [

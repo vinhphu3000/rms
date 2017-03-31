@@ -1,5 +1,7 @@
 <?php
 namespace App\Notification;
+use App\Models\UserActivity;
+use App\Models\UserActivityInvolved;
 use App\Models\UserNotificationCondition;
 use App\Models\UserNotificationConfig;
 use App\Models\UserNotificationMessage;
@@ -52,7 +54,7 @@ class Service
             $conditions_data = UserNotificationCondition::where('user_notification_config_id', $config->id)->get();
 
             $is_action = false;
-            $notification_msg = [];
+            $message = [];
 
             foreach ($conditions_data as $condition) {
 
@@ -60,8 +62,20 @@ class Service
 
                 $condition_object = new $condition_class_name($condition);
                 $checked_status = $condition_object->check();
+
                 $is_action = $config->is_all_net ? ($is_action && $checked_status) : ($is_action || $checked_status);
                 if ($checked_status && $condition_object->getResultData() != null) {
+
+                    $msg_class_name = self::getMapMessageClass( $condition->event );
+
+                    $service_msg= new $msg_class_name( $condition_object->getResultData(), self::$_action_list[$config->action]['func_msg_default'], $condition->user_id );
+
+                    if (method_exists($service_msg, $condition_object->getFuncMsg())) {
+                        $message[] = $service_msg->{$condition_object->getFuncMsg()}();
+                    } else {
+                        $message[] = $service_msg->buildMessage();
+                    }
+
                     $notification_msg[$condition->event] = $condition_object->getResultData();
                 }
             }
@@ -70,14 +84,13 @@ class Service
              * do action
              */
             if ($is_action) {
-
-                foreach ( $notification_msg as $event => $msg ) {
-                    $msg_class_name = self::getMapMessageClass( $event );
-                    $service_msg= new $msg_class_name( $msg, self::$_action_list[$config->action]['func_msg_default'], $condition->user_id );
-                    self::storageMessage( $service_msg->buildMessage() );
+                foreach ( $message as $msg ) {
+                    self::storageMessage( $msg );
                 }
             }
         }
+
+        UserActivityInvolved::where('user_id', $user_id)->where('read', 0)->update(['read' => 1]);
     }
 
     /**
@@ -102,16 +115,36 @@ class Service
     public static function inlineRedAction($user_id)
     {
         $inline_item = [];
-        foreach (UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->get() as $item) {
-
-            $inline_item[] = [
-                'link' => 'proposal/' . $item->propsal_id,
-                'title' => $item->message
+        foreach (UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','inlineRed')->get() as $item) {
+            $new_item = [   'title' => $item->message,
+                            'created_at' => $item->created_at,
+                            'user' => $item->user,
+                            'id' => $item->id
             ];
 
-        }
+            switch ($item->userActivity->type) {
+                case UserActivity::TYPE['ResourceRequest']:
+                    $new_item['link'] = url('/request/details/' . $item->userActivity->request_id);
+                    $new_item['type'] = 'popup';
+                    break;
+                case UserActivity::TYPE['ProposalRequest']:
+                    $new_item['link'] = url('/proposal/' . $item->userActivity->proposal_id);
+                    $new_item['type'] = 'page';
+                    break;
+                case UserActivity::TYPE['ResourceBooking']:
+                    $new_item['link'] = url('/project/details/' . $item->userActivity->project_id);
+                    $new_item['type'] = 'page';
+                    break;
+                default:
+                    $new_item['link'] = url('/project/details/' . $item->userActivity->project_id);
+                    $new_item['type'] = 'page';
 
-        return json_encode($inline_item);
+            }
+            $inline_item[] = $new_item;
+
+        }
+        UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','inlineRed')->update(['has_send' => 1]);
+        return $inline_item;
     }
 
     /**

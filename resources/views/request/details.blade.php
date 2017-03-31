@@ -94,6 +94,9 @@
 </div>
 <div class="clearfix"></div>
 <div class="modal-footer">
+    <?php if ($my->type == 'admin'): ?>
+    <a href="{{ url('request/booking?project_id=' . $project->id) }}" class="btn btn-primary">Create proposal for this request</a>
+        <?php endif;?>
     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 </div>
 <div class="clearfix"></div>
