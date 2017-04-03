@@ -37,8 +37,8 @@ class EmployeeController extends BaseController {
     public function __construct() {
         $this->middleware(function ($request, $next) {
             $this->user = \App\Authentication\Service::getAuthInfo();
-            $notification = Notification::where('send_to', $this->user->id)->get()->take(5);
-            $count_notify = Notification::where('send_to', $this->user->id)->where('status_seen', 0)->count();
+            $notification = Service::inlineRed($this->user->id);
+            $count_notify = Service::inlineRedCount($this->user->id);
             view()->share('my', $this->user);
             view()->share('notification', $notification);
             view()->share('count_notify', $count_notify);

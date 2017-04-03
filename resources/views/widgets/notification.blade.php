@@ -6,20 +6,7 @@
 </a>
 <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
     <?php if(count($notification) > 0) : ?>
-    <?php foreach ($notification as $item): ?>
-    <li class="{{$item->status_seen ? 'seen' : 'unseen'}} notification" id="{{$item->id}}">
-        <a href="{{$item->link}}">
-            <span class="image"><img src="{{ asset($item->user->avatarPath()) }}" alt="Profile Image" /></span>
-                        <span>
-                          <span>{{$item->user->name}}</span>
-                          <span class="time">{{$item->created_at->diffForHumans()}}</span>
-                        </span>
-                        <span class="message">
-                          {{$item->content}}
-                        </span>
-        </a>
-    </li>
-    <?php endforeach; ?>
+        @include('notification.inline-red-item', ['item_inline_red' => $notification])
 
     {{--<li>--}}
         {{--<div class="text-center">--}}
@@ -33,6 +20,5 @@
     <li>
         There are not notification !
     </li>
-
 <?php endif; ?>
 </ul>

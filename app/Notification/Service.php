@@ -110,16 +110,39 @@ class Service
     }
 
     /**
-     * Return json to show inline red
+     * @param $user_id
+     * @param int $limit
+     * @return array
      */
-    public static function inlineRedAction($user_id)
+    public static function inlineRed($user_id)
+    {
+        $list = UserNotificationMessage::where('send_to', $user_id)->where('function','inlineRed')->get();
+        $inline_item  = self::convertDataForInlineRed($list);
+        UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','inlineRed')->update(['has_send' => 1]);
+        return $inline_item;
+    }
+
+    /**
+     * @param $user_id
+     * @return mixed
+     */
+    public static function inlineRedCount($user_id)
+    {
+        return UserNotificationMessage::where('seen', 0)->where('function','inlineRed')->where('send_to', $user_id)->count();
+    }
+
+    /**
+     * @param $list
+     * @return array
+     */
+    public static function convertDataForInlineRed($list)
     {
         $inline_item = [];
-        foreach (UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','inlineRed')->get() as $item) {
+        foreach ($list as $item) {
             $new_item = [   'title' => $item->message,
-                            'created_at' => $item->created_at,
-                            'user' => $item->user,
-                            'id' => $item->id
+                'created_at' => $item->created_at,
+                'user' => $item->user,
+                'id' => $item->id
             ];
 
             switch ($item->userActivity->type) {
@@ -143,6 +166,16 @@ class Service
             $inline_item[] = $new_item;
 
         }
+        return $inline_item;
+    }
+
+    /**
+     * Return json to show inline red
+     */
+    public static function inlineRedAction($user_id)
+    {
+        $list = UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','inlineRed')->get();
+        $inline_item  = self::convertDataForInlineRed($list);
         UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','inlineRed')->update(['has_send' => 1]);
         return $inline_item;
     }
