@@ -3,6 +3,7 @@ use App\Models\Notification;
 use App\Models\User;
 use App\Models\UserNotificationCondition;
 use App\Models\UserNotificationConfig;
+use App\Models\UserNotificationMessage;
 use App\Notification\Service;
 use Request;
 use Mail;
@@ -185,6 +186,22 @@ class NotificationController extends Controller {
             }
         }
         return redirect('/notification/config');
+    }
+
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     */
+    public function doUpdateNotification(\Illuminate\Http\Request $request)
+    {
+        $id = $request->input('id');
+        if (!empty($id)) {
+            $ids = explode(',', $id);
+            if (count($ids)) {
+                UserNotificationMessage::whereIn('id', $ids)->where('send_to', $this->user->id)->update(['seen' => 1]);
+            }
+
+        }
     }
 
 }

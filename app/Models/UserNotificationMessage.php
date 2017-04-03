@@ -23,6 +23,9 @@ class UserNotificationMessage extends Eloquent
      */
     public function when()
     {
+        if ($this->user_activity_id == 0) {
+            return \Carbon\Carbon::now();
+        }
         return UserActivity::find($this->user_activity_id)->created_at;
     }
 

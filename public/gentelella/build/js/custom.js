@@ -275,37 +275,43 @@ $('.info-number').click(function(){
             data.push($(this).attr('id'));
         }
     });
-    $.ajax({
-        url: $(this).attr('data-ajax-url'),
-        data: {id:data.join(',')},
-        dataType: "html",
-        success: function(reponse) {
-            setTimeout(function(){
-                $('.unread-notify').remove();
-                $('.notification').each(function () {
-                    $(this).removeClass('unseen');
-                    $(this).addClass('seen');
-                });
-            }, 1000);
-
-        }
-    });
-});
-function resetNumberOfInlineRed()
-{
-    var number = 0;
-    $('.notification').each(function () {
-        if ($(this).hasClass('unseen')) {
-            number ++;
-        }
-    });
-    if ($('.unread-notify').length) {
-        $('.unread-notify').text(number);
-    } else {
-        $('.info-number').append('<span class="badge unread-notify bg-green">' + number + '</span>');
+    if (data.length) {
+        $.ajax({
+            url: $(this).attr('data-ajax-url'),
+            data: {id:data.join(',')},
+            dataType: "html",
+            success: function(reponse) {
+                setTimeout(function(){
+                    $('.unread-notify').remove();
+                    $('.notification').each(function () {
+                        $(this).removeClass('unseen');
+                        $(this).addClass('seen');
+                    });
+                }, 1000);
+            }
+        });
     }
 
-}
+    });
+    /**
+     * Reset number of inline red
+     */
+    function resetNumberOfInlineRed()
+    {
+        var number = 0;
+        $('.notification').each(function () {
+            if ($(this).hasClass('unseen')) {
+                number ++;
+            }
+        });
+
+        if ($('.unread-notify').length) {
+            $('.unread-notify').text(number);
+        } else {
+            $('.info-number').append('<span class="badge unread-notify bg-green">' + number + '</span>');
+        }
+
+    }
 
 })(jQuery);
 

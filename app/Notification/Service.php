@@ -35,7 +35,7 @@ class Service
     /**
      * @return array
      */
-    public static $_event_list = ['proposal' => 'Proposal', 'resource_request' => 'Project Request Resource'];
+    public static $_event_list = ['proposal' => 'Proposal', 'resource_request' => 'Project Request Resource', 'employee' => 'Employee'];
 
     /**
      * Scan for event to notification
@@ -142,6 +142,7 @@ class Service
             $new_item = [   'title' => $item->message,
                 'created_at' => $item->created_at,
                 'user' => $item->user,
+                'seen' => $item->seen,
                 'id' => $item->id
             ];
 
@@ -221,6 +222,7 @@ class Service
                     'proposal' => 'App\Notification\Proposal',
                     'resource_request' => 'App\Notification\ResourceRequest',
                     'proposal_employee_status' => 'App\Notification\Proposal',
+                    'employee' => 'App\Notification\Employee',
         ];
 
         if (isset($mapping[$condition_name])) {
@@ -240,6 +242,7 @@ class Service
         $mapping = [
             'proposal' => 'App\Notification\Message',
             'resource_request' => 'App\Notification\Message',
+            'employee' => 'App\Notification\Message',
         ];
 
         if (isset($mapping[$event])) {

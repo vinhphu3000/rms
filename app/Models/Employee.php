@@ -148,6 +148,13 @@ class Employee extends Eloquent
         return $timeline_data;
     }
 
+    public static function getNumberEmployeeNeedUpdateCVOverDay($day)
+    {
+        $dt = \Carbon\Carbon::now();
+        $dt->subDays($day);
+        return self::where('updated_at', '<=', $dt)->count();
+    }
+
 
 }
 

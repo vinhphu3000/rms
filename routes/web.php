@@ -74,7 +74,7 @@ Route::group(['middleware' => 'auth'], function () {
     /**
      * Notification
      */
-    Route::get('/notification/seen','UserController@doUpdateNotification');
+    Route::get('/notification/seen','NotificationController@doUpdateNotification');
 
 
 
@@ -116,9 +116,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/notification/scan', 'NotificationController@scanNotify');
     Route::get('/notification/get-red-inline-message', 'NotificationController@getInlineRedMessage');
     Route::get('/notification/get-popup-message', 'NotificationController@getPopupMessage');
-
-
-
     Route::post('/notification/config/add', 'NotificationController@doSaveConfig');
 
 

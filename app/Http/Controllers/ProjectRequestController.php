@@ -1,4 +1,5 @@
 <?php namespace App\Http\Controllers;
+use App\Authentication\Service;
 use App\Events\CreateProject;
 use App\Models\Activity;
 use App\Models\Notification;
@@ -34,8 +35,8 @@ class ProjectRequestController extends BaseController {
     public function __construct() {
         $this->middleware(function ($request, $next) {
             $this->user = \App\Authentication\Service::getAuthInfo();
-            $notification = Service::inlineRed($this->user->id);
-            $count_notify = Service::inlineRedCount($this->user->id);
+            $notification = \App\Notification\Service::inlineRed($this->user->id);
+            $count_notify = \App\Notification\Service::inlineRedCount($this->user->id);
             view()->share('my', $this->user);
             view()->share('notification', $notification);
             view()->share('count_notify', $count_notify);
@@ -53,6 +54,10 @@ class ProjectRequestController extends BaseController {
     }
 
 
+    /**
+     * @param $project_id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function add($project_id)
     {
         $roles = \App\Models\ProjectRole::all();
@@ -61,6 +66,10 @@ class ProjectRequestController extends BaseController {
         return view('request.add', ['roles' => $roles, 'employee_exp' => $employee_exp, 'project' => $project]);
     }
 
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function doAdd(\Illuminate\Http\Request $request)
     {
         $project_id = (int)$request->input('project_id');
@@ -82,6 +91,10 @@ class ProjectRequestController extends BaseController {
         return redirect('/project/details/' . $project_id);
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function details($id)
     {
         $request = ProjectRequest::find((int)$id);

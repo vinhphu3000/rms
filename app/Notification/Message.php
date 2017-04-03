@@ -9,6 +9,7 @@ class Message extends MessageAbstract
 {
     private static $_msg_new_proposal = "<b>%s</b> have send new proposal to you in <b>%s</b> project";
     private static $_msg_new_request = "<b>%s</b> have create new request resource for <b>%s</b> project";
+    private static $_msg_need_update_cv = "Have <b>%s</b> employee need to update cv, Please <a href =\"%s\">click here</a> to update them!.";
 
     public function __construct($resource, $action, $user_id)
     {
@@ -55,6 +56,27 @@ class Message extends MessageAbstract
                 'user_activity_id' => $item->id,
             ];
         }
+
+        return $msg;
+    }
+
+    /**
+     * @return array
+     */
+    public function needUpdateCVMessage()
+    {
+        $msg = [];
+
+
+            $msg[] = [
+                'function' => $this->_action,
+                'title' => $this->_action,
+                'params' => '',
+                'send_to' => $this->_user_id,
+                'message' => sprintf(self::$_msg_need_update_cv, $this->_resource, url('employee')),
+                'user_activity_id' => 0,
+            ];
+
 
         return $msg;
     }

@@ -97,18 +97,6 @@ class UserController extends Controller {
         return redirect('/login');
     }
 
-    public function doUpdateNotification(\Illuminate\Http\Request $request)
-    {
-        $id = $request->input('id');
-        if (!empty($id)) {
-            $ids = explode(',', $id);
-            if (count($ids)) {
-                Notification::whereIn('id', $ids)->where('send_to', $this->user->id)->update(['status_seen' => 1]);
-            }
-
-        }
-
-    }
 
     /**
      * listing action

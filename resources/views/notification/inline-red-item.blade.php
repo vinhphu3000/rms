@@ -1,5 +1,5 @@
 <?php foreach($item_inline_red as $item) : ?>
-<li class="unseen notification" id="{{$item['id']}}">
+<li class="<?php echo $item['seen'] ? 'seen' : 'unseen' ?> notification" id="{{$item['id']}}">
     <?php if($item['type'] =='popup') : ?>
         <a class="link-popup" url="{{$item['link']}}">
     <?php else: ?>
