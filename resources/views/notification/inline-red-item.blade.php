@@ -3,7 +3,7 @@
     <?php if($item['type'] =='popup') : ?>
         <a class="link-popup" url="{{$item['link']}}">
     <?php else: ?>
-        <a class="link-popup" url="{{$item['link']}}" href="{{$item['link']}}">
+        <a  url="{{$item['link']}}" href="{{$item['link']}}">
     <?php endif; ?>
         <span class="image"><img src="{{ asset($item['user']->avatarPath()) }}" alt="Profile Image" /></span>
         <span>

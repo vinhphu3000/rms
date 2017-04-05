@@ -152,7 +152,7 @@ class Service
                     $new_item['type'] = 'popup';
                     break;
                 case UserActivity::TYPE['ProposalRequest']:
-                    $new_item['link'] = url('/proposal/' . $item->userActivity->proposal_id);
+                    $new_item['link'] = url('/project/details/' . $item->userActivity->project_id);
                     $new_item['type'] = 'page';
                     break;
                 case UserActivity::TYPE['ResourceBooking']:
@@ -178,6 +178,7 @@ class Service
         $list = UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','inlineRed')->get();
         $inline_item  = self::convertDataForInlineRed($list);
         UserNotificationMessage::where('has_send', 0)->where('send_to', $user_id)->where('function','inlineRed')->update(['has_send' => 1]);
+
         return $inline_item;
     }
 

@@ -105,6 +105,16 @@ class UserActivity extends Eloquent
         return $this->belongsTo('App\Models\Project');
     }
 
+    public function employee()
+    {
+        return $this->belongsTo('App\Models\Employee');
+    }
+
+    public function proposalStatus()
+    {
+        return $this->belongsTo('App\Models\EmployeeProposalStatus', 'proposal_employee_status_id');
+    }
+
     public function createdAt()
     {
         return new \DateTime($this->created_at);
@@ -128,6 +138,16 @@ class UserActivity extends Eloquent
     {
         $in_id = UserActivityInvolved::getAllActivityIdByUser($user_id);
         return self::where('type', self::TYPE['ResourceRequest'])->whereIn('id',$in_id) ->get();
+    }
+
+    /**
+     * @param $user_id
+     * @return mixed
+     */
+    public static function getEmployeeProposalActivity($user_id)
+    {
+        $in_id = UserActivityInvolved::getAllActivityIdByUser($user_id);
+        return self::where('type', self::TYPE['ProposalEmployeeStatus'])->whereIn('id',$in_id) ->get();
     }
 
     /**

@@ -56,7 +56,14 @@ class ActivityLog
     {
         $activity = UserActivity::createFromProposalEmployeeStatus($event->proposal_employee_status);
         $user_activity = UserActivity::create($activity);
-        UserActivityInvolved::create(['user_activity_id' => $user_activity->id, 'user_id' => $user_activity->project->user_id]);
+        if($user_activity->user->type =='member') {
+            foreach (User::where('type','admin')->get() as $user) {
+                UserActivityInvolved::create(['user_activity_id' => $user_activity->id, 'user_id' => $user->id]);
+            }
+        } else {
+            UserActivityInvolved::create(['user_activity_id' => $user_activity->id, 'user_id' => $user_activity->project->user_id]);
+        }
+
     }
 
 

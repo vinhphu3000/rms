@@ -35,6 +35,12 @@ class Employee extends ProviderAbstract
                                                                                     'msg_func' => 'needUpdateCVMessage',
                                                                                     'param' => true,
                                                                         ],
+                                                                        'proposal_status' => [
+                                                                            'title' => 'Proposal',
+                                                                            'logic_func' => 'proposal',
+                                                                            'msg_func' => 'proposalMessage',
+                                                                            'param' => false,
+                                                                        ],
                                                                     ]
                                                 ]
         ];
@@ -63,6 +69,22 @@ class Employee extends ProviderAbstract
         }
 
         $this->setResultData($numberOfUpdateCv);
+
+        return true;
+    }
+
+    /**
+     * @return bool
+     */
+    public function proposal()
+    {
+        $user_activity = UserActivity::getEmployeeProposalActivity($this->_condition_data->user_id);
+
+        if (!count($user_activity)) {
+            return false;
+        }
+
+        $this->setResultData($user_activity);
 
         return true;
     }
