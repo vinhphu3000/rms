@@ -5,9 +5,9 @@
     <?php else: ?>
         <a  url="{{$item['link']}}" href="{{$item['link']}}">
     <?php endif; ?>
-        <span class="image"><img src="{{ asset($item['user']->avatarPath()) }}" alt="Profile Image" /></span>
+        <span class="image"><img src="{{ asset($item['from']->avatarPath()) }}" alt="Profile Image" /></span>
         <span>
-          <span>{{$item['user']->name}}</span>
+          <span>{{$item['from']->name}}</span>
           <span class="time">{{$item['created_at']->diffForHumans()}}</span>
         </span>
         <span class="message">

@@ -7,10 +7,10 @@ namespace App\Notification;
 
 class Message extends MessageAbstract
 {
-    private static $_msg_new_proposal = "<b>%s</b> have send new proposal to you in <b>%s</b> project";
-    private static $_msg_new_request = "<b>%s</b> have create new request resource for <b>%s</b> project";
+    private static $_msg_new_proposal = "%s have send new proposal to you in %s project";
+    private static $_msg_new_request = "%s have create new request resource for %s project";
     private static $_msg_need_update_cv = "Have <b>%s</b> employee need to update cv, Please <a href =\"%s\">click here</a> to update them!.";
-    private static $_msg_employee_proposal = "<b>%s</b> have <b>%s</b> <b>%s</b> in proposal for <b>%s</b> project";
+    private static $_msg_employee_proposal = "%s have %s %s in proposal for %s project";
 
     public function __construct($resource, $action, $user_id)
     {
@@ -96,7 +96,7 @@ class Message extends MessageAbstract
                 'title' => $this->_action,
                 'params' => '',
                 'send_to' => $this->_user_id,
-                'message' => sprintf(self::$_msg_employee_proposal, $item->user->name, $item->proposalStatus->status, $item->proposalStatus->employee->fullName(), $item->project->name),
+                'message' => sprintf(self::$_msg_employee_proposal, $item->user->name, $item->proposalStatus->status, $item->employee->fullName(), $item->project->name),
                 'user_activity_id' => $item->id,
             ];
         }

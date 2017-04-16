@@ -47,6 +47,10 @@ class EmployeeController extends BaseController {
 
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function profile($id)
     {
         $employee = EmployeeModel::find((int)$id);
@@ -56,6 +60,10 @@ class EmployeeController extends BaseController {
         return view('employee.profile',['employee' => $employee, 'result' => Project::all(), 'projects_booking' => $projects_booking, 'skill' => $skill, 'activity' => $activity]);
     }
 
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function doSearch(\Illuminate\Http\Request $request)
     {
         $limit = 30;
@@ -140,6 +148,10 @@ class EmployeeController extends BaseController {
         })->download('csv');
     }
 
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return string
+     */
     public function doUploadExcel(\Illuminate\Http\Request $request)
     {
         $this->validate($request, [
@@ -154,6 +166,9 @@ class EmployeeController extends BaseController {
         return json_encode(['filename' => $csvFileName, 'header' => $header->keys()]);
     }
 
+    /**
+     * @param \Illuminate\Http\Request $request
+     */
     public function doImport(\Illuminate\Http\Request $request)
     {
         $fileName = $request->input('file_name');
@@ -272,6 +287,10 @@ class EmployeeController extends BaseController {
 
     }
 
+    /**
+     * @param $token
+     * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
+     */
     public function doDownloadCSV($token)
     {
 

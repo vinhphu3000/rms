@@ -143,6 +143,7 @@ class Service
                 'created_at' => $item->created_at,
                 'user' => $item->user,
                 'seen' => $item->seen,
+                'from' => $item->userActivity->user,
                 'id' => $item->id
             ];
 

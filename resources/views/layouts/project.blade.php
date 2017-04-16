@@ -158,7 +158,17 @@
             openPopup($(this).attr('url'), data)
         });
 
-
+        function openPopup(url, data) {
+            $.ajax({
+                url: url,
+                data:data,
+                dataType: "html",
+                success: function(reponse) {
+                    $('.modal-content').html(reponse);
+                    $('#myModal').modal({show:true});
+                }
+            });
+        }
 
 
 
@@ -287,17 +297,7 @@
         }, 20000);
 
 
-        function openPopup(url, data) {
-            $.ajax({
-                url: url,
-                data:data,
-                dataType: "html",
-                success: function(reponse) {
-                    $('.modal-content').html(reponse);
-                    $('#myModal').modal({show:true});
-                }
-            });
-        }
+
 
 
 

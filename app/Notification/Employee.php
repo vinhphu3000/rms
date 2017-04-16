@@ -46,12 +46,17 @@ class Employee extends ProviderAbstract
         ];
     }
 
-
+    /**
+     * @return null
+     */
     public function getResource()
     {
         return null;
     }
 
+    /**
+     * @return mixed
+     */
     public function getParam()
     {
         return $this->_condition_data->param;
