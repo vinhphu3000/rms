@@ -17,7 +17,6 @@ class Authenticate
      */
     public function handle($request, Closure $next)
     {
-
         if (!\App\Authentication\Service::isAuthenticated()) {
             return redirect('login');
         }

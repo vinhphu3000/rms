@@ -4,7 +4,7 @@ namespace App\Modules\Notification\Services;
  * Employee
  * @author Thieu.LeQuang <quangthieuagu@gmail.com>
  */
-use App\Models\UserActivity;
+use App\Modules\Core\Models\UserActivity;
 use App\Modules\Notification\Models\UserNotificationCondition;
 
 class Employee extends ProviderAbstract

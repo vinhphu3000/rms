@@ -4,9 +4,9 @@ namespace App\Modules\Notification\Services;
  * Proposal
  * @author Thieu.LeQuang <quangthieuagu@gmail.com>
  */
-use App\Models\UserActivity;
-use App\Models\UserActivityInvolved;
-use App\Models\UserNotificationCondition;
+use App\Modules\Core\Models\UserActivity;
+use App\Modules\Core\Models\UserActivityInvolved;
+use App\Modules\Core\Models\UserNotificationCondition;
 
 class Proposal extends ProviderAbstract
 {

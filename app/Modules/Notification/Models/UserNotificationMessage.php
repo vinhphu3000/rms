@@ -15,7 +15,7 @@ class UserNotificationMessage extends Eloquent
      */
     public function user()
     {
-        return $this->belongsTo('App\Models\User', 'send_to');
+        return $this->belongsTo('App\Modules\Core\Models\User', 'send_to');
     }
 
     /**
@@ -35,7 +35,7 @@ class UserNotificationMessage extends Eloquent
      */
     public function userActivity()
     {
-        return $this->belongsTo('App\Models\UserActivity', 'user_activity_id');
+        return $this->belongsTo('App\Modules\Core\Models\UserActivity', 'user_activity_id');
     }
 
 

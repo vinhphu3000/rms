@@ -1,7 +1,7 @@
 <?php
 namespace App\Modules\Notification\Services;
-use App\Models\UserActivity;
-use App\Models\UserActivityInvolved;
+use App\Modules\Core\Models\UserActivity;
+use App\Modules\Core\Models\UserActivityInvolved;
 use App\Modules\Notification\Models\UserNotificationCondition;
 use App\Modules\Notification\Models\UserNotificationConfig;
 use App\Modules\Notification\Models\UserNotificationMessage;
