@@ -1,8 +1,6 @@
 <?php namespace App\Http\Controllers;
-use App\Models\Notification;
 use App\Models\User;
 use App\Models\UserNotificationConfig;
-use App\Notification\Service;
 use Request;
 use Mail;
 use Session;
@@ -36,8 +34,8 @@ class UserController extends Controller {
         $this->middleware(function ($request, $next) {
             $this->user = \App\Authentication\Service::getAuthInfo();
             if (!empty($this->user->id)) {
-                $notification = Service::inlineRed($this->user->id);
-                $count_notify = Service::inlineRedCount($this->user->id);
+                $notification = \App\Modules\Notification\Services\Service::inlineRed($this->user->id);
+                $count_notify = \App\Modules\Notification\Services\Service::inlineRedCount($this->user->id);
                 view()->share('my', $this->user);
                 view()->share('notification', $notification);
                 view()->share('count_notify', $count_notify);

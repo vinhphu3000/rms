@@ -1,9 +1,9 @@
 <?php namespace App\Http\Controllers;
 use App\Events\Project as ProjectEvent;
-use App\Models\Notification;
+use App\Modules\Notification\Models\Notification;
 use App\Models\Proposal;
 use App\Models\UserActivity;
-use App\Notification\Service;
+use App\Modules\Notification\Services\Service;
 use League\Flysystem\Exception;
 use App\Models\Project;
 use App\Models\ProjectRequest;

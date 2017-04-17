@@ -1,10 +1,10 @@
 <?php
-namespace App\Notification;
+namespace App\Modules\Notification\Services;
 use App\Models\UserActivity;
 use App\Models\UserActivityInvolved;
-use App\Models\UserNotificationCondition;
-use App\Models\UserNotificationConfig;
-use App\Models\UserNotificationMessage;
+use App\Modules\Notification\Models\UserNotificationCondition;
+use App\Modules\Notification\Models\UserNotificationConfig;
+use App\Modules\Notification\Models\UserNotificationMessage;
 use Illuminate\Support\Facades\Mail;
 
 /**
@@ -221,10 +221,10 @@ class Service
     private static function getMapConditionClass($condition_name)
     {
         $mapping = [
-                    'proposal' => 'App\Notification\Proposal',
-                    'resource_request' => 'App\Notification\ResourceRequest',
-                    'proposal_employee_status' => 'App\Notification\Proposal',
-                    'employee' => 'App\Notification\Employee',
+                    'proposal' => 'App\Modules\Notification\Services\Proposal',
+                    'resource_request' => 'App\Modules\Notification\Services\ResourceRequest',
+                    'proposal_employee_status' => 'App\Modules\Notification\Services\Proposal',
+                    'employee' => 'App\Modules\Notification\Services\Employee',
         ];
 
         if (isset($mapping[$condition_name])) {
@@ -242,9 +242,9 @@ class Service
     private static function getMapMessageClass($event)
     {
         $mapping = [
-            'proposal' => 'App\Notification\Message',
-            'resource_request' => 'App\Notification\Message',
-            'employee' => 'App\Notification\Message',
+            'proposal' => 'App\Modules\Notification\Services\Message',
+            'resource_request' => 'App\Modules\Notification\Services\Message',
+            'employee' => 'App\Modules\Notification\Services\Message',
         ];
 
         if (isset($mapping[$event])) {

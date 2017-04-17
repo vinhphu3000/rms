@@ -1,6 +1,6 @@
 <?php
-namespace App\Models;
-use App\Notification\Service;
+namespace App\Modules\Notification\Models;
+use App\Modules\Notification\Services\Service;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 /**
  * UserNotificationCondition Model class

@@ -1,5 +1,5 @@
 <?php
-namespace App\Models;
+namespace App\Modules\Notification\Models;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 /**
  * UserNotificationMessage Model class

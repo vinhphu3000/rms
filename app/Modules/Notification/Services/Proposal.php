@@ -1,5 +1,5 @@
 <?php
-namespace App\Notification;
+namespace App\Modules\Notification\Services;
 /* 
  * Proposal
  * @author Thieu.LeQuang <quangthieuagu@gmail.com>

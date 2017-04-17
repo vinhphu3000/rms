@@ -106,17 +106,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/proposal/update', 'BookingController@doProposalUpdate');
     Route::post('/proposal/employee/reject/confirm', 'BookingController@doReject');
 
-    /**
-     * Config Notification
-     */
-    Route::get('/notification/config', 'NotificationController@config');
-    Route::get('/notification/config/add-popup', 'NotificationController@addConfigPopup');
-    Route::get('/notification/condition', 'NotificationController@loadCondition');
-    Route::get('/notification/config/edit-popup', 'NotificationController@editConfigPopup');
-    Route::get('/notification/scan', 'NotificationController@scanNotify');
-    Route::get('/notification/get-red-inline-message', 'NotificationController@getInlineRedMessage');
-    Route::get('/notification/get-popup-message', 'NotificationController@getPopupMessage');
-    Route::post('/notification/config/add', 'NotificationController@doSaveConfig');
 
 
 

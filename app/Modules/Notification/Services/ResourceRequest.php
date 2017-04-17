@@ -1,12 +1,12 @@
 <?php
-namespace App\Notification;
+namespace App\Modules\Notification\Services;
 /* 
  * ResourceRequest
  * @author Thieu.LeQuang <quangthieuagu@gmail.com>
  */
 use App\Models\UserActivity;
 use App\Models\UserActivityInvolved;
-use App\Models\UserNotificationCondition;
+use App\Modules\Notification\Models\UserNotificationCondition;
 
 class ResourceRequest extends ProviderAbstract
 {
