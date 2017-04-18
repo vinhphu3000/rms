@@ -2,7 +2,7 @@
 
 namespace App\Events;
 
-use App\Models\ProjectBooking;
+use App\Modules\Project\Models\ProjectBooking;
 use Illuminate\Queue\SerializesModels;
 
 class ResourceBooking

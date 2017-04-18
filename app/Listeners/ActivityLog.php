@@ -7,10 +7,10 @@ use App\Events\ResourceBooking;
 use App\Events\ResourceRequest;
 use App\Events\ProposalRequest;
 use App\Events\ProposalEmployeeStatus;
-use App\Modules\Core\Models\Project;
-use App\Modules\Core\Models\User;
-use App\Modules\Core\Models\UserActivity;
-use App\Modules\Core\Models\UserActivityInvolved;
+use App\Modules\Project\Models\Project;
+use App\Modules\Project\Models\User;
+use App\Modules\Project\Models\UserActivity;
+use App\Modules\Project\Models\UserActivityInvolved;
 use Faker\Provider\cs_CZ\DateTime;
 
 class ActivityLog

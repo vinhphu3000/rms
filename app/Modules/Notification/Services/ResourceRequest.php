@@ -4,8 +4,8 @@ namespace App\Modules\Notification\Services;
  * ResourceRequest
  * @author Thieu.LeQuang <quangthieuagu@gmail.com>
  */
-use App\Modules\Core\Models\UserActivity;
-use App\Modules\Core\Models\UserActivityInvolved;
+use App\Modules\Project\Models\UserActivity;
+use App\Modules\Project\Models\UserActivityInvolved;
 use App\Modules\Notification\Models\UserNotificationCondition;
 
 class ResourceRequest extends ProviderAbstract

@@ -16,7 +16,7 @@ class UserNotificationCondition extends Eloquent
      */
     public function user()
     {
-        return $this->belongsTo('App\Modules\Core\Models\User');
+        return $this->belongsTo('App\Modules\Project\Models\User');
     }
 
     public function getLogicList()

@@ -22,5 +22,10 @@ Route::group(['prefix' => 'notification','middleware' => 'auth', 'namespace' => 
 	Route::get('/get-red-inline-message', 'NotificationController@getInlineRedMessage');
 	Route::get('/get-popup-message', 'NotificationController@getPopupMessage');
 	Route::post('/config/add', 'NotificationController@doSaveConfig');
+    /**
+     * Notification
+     */
+    Route::get('/seen','NotificationController@doUpdateNotification');
+
 
 });

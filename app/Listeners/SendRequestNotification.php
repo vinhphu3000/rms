@@ -7,8 +7,8 @@ use App\Events\ProposalEmployeeStatus;
 use App\Events\ResourceBooking;
 use App\Events\ResourceRequest;
 use App\Events\ProposalRequest;
-use App\Modules\Core\Models\Notification;
-use App\Modules\Core\Models\User;
+use App\Modules\Project\Models\Notification;
+use App\Modules\Project\Models\User;
 
 class SendRequestNotification
 {

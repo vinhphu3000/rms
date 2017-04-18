@@ -1,41 +1,21 @@
 <?php
-namespace App\Modules\Notification\Models;
+namespace App\Modules\Project\Models;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 /**
- * UserNotificationMessage Model class
+ * Notification Model class
  * @author Thieu Le Quang <quangthieuagu@gmail.com>
  */
-class UserNotificationMessage extends Eloquent
+class Notification extends Eloquent
 {
-    protected $table = 'user_notification_message';
-    protected $fillable = ['id','function','title','message','params','send_to','user_activity_id','seen','read','created_at', 'updated_at'];
+    protected $table = 'notification';
+    protected $fillable = ['id','title','send_to','content','created_at','updated_at','has_attachment','status_read','status_seen','user_id', 'link'];
 
     /**
      * Get the phone record associated with the user.
      */
     public function user()
     {
-        return $this->belongsTo('App\Modules\Project\Models\User', 'send_to');
-    }
-
-    /**
-     * Get the phone record associated with the user.
-     */
-    public function when()
-    {
-        if ($this->user_activity_id == 0) {
-            return \Carbon\Carbon::now();
-        }
-        return UserActivity::find($this->user_activity_id)->created_at;
-    }
-
-
-    /**
-     * Get the phone record associated with the user.
-     */
-    public function userActivity()
-    {
-        return $this->belongsTo('App\Modules\Project\Models\UserActivity', 'user_activity_id');
+        return $this->belongsTo('App\Modules\Project\Models\User');
     }
 
 

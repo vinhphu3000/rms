@@ -13,7 +13,7 @@
                 </a>
             </li>
             <li>
-                @include('widgets.notification')
+                @include('Notification::notification')
             </li>
 
 

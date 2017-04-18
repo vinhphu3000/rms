@@ -2,7 +2,7 @@
 namespace App\Authentication;
 use App\Authentication\AdapterInterface;
 use App\Authentication\AbstractAdapter;
-use App\Modules\Core\Models\User;
+use App\Modules\Project\Models\User;
 use DB;
 /* 
  * This is class to authentication through database

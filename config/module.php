@@ -10,7 +10,8 @@
 */
 return  [
    'modules' => [
-      'Core',
+      'Project',
+       'Employee',
        'Notification',
    ]
 ];
