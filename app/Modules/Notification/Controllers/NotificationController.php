@@ -10,7 +10,6 @@ use Mail;
 use Session;
 use Input;
 use DB;
-use App\Models\AclRoles as RoleDBModel;
 use Config;
 
 class NotificationController extends ModulesController {
